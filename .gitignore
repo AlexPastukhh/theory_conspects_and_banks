@@ -1,0 +1,15 @@
+# Keep source conspect workspaces local. Knowledge, repetition and service
+# directories that start with _ remain eligible for Git.
+/_ai-conspects/[!_]*/
+!/_ai-conspects/protocol/
+!/_ai-conspects/.agents/
+
+# Local extraction scratch and Obsidian's changing window layout.
+/_ai-conspects/tmp_pdf_extract/
+/.obsidian/workspace.json
+
+# Keep original visual evidence local as well.
+*.svg
+*.SVG
+*.png
+*.PNG

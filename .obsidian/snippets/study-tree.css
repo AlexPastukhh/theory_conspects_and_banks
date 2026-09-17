@@ -1,0 +1,6 @@
+/* Keep the study tree focused. This changes only Obsidian's file explorer. */
+/* Disable this snippet in Appearance > CSS snippets to see every source folder. */
+.nav-folder:has(> .nav-folder-title[data-path^="_ai-conspects/"]:not([data-path^="_ai-conspects/_knowledge"]):not([data-path^="_ai-conspects/_repetition"])),
+.nav-file:has(> [data-path^="_ai-conspects/"]:not([data-path^="_ai-conspects/_knowledge/"]):not([data-path^="_ai-conspects/_repetition/"])) {
+  display: none !important;
+}

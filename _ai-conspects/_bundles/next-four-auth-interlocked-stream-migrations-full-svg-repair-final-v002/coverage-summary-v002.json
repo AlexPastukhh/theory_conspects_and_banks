@@ -1,0 +1,215 @@
+{
+  "conspects": [
+    {
+      "conspect": "authenticaiton ticket, properties, context.User (claimsprincipal)",
+      "folder_found": true,
+      "embedded_assets": 43,
+      "total_image_uses": 43,
+      "processed_image_uses": 43,
+      "previously_processed_image_uses": 0,
+      "restored_image_uses": 43,
+      "restored_unique_assets": 43,
+      "duplicate_placements": 0,
+      "duplicate_asset_groups": 0,
+      "svg_text_nodes": 31,
+      "processed_svg_text_nodes": 31,
+      "semantic_text_nodes": 31,
+      "empty_structural_text_nodes": 0,
+      "vector_paths": 9,
+      "unassigned_images": 0,
+      "multiply_assigned_images": 0,
+      "unassigned_text_nodes": 0,
+      "multiply_assigned_text_nodes": 0,
+      "missing": 0,
+      "unreviewed": 0,
+      "independent_repeat_audit": "PASS",
+      "regions": [
+        {
+          "region_id": "R01",
+          "title": "HttpContext.User, ClaimsPrincipal, ClaimsIdentity, claims, and multiple identities"
+        },
+        {
+          "region_id": "R02",
+          "title": "AuthenticationTicket structure, scheme, principal, and authentication flow"
+        },
+        {
+          "region_id": "R03",
+          "title": "AuthenticationProperties lifetime, persistence, and refresh semantics"
+        },
+        {
+          "region_id": "R04",
+          "title": "RedirectUri, Items, Parameters, and handler-specific behavior"
+        },
+        {
+          "region_id": "R05",
+          "title": "Token storage helpers and JWT SaveToken behavior"
+        }
+      ],
+      "legacy_match_limitation": null
+    },
+    {
+      "conspect": "interlocked,interlocked.read",
+      "folder_found": true,
+      "embedded_assets": 39,
+      "total_image_uses": 39,
+      "processed_image_uses": 39,
+      "previously_processed_image_uses": 1,
+      "restored_image_uses": 38,
+      "restored_unique_assets": 38,
+      "duplicate_placements": 0,
+      "duplicate_asset_groups": 0,
+      "svg_text_nodes": 21,
+      "processed_svg_text_nodes": 21,
+      "semantic_text_nodes": 21,
+      "empty_structural_text_nodes": 0,
+      "vector_paths": 13,
+      "unassigned_images": 0,
+      "multiply_assigned_images": 0,
+      "unassigned_text_nodes": 0,
+      "multiply_assigned_text_nodes": 0,
+      "missing": 0,
+      "unreviewed": 0,
+      "independent_repeat_audit": "PASS",
+      "regions": [
+        {
+          "region_id": "R01",
+          "title": "Interlocked versus lock, process bitness, and atomic reads"
+        },
+        {
+          "region_id": "R02",
+          "title": "Increment, Decrement, and Add counters"
+        },
+        {
+          "region_id": "R03",
+          "title": "Exchange, CompareExchange, and compare-and-swap loops"
+        },
+        {
+          "region_id": "R04",
+          "title": "Atomic Or/And flag manipulation and XOR mental model"
+        },
+        {
+          "region_id": "R05",
+          "title": "MemoryBarrier, process-wide barriers, and speculation barriers"
+        }
+      ],
+      "legacy_match_limitation": "legacy inventory did not record asset SHA or x/y coordinates, so a historical SHA+placement proof is unavailable"
+    },
+    {
+      "conspect": "processing data as stream in dif situations, httpclient,endpoint,browser,websockets",
+      "folder_found": false,
+      "embedded_assets": 23,
+      "total_image_uses": 23,
+      "processed_image_uses": 23,
+      "previously_processed_image_uses": 0,
+      "restored_image_uses": 23,
+      "restored_unique_assets": 23,
+      "duplicate_placements": 0,
+      "duplicate_asset_groups": 0,
+      "svg_text_nodes": 59,
+      "processed_svg_text_nodes": 59,
+      "semantic_text_nodes": 52,
+      "empty_structural_text_nodes": 7,
+      "vector_paths": 13,
+      "unassigned_images": 0,
+      "multiply_assigned_images": 0,
+      "unassigned_text_nodes": 0,
+      "multiply_assigned_text_nodes": 0,
+      "missing": 0,
+      "unreviewed": 0,
+      "independent_repeat_audit": "PASS",
+      "regions": [
+        {
+          "region_id": "R01",
+          "title": "ASP.NET Core request-body streams, loops, and PipeReader"
+        },
+        {
+          "region_id": "R02",
+          "title": "IOException, HttpRequestException, cancellation, and failure boundaries"
+        },
+        {
+          "region_id": "R03",
+          "title": "HttpClient response streaming, ResponseHeadersRead, and CopyToAsync"
+        },
+        {
+          "region_id": "R04",
+          "title": "ASP.NET Core response BodyWriter and PipeWriter"
+        },
+        {
+          "region_id": "R05",
+          "title": "Browser Fetch ReadableStream, reader loops, and TextDecoder"
+        },
+        {
+          "region_id": "R06",
+          "title": "WebSocket message framing, server receive loops, and browser message events"
+        }
+      ],
+      "legacy_match_limitation": null
+    },
+    {
+      "conspect": "ef migrations, dotnet-counters",
+      "folder_found": true,
+      "embedded_assets": 37,
+      "total_image_uses": 37,
+      "processed_image_uses": 37,
+      "previously_processed_image_uses": 0,
+      "restored_image_uses": 37,
+      "restored_unique_assets": 37,
+      "duplicate_placements": 0,
+      "duplicate_asset_groups": 0,
+      "svg_text_nodes": 27,
+      "processed_svg_text_nodes": 27,
+      "semantic_text_nodes": 27,
+      "empty_structural_text_nodes": 0,
+      "vector_paths": 3,
+      "unassigned_images": 0,
+      "multiply_assigned_images": 0,
+      "unassigned_text_nodes": 0,
+      "multiply_assigned_text_nodes": 0,
+      "missing": 0,
+      "unreviewed": 0,
+      "independent_repeat_audit": "PASS",
+      "regions": [
+        {
+          "region_id": "R01",
+          "title": "Applying migrations from code and production safety"
+        },
+        {
+          "region_id": "R02",
+          "title": "EF migration CLI workflow: add, update, remove, and list"
+        },
+        {
+          "region_id": "R03",
+          "title": "SQL migration scripts and idempotent deployment"
+        },
+        {
+          "region_id": "R04",
+          "title": "Migration bundles and deployment flow"
+        },
+        {
+          "region_id": "R05",
+          "title": "dotnet-counters installation, process selection, and monitoring"
+        },
+        {
+          "region_id": "R06",
+          "title": "EF Core runtime counters and diagnostic interpretation"
+        }
+      ],
+      "legacy_match_limitation": null
+    }
+  ],
+  "combined": {
+    "conspects": 4,
+    "embedded_assets": 142,
+    "total_image_uses": 142,
+    "processed_image_uses": 142,
+    "restored_image_uses": 141,
+    "duplicate_placements": 0,
+    "svg_text_nodes": 138,
+    "vector_paths": 38,
+    "unassigned_images": 0,
+    "multiply_assigned_images": 0,
+    "unassigned_text_nodes": 0,
+    "missing": 0,
+    "unreviewed": 0
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "generated": "2026-06-13 09:05:00 UTC",
+  "items": [
+    {
+      "slug": "apibehavioroptions",
+      "title": "ASP.NET Core ApiBehaviorOptions: invalid model state and client error mapping",
+      "unique_images": 26,
+      "image_uses": 26,
+      "text_labels": 13,
+      "duplicate_groups": 0,
+      "regions": [
+        {
+          "region": "R01",
+          "slug": "invalid-model-state-response-factory",
+          "title": "Invalid model state and automatic response factory",
+          "image_uses": 8,
+          "text_labels": 3
+        },
+        {
+          "region": "R02",
+          "slug": "binding-source-inference-and-api-behavior-switches",
+          "title": "Binding-source inference and ApiBehaviorOptions switches",
+          "image_uses": 8,
+          "text_labels": 3
+        },
+        {
+          "region": "R03",
+          "slug": "client-error-mapping-and-suppress-map-client-errors",
+          "title": "ClientErrorMapping and SuppressMapClientErrors",
+          "image_uses": 10,
+          "text_labels": 7
+        }
+      ]
+    },
+    {
+      "slug": "ef-core-performance-diagnostics-compiled-linq-batching-n-1",
+      "title": "EF Core performance: diagnostics, compiled LINQ, batching, N+1",
+      "unique_images": 25,
+      "image_uses": 25,
+      "text_labels": 26,
+      "duplicate_groups": 0,
+      "regions": [
+        {
+          "region": "R01",
+          "slug": "query-shape-conditions-and-left-side-examples",
+          "title": "Query shape, conditions and left-side examples",
+          "image_uses": 2,
+          "text_labels": 4
+        },
+        {
+          "region": "R02",
+          "slug": "compiled-query-decision-rules-hot-paths",
+          "title": "Compiled query decision rules and hot paths",
+          "image_uses": 8,
+          "text_labels": 9
+        },
+        {
+          "region": "R03",
+          "slug": "compiled-query-execution-and-infrastructure-costs",
+          "title": "Compiled query execution and infrastructure costs",
+          "image_uses": 7,
+          "text_labels": 4
+        },
+        {
+          "region": "R04",
+          "slug": "diagnostics-n-plus-one-and-batching",
+          "title": "Diagnostics, N+1 and batching",
+          "image_uses": 8,
+          "text_labels": 9
+        }
+      ]
+    },
+    {
+      "slug": "httpcontext-items-and-features",
+      "title": "ASP.NET Core HttpContext Items and Features",
+      "unique_images": 27,
+      "image_uses": 27,
+      "text_labels": 7,
+      "duplicate_groups": 0,
+      "regions": [
+        {
+          "region": "R01",
+          "slug": "features-and-custom-feature-basics",
+          "title": "Features and custom feature basics",
+          "image_uses": 10,
+          "text_labels": 2
+        },
+        {
+          "region": "R02",
+          "slug": "features-vs-items-and-when-to-use-what",
+          "title": "Features vs Items and when to use what",
+          "image_uses": 7,
+          "text_labels": 3
+        },
+        {
+          "region": "R03",
+          "slug": "items-examples-and-object-keys",
+          "title": "Items examples and object keys",
+          "image_uses": 10,
+          "text_labels": 2
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+conspect_slug,conspect_title,region,processed_count,status,meaning
+scopes-and-idisposable,Scopes And IDisposable,SCOPEIDISP-R01,8,processed-in-scopeidisp-r01-v001,IDisposable / using / Dispose
+scopes-and-idisposable,Scopes And IDisposable,SCOPEIDISP-R02,7,processed-in-scopeidisp-r02-v001,DI scopes / IServiceScopeFactory
+scopes-and-idisposable,Scopes And IDisposable,SCOPEIDISP-R03,7,processed-in-scopeidisp-r03-v001,background tasks / leaks / pitfalls
+exception-handlers,Exception Handlers,EXHAND-R01,8,processed-in-exhand-r01-v001,global middleware / UseExceptionHandler
+exception-handlers,Exception Handlers,EXHAND-R02,8,processed-in-exhand-r02-v001,IExceptionHandler / ProblemDetails / status mapping
+exception-handlers,Exception Handlers,EXHAND-R03,8,processed-in-exhand-r03-v001,local try-catch / domain validation / pitfalls
+httpcontent-custom-readasstream-buffering-compression,HttpContent Custom ReadAsStream Buffering Compression,HTTPCONTENT-R01,9,processed-in-httpcontent-r01-v001,HttpContent basics / ReadAsStream / buffering
+httpcontent-custom-readasstream-buffering-compression,HttpContent Custom ReadAsStream Buffering Compression,HTTPCONTENT-R02,9,processed-in-httpcontent-r02-v001,custom HttpContent / SerializeToStreamAsync
+httpcontent-custom-readasstream-buffering-compression,HttpContent Custom ReadAsStream Buffering Compression,HTTPCONTENT-R03,8,processed-in-httpcontent-r03-v001,compression directly to network / disposal

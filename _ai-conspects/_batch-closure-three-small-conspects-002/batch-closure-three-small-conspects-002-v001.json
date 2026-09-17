@@ -1,0 +1,43 @@
+{
+  "generated": "2026-06-20 08:07:06 UTC",
+  "archive_type": "three small conspects 002 closure audit batch",
+  "total_sources": 72,
+  "total_processed": 72,
+  "total_pending": 0,
+  "total_bad_placeholder_signals": 0,
+  "all_closed": true,
+  "verdicts": [
+    "Scopes And IDisposable S-001..S-022 is closed",
+    "Exception Handlers S-001..S-024 is closed",
+    "HttpContent Custom ReadAsStream Buffering Compression S-001..S-026 is closed"
+  ],
+  "rows": [
+    {
+      "conspect_slug": "scopes-and-idisposable",
+      "conspect_title": "Scopes And IDisposable",
+      "total_sources": 22,
+      "processed_sources": 22,
+      "pending_candidates": 0,
+      "bad_placeholder_signals": 0,
+      "final_verdict": "Scopes And IDisposable S-001..S-022 is closed"
+    },
+    {
+      "conspect_slug": "exception-handlers",
+      "conspect_title": "Exception Handlers",
+      "total_sources": 24,
+      "processed_sources": 24,
+      "pending_candidates": 0,
+      "bad_placeholder_signals": 0,
+      "final_verdict": "Exception Handlers S-001..S-024 is closed"
+    },
+    {
+      "conspect_slug": "httpcontent-custom-readasstream-buffering-compression",
+      "conspect_title": "HttpContent Custom ReadAsStream Buffering Compression",
+      "total_sources": 26,
+      "processed_sources": 26,
+      "pending_candidates": 0,
+      "bad_placeholder_signals": 0,
+      "final_verdict": "HttpContent Custom ReadAsStream Buffering Compression S-001..S-026 is closed"
+    }
+  ]
+}

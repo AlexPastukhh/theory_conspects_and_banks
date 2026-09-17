@@ -1,0 +1,102 @@
+{
+  "batch": "batch-promise-vitest-collections-regex-pagination-final-v001",
+  "conspects": [
+    {
+      "target": "_ai-conspects/promise.all",
+      "source": "promise.all.svg",
+      "unique_screenshots": 11,
+      "image_uses": 11,
+      "text_labels": 2,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/vitest test errors",
+      "source": "vitest test errors.svg",
+      "unique_screenshots": 7,
+      "image_uses": 7,
+      "text_labels": 20,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/map and weakmap js",
+      "source": "map and weakmap js.svg",
+      "unique_screenshots": 11,
+      "image_uses": 11,
+      "text_labels": 0,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/Bitwise checking for all combinations",
+      "source": "Bitwise checking for all combinations.svg",
+      "unique_screenshots": 14,
+      "image_uses": 14,
+      "text_labels": 14,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/BALANCING GROUPS .NET",
+      "source": "BALANCING GROUPS .NET.svg",
+      "unique_screenshots": 14,
+      "image_uses": 14,
+      "text_labels": 24,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/vitest mocking",
+      "source": "vitest mocking.svg",
+      "unique_screenshots": 6,
+      "image_uses": 6,
+      "text_labels": 22,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/regex, reusing, compiled",
+      "source": "regex, reusing, compiled.svg",
+      "unique_screenshots": 11,
+      "image_uses": 11,
+      "text_labels": 9,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/parse string to int,float,double",
+      "source": "parse string to int,float,double.svg",
+      "unique_screenshots": 9,
+      "image_uses": 9,
+      "text_labels": 0,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/pagination offset take",
+      "source": "pagination offset take.svg",
+      "unique_screenshots": 10,
+      "image_uses": 10,
+      "text_labels": 2,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/set js",
+      "source": "set js.svg",
+      "unique_screenshots": 12,
+      "image_uses": 12,
+      "text_labels": 28,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    }
+  ],
+  "totals": {
+    "unique_screenshots": 105,
+    "image_uses": 105,
+    "text_labels": 121,
+    "duplicate_extra_placements": 0,
+    "remaining_unclosed": 0
+  }
+}

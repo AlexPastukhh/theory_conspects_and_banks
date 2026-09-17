@@ -1,0 +1,4 @@
+slug,title,image_uses,text_labels,regions,assigned_image_uses,missing_image_uses,duplicate_assignments,processed_image_uses,next
+linq-join-groupjoin-groupby-selectmany-selectmany-second-callback,C# LINQ join / GroupJoin / GroupBy / SelectMany,29,10,3,29,0,0,0,NEXT01: LJG01 = 14 image uses
+server-resources-multipleinstances-microservices,Server resources / multiple instances / microservices,30,20,3,30,0,0,0,NEXT01: SRM01 = 12 image uses
+routing-route-params-tech-info-custom-constraints-router-matching,ASP.NET Core routing / route parameters / custom constraints / matching,18,23,3,18,0,0,0,NEXT01: RTR01 + RTR02 = 5 image uses

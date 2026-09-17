@@ -1,0 +1,44 @@
+[
+  {
+    "name": "headers",
+    "source_svg": "headers.svg",
+    "image_uses": 0,
+    "text_elements": 81
+  },
+  {
+    "name": "identity",
+    "source_svg": "identity.svg",
+    "image_uses": 0,
+    "text_elements": 92
+  },
+  {
+    "name": "searching impl, ef core, full text search,sql server",
+    "source_svg": "searching impl, ef core, full text search,sql server.svg",
+    "image_uses": 0,
+    "text_elements": 73
+  },
+  {
+    "name": "compression,decompression,request,response",
+    "source_svg": "compression,decompression,request,response.svg",
+    "image_uses": 0,
+    "text_elements": 91
+  },
+  {
+    "name": "hashing",
+    "source_svg": "hashing.svg",
+    "image_uses": 0,
+    "text_elements": 70
+  },
+  {
+    "name": "antiforgerytoken",
+    "source_svg": "antiforgerytoken(2).svg",
+    "image_uses": 0,
+    "text_elements": 51
+  },
+  {
+    "name": "adddataprotection, encryption, password recovery",
+    "source_svg": "adddataprotection, encryption, password recovery.svg",
+    "image_uses": 0,
+    "text_elements": 77
+  }
+]

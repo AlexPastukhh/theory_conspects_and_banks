@@ -1,0 +1,8 @@
+name,source_svg,image_uses,text_elements
+headers,headers.svg,0,81
+identity,identity.svg,0,92
+"searching impl, ef core, full text search,sql server","searching impl, ef core, full text search,sql server.svg",0,73
+"compression,decompression,request,response","compression,decompression,request,response.svg",0,91
+hashing,hashing.svg,0,70
+antiforgerytoken,antiforgerytoken(2).svg,0,51
+"adddataprotection, encryption, password recovery","adddataprotection, encryption, password recovery.svg",0,77

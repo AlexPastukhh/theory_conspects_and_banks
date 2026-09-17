@@ -1,0 +1,50 @@
+{
+  "batch": "batch-react-effects-text-streams-usereducer-dictionary-span-combined-final-v001",
+  "unique_screenshots": 142,
+  "image_uses": 142,
+  "text_labels": 39,
+  "duplicate_extra_placements": 0,
+  "remaining_unclosed": 0,
+  "targets": [
+    {
+      "target": "_ai-conspects/react render + useEffect",
+      "unique_screenshots": 22,
+      "image_uses": 22,
+      "text_labels": 22,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/textdecoder, encoder, streaming and processing chunks, textdecoderstream of transformstream",
+      "unique_screenshots": 32,
+      "image_uses": 32,
+      "text_labels": 4,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/useReducer",
+      "unique_screenshots": 31,
+      "image_uses": 31,
+      "text_labels": 0,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/sheet dict",
+      "unique_screenshots": 35,
+      "image_uses": 35,
+      "text_labels": 11,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/struct span",
+      "unique_screenshots": 22,
+      "image_uses": 22,
+      "text_labels": 2,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    }
+  ]
+}

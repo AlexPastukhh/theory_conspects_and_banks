@@ -1,0 +1,4 @@
+slug,title,source_file,image_definitions,image_uses,text_labels,duplicate_groups,next
+linq-join-groupjoin-groupby-selectmany-selectmany-second-callback,C# LINQ join / GroupJoin / GroupBy / SelectMany,"linq join groupjoin groupby selectmany,selectmany second callback.svg",29,29,10,0,Stage1 boundary review
+server-resources-multipleinstances-microservices,Server resources / multiple instances / microservices,"server resources,multipleinstances,microservices.svg",30,30,20,0,Stage1 boundary review
+routing-route-params-tech-info-custom-constraints-router-matching,ASP.NET Core routing / route parameters / custom constraints / matching,"routing,route params tech info, custom constraints,router matching.svg",18,18,23,0,Stage1 boundary review

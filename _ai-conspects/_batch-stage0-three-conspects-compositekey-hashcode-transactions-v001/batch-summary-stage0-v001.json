@@ -1,0 +1,112 @@
+{
+  "generated": "2026-06-13 09:35:00 UTC",
+  "items": [
+    {
+      "slug": "composite-key",
+      "title": "EF Core composite keys: primary keys, foreign keys and indexes",
+      "unique_images": 25,
+      "image_uses": 25,
+      "text_labels": 18,
+      "duplicate_groups": 0,
+      "regions": [
+        {
+          "region": "R01",
+          "slug": "composite-key-basics-and-entity-configuration",
+          "title": "Composite key basics and entity configuration",
+          "image_uses": 14,
+          "text_labels": 4
+        },
+        {
+          "region": "R02",
+          "slug": "find-entity-and-foreign-key-consequences",
+          "title": "Finding entities and foreign-key consequences",
+          "image_uses": 6,
+          "text_labels": 9
+        },
+        {
+          "region": "R03",
+          "slug": "null-uniqueness-and-indexes-over-composite-keys",
+          "title": "Null semantics, uniqueness and indexes over composite keys",
+          "image_uses": 5,
+          "text_labels": 5
+        }
+      ]
+    },
+    {
+      "slug": "hashcode",
+      "title": "C# HashCode, Equals/GetHashCode and mutable dictionary keys",
+      "unique_images": 24,
+      "image_uses": 24,
+      "text_labels": 19,
+      "duplicate_groups": 0,
+      "regions": [
+        {
+          "region": "R01",
+          "slug": "mutable-keys-and-hashtable-bucket-failure",
+          "title": "Mutable keys and hashtable bucket failure",
+          "image_uses": 3,
+          "text_labels": 8
+        },
+        {
+          "region": "R02",
+          "slug": "equals-gethashcode-considerations-and-combine",
+          "title": "Equals/GetHashCode considerations and HashCode.Combine",
+          "image_uses": 8,
+          "text_labels": 5
+        },
+        {
+          "region": "R03",
+          "slug": "hashcode-struct-incremental-add-and-null-handling",
+          "title": "HashCode struct, incremental Add and null handling",
+          "image_uses": 8,
+          "text_labels": 4
+        },
+        {
+          "region": "R04",
+          "slug": "hashcode-in-loop-and-conditional-logic",
+          "title": "HashCode in a loop and conditional logic",
+          "image_uses": 5,
+          "text_labels": 2
+        }
+      ]
+    },
+    {
+      "slug": "transaction-isolation",
+      "title": "Transactions and isolation levels: read committed, snapshot and serializable",
+      "unique_images": 18,
+      "image_uses": 18,
+      "text_labels": 71,
+      "duplicate_groups": 0,
+      "regions": [
+        {
+          "region": "R01",
+          "slug": "transaction-basics-read-committed-and-atomicity",
+          "title": "Transaction basics, read committed and atomicity",
+          "image_uses": 4,
+          "text_labels": 33
+        },
+        {
+          "region": "R02",
+          "slug": "isolation-levels-snapshot-serializable-readuncommitted",
+          "title": "Isolation levels: snapshot, serializable and read uncommitted",
+          "image_uses": 0,
+          "text_labels": 15
+        },
+        {
+          "region": "R03",
+          "slug": "efcore-execution-strategy-savepoints-and-retries",
+          "title": "EF Core execution strategy, savepoints and retries",
+          "image_uses": 14,
+          "text_labels": 9
+        },
+        {
+          "region": "R04",
+          "slug": "locks-rcsi-serializable-range-protection",
+          "title": "Locks, RCSI and serializable range protection",
+          "image_uses": 0,
+          "text_labels": 14
+        }
+      ]
+    }
+  ]
+}

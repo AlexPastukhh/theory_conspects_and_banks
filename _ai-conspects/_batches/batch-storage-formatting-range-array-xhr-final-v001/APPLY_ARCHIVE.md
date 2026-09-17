@@ -1,0 +1,5 @@
+# APPLY ARCHIVE
+
+```powershell
+& { Set-Location "C:\Users\alexa\obs"; git checkout ai-processed-conspects-text; $zip = "C:\Users\alexa\Downloads\ai-conspects-storage-formatting-range-array-xhr-final-v001.zip"; $batch = "_ai-conspects\_batches\batch-storage-formatting-range-array-xhr-final-v001"; $target1 = "_ai-conspects\memory vs localstorage vs sessionstorage, session storage and local storage api methods"; $target2 = "_ai-conspects\formatting, numeric formatting, what can be formatted"; $target3 = "_ai-conspects\range operations on list"; $target4 = "_ai-conspects\create array, fixed length"; $target5 = "_ai-conspects\xhr"; $OutputEncoding = [System.Text.UTF8Encoding]::new(); [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new(); Expand-Archive -Path $zip -DestinationPath . -Force; git add -A -- $batch $target1 $target2 $target3 $target4 $target5; git status --short -- $batch $target1 $target2 $target3 $target4 $target5; git commit -m "Add storage formatting ranges arrays and XHR semantic conspects"; git push origin ai-processed-conspects-text }
+```

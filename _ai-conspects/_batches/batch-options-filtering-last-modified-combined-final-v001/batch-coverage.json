@@ -1,0 +1,34 @@
+{
+  "batch": "batch-options-filtering-last-modified-combined-final-v001",
+  "unique_screenshots": 67,
+  "image_uses": 69,
+  "text_labels": 62,
+  "duplicate_extra_placements": 2,
+  "remaining_unclosed": 0,
+  "targets": [
+    {
+      "target": "_ai-conspects/options requ",
+      "unique_screenshots": 24,
+      "image_uses": 24,
+      "text_labels": 5,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/FILTERING AND SEARCHING",
+      "unique_screenshots": 12,
+      "image_uses": 12,
+      "text_labels": 6,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/last modified header, implementation, expirational model",
+      "unique_screenshots": 31,
+      "image_uses": 33,
+      "text_labels": 51,
+      "duplicate_extra_placements": 2,
+      "remaining_unclosed": 0
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+# APPLY ARCHIVE
+
+```powershell
+& { Set-Location "C:\Users\alexa\obs"; git checkout ai-processed-conspects-text; $zip = "C:\Users\alexa\Downloads\ai-conspects-css-inset-regex-react-query-context-svg-react-combined-final-v001.zip"; $batch = "_ai-conspects\_batches\batch-css-inset-regex-react-query-context-svg-react-combined-final-v001"; $target1 = "_ai-conspects\inset vs size,margins,formula"; $target2 = "_ai-conspects\sharp regex options  + COND REPLACE"; $target3 = "_ai-conspects\react query rerenders + setting and getting data from cache outside of react"; $target4 = "_ai-conspects\context"; $target5 = "_ai-conspects\svg react"; $OutputEncoding = [System.Text.UTF8Encoding]::new(); [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new(); Expand-Archive -Path $zip -DestinationPath . -Force; git add -A -- $batch $target1 $target2 $target3 $target4 $target5; git status --short -- $batch $target1 $target2 $target3 $target4 $target5; git commit -m "Add CSS Regex React Query Context and SVG conspects"; git push origin ai-processed-conspects-text }
+```

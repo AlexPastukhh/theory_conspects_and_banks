@@ -1,0 +1,171 @@
+{
+  "batch": "batch-strings-regex-linq-sql-css-useref-combined-final-v001",
+  "conspects": 20,
+  "unique_screenshots": 30,
+  "image_uses": 30,
+  "text_labels": 21,
+  "duplicate_extra_placements": 0,
+  "remaining_unclosed": 0,
+  "targets": [
+    {
+      "target": "_ai-conspects/STRING  TRIM",
+      "unique_screenshots": 2,
+      "image_uses": 2,
+      "text_labels": 0,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/last element sharp",
+      "unique_screenshots": 2,
+      "image_uses": 2,
+      "text_labels": 0,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/last element",
+      "unique_screenshots": 2,
+      "image_uses": 2,
+      "text_labels": 0,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/sheet regex sharp",
+      "unique_screenshots": 1,
+      "image_uses": 1,
+      "text_labels": 2,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/string to char list",
+      "unique_screenshots": 1,
+      "image_uses": 1,
+      "text_labels": 0,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/js url safe, encodeuri",
+      "unique_screenshots": 2,
+      "image_uses": 2,
+      "text_labels": 0,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/REPLACE",
+      "unique_screenshots": 1,
+      "image_uses": 1,
+      "text_labels": 2,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/delete",
+      "unique_screenshots": 1,
+      "image_uses": 1,
+      "text_labels": 0,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/sheet exec order",
+      "unique_screenshots": 1,
+      "image_uses": 1,
+      "text_labels": 5,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/Enumerable static methods",
+      "unique_screenshots": 1,
+      "image_uses": 1,
+      "text_labels": 3,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/STRING SORT",
+      "unique_screenshots": 1,
+      "image_uses": 1,
+      "text_labels": 1,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/any in exists",
+      "unique_screenshots": 1,
+      "image_uses": 1,
+      "text_labels": 0,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/STRING REMOVE INSERT",
+      "unique_screenshots": 1,
+      "image_uses": 1,
+      "text_labels": 0,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/STRING INDEX",
+      "unique_screenshots": 1,
+      "image_uses": 1,
+      "text_labels": 2,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/CONTAINS STARTSWITH ENDSWITH",
+      "unique_screenshots": 1,
+      "image_uses": 1,
+      "text_labels": 0,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/STRING SPLIT",
+      "unique_screenshots": 1,
+      "image_uses": 1,
+      "text_labels": 0,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/STRING PADDING",
+      "unique_screenshots": 1,
+      "image_uses": 1,
+      "text_labels": 0,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/prog inline styles css",
+      "unique_screenshots": 3,
+      "image_uses": 3,
+      "text_labels": 1,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/string join",
+      "unique_screenshots": 2,
+      "image_uses": 2,
+      "text_labels": 0,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/useref, when need to have ref from obj created in useeffect + when need to access someting inside effect without incl into dep array",
+      "unique_screenshots": 4,
+      "image_uses": 4,
+      "text_labels": 5,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    }
+  ]
+}

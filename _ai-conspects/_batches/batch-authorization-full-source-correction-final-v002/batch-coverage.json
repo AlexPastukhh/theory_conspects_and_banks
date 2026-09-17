@@ -1,0 +1,13 @@
+{
+  "batch": "batch-authorization-full-source-correction-final-v002",
+  "target": "_ai-conspects/authorization-flow-autorization-options-framework-authorizationmiddlewareresulthandler",
+  "correction": {
+    "old_unique_screenshots": 54,
+    "old_image_uses": 55,
+    "new_unique_screenshots": 119,
+    "new_image_uses": 120,
+    "native_svg_labels": 112,
+    "duplicate_extra_placements": 1,
+    "remaining_unclosed": 0
+  }
+}

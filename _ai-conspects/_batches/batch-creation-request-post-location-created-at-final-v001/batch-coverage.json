@@ -1,0 +1,9 @@
+{
+  "batch": "batch-creation-request-post-location-created-at-final-v001",
+  "target": "_ai-conspects/CREATION REQUEST,POST REQUEST,LOCACTION HEADER,CREATED AT",
+  "unique_screenshots": 19,
+  "image_uses": 19,
+  "text_labels": 17,
+  "duplicate_extra_placements": 0,
+  "remaining_unclosed": 0
+}

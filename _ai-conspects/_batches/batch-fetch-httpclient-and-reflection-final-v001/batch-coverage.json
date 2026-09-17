@@ -1,0 +1,29 @@
+{
+  "batch": "batch-fetch-httpclient-and-reflection-final-v001",
+  "conspects": [
+    {
+      "target": "_ai-conspects/FETCH,FETCH AXIOS COMP, getch reader, httpclient comparison",
+      "source": "FETCH,FETCH AXIOS COMP, getch reader, httpclient comparison.svg",
+      "unique_screenshots": 107,
+      "image_uses": 107,
+      "text_labels": 43,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/REFLECTION",
+      "source": "REFLECTION.svg",
+      "unique_screenshots": 95,
+      "image_uses": 95,
+      "text_labels": 89,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    }
+  ],
+  "totals": {
+    "unique_screenshots": 202,
+    "image_uses": 202,
+    "text_labels": 132,
+    "remaining_unclosed": 0
+  }
+}

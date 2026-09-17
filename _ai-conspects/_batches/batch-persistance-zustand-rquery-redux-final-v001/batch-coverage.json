@@ -1,0 +1,19 @@
+{
+  "batch": "batch-persistance-zustand-rquery-redux-final-v001",
+  "conspects": 1,
+  "unique_screenshots": 135,
+  "image_uses": 137,
+  "text_labels": 75,
+  "duplicate_extra_placements": 2,
+  "remaining_unclosed": 0,
+  "targets": [
+    {
+      "target": "_ai-conspects/persistance, zustand,rquery,redux",
+      "unique_screenshots": 135,
+      "image_uses": 137,
+      "text_labels": 75,
+      "duplicate_extra_placements": 2,
+      "remaining_unclosed": 0
+    }
+  ]
+}

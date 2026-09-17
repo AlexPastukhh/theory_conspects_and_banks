@@ -1,0 +1,22 @@
+{
+  "bundle": "problem details + event source browser + query filters ef core - final-coverage-v001",
+  "conspects": {
+    "problem details": {
+      "image_uses": 25,
+      "labels": 118,
+      "remaining": 0
+    },
+    "event source browser": {
+      "image_uses": 20,
+      "labels": 8,
+      "remaining": 0
+    },
+    "query filters ef core": {
+      "image_uses": 15,
+      "labels": 15,
+      "remaining": 0
+    }
+  },
+  "combined_image_uses": 60,
+  "combined_labels": 141
+}

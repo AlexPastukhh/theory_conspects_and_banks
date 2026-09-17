@@ -1,0 +1,5 @@
+# APPLY ARCHIVE
+
+```powershell
+& { Set-Location "C:\Users\alexa\obs"; git checkout ai-processed-conspects-text; $zip = "C:\Users\alexa\Downloads\ai-conspects-js-sorting-ctor-stringcomparer-animation-intersection-observer-combined-final-v001.zip"; $batch = "_ai-conspects\_batches\batch-js-sorting-ctor-stringcomparer-animation-intersection-observer-combined-final-v001"; $target1 = "_ai-conspects\js sorting"; $target2 = "_ai-conspects\ctor type and instance type"; $target3 = "_ai-conspects\STRINGCOMPARER,compare strings case insens"; $target4 = "_ai-conspects\animation keyframes"; $target5 = "_ai-conspects\interseption observer"; $OutputEncoding = [System.Text.UTF8Encoding]::new(); [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new(); Expand-Archive -Path $zip -DestinationPath . -Force; git add -A -- $batch $target1 $target2 $target3 $target4 $target5; git status --short -- $batch $target1 $target2 $target3 $target4 $target5; git commit -m "Add sorting constructor comparer animation and observer conspects"; git push origin ai-processed-conspects-text }
+```

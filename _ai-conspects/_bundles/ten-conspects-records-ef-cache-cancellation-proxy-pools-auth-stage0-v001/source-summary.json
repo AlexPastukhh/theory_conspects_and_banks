@@ -1,0 +1,182 @@
+[
+  {
+    "conspect_name": "records",
+    "source_svg": "records(1).svg",
+    "folder": "_ai-conspects/records",
+    "viewBox": [
+      0.0,
+      0.0,
+      8610.292532995627,
+      9145.76524904902
+    ],
+    "unique_embedded_images": 0,
+    "image_uses_on_canvas": 0,
+    "text_labels_parsed": 22,
+    "vector_paths": 12,
+    "vector_groups": 31,
+    "duplicate_image_uses_by_extracted_content": 0,
+    "source_kind": "vector/text SVG without embedded raster images"
+  },
+  {
+    "conspect_name": "dbcontext interseptors savechanges , dbcommand",
+    "source_svg": "dbcontext interseptors savechanges , dbcommand(1).svg",
+    "folder": "_ai-conspects/dbcontext interseptors savechanges , dbcommand",
+    "viewBox": [
+      0.0,
+      0.0,
+      12427.715161652446,
+      8316.271981601258
+    ],
+    "unique_embedded_images": 0,
+    "image_uses_on_canvas": 0,
+    "text_labels_parsed": 18,
+    "vector_paths": 21,
+    "vector_groups": 43,
+    "duplicate_image_uses_by_extracted_content": 0,
+    "source_kind": "vector/text SVG without embedded raster images"
+  },
+  {
+    "conspect_name": "dbset fromsql fromsqlraw fromsqlinterpolated and LINQ executeupdateasync and executedelete async,database.executesql executeraw,fromsqlquery",
+    "source_svg": "dbset fromsql fromsqlraw fromsqlinterpolated and LINQ executeupdateasync and executedelete async,database.executesql executeraw,fromsqlquery(1).svg",
+    "folder": "_ai-conspects/dbset fromsql fromsqlraw fromsqlinterpolated and LINQ executeupdateasync and executedelete async,database.executesql executeraw,fromsqlquery",
+    "viewBox": [
+      0.0,
+      0.0,
+      6662.8788601971755,
+      8893.526400089087
+    ],
+    "unique_embedded_images": 0,
+    "image_uses_on_canvas": 0,
+    "text_labels_parsed": 19,
+    "vector_paths": 18,
+    "vector_groups": 33,
+    "duplicate_image_uses_by_extracted_content": 0,
+    "source_kind": "vector/text SVG without embedded raster images"
+  },
+  {
+    "conspect_name": "idistributedcache",
+    "source_svg": "idistributedcache(1).svg",
+    "folder": "_ai-conspects/idistributedcache",
+    "viewBox": [
+      0.0,
+      0.0,
+      10950.207478847133,
+      9251.96291663423
+    ],
+    "unique_embedded_images": 0,
+    "image_uses_on_canvas": 0,
+    "text_labels_parsed": 23,
+    "vector_paths": 9,
+    "vector_groups": 24,
+    "duplicate_image_uses_by_extracted_content": 0,
+    "source_kind": "vector/text SVG without embedded raster images"
+  },
+  {
+    "conspect_name": "ef migrations, dotnet-counters",
+    "source_svg": "ef migrations, dotnet-counters(1).svg",
+    "folder": "_ai-conspects/ef migrations, dotnet-counters",
+    "viewBox": [
+      0.0,
+      0.0,
+      4372.689561616131,
+      10779.540939560244
+    ],
+    "unique_embedded_images": 0,
+    "image_uses_on_canvas": 0,
+    "text_labels_parsed": 27,
+    "vector_paths": 3,
+    "vector_groups": 23,
+    "duplicate_image_uses_by_extracted_content": 0,
+    "source_kind": "vector/text SVG without embedded raster images"
+  },
+  {
+    "conspect_name": "dbcontextpool, queryfilter",
+    "source_svg": "dbcontextpool, queryfilter(1).svg",
+    "folder": "_ai-conspects/dbcontextpool, queryfilter",
+    "viewBox": [
+      0.0,
+      0.0,
+      9569.77017370112,
+      6023.742472883551
+    ],
+    "unique_embedded_images": 0,
+    "image_uses_on_canvas": 0,
+    "text_labels_parsed": 38,
+    "vector_paths": 16,
+    "vector_groups": 35,
+    "duplicate_image_uses_by_extracted_content": 0,
+    "source_kind": "vector/text SVG without embedded raster images"
+  },
+  {
+    "conspect_name": "cancellation,async",
+    "source_svg": "cancellation,async(1).svg",
+    "folder": "_ai-conspects/cancellation,async",
+    "viewBox": [
+      0.0,
+      0.0,
+      11360.453148088394,
+      7616.208302216179
+    ],
+    "unique_embedded_images": 0,
+    "image_uses_on_canvas": 0,
+    "text_labels_parsed": 37,
+    "vector_paths": 12,
+    "vector_groups": 38,
+    "duplicate_image_uses_by_extracted_content": 0,
+    "source_kind": "vector/text SVG without embedded raster images"
+  },
+  {
+    "conspect_name": "proxy, server, vite dev server proxy",
+    "source_svg": "proxy, server, vite dev server proxy(1).svg",
+    "folder": "_ai-conspects/proxy, server, vite dev server proxy",
+    "viewBox": [
+      0.0,
+      0.0,
+      15239.563169070616,
+      5399.797673143187
+    ],
+    "unique_embedded_images": 0,
+    "image_uses_on_canvas": 0,
+    "text_labels_parsed": 25,
+    "vector_paths": 21,
+    "vector_groups": 48,
+    "duplicate_image_uses_by_extracted_content": 0,
+    "source_kind": "vector/text SVG without embedded raster images"
+  },
+  {
+    "conspect_name": "objectpool,arraypool,memorypool",
+    "source_svg": "objectpool,arraypool,memorypool(1).svg",
+    "folder": "_ai-conspects/objectpool,arraypool,memorypool",
+    "viewBox": [
+      0.0,
+      0.0,
+      9063.802832646135,
+      5151.632318672396
+    ],
+    "unique_embedded_images": 0,
+    "image_uses_on_canvas": 0,
+    "text_labels_parsed": 30,
+    "vector_paths": 3,
+    "vector_groups": 22,
+    "duplicate_image_uses_by_extracted_content": 0,
+    "source_kind": "vector/text SVG without embedded raster images"
+  },
+  {
+    "conspect_name": "authenticaiton ticket, properties, context.User (claimsprincipal)",
+    "source_svg": "authenticaiton ticket, properties, context.User (claimsprincipal)(1).svg",
+    "folder": "_ai-conspects/authenticaiton ticket, properties, context.User (claimsprincipal)",
+    "viewBox": [
+      0.0,
+      0.0,
+      9252.990897570853,
+      12167.300549722499
+    ],
+    "unique_embedded_images": 0,
+    "image_uses_on_canvas": 0,
+    "text_labels_parsed": 31,
+    "vector_paths": 9,
+    "vector_groups": 38,
+    "duplicate_image_uses_by_extracted_content": 0,
+    "source_kind": "vector/text SVG without embedded raster images"
+  }
+]

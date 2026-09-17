@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "middleware-writeasjson",
+    "title": "ASP.NET Core middleware / WriteAsJson / custom middleware response JSON",
+    "scope": "R01R02R03",
+    "image_uses": 34,
+    "text_labels": 34,
+    "remaining_unclosed_image_uses": 0,
+    "remaining_unclosed_text_labels": 0,
+    "stage": "complete-final-coverage-v001"
+  },
+  {
+    "slug": "linq-query-syntax",
+    "title": "C# LINQ query syntax / from-where-select / join / into",
+    "scope": "R01R02R03",
+    "image_uses": 36,
+    "text_labels": 36,
+    "remaining_unclosed_image_uses": 0,
+    "remaining_unclosed_text_labels": 0,
+    "stage": "complete-final-coverage-v001"
+  },
+  {
+    "slug": "alternate-key",
+    "title": "EF Core alternate key / principal key / relationships",
+    "scope": "R01R02R03",
+    "image_uses": 24,
+    "text_labels": 8,
+    "remaining_unclosed_image_uses": 0,
+    "remaining_unclosed_text_labels": 0,
+    "stage": "complete-final-coverage-v001"
+  }
+]

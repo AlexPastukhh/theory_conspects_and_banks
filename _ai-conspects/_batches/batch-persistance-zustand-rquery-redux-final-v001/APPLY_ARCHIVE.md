@@ -1,0 +1,7 @@
+# APPLY ARCHIVE
+
+Copy the complete single physical line into PowerShell.
+
+```powershell
+& { Set-Location "C:\Users\alexa\obs"; git checkout ai-processed-conspects-text; $zip = "C:\Users\alexa\Downloads\ai-conspects-persistance-zustand-rquery-redux-final-v001.zip"; $batch = "_ai-conspects\_batches\batch-persistance-zustand-rquery-redux-final-v001"; $target = "_ai-conspects\persistance, zustand,rquery,redux"; $OutputEncoding = [System.Text.UTF8Encoding]::new(); [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new(); git config core.longpaths true; Add-Type -AssemblyName System.IO.Compression.FileSystem; $root = "\\?\C:\Users\alexa\obs"; $archive = [System.IO.Compression.ZipFile]::OpenRead($zip); try { foreach ($entry in $archive.Entries) { $destination = $root + "\" + $entry.FullName.Replace("/","\"); if ([string]::IsNullOrEmpty($entry.Name)) { [System.IO.Directory]::CreateDirectory($destination) | Out-Null } else { [System.IO.Directory]::CreateDirectory([System.IO.Path]::GetDirectoryName($destination)) | Out-Null; $inputStream = $entry.Open(); try { $outputStream = [System.IO.File]::Open($destination,[System.IO.FileMode]::Create,[System.IO.FileAccess]::Write,[System.IO.FileShare]::None); try { $inputStream.CopyTo($outputStream) } finally { $outputStream.Dispose() } } finally { $inputStream.Dispose() } } } } finally { $archive.Dispose() }; git add -A -- $batch $target; git status --short -- $batch $target; git commit -m "Add persistence Zustand React Query and Redux semantic conspect"; git push origin ai-processed-conspects-text }
+```

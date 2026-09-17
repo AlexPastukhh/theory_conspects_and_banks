@@ -1,0 +1,93 @@
+{
+  "generated": "2026-06-27 UTC",
+  "bundle": "ten-conspects-final-coverage-v001",
+  "conspects_closed": 10,
+  "text_labels_total": 270,
+  "text_labels_covered": 270,
+  "vector_paths_reviewed": 124,
+  "embedded_images": 0,
+  "image_uses": 0,
+  "unresolved": 0,
+  "conspects": [
+    {
+      "conspect": "authenticaiton ticket, properties, context.User (claimsprincipal)",
+      "folder": "_ai-conspects/authenticaiton ticket, properties, context.User (claimsprincipal)",
+      "text_labels": 31,
+      "vector_paths": 9,
+      "covered_labels": 31,
+      "unresolved": 0
+    },
+    {
+      "conspect": "cancellation,async",
+      "folder": "_ai-conspects/cancellation,async",
+      "text_labels": 37,
+      "vector_paths": 12,
+      "covered_labels": 37,
+      "unresolved": 0
+    },
+    {
+      "conspect": "dbcontext interseptors savechanges , dbcommand",
+      "folder": "_ai-conspects/dbcontext interseptors savechanges , dbcommand",
+      "text_labels": 18,
+      "vector_paths": 21,
+      "covered_labels": 18,
+      "unresolved": 0
+    },
+    {
+      "conspect": "dbcontextpool, queryfilter",
+      "folder": "_ai-conspects/dbcontextpool, queryfilter",
+      "text_labels": 38,
+      "vector_paths": 16,
+      "covered_labels": 38,
+      "unresolved": 0
+    },
+    {
+      "conspect": "dbset fromsql fromsqlraw fromsqlinterpolated and LINQ executeupdateasync and executedelete async,database.executesql executeraw,fromsqlquery",
+      "folder": "_ai-conspects/dbset fromsql fromsqlraw fromsqlinterpolated and LINQ executeupdateasync and executedelete async,database.executesql executeraw,fromsqlquery",
+      "text_labels": 19,
+      "vector_paths": 18,
+      "covered_labels": 19,
+      "unresolved": 0
+    },
+    {
+      "conspect": "ef migrations, dotnet-counters",
+      "folder": "_ai-conspects/ef migrations, dotnet-counters",
+      "text_labels": 27,
+      "vector_paths": 3,
+      "covered_labels": 27,
+      "unresolved": 0
+    },
+    {
+      "conspect": "idistributedcache",
+      "folder": "_ai-conspects/idistributedcache",
+      "text_labels": 23,
+      "vector_paths": 9,
+      "covered_labels": 23,
+      "unresolved": 0
+    },
+    {
+      "conspect": "objectpool,arraypool,memorypool",
+      "folder": "_ai-conspects/objectpool,arraypool,memorypool",
+      "text_labels": 30,
+      "vector_paths": 3,
+      "covered_labels": 30,
+      "unresolved": 0
+    },
+    {
+      "conspect": "proxy, server, vite dev server proxy",
+      "folder": "_ai-conspects/proxy, server, vite dev server proxy",
+      "text_labels": 25,
+      "vector_paths": 21,
+      "covered_labels": 25,
+      "unresolved": 0
+    },
+    {
+      "conspect": "records",
+      "folder": "_ai-conspects/records",
+      "text_labels": 22,
+      "vector_paths": 12,
+      "covered_labels": 22,
+      "unresolved": 0
+    }
+  ]
+}

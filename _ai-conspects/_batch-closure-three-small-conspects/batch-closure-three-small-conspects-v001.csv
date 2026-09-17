@@ -1,0 +1,4 @@
+conspect_slug,conspect_title,total_sources,processed_sources,pending_candidates,bad_placeholder_signals,final_verdict
+raw-connections-dbconnection-sqlconnection-commands,Raw Connections DbConnection SqlConnection Commands,36,36,0,0,Raw Connections DbConnection SqlConnection Commands S-001..S-036 is closed
+lazy-lazyt-initialization,Lazy LazyT Initialization,38,38,0,0,Lazy LazyT Initialization S-001..S-038 is closed
+creating-base32-secret,Creating Base32 Secret,34,34,0,0,Creating Base32 Secret S-001..S-034 is closed

@@ -1,0 +1,9 @@
+{
+  "batch": "batch-paging-semantic-conspect-final-v001",
+  "target": "_ai-conspects/PAGING",
+  "unique_screenshots": 24,
+  "image_uses": 24,
+  "text_labels": 43,
+  "duplicate_extra_placements": 0,
+  "remaining_unclosed": 0
+}

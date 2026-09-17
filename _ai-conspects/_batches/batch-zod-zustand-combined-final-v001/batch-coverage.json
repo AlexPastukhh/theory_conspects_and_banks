@@ -1,0 +1,26 @@
+{
+  "batch": "batch-zod-zustand-combined-final-v001",
+  "unique_screenshots": 164,
+  "image_uses": 164,
+  "text_labels": 47,
+  "duplicate_extra_placements": 0,
+  "remaining_unclosed": 0,
+  "targets": [
+    {
+      "target": "_ai-conspects/zod",
+      "unique_screenshots": 84,
+      "image_uses": 84,
+      "text_labels": 20,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/zustand",
+      "unique_screenshots": 80,
+      "image_uses": 80,
+      "text_labels": 27,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    }
+  ]
+}

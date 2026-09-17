@@ -1,0 +1,41 @@
+{
+  "generated": "2026-06-13 10:27:51 UTC",
+  "archive_type": "three small conspects Stage0 boundary review batch 002",
+  "processed_by_this_archive": 0,
+  "conspects": {
+    "scopes-and-idisposable": {
+      "title": "Scopes And IDisposable",
+      "source_file": "scopes and idisposable.svg",
+      "source_count": 22,
+      "groups": {
+        "SCOPEIDISP-R01-disposable-lifetime-using-dispose": 8,
+        "SCOPEIDISP-R02-di-scopes-services-scopefactory": 7,
+        "SCOPEIDISP-R03-background-tasks-leaks-pitfalls": 7
+      },
+      "next": "SCOPEIDISP-stage1 transcript"
+    },
+    "exception-handlers": {
+      "title": "Exception Handlers",
+      "source_file": "EXCEPTIONHANDLERS.svg",
+      "source_count": 24,
+      "groups": {
+        "EXHAND-R01-global-exception-middleware-useexceptionhandler": 8,
+        "EXHAND-R02-iexceptionhandler-problemdetails-status-mapping": 8,
+        "EXHAND-R03-local-try-catch-domain-validation-pitfalls": 8
+      },
+      "next": "EXHAND-stage1 transcript"
+    },
+    "httpcontent-custom-readasstream-buffering-compression": {
+      "title": "HttpContent Custom ReadAsStream Buffering Compression",
+      "source_file": "httpcontent,custom one, readasstream buffering, compression directly to network.svg",
+      "source_count": 26,
+      "groups": {
+        "HTTPCONTENT-R01-httpcontent-basics-readasstream-buffering": 9,
+        "HTTPCONTENT-R02-custom-httpcontent-serialize-stream": 9,
+        "HTTPCONTENT-R03-compression-direct-to-network-disposal": 8
+      },
+      "next": "HTTPCONTENT-stage1 transcript"
+    }
+  },
+  "next": "After apply/commit, process Stage1 transcript for all three small conspects in one batch."
+}

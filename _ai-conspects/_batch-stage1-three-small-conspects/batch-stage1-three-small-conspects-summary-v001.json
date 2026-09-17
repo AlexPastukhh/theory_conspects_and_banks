@@ -1,0 +1,73 @@
+{
+  "generated": "2026-06-13 08:38:25 UTC",
+  "archive_type": "three small conspects Stage1 transcript batch",
+  "total_processed": 108,
+  "total_pending_after": 0,
+  "transcript_level": "source-level semantic transcript; exact code punctuation remains in preserved Stage0 PNGs",
+  "regions": [
+    {
+      "conspect_slug": "raw-connections-dbconnection-sqlconnection-commands",
+      "conspect_title": "Raw Connections DbConnection SqlConnection Commands",
+      "region": "RAWCONN-R01",
+      "file": "regions/RAWCONN-R01-dbconnection-sqlconnection-open-close.md",
+      "processed_count": 12,
+      "status": "processed-in-rawconn-r01-v001",
+      "meaning": "ADO.NET connection basics: DbConnection/SqlConnection, connection string, Open/OpenAsync, Close/Dispose, using blocks, and connection lifetime."
+    },
+    {
+      "conspect_slug": "raw-connections-dbconnection-sqlconnection-commands",
+      "conspect_title": "Raw Connections DbConnection SqlConnection Commands",
+      "region": "RAWCONN-R02",
+      "file": "regions/RAWCONN-R02-dbcommand-sqlcommand-parameters-execute.md",
+      "processed_count": 12,
+      "status": "processed-in-rawconn-r02-v001",
+      "meaning": "ADO.NET command basics: DbCommand/SqlCommand, CommandText, parameters, ExecuteReader/ExecuteScalar/ExecuteNonQuery, and avoiding SQL injection."
+    },
+    {
+      "conspect_slug": "raw-connections-dbconnection-sqlconnection-commands",
+      "conspect_title": "Raw Connections DbConnection SqlConnection Commands",
+      "region": "RAWCONN-R03",
+      "file": "regions/RAWCONN-R03-transactions-reader-errors-provider-abstraction.md",
+      "processed_count": 12,
+      "status": "processed-in-rawconn-r03-v001",
+      "meaning": "Raw connection edge cases: transactions, data readers, provider abstraction, exceptions, async/cancellation, and when raw commands are appropriate vs EF/Core ORM."
+    },
+    {
+      "conspect_slug": "lazy-lazyt-initialization",
+      "conspect_title": "Lazy LazyT Initialization",
+      "region": "LAZY-R01",
+      "file": "regions/LAZY-R01-lazy-basics-value-factory.md",
+      "processed_count": 23,
+      "status": "processed-in-lazy-r01-v001",
+      "meaning": "Lazy<T> basics: deferred initialization, value factory, Value property, exception caching, and when lazy allocation is useful."
+    },
+    {
+      "conspect_slug": "lazy-lazyt-initialization",
+      "conspect_title": "Lazy LazyT Initialization",
+      "region": "LAZY-R02",
+      "file": "regions/LAZY-R02-thread-safety-modes-di.md",
+      "processed_count": 15,
+      "status": "processed-in-lazy-r02-v001",
+      "meaning": "Lazy<T> thread-safety behavior: ExecutionAndPublication, PublicationOnly, None, locking, concurrency, singleton/DI scenarios, and pitfalls."
+    },
+    {
+      "conspect_slug": "creating-base32-secret",
+      "conspect_title": "Creating Base32 Secret",
+      "region": "B32SEC-R01",
+      "file": "regions/B32SEC-R01-random-secret-bytes-base32-encoding.md",
+      "processed_count": 17,
+      "status": "processed-in-b32sec-r01-v001",
+      "meaning": "Creating a Base32 secret: cryptographically random bytes, Base32 encoding alphabet, no padding/normalization, storage, and display/copy rules."
+    },
+    {
+      "conspect_slug": "creating-base32-secret",
+      "conspect_title": "Creating Base32 Secret",
+      "region": "B32SEC-R02",
+      "file": "regions/B32SEC-R02-totp-authenticator-qr-provisioning.md",
+      "processed_count": 17,
+      "status": "processed-in-b32sec-r02-v001",
+      "meaning": "TOTP/authenticator provisioning: otpauth URI, issuer/account label, QR code, authenticator app setup, and verifying generated codes."
+    }
+  ],
+  "next": "closure audit batch for all three small conspects"
+}

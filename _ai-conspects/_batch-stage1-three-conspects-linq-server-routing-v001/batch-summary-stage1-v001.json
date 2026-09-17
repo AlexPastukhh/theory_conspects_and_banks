@@ -1,0 +1,48 @@
+{
+  "generated": "2026-06-21 14:48:44 UTC",
+  "archive_type": "three-conspect Stage1 boundary-review batch",
+  "items": [
+    {
+      "slug": "linq-join-groupjoin-groupby-selectmany-selectmany-second-callback",
+      "title": "C# LINQ join / GroupJoin / GroupBy / SelectMany",
+      "image_uses": 29,
+      "text_labels": 10,
+      "regions": 3,
+      "assigned_image_uses": 29,
+      "missing_image_uses": 0,
+      "duplicate_assignments": 0,
+      "processed_image_uses": 0,
+      "next": "NEXT01: LJG01 = 14 image uses"
+    },
+    {
+      "slug": "server-resources-multipleinstances-microservices",
+      "title": "Server resources / multiple instances / microservices",
+      "image_uses": 30,
+      "text_labels": 20,
+      "regions": 3,
+      "assigned_image_uses": 30,
+      "missing_image_uses": 0,
+      "duplicate_assignments": 0,
+      "processed_image_uses": 0,
+      "next": "NEXT01: SRM01 = 12 image uses"
+    },
+    {
+      "slug": "routing-route-params-tech-info-custom-constraints-router-matching",
+      "title": "ASP.NET Core routing / route parameters / custom constraints / matching",
+      "image_uses": 18,
+      "text_labels": 23,
+      "regions": 3,
+      "assigned_image_uses": 18,
+      "missing_image_uses": 0,
+      "duplicate_assignments": 0,
+      "processed_image_uses": 0,
+      "next": "NEXT01: RTR01 + RTR02 = 5 image uses"
+    }
+  ],
+  "total_image_uses": 77,
+  "total_assigned": 77,
+  "total_missing": 0,
+  "total_duplicate_assignments": 0,
+  "total_processed": 0,
+  "next": "NEXT01 transcript batch for all three conspects"
+}

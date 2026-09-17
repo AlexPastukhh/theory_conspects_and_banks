@@ -1,0 +1,50 @@
+{
+  "batch": "batch-js-sorting-ctor-stringcomparer-animation-intersection-observer-combined-final-v001",
+  "unique_screenshots": 70,
+  "image_uses": 70,
+  "text_labels": 16,
+  "duplicate_extra_placements": 0,
+  "remaining_unclosed": 0,
+  "targets": [
+    {
+      "target": "_ai-conspects/js sorting",
+      "unique_screenshots": 13,
+      "image_uses": 13,
+      "text_labels": 6,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/ctor type and instance type",
+      "unique_screenshots": 15,
+      "image_uses": 15,
+      "text_labels": 0,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/STRINGCOMPARER,compare strings case insens",
+      "unique_screenshots": 13,
+      "image_uses": 13,
+      "text_labels": 2,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/animation keyframes",
+      "unique_screenshots": 14,
+      "image_uses": 14,
+      "text_labels": 0,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/interseption observer",
+      "unique_screenshots": 15,
+      "image_uses": 15,
+      "text_labels": 8,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "generated": "2026-06-13 08:48:07 UTC",
+  "archive_type": "three small conspects closure audit batch",
+  "total_sources": 108,
+  "total_processed": 108,
+  "total_pending": 0,
+  "total_bad_placeholder_signals": 0,
+  "all_closed": true,
+  "verdicts": [
+    "Raw Connections DbConnection SqlConnection Commands S-001..S-036 is closed",
+    "Lazy LazyT Initialization S-001..S-038 is closed",
+    "Creating Base32 Secret S-001..S-034 is closed"
+  ],
+  "rows": [
+    {
+      "conspect_slug": "raw-connections-dbconnection-sqlconnection-commands",
+      "conspect_title": "Raw Connections DbConnection SqlConnection Commands",
+      "total_sources": 36,
+      "processed_sources": 36,
+      "pending_candidates": 0,
+      "bad_placeholder_signals": 0,
+      "final_verdict": "Raw Connections DbConnection SqlConnection Commands S-001..S-036 is closed"
+    },
+    {
+      "conspect_slug": "lazy-lazyt-initialization",
+      "conspect_title": "Lazy LazyT Initialization",
+      "total_sources": 38,
+      "processed_sources": 38,
+      "pending_candidates": 0,
+      "bad_placeholder_signals": 0,
+      "final_verdict": "Lazy LazyT Initialization S-001..S-038 is closed"
+    },
+    {
+      "conspect_slug": "creating-base32-secret",
+      "conspect_title": "Creating Base32 Secret",
+      "total_sources": 34,
+      "processed_sources": 34,
+      "pending_candidates": 0,
+      "bad_placeholder_signals": 0,
+      "final_verdict": "Creating Base32 Secret S-001..S-034 is closed"
+    }
+  ]
+}

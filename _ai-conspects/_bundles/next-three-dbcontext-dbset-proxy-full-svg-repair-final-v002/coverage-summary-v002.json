@@ -1,0 +1,162 @@
+{
+  "conspects": [
+    {
+      "conspect": "dbcontext interseptors savechanges , dbcommand",
+      "embedded_assets": 59,
+      "total_image_uses": 59,
+      "processed_image_uses": 59,
+      "previously_processed_image_uses": 0,
+      "restored_image_uses": 59,
+      "restored_unique_assets": 59,
+      "duplicate_placements": 0,
+      "duplicate_asset_groups": 0,
+      "svg_text_nodes": 18,
+      "processed_svg_text_nodes": 18,
+      "vector_paths": 21,
+      "unassigned_images": 0,
+      "multiply_assigned_images": 0,
+      "unassigned_text_nodes": 0,
+      "multiply_assigned_text_nodes": 0,
+      "missing": 0,
+      "unreviewed": 0,
+      "exact_text_matches": 18,
+      "whitespace_normalized_matches": 18,
+      "independent_repeat_audit": "PASS",
+      "regions": [
+        {
+          "region_id": "R01",
+          "title": "SaveChanges lifecycle, event data, and successful-save auditing"
+        },
+        {
+          "region_id": "R02",
+          "title": "Save suppression, alternate results, and side-channel outcome reporting"
+        },
+        {
+          "region_id": "R03",
+          "title": "Save failure, optimistic-concurrency, and cancellation callbacks"
+        },
+        {
+          "region_id": "R04",
+          "title": "DbCommand categories, callbacks, and result shapes"
+        },
+        {
+          "region_id": "R05",
+          "title": "DbCommand event data, logging, SQL mutation, suppression, and registration"
+        }
+      ]
+    },
+    {
+      "conspect": "dbset fromsql fromsqlraw fromsqlinterpolated and LINQ executeupdateasync and executedelete async,database.executesql executeraw,fromsqlquery",
+      "embedded_assets": 51,
+      "total_image_uses": 52,
+      "processed_image_uses": 52,
+      "previously_processed_image_uses": 0,
+      "restored_image_uses": 52,
+      "restored_unique_assets": 51,
+      "duplicate_placements": 1,
+      "duplicate_asset_groups": 1,
+      "svg_text_nodes": 19,
+      "processed_svg_text_nodes": 19,
+      "vector_paths": 18,
+      "unassigned_images": 0,
+      "multiply_assigned_images": 0,
+      "unassigned_text_nodes": 0,
+      "multiply_assigned_text_nodes": 0,
+      "missing": 0,
+      "unreviewed": 0,
+      "exact_text_matches": 18,
+      "whitespace_normalized_matches": 19,
+      "independent_repeat_audit": "PASS",
+      "regions": [
+        {
+          "region_id": "R01",
+          "title": "API families, immediate execution, and transaction boundaries"
+        },
+        {
+          "region_id": "R02",
+          "title": "FromSql entity queries, tracking, and parameterized values"
+        },
+        {
+          "region_id": "R03",
+          "title": "Dynamic SQL structure and safe raw construction"
+        },
+        {
+          "region_id": "R04",
+          "title": "Database.SqlQuery for scalar, DTO, and non-entity results"
+        },
+        {
+          "region_id": "R05",
+          "title": "ExecuteUpdateAsync and ExecuteDeleteAsync set-based DML"
+        }
+      ]
+    },
+    {
+      "conspect": "proxy, server, vite dev server proxy",
+      "embedded_assets": 54,
+      "total_image_uses": 54,
+      "processed_image_uses": 54,
+      "previously_processed_image_uses": 0,
+      "restored_image_uses": 54,
+      "restored_unique_assets": 54,
+      "duplicate_placements": 0,
+      "duplicate_asset_groups": 0,
+      "svg_text_nodes": 25,
+      "processed_svg_text_nodes": 25,
+      "vector_paths": 21,
+      "unassigned_images": 0,
+      "multiply_assigned_images": 0,
+      "unassigned_text_nodes": 0,
+      "multiply_assigned_text_nodes": 0,
+      "missing": 0,
+      "unreviewed": 0,
+      "exact_text_matches": 25,
+      "whitespace_normalized_matches": 25,
+      "independent_repeat_audit": "PASS",
+      "regions": [
+        {
+          "region_id": "R01",
+          "title": "Server/client roles, listening endpoints, and request flow"
+        },
+        {
+          "region_id": "R02",
+          "title": "Forward proxies and HttpClient outbound proxy configuration"
+        },
+        {
+          "region_id": "R03",
+          "title": "Reverse-proxy architecture, YARP, routing, and infrastructure management"
+        },
+        {
+          "region_id": "R04",
+          "title": "TLS termination, load balancing, backend isolation, and edge offload"
+        },
+        {
+          "region_id": "R05",
+          "title": "Vite development-server proxy, SpaProxyServerUrl, and CORS"
+        },
+        {
+          "region_id": "R06",
+          "title": "Forwarded headers, trusted proxies, and preserving original request data"
+        },
+        {
+          "region_id": "X01",
+          "title": "Punctuation-only navigation label"
+        }
+      ]
+    }
+  ],
+  "combined": {
+    "conspects": 3,
+    "embedded_assets": 164,
+    "total_image_uses": 165,
+    "processed_image_uses": 165,
+    "restored_image_uses": 165,
+    "duplicate_placements": 1,
+    "svg_text_nodes": 62,
+    "vector_paths": 60,
+    "unassigned_images": 0,
+    "multiply_assigned_images": 0,
+    "unassigned_text_nodes": 0,
+    "missing": 0,
+    "unreviewed": 0
+  }
+}

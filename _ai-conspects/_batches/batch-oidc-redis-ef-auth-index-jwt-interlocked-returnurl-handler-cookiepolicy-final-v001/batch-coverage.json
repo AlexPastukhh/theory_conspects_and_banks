@@ -1,0 +1,62 @@
+[
+  {
+    "name": "OIDC,OAUTH, IDENTITY SERVER,BFF,authtoken, authproperties",
+    "unique_images": 0,
+    "image_uses": 0,
+    "text_elements": 227
+  },
+  {
+    "name": "redis, idatabase,iserver",
+    "unique_images": 1,
+    "image_uses": 1,
+    "text_elements": 20
+  },
+  {
+    "name": "onmodelcreating",
+    "unique_images": 0,
+    "image_uses": 0,
+    "text_elements": 153
+  },
+  {
+    "name": "cookie auth, antiforgery",
+    "unique_images": 0,
+    "image_uses": 0,
+    "text_elements": 124
+  },
+  {
+    "name": "indexes, onmodel indexes",
+    "unique_images": 0,
+    "image_uses": 0,
+    "text_elements": 80
+  },
+  {
+    "name": "jwt auth",
+    "unique_images": 0,
+    "image_uses": 0,
+    "text_elements": 112
+  },
+  {
+    "name": "interlocked,interlocked.read",
+    "unique_images": 1,
+    "image_uses": 1,
+    "text_elements": 21
+  },
+  {
+    "name": "return url implementation razor",
+    "unique_images": 3,
+    "image_uses": 3,
+    "text_elements": 0
+  },
+  {
+    "name": "primary httphandler optoins, socket",
+    "unique_images": 2,
+    "image_uses": 2,
+    "text_elements": 47
+  },
+  {
+    "name": "usecookiepolicy",
+    "unique_images": 2,
+    "image_uses": 2,
+    "text_elements": 42
+  }
+]

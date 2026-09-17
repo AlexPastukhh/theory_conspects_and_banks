@@ -1,0 +1,46 @@
+{
+  "generated_utc": "2026-06-28 06:00:00 UTC",
+  "branch": "ai-processed-conspects-text",
+  "repair_count": 3,
+  "files": [
+    {
+      "conspect": "STRING  TRIM",
+      "mode": "source_svg_repair_only",
+      "archive_path": "_ai-conspects/STRING  TRIM/source/STRING  TRIM.svg",
+      "sha256": "258d763f243ce32c03f5010e9311b4a01f655e00cb30b414eb312ffdaeca9525",
+      "bytes": 79967,
+      "viewBox": "0 0 1035.1064558610665 653.1128671327031",
+      "text_elements": 0,
+      "unique_embedded_images": 2,
+      "image_uses": 2,
+      "transcripts_modified": false,
+      "coverage_modified": false
+    },
+    {
+      "conspect": "string join",
+      "mode": "source_svg_repair_only",
+      "archive_path": "_ai-conspects/string join/source/string join.svg",
+      "sha256": "563f7c89d6166fb93c509ca64ecf6974c8ffce9fb8b7944d69e6bcc9c3c3a195",
+      "bytes": 187132,
+      "viewBox": "0 0 957.6313589094997 889.4340108235665",
+      "text_elements": 0,
+      "unique_embedded_images": 2,
+      "image_uses": 2,
+      "transcripts_modified": false,
+      "coverage_modified": false
+    },
+    {
+      "conspect": "useref, when need to have ref from obj created in useeffect + when need to access someting inside effect without incl into dep array",
+      "mode": "source_svg_repair_only",
+      "archive_path": "_ai-conspects/useref, when need to have ref from obj created in useeffect + when need to access someting inside effect without incl into dep array/source/useref, when need to have ref from obj created in useeffect + when need to access someting inside effect without incl into dep array.svg",
+      "sha256": "bc7e9e9c6c5a896b01a0f0de0f540e167eddb0bf8b931390d34c79134189da57",
+      "bytes": 187104,
+      "viewBox": "0 0 1026.4241094424542 1875.4565294553613",
+      "text_elements": 5,
+      "unique_embedded_images": 4,
+      "image_uses": 4,
+      "transcripts_modified": false,
+      "coverage_modified": false
+    }
+  ]
+}

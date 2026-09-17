@@ -1,0 +1,83 @@
+{
+  "generated": "2026-06-20 08:40:16 UTC",
+  "archive_type": "three-conspect Stage0 source-check batch",
+  "repo_precheck": "No matching started conspects were found under the checked plausible slugs.",
+  "items": [
+    {
+      "slug": "linq-join-groupjoin-groupby-selectmany-selectmany-second-callback",
+      "title": "C# LINQ join / GroupJoin / GroupBy / SelectMany",
+      "source_file": "linq join groupjoin groupby selectmany,selectmany second callback.svg",
+      "viewBox": "0 0 7155.245278600958 6731.465181355952",
+      "image_definitions": 29,
+      "image_uses": 29,
+      "text_labels": 10,
+      "duplicate_groups": 0,
+      "candidate_regions": [
+        {
+          "region": "LJG01",
+          "title": "Join and GroupJoin semantics"
+        },
+        {
+          "region": "LJG02",
+          "title": "GroupBy grouping and result shape"
+        },
+        {
+          "region": "LJG03",
+          "title": "SelectMany flattening and result-selector callback"
+        }
+      ],
+      "next": "Stage1 boundary review"
+    },
+    {
+      "slug": "server-resources-multipleinstances-microservices",
+      "title": "Server resources / multiple instances / microservices",
+      "source_file": "server resources,multipleinstances,microservices.svg",
+      "viewBox": "0 0 4303.754746784847 8421.85463322718",
+      "image_definitions": 30,
+      "image_uses": 30,
+      "text_labels": 20,
+      "duplicate_groups": 0,
+      "candidate_regions": [
+        {
+          "region": "SRM01",
+          "title": "Finite server resources and request-processing limits"
+        },
+        {
+          "region": "SRM02",
+          "title": "Scaling out with multiple instances"
+        },
+        {
+          "region": "SRM03",
+          "title": "Microservices versus simply adding machines"
+        }
+      ],
+      "next": "Stage1 boundary review"
+    },
+    {
+      "slug": "routing-route-params-tech-info-custom-constraints-router-matching",
+      "title": "ASP.NET Core routing / route parameters / custom constraints / matching",
+      "source_file": "routing,route params tech info, custom constraints,router matching.svg",
+      "viewBox": "0 0 2079.1899838561826 9284.760974871868",
+      "image_definitions": 18,
+      "image_uses": 18,
+      "text_labels": 23,
+      "duplicate_groups": 0,
+      "candidate_regions": [
+        {
+          "region": "RTR01",
+          "title": "Routing matching, precedence and endpoint order"
+        },
+        {
+          "region": "RTR02",
+          "title": "Route parameters and constraint behavior"
+        },
+        {
+          "region": "RTR03",
+          "title": "Custom IRouteConstraint implementation and registration"
+        }
+      ],
+      "next": "Stage1 boundary review"
+    }
+  ],
+  "next": "Stage1 boundary review for all three conspects in one combined archive."
+}

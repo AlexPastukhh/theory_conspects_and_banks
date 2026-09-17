@@ -1,0 +1,46 @@
+{
+  "batch": "batch-idistributedcache-auth-events-transaction-isolation-combined-recovery-final-v001",
+  "conspects": [
+    {
+      "conspect": "idistributedcache",
+      "target": "_ai-conspects/idistributedcache",
+      "previous_unique_images": 0,
+      "corrected_unique_images": 70,
+      "previous_image_uses": 0,
+      "corrected_image_uses": 72,
+      "recovered_image_uses": 72,
+      "text_labels": 23,
+      "duplicate_extra_placements": 2,
+      "remaining_unclosed": 0
+    },
+    {
+      "conspect": "AUTH EVENTS",
+      "target": "_ai-conspects/AUTH EVENTS",
+      "previous_unique_images": 6,
+      "corrected_unique_images": 93,
+      "previous_image_uses": 6,
+      "corrected_image_uses": 94,
+      "recovered_image_uses": 88,
+      "text_labels": 38,
+      "duplicate_extra_placements": 1,
+      "remaining_unclosed": 0
+    },
+    {
+      "conspect": "transaction, isolation",
+      "target": "_ai-conspects/transaction, isolation",
+      "previous_unique_images": 0,
+      "corrected_unique_images": 71,
+      "previous_image_uses": 0,
+      "corrected_image_uses": 71,
+      "recovered_image_uses": 71,
+      "text_labels": 71,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    }
+  ],
+  "total_corrected_unique_images": 234,
+  "total_corrected_image_uses": 237,
+  "total_recovered_image_uses": 231,
+  "total_text_labels": 132,
+  "remaining_unclosed": 0
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "conspect": "websockets",
+    "image_uses": 21,
+    "text_labels": 53,
+    "completed_regions": "R01,R02,R03",
+    "remaining_unclosed": 0
+  },
+  {
+    "conspect": "imemorycache",
+    "image_uses": 20,
+    "text_labels": 7,
+    "completed_regions": "R01,R02,R03",
+    "remaining_unclosed": 0
+  },
+  {
+    "conspect": "jsonconverter",
+    "image_uses": 19,
+    "text_labels": 3,
+    "completed_regions": "R01,R02",
+    "remaining_unclosed": 0
+  }
+]

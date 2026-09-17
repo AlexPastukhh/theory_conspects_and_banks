@@ -1,0 +1,56 @@
+{
+  "bundle": "cookies vs tokens sheet jswt in cookies + viewcomponent + url save base 64 for db, hex string - stage0-v001",
+  "generated": "2026-06-22 UTC",
+  "conspects": [
+    "cookies vs tokens sheet jswt in cookies",
+    "viewcomponent",
+    "url save base 64 for db, hex string"
+  ],
+  "total_image_uses": 29,
+  "total_text_labels": 5,
+  "total_duplicate_placements": 0,
+  "items": [
+    {
+      "conspect_name": "cookies vs tokens sheet jswt in cookies",
+      "source_svg": "cookies vs tokens sheet jswt in cookies.svg",
+      "viewBox": [
+        0.0,
+        0.0,
+        2286.8519422743057,
+        3470.582112630189
+      ],
+      "unique_embedded_images": 10,
+      "image_uses_on_canvas": 10,
+      "text_labels_parsed": 2,
+      "duplicate_image_uses_by_extracted_content": 0
+    },
+    {
+      "conspect_name": "viewcomponent",
+      "source_svg": "viewcomponent.svg",
+      "viewBox": [
+        0.0,
+        0.0,
+        1866.928689862686,
+        3286.4638411351916
+      ],
+      "unique_embedded_images": 11,
+      "image_uses_on_canvas": 11,
+      "text_labels_parsed": 0,
+      "duplicate_image_uses_by_extracted_content": 0
+    },
+    {
+      "conspect_name": "url save base 64 for db, hex string",
+      "source_svg": "url save base 64 for db, hex string.svg",
+      "viewBox": [
+        0.0,
+        0.0,
+        2658.5717111382933,
+        2556.1211529748425
+      ],
+      "unique_embedded_images": 8,
+      "image_uses_on_canvas": 8,
+      "text_labels_parsed": 3,
+      "duplicate_image_uses_by_extracted_content": 0
+    }
+  ]
+}

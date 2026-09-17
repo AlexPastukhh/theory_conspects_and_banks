@@ -1,0 +1,5 @@
+# APPLY ARCHIVE
+
+```powershell
+& { Set-Location "C:\Users\alexa\obs"; git checkout ai-processed-conspects-text; $zip = "C:\Users\alexa\Downloads\ai-conspects-yield-transition-css-openjson-index-sign-final-v001.zip"; $batch = "_ai-conspects\_batches\batch-yield-transition-css-openjson-index-sign-final-v001"; $target1 = "_ai-conspects\js yield, asyncenumerable, finally of generator"; $target2 = "_ai-conspects\usetransition,cancelling queries of rquery,cant cancel suspence query, batching transitions"; $target3 = "_ai-conspects\header max width, sticky,fixed"; $target4 = "_ai-conspects\openjson"; $target5 = "_ai-conspects\index sign, keyof, type assertions, records to solve index sign issues"; $OutputEncoding = [System.Text.UTF8Encoding]::new(); [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new(); Expand-Archive -Path $zip -DestinationPath . -Force; git add -A -- $batch $target1 $target2 $target3 $target4 $target5; git status --short -- $batch $target1 $target2 $target3 $target4 $target5; git commit -m "Add generators transitions CSS OPENJSON and TypeScript indexing conspects"; git push origin ai-processed-conspects-text }
+```

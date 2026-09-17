@@ -1,0 +1,29 @@
+{
+  "bundle": "cookies vs tokens sheet jswt in cookies + viewcomponent + url save base 64 for db, hex string - final-coverage-v001",
+  "generated": "2026-06-22 UTC",
+  "conspects": [
+    {
+      "name": "cookies vs tokens sheet jswt in cookies",
+      "images": 10,
+      "labels": 2,
+      "remaining": 0
+    },
+    {
+      "name": "viewcomponent",
+      "images": 11,
+      "labels": 0,
+      "remaining": 0
+    },
+    {
+      "name": "url save base 64 for db, hex string",
+      "images": 8,
+      "labels": 3,
+      "remaining": 0
+    }
+  ],
+  "totals": {
+    "images": 29,
+    "labels": 5,
+    "remaining": 0
+  }
+}

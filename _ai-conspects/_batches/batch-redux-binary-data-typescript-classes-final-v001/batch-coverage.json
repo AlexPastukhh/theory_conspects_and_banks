@@ -1,0 +1,39 @@
+{
+  "batch": "batch-redux-binary-data-typescript-classes-final-v001",
+  "conspects": [
+    {
+      "target": "_ai-conspects/redux rtk",
+      "source": "redux rtk.svg",
+      "unique_screenshots": 50,
+      "image_uses": 50,
+      "text_labels": 72,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/uintarray,blob, arraybuffer,dataview,endianness",
+      "source": "uintarray,blob, arraybuffer,dataview,endianness.svg",
+      "unique_screenshots": 52,
+      "image_uses": 53,
+      "text_labels": 8,
+      "duplicate_extra_placements": 1,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/typescript ctor shortcut, inheritance, statics, getters,setters, prop! - definite assertion",
+      "source": "typescript ctor shortcut, inheritance, statics, getters,setters, prop! - definite assertion.svg",
+      "unique_screenshots": 14,
+      "image_uses": 14,
+      "text_labels": 10,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    }
+  ],
+  "totals": {
+    "unique_screenshots": 116,
+    "image_uses": 117,
+    "text_labels": 90,
+    "duplicate_extra_placements": 1,
+    "remaining_unclosed": 0
+  }
+}

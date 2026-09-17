@@ -1,0 +1,4 @@
+conspect_slug,conspect_title,total_sources,processed_sources,pending_candidates,bad_placeholder_signals,final_verdict
+scopes-and-idisposable,Scopes And IDisposable,22,22,0,0,Scopes And IDisposable S-001..S-022 is closed
+exception-handlers,Exception Handlers,24,24,0,0,Exception Handlers S-001..S-024 is closed
+httpcontent-custom-readasstream-buffering-compression,HttpContent Custom ReadAsStream Buffering Compression,26,26,0,0,HttpContent Custom ReadAsStream Buffering Compression S-001..S-026 is closed

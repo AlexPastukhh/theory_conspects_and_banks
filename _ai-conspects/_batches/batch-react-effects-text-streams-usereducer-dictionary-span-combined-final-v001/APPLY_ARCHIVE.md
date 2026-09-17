@@ -1,0 +1,5 @@
+# APPLY ARCHIVE
+
+```powershell
+& { Set-Location "C:\Users\alexa\obs"; git checkout ai-processed-conspects-text; $zip = "C:\Users\alexa\Downloads\ai-conspects-react-effects-text-streams-usereducer-dictionary-span-combined-final-v001.zip"; $batch = "_ai-conspects\_batches\batch-react-effects-text-streams-usereducer-dictionary-span-combined-final-v001"; $target1 = "_ai-conspects\react render + useEffect"; $target2 = "_ai-conspects\textdecoder, encoder, streaming and processing chunks, textdecoderstream of transformstream"; $target3 = "_ai-conspects\useReducer"; $target4 = "_ai-conspects\sheet dict"; $target5 = "_ai-conspects\struct span"; $OutputEncoding = [System.Text.UTF8Encoding]::new(); [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new(); Expand-Archive -Path $zip -DestinationPath . -Force; git add -A -- $batch $target1 $target2 $target3 $target4 $target5; git status --short -- $batch $target1 $target2 $target3 $target4 $target5; git commit -m "Add React streams reducer dictionary and Span semantic conspects"; git push origin ai-processed-conspects-text }
+```

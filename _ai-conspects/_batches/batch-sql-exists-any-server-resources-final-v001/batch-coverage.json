@@ -1,0 +1,30 @@
+{
+  "batch": "batch-sql-exists-any-server-resources-final-v001",
+  "targets": [
+    {
+      "target": "_ai-conspects/in any exist, some",
+      "unique_screenshots": 2,
+      "image_uses": 2,
+      "native_svg_labels": 11,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0,
+      "build_status": "completion-of-existing-stage0"
+    },
+    {
+      "target": "_ai-conspects/server resources,multipleinstances,microservices",
+      "unique_screenshots": 30,
+      "image_uses": 30,
+      "native_svg_labels": 20,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0,
+      "build_status": "new-complete-conspect"
+    }
+  ],
+  "totals": {
+    "unique_screenshots": 32,
+    "image_uses": 32,
+    "native_svg_labels": 31,
+    "duplicate_extra_placements": 0,
+    "remaining_unclosed": 0
+  }
+}

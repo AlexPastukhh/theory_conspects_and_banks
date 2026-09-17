@@ -1,0 +1,39 @@
+{
+  "generated": "2026-06-13 08:19:37 UTC",
+  "archive_type": "three small conspects Stage0 boundary review batch",
+  "processed_by_this_archive": 0,
+  "conspects": {
+    "raw-connections-dbconnection-sqlconnection-commands": {
+      "title": "Raw Connections DbConnection SqlConnection Commands",
+      "source_file": "rawconnections,dbconnection,sqlconnection,commands.svg",
+      "source_count": 36,
+      "groups": {
+        "RAWCONN-R01-dbconnection-sqlconnection-open-close": 12,
+        "RAWCONN-R02-dbcommand-sqlcommand-parameters-execute": 12,
+        "RAWCONN-R03-transactions-reader-errors-provider-abstraction": 12
+      },
+      "next": "RAWCONN-stage1 transcript"
+    },
+    "lazy-lazyt-initialization": {
+      "title": "Lazy LazyT Initialization",
+      "source_file": "Lazy.svg",
+      "source_count": 38,
+      "groups": {
+        "LAZY-R01-lazy-basics-value-factory": 23,
+        "LAZY-R02-thread-safety-modes-di": 15
+      },
+      "next": "LAZY-stage1 transcript"
+    },
+    "creating-base32-secret": {
+      "title": "Creating Base32 Secret",
+      "source_file": "creating base32 secret.svg",
+      "source_count": 34,
+      "groups": {
+        "B32SEC-R01-random-secret-bytes-base32-encoding": 17,
+        "B32SEC-R02-totp-authenticator-qr-provisioning": 17
+      },
+      "next": "B32SEC-stage1 transcript"
+    }
+  },
+  "next": "After apply/commit, process Stage1 transcript for all three small conspects in one batch."
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "conspect_name": "problem details",
+    "folder": "_ai-conspects/problem details",
+    "source_svg": "problem details.svg",
+    "viewBox": [
+      0.0,
+      0.0,
+      24118.984298337513,
+      8860.442454800075
+    ],
+    "unique_embedded_images": 17,
+    "image_uses_on_canvas": 25,
+    "text_labels_parsed": 118,
+    "duplicate_image_uses_by_extracted_content": 8
+  },
+  {
+    "conspect_name": "event source browser",
+    "folder": "_ai-conspects/event source browser",
+    "source_svg": "event source browser.svg",
+    "viewBox": [
+      0.0,
+      0.0,
+      5088.122033312979,
+      2832.2216398766977
+    ],
+    "unique_embedded_images": 20,
+    "image_uses_on_canvas": 20,
+    "text_labels_parsed": 8,
+    "duplicate_image_uses_by_extracted_content": 0
+  },
+  {
+    "conspect_name": "query filters ef core",
+    "folder": "_ai-conspects/query filters ef core",
+    "source_svg": "query filters ef core.svg",
+    "viewBox": [
+      0.0,
+      0.0,
+      4791.23692451849,
+      4572.183713599312
+    ],
+    "unique_embedded_images": 15,
+    "image_uses_on_canvas": 15,
+    "text_labels_parsed": 15,
+    "duplicate_image_uses_by_extracted_content": 0
+  }
+]

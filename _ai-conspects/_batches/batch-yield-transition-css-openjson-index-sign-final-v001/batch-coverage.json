@@ -1,0 +1,57 @@
+{
+  "batch": "batch-yield-transition-css-openjson-index-sign-final-v001",
+  "conspects": [
+    {
+      "target": "_ai-conspects/js yield, asyncenumerable, finally of generator",
+      "source": "js yield, asyncenumerable, finally of generator.svg",
+      "unique_screenshots": 30,
+      "image_uses": 30,
+      "text_labels": 19,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/usetransition,cancelling queries of rquery,cant cancel suspence query, batching transitions",
+      "source": "usetransition,cancelling queries of rquery,cant cancel suspence query, batching transitions.svg",
+      "unique_screenshots": 21,
+      "image_uses": 21,
+      "text_labels": 15,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/header max width, sticky,fixed",
+      "source": "header max width, sticky,fixed.svg",
+      "unique_screenshots": 19,
+      "image_uses": 19,
+      "text_labels": 23,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/openjson",
+      "source": "openjson.svg",
+      "unique_screenshots": 27,
+      "image_uses": 27,
+      "text_labels": 14,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/index sign, keyof, type assertions, records to solve index sign issues",
+      "source": "index sign, keyof, type assertions, records to solve index sign issues.svg",
+      "unique_screenshots": 26,
+      "image_uses": 26,
+      "text_labels": 4,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    }
+  ],
+  "totals": {
+    "unique_screenshots": 123,
+    "image_uses": 123,
+    "text_labels": 75,
+    "duplicate_extra_placements": 0,
+    "remaining_unclosed": 0
+  }
+}

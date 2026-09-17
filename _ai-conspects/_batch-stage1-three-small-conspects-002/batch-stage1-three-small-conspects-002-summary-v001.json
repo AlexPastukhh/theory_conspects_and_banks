@@ -1,0 +1,82 @@
+{
+  "generated": "2026-06-13 11:27:40 UTC",
+  "archive_type": "three small conspects 002 Stage1 transcript batch",
+  "total_processed": 72,
+  "total_pending_after": 0,
+  "transcript_level": "source-level semantic transcript; exact code punctuation remains in preserved Stage0 PNGs",
+  "regions": [
+    {
+      "conspect_slug": "scopes-and-idisposable",
+      "conspect_title": "Scopes And IDisposable",
+      "region": "SCOPEIDISP-R01",
+      "processed_count": 8,
+      "status": "processed-in-scopeidisp-r01-v001",
+      "meaning": "IDisposable / using / Dispose"
+    },
+    {
+      "conspect_slug": "scopes-and-idisposable",
+      "conspect_title": "Scopes And IDisposable",
+      "region": "SCOPEIDISP-R02",
+      "processed_count": 7,
+      "status": "processed-in-scopeidisp-r02-v001",
+      "meaning": "DI scopes / IServiceScopeFactory"
+    },
+    {
+      "conspect_slug": "scopes-and-idisposable",
+      "conspect_title": "Scopes And IDisposable",
+      "region": "SCOPEIDISP-R03",
+      "processed_count": 7,
+      "status": "processed-in-scopeidisp-r03-v001",
+      "meaning": "background tasks / leaks / pitfalls"
+    },
+    {
+      "conspect_slug": "exception-handlers",
+      "conspect_title": "Exception Handlers",
+      "region": "EXHAND-R01",
+      "processed_count": 8,
+      "status": "processed-in-exhand-r01-v001",
+      "meaning": "global middleware / UseExceptionHandler"
+    },
+    {
+      "conspect_slug": "exception-handlers",
+      "conspect_title": "Exception Handlers",
+      "region": "EXHAND-R02",
+      "processed_count": 8,
+      "status": "processed-in-exhand-r02-v001",
+      "meaning": "IExceptionHandler / ProblemDetails / status mapping"
+    },
+    {
+      "conspect_slug": "exception-handlers",
+      "conspect_title": "Exception Handlers",
+      "region": "EXHAND-R03",
+      "processed_count": 8,
+      "status": "processed-in-exhand-r03-v001",
+      "meaning": "local try-catch / domain validation / pitfalls"
+    },
+    {
+      "conspect_slug": "httpcontent-custom-readasstream-buffering-compression",
+      "conspect_title": "HttpContent Custom ReadAsStream Buffering Compression",
+      "region": "HTTPCONTENT-R01",
+      "processed_count": 9,
+      "status": "processed-in-httpcontent-r01-v001",
+      "meaning": "HttpContent basics / ReadAsStream / buffering"
+    },
+    {
+      "conspect_slug": "httpcontent-custom-readasstream-buffering-compression",
+      "conspect_title": "HttpContent Custom ReadAsStream Buffering Compression",
+      "region": "HTTPCONTENT-R02",
+      "processed_count": 9,
+      "status": "processed-in-httpcontent-r02-v001",
+      "meaning": "custom HttpContent / SerializeToStreamAsync"
+    },
+    {
+      "conspect_slug": "httpcontent-custom-readasstream-buffering-compression",
+      "conspect_title": "HttpContent Custom ReadAsStream Buffering Compression",
+      "region": "HTTPCONTENT-R03",
+      "processed_count": 8,
+      "status": "processed-in-httpcontent-r03-v001",
+      "meaning": "compression directly to network / disposal"
+    }
+  ],
+  "next": "closure audit batch for all three small conspects 002"
+}

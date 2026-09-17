@@ -1,0 +1,30 @@
+{
+  "batch": "batch-membernotnull-typescript-keyof-final-v001",
+  "targets": [
+    {
+      "target": "_ai-conspects/membernotnull attribute,NULL",
+      "unique_screenshots": 2,
+      "image_uses": 2,
+      "native_svg_labels": 1,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0,
+      "build_status": "new-complete-conspect"
+    },
+    {
+      "target": "_ai-conspects/typescript generic get prop from aray of users, k extends keyof T",
+      "unique_screenshots": 2,
+      "image_uses": 2,
+      "native_svg_labels": 0,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0,
+      "build_status": "completion-of-existing-stage0"
+    }
+  ],
+  "totals": {
+    "unique_screenshots": 4,
+    "image_uses": 4,
+    "native_svg_labels": 1,
+    "duplicate_extra_placements": 0,
+    "remaining_unclosed": 0
+  }
+}

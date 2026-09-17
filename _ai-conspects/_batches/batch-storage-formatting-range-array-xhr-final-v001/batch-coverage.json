@@ -1,0 +1,57 @@
+{
+  "batch": "batch-storage-formatting-range-array-xhr-final-v001",
+  "conspects": [
+    {
+      "target": "_ai-conspects/memory vs localstorage vs sessionstorage, session storage and local storage api methods",
+      "source": "memory vs localstorage vs sessionstorage, session storage and local storage api methods.svg",
+      "unique_screenshots": 20,
+      "image_uses": 20,
+      "text_labels": 6,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/formatting, numeric formatting, what can be formatted",
+      "source": "formatting, numeric formatting, what can be formatted.svg",
+      "unique_screenshots": 28,
+      "image_uses": 28,
+      "text_labels": 5,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/range operations on list",
+      "source": "range operations on list.svg",
+      "unique_screenshots": 18,
+      "image_uses": 18,
+      "text_labels": 4,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/create array, fixed length",
+      "source": "create array, fixed length.svg",
+      "unique_screenshots": 19,
+      "image_uses": 19,
+      "text_labels": 3,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/xhr",
+      "source": "xhr.svg",
+      "unique_screenshots": 21,
+      "image_uses": 21,
+      "text_labels": 6,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    }
+  ],
+  "totals": {
+    "unique_screenshots": 106,
+    "image_uses": 106,
+    "text_labels": 24,
+    "duplicate_extra_placements": 0,
+    "remaining_unclosed": 0
+  }
+}

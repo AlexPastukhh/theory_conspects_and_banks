@@ -1,0 +1,4 @@
+slug,title,image_uses,text_labels,regions,remaining_image_uses,remaining_text_labels
+composite-key,"EF Core composite key: primary keys, foreign keys and indexes",25,18,R01+R02+R03,0,0
+hashcode,"C# HashCode, Equals and mutable keys in Dictionary/HashSet",24,19,R01+R02+R03+R04,0,0
+transaction-isolation,"Transactions and isolation levels: Read Committed, Snapshot and Serializable",18,71,R01+R02+R03+R04,0,0

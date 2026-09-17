@@ -1,0 +1,46 @@
+{
+  "batch": "batch-antiforgerytoken-assplitquery-fulltext-search-combined-recovery-final-v001",
+  "conspects": [
+    {
+      "conspect": "antiforgerytoken",
+      "target": "_ai-conspects/antiforgerytoken",
+      "previous_unique_images": 0,
+      "corrected_unique_images": 58,
+      "previous_image_uses": 0,
+      "corrected_image_uses": 58,
+      "recovered_image_uses": 58,
+      "text_labels": 51,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "conspect": "assplitquery",
+      "target": "_ai-conspects/assplitquery",
+      "previous_unique_images": 0,
+      "corrected_unique_images": 61,
+      "previous_image_uses": 0,
+      "corrected_image_uses": 61,
+      "recovered_image_uses": 61,
+      "text_labels": 44,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "conspect": "searching impl, ef core, full text search,sql server",
+      "target": "_ai-conspects/searching impl, ef core, full text search,sql server",
+      "previous_unique_images": 0,
+      "corrected_unique_images": 89,
+      "previous_image_uses": 0,
+      "corrected_image_uses": 90,
+      "recovered_image_uses": 90,
+      "text_labels": 73,
+      "duplicate_extra_placements": 1,
+      "remaining_unclosed": 0
+    }
+  ],
+  "total_corrected_unique_images": 208,
+  "total_corrected_image_uses": 209,
+  "total_recovered_image_uses": 209,
+  "total_text_labels": 168,
+  "remaining_unclosed": 0
+}

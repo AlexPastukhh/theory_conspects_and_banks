@@ -1,0 +1,5 @@
+# Apply archive
+
+```powershell
+& { Set-Location -LiteralPath "C:\Users\alexa\obs"; git checkout ai-processed-conspects-text; git config core.longpaths true; $zip="C:\Users\alexa\Downloads\ai-conspects-hateoas-new-conspect-final-v001.zip"; tar.exe -xf $zip -C .; $target="_ai-conspects\hateoas"; $bundle="_ai-conspects\_bundles\hateoas-new-conspect-final-v001"; Push-Location -LiteralPath $target; git add -f -A -- .; Pop-Location; Push-Location -LiteralPath $bundle; git add -f -A -- .; Pop-Location; git commit --only -m "Add complete HATEOAS semantic conspect" -- "$target" "$bundle"; git push origin ai-processed-conspects-text }
+```

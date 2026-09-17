@@ -1,0 +1,225 @@
+{
+  "conspect": "hateoas",
+  "target_folder": "_ai-conspects/hateoas",
+  "existing_target_folder_found": false,
+  "source_file": "hateoas.svg",
+  "stored_source": "source/source-complete-v001.svg",
+  "source_sha256": "2da856a46523c9a79a0b812d6abdbca34ac7ed88c642150d29d54b4b3fd35851",
+  "source_inventory": {
+    "embedded_assets": 76,
+    "total_image_uses": 78,
+    "svg_text_nodes": 55,
+    "vector_paths": 29
+  },
+  "final_coverage": {
+    "embedded_assets": 76,
+    "total_image_uses": 78,
+    "processed_image_uses": 78,
+    "restored_image_uses": 78,
+    "restored_unique_assets": 76,
+    "duplicate_placements": 2,
+    "duplicate_asset_groups": 1,
+    "svg_text_nodes": 55,
+    "processed_svg_text_nodes": 55,
+    "vector_paths": 29,
+    "unassigned_images": 0,
+    "multiply_assigned_images": 0,
+    "unassigned_text_nodes": 0,
+    "multiply_assigned_text_nodes": 0,
+    "missing": 0,
+    "unreviewed": 0
+  },
+  "regions": {
+    "R01": {
+      "title": "HATEOAS purpose, hypermedia, client coupling, and evolvability",
+      "image_uses": [
+        "S-004",
+        "S-005",
+        "S-006",
+        "S-008",
+        "S-010",
+        "S-013",
+        "S-014",
+        "S-015",
+        "S-016",
+        "S-019",
+        "S-031",
+        "S-034",
+        "S-038"
+      ],
+      "svg_text_nodes": [
+        "T-001",
+        "T-002",
+        "T-003",
+        "T-004",
+        "T-006",
+        "T-007",
+        "T-008",
+        "T-009",
+        "T-010",
+        "T-011",
+        "T-012",
+        "T-013",
+        "T-014",
+        "T-015",
+        "T-023",
+        "T-029",
+        "T-031",
+        "T-032",
+        "T-033"
+      ]
+    },
+    "R02": {
+      "title": "Link contract: href, rel, method, naming conventions, and documentation",
+      "image_uses": [
+        "S-003",
+        "S-011",
+        "S-018",
+        "S-024",
+        "S-030",
+        "S-033",
+        "S-035",
+        "S-042",
+        "S-043",
+        "S-046"
+      ],
+      "svg_text_nodes": [
+        "T-020"
+      ]
+    },
+    "R03": {
+      "title": "Single-resource implementation with LinkDto and controller actions",
+      "image_uses": [
+        "S-012",
+        "S-020",
+        "S-023",
+        "S-028",
+        "S-029",
+        "S-032",
+        "S-037",
+        "S-039",
+        "S-041",
+        "S-055",
+        "S-058",
+        "S-061",
+        "S-062",
+        "S-064"
+      ],
+      "svg_text_nodes": [
+        "T-022",
+        "T-030",
+        "T-034"
+      ]
+    },
+    "R04": {
+      "title": "Data shaping, ExpandoObject, IDictionary, and identity preservation",
+      "image_uses": [
+        "S-001",
+        "S-002",
+        "S-021",
+        "S-049",
+        "S-052",
+        "S-065",
+        "S-069",
+        "S-070",
+        "S-075"
+      ],
+      "svg_text_nodes": [
+        "T-035",
+        "T-036",
+        "T-037",
+        "T-038",
+        "T-039",
+        "T-040",
+        "T-041",
+        "T-044",
+        "T-045",
+        "T-046",
+        "T-047"
+      ]
+    },
+    "R05": {
+      "title": "Pagination and collection resources with navigation links and envelopes",
+      "image_uses": [
+        "S-007",
+        "S-009",
+        "S-017",
+        "S-025",
+        "S-026",
+        "S-036",
+        "S-045",
+        "S-048",
+        "S-050",
+        "S-051",
+        "S-054",
+        "S-057",
+        "S-060",
+        "S-063",
+        "S-066",
+        "S-067",
+        "S-068",
+        "S-071",
+        "S-072",
+        "S-073",
+        "S-074",
+        "S-076",
+        "S-077",
+        "S-078"
+      ],
+      "svg_text_nodes": [
+        "T-005",
+        "T-016",
+        "T-017",
+        "T-018",
+        "T-019",
+        "T-021",
+        "T-026",
+        "T-042",
+        "T-043",
+        "T-048",
+        "T-049",
+        "T-050",
+        "T-051",
+        "T-052",
+        "T-053",
+        "T-054",
+        "T-055"
+      ]
+    },
+    "R06": {
+      "title": "Conditional action links, workflow rules, documentation, and tradeoffs",
+      "image_uses": [
+        "S-022",
+        "S-027",
+        "S-040",
+        "S-044",
+        "S-047",
+        "S-053",
+        "S-056",
+        "S-059"
+      ],
+      "svg_text_nodes": [
+        "T-024",
+        "T-025",
+        "T-027",
+        "T-028"
+      ]
+    }
+  },
+  "independent_repeat_check": {
+    "pass_a": "XML DOM parser",
+    "pass_b": "independent raw-SVG regular-expression scanner",
+    "dom_embedded_assets": 76,
+    "regex_embedded_assets": 76,
+    "dom_image_uses": 78,
+    "regex_image_uses": 78,
+    "dom_svg_text_nodes": 55,
+    "regex_svg_text_nodes": 55,
+    "sha_sets_equal": true,
+    "placement_sets_equal": true,
+    "orphan_assets": [],
+    "missing_references": [],
+    "result": "PASS"
+  },
+  "closure": "complete"
+}

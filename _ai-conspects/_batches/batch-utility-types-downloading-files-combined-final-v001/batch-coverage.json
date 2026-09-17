@@ -1,0 +1,26 @@
+{
+  "batch": "batch-utility-types-downloading-files-combined-final-v001",
+  "unique_screenshots": 123,
+  "image_uses": 123,
+  "text_labels": 77,
+  "duplicate_extra_placements": 0,
+  "remaining_unclosed": 0,
+  "targets": [
+    {
+      "target": "_ai-conspects/utility types",
+      "unique_screenshots": 66,
+      "image_uses": 66,
+      "text_labels": 37,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/donwloading files, blob,window.location,signed uri, showsavefilepicker createwritable",
+      "unique_screenshots": 57,
+      "image_uses": 57,
+      "text_labels": 40,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "batch": "batch-css-inset-regex-react-query-context-svg-react-combined-final-v001",
+  "unique_screenshots": 87,
+  "image_uses": 87,
+  "text_labels": 127,
+  "duplicate_extra_placements": 0,
+  "remaining_unclosed": 0,
+  "targets": [
+    {
+      "target": "_ai-conspects/inset vs size,margins,formula",
+      "unique_screenshots": 26,
+      "image_uses": 26,
+      "text_labels": 10,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/sharp regex options  + COND REPLACE",
+      "unique_screenshots": 23,
+      "image_uses": 23,
+      "text_labels": 18,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/react query rerenders + setting and getting data from cache outside of react",
+      "unique_screenshots": 18,
+      "image_uses": 18,
+      "text_labels": 75,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/context",
+      "unique_screenshots": 6,
+      "image_uses": 6,
+      "text_labels": 8,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    },
+    {
+      "target": "_ai-conspects/svg react",
+      "unique_screenshots": 14,
+      "image_uses": 14,
+      "text_labels": 16,
+      "duplicate_extra_placements": 0,
+      "remaining_unclosed": 0
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "conspect": "cache control header,directives, PUBLIC PRIVATE CACHE , RESPONSE CACHE TYPES , E TAG CACHE FLOWS",
+  "target_folder": "_ai-conspects/cache control header,directives, PUBLIC PRIVATE CACHE , RESPONSE CACHE TYPES , E TAG CACHE FLOWS",
+  "existing_target_folder_found": false,
+  "source_file": "cache control header,directives, PUBLIC PRIVATE CACHE , RESPONSE CACHE TYPES , E TAG CACHE FLOWS.svg",
+  "stored_source": "source/source-complete-v001.svg",
+  "source_sha256": "486e26ff13b5265cfae94921af2e4044a04ae1ad4ca13ca4b113626b1934e1c8",
+  "source_inventory": {
+    "embedded_assets": 67,
+    "total_image_uses": 68,
+    "svg_text_nodes": 40,
+    "vector_paths": 15
+  },
+  "final_coverage": {
+    "embedded_assets": 67,
+    "total_image_uses": 68,
+    "processed_image_uses": 68,
+    "restored_image_uses": 68,
+    "restored_unique_assets": 67,
+    "duplicate_placements": 1,
+    "duplicate_asset_groups": 1,
+    "svg_text_nodes": 40,
+    "processed_svg_text_nodes": 40,
+    "semantic_text_nodes": 40,
+    "empty_structural_text_nodes": 0,
+    "vector_paths": 15,
+    "unassigned_images": 0,
+    "multiply_assigned_images": 0,
+    "unassigned_text_nodes": 0,
+    "multiply_assigned_text_nodes": 0,
+    "missing": 0,
+    "unreviewed": 0
+  },
+  "regions": {
+    "R01": {
+      "title": "HTTP cache model and interaction of request and response Cache-Control",
+      "image_uses": [
+        "S-001",
+        "S-002",
+        "S-003",
+        "S-013",
+        "S-023",
+        "S-025",
+        "S-032",
+        "S-038",
+        "S-044",
+        "S-051",
+        "S-061"
+      ],
+      "svg_text_nodes": [
+        "T-001",
+        "T-017",
+        "T-018",
+        "T-019",
+        "T-020",
+        "T-021"
+      ]
+    },
+    "R02": {
+      "title": "Freshness, max-age, heuristic caching, and missing freshness metadata",
+      "image_uses": [
+        "S-004",
+        "S-007",
+        "S-014",
+        "S-016",
+        "S-019",
+        "S-020",
+        "S-033",
+        "S-035",
+        "S-054",
+        "S-055"
+      ],
+      "svg_text_nodes": [
+        "T-006",
+        "T-010",
+        "T-012",
+        "T-014",
+        "T-022",
+        "T-023"
+      ]
+    },
+    "R03": {
+      "title": "Validators, conditional requests, no-cache, and must-revalidate flows",
+      "image_uses": [
+        "S-005",
+        "S-006",
+        "S-012",
+        "S-018",
+        "S-021",
+        "S-026",
+        "S-028",
+        "S-030",
+        "S-034",
+        "S-036",
+        "S-039",
+        "S-057",
+        "S-065",
+        "S-066"
+      ],
+      "svg_text_nodes": [
+        "T-003",
+        "T-007",
+        "T-008",
+        "T-009",
+        "T-026"
+      ]
+    },
+    "R04": {
+      "title": "Cacheability and safety: no-store, public, private, and shared caches",
+      "image_uses": [
+        "S-008",
+        "S-011",
+        "S-017",
+        "S-022",
+        "S-024",
+        "S-027",
+        "S-029",
+        "S-031",
+        "S-037",
+        "S-040",
+        "S-041",
+        "S-043",
+        "S-060",
+        "S-062",
+        "S-063",
+        "S-064"
+      ],
+      "svg_text_nodes": [
+        "T-005",
+        "T-024",
+        "T-025",
+        "T-027",
+        "T-028"
+      ]
+    },
+    "R05": {
+      "title": "Advanced directives: s-maxage, Vary, immutable, stale-while-revalidate, and stale-if-error",
+      "image_uses": [
+        "S-047",
+        "S-050",
+        "S-053",
+        "S-059",
+        "S-067"
+      ],
+      "svg_text_nodes": [
+        "T-002"
+      ]
+    },
+    "R06": {
+      "title": "ASP.NET Core Response Caching Middleware versus Output Cache",
+      "image_uses": [
+        "S-009",
+        "S-010",
+        "S-015",
+        "S-042",
+        "S-045",
+        "S-046",
+        "S-048",
+        "S-049",
+        "S-052",
+        "S-056",
+        "S-058"
+      ],
+      "svg_text_nodes": [
+        "T-011",
+        "T-013",
+        "T-016",
+        "T-029",
+        "T-030",
+        "T-031",
+        "T-032",
+        "T-033",
+        "T-034",
+        "T-035",
+        "T-036",
+        "T-037",
+        "T-038",
+        "T-039",
+        "T-040"
+      ]
+    },
+    "R07": {
+      "title": "Practical caching recipes and decision checklist",
+      "image_uses": [
+        "S-068"
+      ],
+      "svg_text_nodes": [
+        "T-004",
+        "T-015"
+      ]
+    }
+  },
+  "independent_repeat_check": {
+    "pass_a": "XML DOM parser",
+    "pass_b": "independent raw-SVG regular-expression scanner",
+    "dom_embedded_assets": 67,
+    "regex_embedded_assets": 67,
+    "dom_image_uses": 68,
+    "regex_image_uses": 68,
+    "dom_svg_text_nodes": 40,
+    "regex_svg_text_nodes": 40,
+    "sha_sets_equal": true,
+    "placement_sets_equal": true,
+    "orphan_assets": [],
+    "missing_references": [],
+    "result": "PASS"
+  },
+  "closure": "complete"
+}
