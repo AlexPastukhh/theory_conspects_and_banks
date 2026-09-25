@@ -5,6 +5,7 @@
 ## Структура
 
 - [documentation/](documentation/) — текущие принципы работы и Use Cases. [Принципы работы с репозиторием](documentation/repository-work-principles.md) задают форму и границы authority.
+- [documentation/proposals/personal-knowledge-system-v11/](documentation/proposals/personal-knowledge-system-v11/) — consistency-clean v11 target-system proposal. Это не текущая operational authority: физическая миграция knowledge/repetition layers и переключение текущих owner-документов требуют отдельного решения.
 - [_ai-conspects/](./_ai-conspects/) — содержимое системы: локальные source workspaces, knowledge layer, repetition layer и унаследованные материалы обработки.
 - [_ai-conspects/_knowledge/INDEX.md](_ai-conspects/_knowledge/INDEX.md) — навигация по topics; сами units лежат в каталогах topics.
 - [_ai-conspects/_repetition/REPETITION_INDEX.md](_ai-conspects/_repetition/REPETITION_INDEX.md) — навигация по состоянию повторения. Численные правила и интервалы принадлежат [REPETITION_POLICY.md](_ai-conspects/_repetition/REPETITION_POLICY.md).
