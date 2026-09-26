@@ -53,6 +53,14 @@ Debounce changes when work starts; it does not make expensive rendering interrup
 
 A debounced value and a debounced callback solve different problems: the former publishes lagging state, while the latter postpones an operation directly. Keep the delay stable when possible; because it is an effect dependency, changing it restarts the timer just like changing the source value.
 
+## What should be recallable
+
+- Explain the core model of **React debounce hooks and request cleanup** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Debounce waits for a quiet interval and emits the latest value once.
+- Reconstruct this Unit-grounded rule: The effect that uses the debounced value owns request cleanup.
+- Reconstruct this Unit-grounded rule: Debounce changes when work starts; it does not make expensive rendering interruptible.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/useTransition full flow, usedebounce, useDefferedvalue/`

@@ -17,6 +17,14 @@ Capture history follows engine matching/backtracking semantics, not a general mu
 
 Use this for balanced delimiters or small constrained languages, not real HTML/XML with comments, scripts, quoted brackets, void elements, namespaces, and browser parsing rules. Complex/untrusted patterns need a timeout; balancing and nested alternatives can backtrack expensively.
 
+## What should be recallable
+
+- Explain the core model of **.NET Regex balancing groups** without opening the Unit.
+- Reconstruct this Unit-grounded rule: .NET balancing groups treat capture history as a stack.
+- Reconstruct this Unit-grounded rule: Multiple named stacks can track delimiter families.
+- Reconstruct this Unit-grounded rule: Capture history follows engine matching/backtracking semantics, not a general mutable collection API.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/BALANCING GROUPS .NET/`

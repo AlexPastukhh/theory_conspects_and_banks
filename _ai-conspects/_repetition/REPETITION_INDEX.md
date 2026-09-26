@@ -1,6 +1,8 @@
+> **Migration status:** transitional legacy operational artifact for the pre-CS5 repetition/storage model. Target semantics are owned under `documentation/principles/` and `documentation/policies/`; do not silently reinterpret legacy state as v11 state. See `documentation/migration/CURRENT-MIGRATION-STATE.md`.
+
 # Repetition Index
 
-Status: active human-readable dashboard
+Status: transitional active legacy repetition dashboard; not a target View owner
 
 Canonical per-unit current state: `REPETITION_STATE.csv`
 

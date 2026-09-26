@@ -441,6 +441,14 @@ var composite = string.Format("Name={0}, Age={1}", name, age);
 
 Use interpolation when values are directly available and readability is central. `string.Format` is useful when the pattern is data-driven, selected dynamically, localized, or stored separately from its values.
 
+## What should be recallable
+
+- Explain the core model of **.NET format strings, culture, and round-trip output** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Formatting converts values to text through the type-specific `ToString(format, provider)` contract.
+- Reconstruct this Unit-grounded rule: Culture controls separators, symbols, and names.
+- Reconstruct this Unit-grounded rule: Some types—including `Uri`, `Version`, exceptions, and framework-specific objects—have a meaningful parameterless `ToString()` but no standard format-string language.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/time/`
 - Authoritative processed source: `regions/R03-parsing-formatting-cheat-sheets.md`, sections 5-15 including the S158 escaping correction

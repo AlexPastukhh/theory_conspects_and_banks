@@ -41,6 +41,14 @@ fn(1, ...values, 4);
 
 Call spread expands an iterable and can mix with explicit arguments before or after it, though huge spreads may hit engine argument limits. Rest works in arrows and is preferable to array-like `arguments`. Function-parameter rest and object-rest syntax are related but operate in different contexts. Use an array parameter when the input concept is one collection rather than variadic arguments.
 
+## What should be recallable
+
+- Explain the core model of **JavaScript function defaults, rest, and spread** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Expressions run per invocation, may reference earlier parameters, and create fresh objects.
+- Reconstruct this Unit-grounded rule: Pass `undefined` to skip an earlier position.
+- Reconstruct this Unit-grounded rule: Changing positional order is a breaking API change.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/default values of funcs, how to call, rest params in funcs/`
 - Processed source: `04-full-combined-final-transcript.md`, complete transcript

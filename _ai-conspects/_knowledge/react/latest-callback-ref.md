@@ -26,6 +26,14 @@ The ref object is stable; updating `.current` does not render. Render-time assig
 
 Use this when one long-lived external handler must execute current logic and re-registration is expensive/lossy. Do not hide truly reactive dependencies or a changing source in refs. Reading `.current` during render does not subscribe to changes, and mutations must not influence concurrent rendered output. Prefer framework effect-event APIs or tested library hooks when available.
 
+## What should be recallable
+
+- Explain the core model of **Stable subscriptions with the latest callback ref** without opening the Unit.
+- Reconstruct this Unit-grounded rule: A render-created callback changes identity and may capture current props/state.
+- Reconstruct this Unit-grounded rule: The ref object is stable; updating `.current` does not render.
+- Reconstruct this Unit-grounded rule: Use this when one long-lived external handler must execute current logic and re-registration is expensive/lossy.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/useRef to avoid including into deps array, to avoid rerenders or bad recreations/`
 - Processed source: `04-full-combined-final-transcript.md`, complete transcript

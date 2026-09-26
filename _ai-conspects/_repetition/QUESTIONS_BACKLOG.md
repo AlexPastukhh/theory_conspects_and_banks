@@ -1,6 +1,8 @@
+> **Migration status:** transitional legacy operational artifact for the pre-CS5 repetition/storage model. Target semantics are owned under `documentation/principles/` and `documentation/policies/`; do not silently reinterpret legacy state as v11 state. See `documentation/migration/CURRENT-MIGRATION-STATE.md`.
+
 # Questions and Clarifications Backlog
 
-Status: active canonical registry
+Status: transitional active legacy question registry; not the target canonical Question owner
 
 Scope: questions, clarifications, source gaps and future-unit candidates discovered during recall or materialization.
 

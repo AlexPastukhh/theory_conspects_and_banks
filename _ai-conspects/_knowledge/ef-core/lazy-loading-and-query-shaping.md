@@ -23,6 +23,14 @@ Both turn property access into hidden I/O and require an attached entity with a 
 
 Proxy overrides intercept virtual getters, not direct private-field reads inside domain methods. This conflicts with encapsulated aggregates, makes tests differ from attached production entities, and lets serialization/logging/debugging accidentally query. Exposing `IReadOnlyCollection<T>` alone does not guarantee immutability if callers can cast the runtime collection to a mutable interface. Navigation traversal can also blur aggregate and transaction boundaries through hidden round trips. For command invariants, explicitly load children, then execute the domain method; for reads, project purpose-built models. Lazy loading is a deliberate infrastructure tradeoff, not a default.
 
+## What should be recallable
+
+- Explain the core model of **EF Core lazy loading and query shaping** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Keep filters, ordering, aggregates, and projections on `IQueryable<T>` until materialization so EF can translate them.
+- Reconstruct this Unit-grounded rule: An arbitrary custom method inside `Where` is normally not translatable.
+- Reconstruct this Unit-grounded rule: Proxy lazy loading requires `UseLazyLoadingProxies`, subclassable entities, and overridable accessible navigations.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/lazy loading/`
 - Processed source: `05-full-combined-final-transcript.md`, complete transcript

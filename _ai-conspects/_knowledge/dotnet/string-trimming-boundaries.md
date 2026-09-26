@@ -25,6 +25,14 @@ if (value.StartsWith(prefix, StringComparison.Ordinal))
 string result = input?.Trim() ?? string.Empty;
 ```
 
+## What should be recallable
+
+- Explain the core model of **C# string trimming boundaries** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `Trim`, `TrimStart`, and `TrimEnd` remove recognized whitespace at boundaries, not inside.
+- Reconstruct this Unit-grounded rule: Conceptually, trimming `a` and `b` removes any boundary character in that set; it does not remove the exact substring `"ab"`.
+- Reconstruct this Unit-grounded rule: For an exact prefix/suffix, use `StartsWith`/`EndsWith` with explicit `StringComparison`, then slice.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/STRING  TRIM/`

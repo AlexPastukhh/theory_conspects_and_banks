@@ -1,6 +1,8 @@
+> **Migration status:** transitional legacy operational artifact for the pre-CS5 repetition/storage model. Target semantics are owned under `documentation/principles/` and `documentation/policies/`; do not silently reinterpret legacy state as v11 state. See `documentation/migration/CURRENT-MIGRATION-STATE.md`.
+
 # Learning Inbox
 
-Status: active registry for new-knowledge batches
+Status: transitional active legacy batch registry; target Capture/Triage semantics are owned under `documentation/`
 
 This registry implements the collection-to-knowledge cycle defined in `REPETITION_POLICY.md`.
 

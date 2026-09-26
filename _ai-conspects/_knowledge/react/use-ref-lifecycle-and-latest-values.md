@@ -58,6 +58,14 @@ Do not read or write refs during render except predictable initialization patter
 
 Reconnect logic must also belong to the effect instance that created the socket. Cleanup should cancel that instance's timers/listeners and close that exact socket; delayed work from an obsolete effect must verify that it still owns the current connection before opening or publishing another one. This prevents a URL change or retry race from leaving parallel sockets alive.
 
+## What should be recallable
+
+- Explain the core model of **React useRef lifecycle and latest values** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `useRef` stores a stable mutable container across renders without causing a rerender.
+- Reconstruct this Unit-grounded rule: Existence of a socket does not mean it is ready to send; check `readyState === WebSocket.OPEN` before `send()`.
+- Reconstruct this Unit-grounded rule: Here subscription lifetime depends only on `url`, while the handler reads the latest `onMessage`.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/useref, when need to have ref from obj created in useeffect + when need to access someting inside effect without incl into dep array/`
 - Processed source: `01-final-transcript.md`, complete transcript

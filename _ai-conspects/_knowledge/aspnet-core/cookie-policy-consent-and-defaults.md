@@ -12,6 +12,14 @@ Global policies apply broadly and can break auth, session, antiforgery, or proto
 
 `UseCookiePolicy` does not inherit `AddCookie` handler settings; it is a later policy layer over append/delete operations. A manual `Response.Cookies.Append` uses `CookieOptions` such as `Path`, `Domain`, `HttpOnly`, boolean `Secure`, `SameSite`, `Expires`, `MaxAge`, and `IsEssential`. The boolean `CookieOptions.Secure` is not the same API type as cookie authentication's `CookieSecurePolicy`.
 
+## What should be recallable
+
+- Explain the core model of **ASP.NET Core cookie policy, consent, and defaults** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `UseCookiePolicy` governs later append/delete operations, so place it before cookie-producing components.
+- Reconstruct this Unit-grounded rule: `CheckConsentNeeded` gates non-essential appends; `CookieOptions.IsEssential` bypasses that gate only for genuinely necessary cookies.
+- Reconstruct this Unit-grounded rule: Global policies apply broadly and can break auth, session, antiforgery, or protocol cookies.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/usecookiepolicy/`

@@ -1,7 +1,9 @@
+> **Historical proposal snapshot.** Current canonical methodology was promoted during CS1. Start at [`../../README.md`](../../README.md) and [`../../migration/CURRENT-MIGRATION-STATE.md`](../../migration/CURRENT-MIGRATION-STATE.md).
+
 # Personal Knowledge System — consolidated target v11
 
 Status:
-- **Use Cases:** current agreed working set.
+- **Use Cases:** historical snapshot of the set later promoted to current owners.
 - **Principles / policies / workflows:** proposals to approve.
 - **Appendix:** explanatory simulation, not a second methodology.
 

@@ -29,6 +29,14 @@ FROM Orders;
 
 It is often much slower than native functions and is best reserved for final presentation when the application cannot format. Formatted strings are not dates and sort chronologically only when deliberately designed. Prefer application formatting at volume and inspect actual plans/logical reads to confirm expected seeks.
 
+## What should be recallable
+
+- Explain the core model of **SQL Server date extraction, formatting, and SARGability** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `YEAR(value)` (equivalent to `DATEPART(year, value)`) is concise for projection/grouping and returns NULL for NULL.
+- Reconstruct this Unit-grounded rule: Wrapping an indexed date column in `YEAR`, `DATEPART`, conversion, or `FORMAT` commonly makes filtering non-SARGable.
+- Reconstruct this Unit-grounded rule: Inclusive start/exclusive next boundary handles all supported time precisions and avoids fragile end-of-day constants.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/date/`
 - Processed source: `05-full-combined-final-transcript.md`, complete transcript

@@ -17,6 +17,14 @@ Use current culture for localized input and invariant culture for protocol/file/
 
 C# does not parse `"123abc"` like JavaScript `parseInt`. Explicitly extract a prefix, then `TryParse`; anchored `^[+-]?\d+` finds a prefix, while unanchored `[+-]?\d+` finds a number anywhere. A deliberate parser is needed for signs, decimals, and exponents. Validate overflow using the target type and choose type by required range/precision.
 
+## What should be recallable
+
+- Explain the core model of **Parsing numeric strings in .NET** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Use `TryParse` for expected invalid/user input: it returns `true`/`false` and writes the parsed value or the target type's default to `out` on failure.
+- Reconstruct this Unit-grounded rule: Use current culture for localized input and invariant culture for protocol/file/API formats.
+- Reconstruct this Unit-grounded rule: C# does not parse `"123abc"` like JavaScript `parseInt`.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/parse string to int,float,double/`

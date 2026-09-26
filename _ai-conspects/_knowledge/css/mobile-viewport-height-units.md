@@ -39,6 +39,13 @@ window.addEventListener("resize", updateViewportUnit);
 
 Use `height: calc(var(--vh, 1vh) * 100)`, recalculate for resize/orientation, debounce rapid events, remove listeners at disposal, and avoid `window` during SSR. This workaround adds lifecycle code and possible initial layout shift; prefer progressive CSS enhancement when `svh`/`lvh`/`dvh` meet the design.
 
+## What should be recallable
+
+- Why legacy `100vh` can exceed the visible mobile viewport and what symptoms that creates.
+- How `svh`, `lvh`, and `dvh` differ and when each semantic viewport is appropriate.
+- Why `min-height`, safe-area insets, keyboard/orientation testing, and ordinary scrolling remain separate concerns.
+- How the historical `window.innerHeight`/`--vh` fallback works and what lifecycle/performance costs it introduces.
+
 ## Sources
 - Workspace: `_ai-conspects/SVH DVH LVH/`
 - Processed source: `05-full-combined-final-transcript.md`, complete transcript

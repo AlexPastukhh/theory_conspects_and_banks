@@ -10,6 +10,14 @@ Reuse the long-lived `ConnectionMultiplexer`; it owns sockets, reconnects, disco
 
 Hash fields have no independent TTL. Lists provide ordered push/pop/range operations and can act as queues or stacks. Sets provide uniqueness, membership tests, and set algebra. Sorted sets associate a score with each unique member and support rank and score ranges. Choose the structure by the atomic server-side operation required.
 
+## What should be recallable
+
+- Explain the core model of **Redis connection model and data structures** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Reuse the long-lived `ConnectionMultiplexer`; it owns sockets, reconnects, discovery, and routing.
+- Reconstruct this Unit-grounded rule: `RedisKey` is binary-safe; use stable prefixes and remember TTL applies to the whole key.
+- Reconstruct this Unit-grounded rule: Hash fields have no independent TTL.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/manual account lockout,ratelimiter middleware, idatabase vs idist cache/`

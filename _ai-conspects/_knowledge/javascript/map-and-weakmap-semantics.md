@@ -29,6 +29,14 @@ bucket.push(item);
 map.set(groupKey, bucket);
 ```
 
+## What should be recallable
+
+- Explain the core model of **JavaScript Map and WeakMap semantics** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Iteration exposes entries/keys/values; `forEach` receives value then key.
+- Reconstruct this Unit-grounded rule: Object conversion cannot faithfully round-trip arbitrary Map keys, and `JSON.stringify(new Map())` does not serialize entries automatically.
+- Reconstruct this Unit-grounded rule: `WeakMap` accepts object keys weakly: entries may disappear after no strong key reference remains.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/map and weakmap js/`

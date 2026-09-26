@@ -15,6 +15,13 @@ The array infers `T`; `keyof T` restricts keys; the literal infers `K`; `T[K]` p
 
 A variable widened to `string` is too broad; preserve the literal with `const`/`as const` or type it as `keyof T`. Once `T` is inferred, IntelliSense can offer its valid keys.
 
+## What should be recallable
+
+- Explain the core model of **Generic property extraction with keyof** without opening the Unit.
+- Reconstruct this Unit-grounded rule: The array infers `T`; `keyof T` restricts keys; the literal infers `K`; `T[K]` preserves the exact selected value type.
+- Reconstruct this Unit-grounded rule: A variable widened to `string` is too broad; preserve the literal with `const`/`as const` or type it as `keyof T`.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/typescript generic get prop from aray of users, k extends keyof T/`
 - Processed source: `01-final-transcript.md`, complete transcript

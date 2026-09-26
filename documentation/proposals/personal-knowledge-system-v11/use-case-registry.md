@@ -1,6 +1,8 @@
+> **Historical proposal snapshot.** Current canonical methodology was promoted during CS1. Start at [`../../README.md`](../../README.md) and [`../../migration/CURRENT-MIGRATION-STATE.md`](../../migration/CURRENT-MIGRATION-STATE.md).
+
 # Use-Case Registry
 
-Status: current agreed working set.
+Status: historical/non-authoritative proposal registry snapshot.
 
 ## Knowledge & Learning
 

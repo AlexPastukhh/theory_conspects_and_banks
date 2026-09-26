@@ -26,6 +26,13 @@ SELECT * FROM ranked WHERE rn = 1;
 
 The optimizer may physically reorder joins, predicates, and operators while preserving the logical result. Use logical order to explain semantics and the actual execution plan to explain work. Vendor-specific features can occupy engine-specific positions.
 
+## What should be recallable
+
+- Explain the core model of **SQL logical query processing order** without opening the Unit.
+- Reconstruct this Unit-grounded rule: This explains why a `SELECT` alias is generally unavailable in `WHERE`: the filter is logically earlier.
+- Reconstruct this Unit-grounded rule: The optimizer may physically reorder joins, predicates, and operators while preserving the logical result.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/sheet exec order/`
 - Processed source: `01-final-transcript.md`, complete transcript

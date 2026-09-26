@@ -27,6 +27,14 @@ modelBuilder.Entity<User>()
 
 A unique index enforces uniqueness without automatically becoming a relationship principal key; an alternate key carries that key-model meaning. Composite unique indexes enforce uniqueness over the complete tuple. Explicit index and constraint names also provide stable identifiers when provider errors must be mapped back to domain rules.
 
+## What should be recallable
+
+- Explain the core model of **EF Core index configuration** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Configure indexes from actual filter, join, order, and projection patterns.
+- Reconstruct this Unit-grounded rule: `IncludeProperties`, `HasFilter`, clustered configuration, descending metadata, and null uniqueness semantics are provider-specific.
+- Reconstruct this Unit-grounded rule: A unique index enforces uniqueness without automatically becoming a relationship principal key; an alternate key carries that key-model meaning.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/indexes, onmodel indexes/`
 - Processed source: `09-full-combined-final-transcript.md`, complete transcript

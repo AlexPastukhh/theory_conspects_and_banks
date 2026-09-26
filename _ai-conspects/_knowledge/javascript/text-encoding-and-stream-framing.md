@@ -54,6 +54,14 @@ consumeText(decoder.decode());
 
 Binary protocols can process each `Uint8Array` as bytes, but must still apply their own framing rather than treating a reader chunk as a message.
 
+## What should be recallable
+
+- Explain the core model of **Text encoding and stream framing** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `TextEncoder` converts a JavaScript string to UTF-8 `Uint8Array`; `TextDecoder` converts compatible byte buffers/views back to text.
+- Reconstruct this Unit-grounded rule: Stream chunks are arbitrary transport chunks, not characters, lines, JSON values, or application frames.
+- Reconstruct this Unit-grounded rule: Character decoding does not solve message framing.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/textdecoder, encoder, streaming and processing chunks, textdecoderstream of transformstream/`
 - Processed source: `01-final-transcript.md`, complete transcript

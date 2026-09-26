@@ -15,6 +15,14 @@ Choose using actual query/write shapes, hierarchy stability, constraints, and pr
 
 `HasBaseType` controls EF model inheritance; setting it to `null` detaches a CLR-derived type in the EF model while CLR inheritance remains. Querying a mapped base type is polymorphic. Casting changes compile-time access but not runtime subtype; use type tests/pattern matching/`OfType<TDerived>` for subtype logic.
 
+## What should be recallable
+
+- Explain the core model of **EF Core inheritance mapping with TPH, TPT, and TPC** without opening the Unit.
+- Reconstruct this Unit-grounded rule: TPH stores a hierarchy in one table with a discriminator.
+- Reconstruct this Unit-grounded rule: Choose using actual query/write shapes, hierarchy stability, constraints, and provider measurements.
+- Reconstruct this Unit-grounded rule: `HasBaseType` controls EF model inheritance; setting it to `null` detaches a CLR-derived type in the EF model while CLR inheritance remains.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/onmodelcreating/`

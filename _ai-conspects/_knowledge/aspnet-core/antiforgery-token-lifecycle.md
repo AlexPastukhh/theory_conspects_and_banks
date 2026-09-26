@@ -77,6 +77,14 @@ public async Task OnResultExecutionAsync(
 
 Always-run variants exist only for result filters (`IAlwaysRunResultFilter` and `IAsyncAlwaysRunResultFilter`), not for arbitrary authorization or action filters.
 
+## What should be recallable
+
+- Explain the core model of **ASP.NET Core antiforgery token lifecycle** without opening the Unit.
+- Reconstruct this Unit-grounded rule: CSRF exploits automatic auth-cookie attachment.
+- Reconstruct this Unit-grounded rule: Refresh after login/logout/session changes.
+- Reconstruct this Unit-grounded rule: The cookie token and request token are related but not interchangeable.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/antiforgerytoken/`
 - Processed source: `02-corrected-semantic-transcript-v002.md`, complete corrected transcript

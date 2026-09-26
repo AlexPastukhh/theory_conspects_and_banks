@@ -38,6 +38,13 @@ failed login
 
 Redis makes the state shared across application instances; the built-in ASP.NET Core partition limiter remains local. A practical layered design uses a cheap local limiter for resource protection, Redis for shared failed-attempt state, and Identity lockout for account security. Distributed coordination adds availability and consistency trade-offs, so define fallback behavior when Redis is unavailable.
 
+## What should be recallable
+
+- The lifetime/role of `IConnectionMultiplexer`, the lightweight nature of `IDatabase`, and where `IDistributedCache` is intentionally too portable.
+- Why Redis fits shared short-lived operational state while durable business/audit truth normally stays in the database.
+- Why `INCR` solves lost-update races and why `INCR` plus `EXPIRE` still needs crash-safe invariant handling.
+- How local limiting, shared Redis throttling, Identity lockout, and Redis-unavailable fallback form a layered design.
+
 ## Sources
 
 - Workspace: `_ai-conspects/manual account lockout,ratelimiter middleware, idatabase vs idist cache/`

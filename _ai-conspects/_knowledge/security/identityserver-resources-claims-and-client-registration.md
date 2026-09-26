@@ -29,6 +29,14 @@ inspect currently granted scopes
 
 Both the resulting access token and the protected API policy must reflect the extra scope.
 
+## What should be recallable
+
+- Explain the core model of **IdentityServer resources, claims, and client registration** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Identity resources describe identity claims requested through OIDC scopes, such as `openid`, profile, or email.
+- Reconstruct this Unit-grounded rule: `IProfileService` selects claims for the current subject, client, requested claim types, and authorization context.
+- Reconstruct this Unit-grounded rule: Do not confuse a client secret with user authentication or PKCE, and do not grant broad scopes merely because the client can request them.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/OIDC,OAUTH, IDENTITY SERVER,BFF,authtoken, authproperties/`

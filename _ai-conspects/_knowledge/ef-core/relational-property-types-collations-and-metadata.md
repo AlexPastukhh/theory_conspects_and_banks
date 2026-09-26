@@ -18,6 +18,14 @@ builder.Property(x => x.Code)
 
 An explicit query collation may prevent use of an index built under a different collation. Prefer schema-level semantics for common queries and verify generated SQL/query plans. A default schema can be overridden per table, sequence, or function; migrations create or move the actual objects. Store-type, collation, computed-column, schema, sequence, and mapped-function metadata are separate relational/provider contracts.
 
+## What should be recallable
+
+- Explain the core model of **EF Core relational property types, collations, and metadata** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Property configuration spans different concerns.
+- Reconstruct this Unit-grounded rule: In SQL Server, Unicode semantics and collation are independent.
+- Reconstruct this Unit-grounded rule: An explicit query collation may prevent use of an index built under a different collation.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/onmodelcreating/`

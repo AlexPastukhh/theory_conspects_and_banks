@@ -21,6 +21,14 @@ Common leaf operations are `Constant`, `Parameter`, and `Default`. `MemberAccess
 
 `ExpressionVisitor` provides recursive traversal and immutable rewriting. Override focused visit methods, call `Visit` for children, and return the original node when children are unchanged to preserve sharing. Visitors power query translation, dynamic predicates, rule analysis, instrumentation, and serializers, but every consumer supports only a subset of node kinds.
 
+## What should be recallable
+
+- Explain the core model of **Expression-tree structure and visitors** without opening the Unit.
+- Reconstruct this Unit-grounded rule: An `Expression<TDelegate>` represents a lambda as data.
+- Reconstruct this Unit-grounded rule: Inspect `NodeType`, `Type`, and the concrete node class rather than parsing `ToString()`.
+- Reconstruct this Unit-grounded rule: Common leaf operations are `Constant`, `Parameter`, and `Default`.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/EXPRESSION TREES/`

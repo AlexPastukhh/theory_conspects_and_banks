@@ -12,6 +12,14 @@ Topic: `dotnet`
 
 Use it for loops, unknown fragment counts, serializers, code/report/protocol generation. For a few fixed operands, interpolation/`+` is clearer and often compiler-optimized. Avoid shared concurrent mutation, excessive over-allocation, and builders used for only two appends. Formatting remains culture-dependent unless given an explicit provider; profile allocation assumptions.
 
+## What should be recallable
+
+- Explain the core model of **StringBuilder mutation and sizing** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `StringBuilder` maintains a mutable character buffer for many incremental edits.
+- Reconstruct this Unit-grounded rule: `ToString()` materializes an immutable snapshot, while `ToString(startIndex, length)` materializes a range.
+- Reconstruct this Unit-grounded rule: `Append`, `AppendLine`, `AppendJoin`, and `AppendFormat` build content; interpolation handlers may be clearer for modern formatting.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/STRINGBUILDER/`
 - Processed source: `04-full-combined-final-transcript.md`, complete transcript

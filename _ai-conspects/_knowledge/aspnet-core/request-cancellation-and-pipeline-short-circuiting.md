@@ -22,6 +22,14 @@ Client cancellation is normal control flow: do not log it as an application erro
 
 Middleware short-circuits the remaining request pipeline by returning without `_next`. An async action filter short-circuits MVC by setting `context.Result` and returning without `next`; earlier/later hosting middleware remains in control. When disconnected, simply return; for a normal policy rejection, set a result such as unauthorized/forbid before returning.
 
+## What should be recallable
+
+- Explain the core model of **Request cancellation and pipeline short-circuiting** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `HttpContext.RequestAborted` signals client disconnect.
+- Reconstruct this Unit-grounded rule: Client cancellation is normal control flow: do not log it as an application error or attempt a body after disconnect.
+- Reconstruct this Unit-grounded rule: Middleware short-circuits the remaining request pipeline by returning without `_next`.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/filter-middleware-cancellation-request-aborted/`
 - Processed source: `10-full-source-preserving-transcript-v003.md`, complete transcript

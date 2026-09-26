@@ -37,6 +37,14 @@ app.MapPost("/login", Login).RequireRateLimiting("login");
 
 Built-in limiter state is process-local. With several application instances, effective aggregate capacity grows unless a shared upstream/distributed layer coordinates it.
 
+## What should be recallable
+
+- Explain the core model of **ASP.NET Core rate-limiter policies and endpoint middleware** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Register policies with `AddRateLimiter` and place `UseRateLimiter` after routing and before mapped endpoints when endpoint metadata selects policies.
+- Reconstruct this Unit-grounded rule: Global and endpoint-specific policies may coexist.
+- Reconstruct this Unit-grounded rule: Built-in limiter state is process-local.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/manual account lockout,ratelimiter middleware, idatabase vs idist cache/`

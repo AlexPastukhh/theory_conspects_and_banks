@@ -20,6 +20,14 @@ function charToDigitAscii(ch) {
 
 ASCII `0…9` occupy consecutive codes `48…57`; this fast path does not support other Unicode digits.
 
+## What should be recallable
+
+- Explain the core model of **Numeric conversion and prefix parsing** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Unary `+` and `Number(value)` convert the entire value.
+- Reconstruct this Unit-grounded rule: It stops before the fraction rather than rounding.
+- Reconstruct this Unit-grounded rule: ASCII `0…9` occupy consecutive codes `48…57`; this fast path does not support other Unicode digits.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/parse string to int, convert char/`
 - Processed source: `01-detailed-near-literal-transcript.md`, complete transcript

@@ -12,6 +12,14 @@ An abstract base record plus derived records carries case-specific payloads and 
 
 An explicit `OneOf<A,B,C>`-style library makes the finite case list part of the type, at the cost of a dependency. Record hierarchies, enum switches, and explicit unions provide different closure guarantees rather than interchangeable syntax.
 
+## What should be recallable
+
+- Explain the core model of **Exhaustiveness with enums, records, and explicit unions** without opening the Unit.
+- Reconstruct this Unit-grounded rule: An enum switch expression without a discard arm can keep omitted named cases visible to compiler/analyzer diagnostics.
+- Reconstruct this Unit-grounded rule: A throwing `_` arm provides deliberate runtime failure and useful argument information, but it matches everything.
+- Reconstruct this Unit-grounded rule: An abstract base record plus derived records carries case-specific payloads and enables type-pattern switches, but ordinary inheritance is open: the compiler does not generally know the complete global subtype set.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/exaustiveness check with sicr union for enums,classes with inher/`
 - Processed source: `05-source-preserving-transcript-v002.md`, complete transcript

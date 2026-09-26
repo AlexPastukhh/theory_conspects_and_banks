@@ -10,6 +10,14 @@ Each branch adds round trips, command/startup, reading, materialization, and fix
 
 Affected EF versions require fully unique ordering with split Skip/Take. `IgnoreAutoIncludes` disables model eager loading. Explicit loading chooses what/when for a tracked root; split coordinates an Include graph. Projection is often best for subsets. Prefer split for wide sibling branches and single query for small graphs or one-statement consistency—measure latency, rows, width, and memory.
 
+## What should be recallable
+
+- Explain the core model of **EF Core split-query tradeoffs** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `AsSplitQuery` loads a root and collection Include branches with multiple statements.
+- Reconstruct this Unit-grounded rule: Each branch adds round trips, command/startup, reading, materialization, and fix-up.
+- Reconstruct this Unit-grounded rule: Affected EF versions require fully unique ordering with split Skip/Take.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/assplitquery/`
 - Processed source: `01-final-transcript.md`, complete transcript

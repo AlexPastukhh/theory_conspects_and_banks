@@ -17,6 +17,14 @@ await waitFor(() => {
 
 Helpers should accept semantic role/name options, use `findByRole`, return the element, preserve useful errors, and exist only for repeated domain-level assertions.
 
+## What should be recallable
+
+- Explain the core model of **Testing Library query and wait semantics** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `getByRole` is synchronous and throws for zero/multiple matches; use it for present UI.
+- Reconstruct this Unit-grounded rule: `waitFor` retries while its callback throws—returning false does not retry.
+- Reconstruct this Unit-grounded rule: Helpers should accept semantic role/name options, use `findByRole`, return the element, preserve useful errors, and exist only for repeated domain-level assertions.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/viTst existance assert test/`
 - Processed source: `04-full-combined-final-transcript.md`, complete transcript

@@ -17,6 +17,13 @@ if (ReferenceEquals(value, MissingValue))
 
 Type initialization safely publishes the shared readonly reference. `readonly` prevents field reassignment, not mutation of the referenced object, so a sentinel should carry no mutable state. Keep internal markers private; for a public protocol prefer a typed token or dedicated result/union type. A public sentinel can be reused by any holder, and GUIDs are forgeable data rather than property-key primitives.
 
+## What should be recallable
+
+- Explain the core model of **.NET identity sentinels and transferable IDs** without opening the Unit.
+- Reconstruct this Unit-grounded rule: .NET has no direct JavaScript Symbol primitive.
+- Reconstruct this Unit-grounded rule: Type initialization safely publishes the shared readonly reference.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/symbol/`
 - Processed source: `05-full-combined-final-transcript.md`, complete transcript

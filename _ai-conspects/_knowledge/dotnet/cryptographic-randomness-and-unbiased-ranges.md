@@ -41,6 +41,14 @@ Entropy of direct selection: each character from a 32-symbol alphabet contribute
 
 The byte-first approach (`RandomNumberGenerator.GetBytes` + `Base32Encoding.ToString`) is preferred because its entropy is controlled by byte count, not output length, and it is conventional for TOTP libraries.
 
+## What should be recallable
+
+- Explain the core model of **Cryptographic randomness and unbiased ranges** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Use `RandomNumberGenerator` whenever unpredictability protects security: session/reset/activation tokens, API keys, salts, nonces, MFA/recovery codes, and secrets.
+- Reconstruct this Unit-grounded rule: `GetBytes` returns raw entropy; `Fill(Span<byte>)` uses existing storage.
+- Reconstruct this Unit-grounded rule: `GetInt32(min, max)` uses an exclusive upper bound and unbiased range reduction.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/randomnumbergenerator/`
 - Processed source: `regions/R01R02R03-final-coverage-transcript.md`, complete transcript

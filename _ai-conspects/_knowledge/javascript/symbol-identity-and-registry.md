@@ -15,6 +15,13 @@ user[internalId];  // 42
 
 `Symbol.for(key)` retrieves or creates a shared identity in the runtime-global registry; repeated calls with the same string return the same symbol, and `Symbol.keyFor` returns a registered key. Plain symbols are not registered. Use namespaced registry keys for cross-module protocols and local symbols when sharing is unnecessary. Well-known symbols such as `Symbol.iterator` define language protocols. Registry keys are neither private nor a place for secrets.
 
+## What should be recallable
+
+- Explain the core model of **JavaScript Symbol identity and registry** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Every `Symbol()` call creates a distinct primitive even when descriptions match; the description is debugging metadata, not identity.
+- Reconstruct this Unit-grounded rule: `Symbol.for(key)` retrieves or creates a shared identity in the runtime-global registry; repeated calls with the same string return the same symbol, and `Symbol.keyFor` returns a registered key.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/symbol/`
 - Processed source: `05-full-combined-final-transcript.md`, complete transcript

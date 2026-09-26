@@ -1460,10 +1460,13 @@ Visible text present; OCR-assisted read, not an OCR-timeout/error placeholder.
 
 ---
 
-### Recall additions
+## What should be recallable
 
-- How urgent and transition updates differ in step-by-step pagination timelines.
-- How transitions interact with Suspense, placeholder data, pending UI, rapid navigation, and request cancellation.
+
+- Why `startTransition` changes render priority but does not debounce work or cancel network I/O.
+- How transitions and Suspense can keep previously committed UI visible while non-urgent work is prepared.
+- How TanStack Query cancellation depends on forwarding `AbortSignal`, and why `cancelQueries` is not equivalent to interrupted React rendering.
+- Why workflows that need per-request ownership require explicit query keys/IDs/state rather than relying on transition call order.
 
 
 ## Sources

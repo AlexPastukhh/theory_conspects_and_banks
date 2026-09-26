@@ -15,6 +15,13 @@ Response-compression support does not imply request decompression. Cacheable com
 
 Compress sufficiently large text payloads when network savings justify CPU/latency. Avoid recompressing media/archive formats already compressed. `SocketsHttpHandler.AutomaticDecompression` yields decoded response bytes to application code.
 
+## What should be recallable
+
+- Explain the core model of **HTTP content coding direction and negotiation** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Response-compression support does not imply request decompression.
+- Reconstruct this Unit-grounded rule: Compress sufficiently large text payloads when network savings justify CPU/latency.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/compression,decompression,request,response/`

@@ -23,6 +23,14 @@ const matrix = Array.from(
 
 Normal arrays remain resizable regardless of initial length. Typed arrays such as `Uint8Array(16)` have fixed numeric element counts and zero initialization; an outer normal array of typed rows can still resize. `Object.freeze` prevents structural mutation of one normal array object but is not deep fixed-size numeric storage.
 
+## What should be recallable
+
+- Explain the core model of **JavaScript array creation, holes, and fixed storage** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Prefer literals for ordinary arrays.
+- Reconstruct this Unit-grounded rule: `Array.from(source, mapper)` creates an array from an iterable or array-like input and can map while creating.
+- Reconstruct this Unit-grounded rule: Holes read as `undefined` but are not own properties, and methods such as `map`, `forEach`, and `filter` skip them.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/create array, fixed length/`
 - Processed source: `regions/final-transcript.md`, complete transcript

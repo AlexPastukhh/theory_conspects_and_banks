@@ -14,6 +14,14 @@ The server emits `Set-Cookie`; the browser stores the value and later attaches i
 
 CORS credentials and SameSite answer different questions: CORS may permit a credentialed cross-origin request while SameSite still prevents cookie attachment. A credentialed CORS flow needs client credential mode plus an explicit allowed origin and `Access-Control-Allow-Credentials: true`; it cannot use wildcard origin. Even then, `SameSite`, `Secure`, and browser third-party-cookie policy independently decide whether the cookie is sent. First/third-party and partitioned-cookie rules can further scope embedded/iframe flows.
 
+## What should be recallable
+
+- Explain the core model of **Browser cookie delivery and security** without opening the Unit.
+- Reconstruct this Unit-grounded rule: The server emits `Set-Cookie`; the browser stores the value and later attaches it as a `Cookie` header only when name/domain/path/SameSite/Secure rules match.
+- Reconstruct this Unit-grounded rule: `HttpOnly` blocks `document.cookie` access but does not stop automatic request attachment; a non-HttpOnly credential is more exposed to XSS.
+- Reconstruct this Unit-grounded rule: CORS credentials and SameSite answer different questions: CORS may permit a credentialed cross-origin request while SameSite still prevents cookie attachment.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/cookies-general-theo-plain-cookie-options/`
 - Processed source: `regions/R01R02R03-cookies-options-theory-samesite-final.md`, complete transcript

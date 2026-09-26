@@ -56,6 +56,14 @@ Short TTLs create more lock windows. Slow databases/APIs make the lock holder sl
 
 Cache the reusable 200 representation, not a transient bodyless 304 as content. A validator checked against cached output proves whether that cached representation matches the request validator; it does not query current database state. Force endpoint execution when current backing state must be consulted.
 
+## What should be recallable
+
+- Explain the core model of **Output Cache safety, value, and locking decisions** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Reject full-response caching when output depends on the current user, session, tenant, role, claims, account/security state, or unsafe cookie state.
+- Reconstruct this Unit-grounded rule: Safe candidates include anonymous public listings, documentation, stable search results, and mostly static pages.
+- Reconstruct this Unit-grounded rule: Hot common URLs and query combinations are strong candidates; request IDs, timestamps, random values, and highly unique searches create cold one-off variants.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Related knowledge
 
 - `aspnet-core.response-and-output-caching-policies`

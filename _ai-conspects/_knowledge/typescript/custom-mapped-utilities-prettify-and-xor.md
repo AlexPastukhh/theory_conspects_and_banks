@@ -58,6 +58,14 @@ const invalid: Lookup = {
 
 A plain structural union `ById | ByEmail` can admit an object carrying both sets of properties in some assignment and excess-property situations. `XOR` makes the exclusion part of the type by assigning the other branch's unique keys to `never`. For non-object inputs, the helper falls back to the ordinary union.
 
+## What should be recallable
+
+- Explain the core model of **Custom mapped utilities: Prettify and XOR** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Custom mapped and conditional types can improve editor display or express object alternatives that a plain union does not enforce clearly.
+- Reconstruct this Unit-grounded rule: It is a type-display helper only; it changes no runtime value or behavior.
+- Reconstruct this Unit-grounded rule: A plain structural union `ById | ByEmail` can admit an object carrying both sets of properties in some assignment and excess-property situations.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/utility types/`
 - Authoritative processed source: `01-final-transcript.md`, R05

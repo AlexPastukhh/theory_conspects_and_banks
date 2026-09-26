@@ -1,19 +1,33 @@
-# UC-SOURCE-CREATE-CONSPECT — Создать source-конспект
+# UC-SOURCE-CREATE-CONSPECT — Create Source-Preserving Conspect
 
 ## Situation
+An external source should be transformed into a convenient working representation without losing what the source actually contains.
 
-Имеется текстовый, визуальный или смешанный исходный материал, для которого требуется проверяемое source-preserving представление до возможного переноса в knowledge layer.
+Sources may include text, documents, images, screenshots, Excalidraw, presentations, or mixed visual material.
 
 ## Result
-
-Source workspace содержит точное представление доступного материала, provenance, границы прочитанного и актуальную authority-цепочку. Недоступные или неоднозначные части остаются явно незавершёнными, а не объявляются verified.
+A source-preserving conspect that:
+- represents the source faithfully enough for later work;
+- preserves important provenance;
+- distinguishes explicit source content from interpretation;
+- marks unclear/unavailable fragments;
+- can be verified and later materialized into knowledge.
 
 ## Process
+1. Identify the authoritative source.
+2. Choose an appropriate transcription method.
+3. Preserve meaningful source content.
+4. Preserve meaningful spatial/layout semantics for visual sources.
+5. Separate exact visible/source content, normalized source, and interpretation.
+6. Do not reconstruct cropped/unclear content from memory.
+7. Check coverage.
+8. Mark unresolved fragments.
+9. Preserve provenance.
 
-1. Зафиксировать материал и его фактическую доступность. Применить [принципы работы с репозиторием](../repository-work-principles.md): текстовый источник не превращать искусственно в image workflow.
-2. Если источник текстовый, сохранить исходный текст/ссылку и сделать source-preserving обработку без добавления несourced утверждений. Если источник визуальный, следовать [принципам работы с изображениями](../image-conspect-principles.md) и только применимым специализированным визуальным правилам.
-3. Разделить проверенное содержание, нормализацию, интерпретации и unresolved места. Фиксировать не только центральный тезис, но и значимые примеры, caveats, причинные связи и ограничения.
-4. Оформить только нужные source-файлы и coverage/audit evidence. CURRENT_SOURCE_OF_TRUTH.md должен указывать реальные authoritative файлы и честно отражать partial/complete состояние; отсутствие физического изображения не маскировать именем файла.
-5. Проверить содержимое против доступного источника, физическое разрешение путей и заявленные coverage/counts. Не создавать KNOWLEDGE_REGISTRY.md, пока не выполнена реальная миграция meaningful claims.
+## Boundary
+A source conspect is not automatically a Knowledge Unit. Its responsibility is faithful source representation.
 
-Если нужен сразу самостоятельный материал для повторения, после подтверждения источника отдельно применить [UC-KNOWLEDGE-CREATE-OR-CHANGE](UC-KNOWLEDGE-CREATE-OR-CHANGE.md); один source workspace сам по себе ещё не knowledge unit.
+
+## Current repository specialization
+
+For visual material, apply `documentation/image-conspect-principles.md` and the still-valid source-preservation mechanics under `_ai-conspects/`. Those specialized rules support this Use Case; they do not create a second source-conspect capability.

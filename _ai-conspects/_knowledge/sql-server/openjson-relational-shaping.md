@@ -22,6 +22,14 @@ Project nested scalar fields with paths such as `$.address.city`. Mark a nested 
 
 Mental model: the first `OPENJSON` selects parent rows, `AS JSON` preserves a child fragment, and an applied `OPENJSON` produces child rows. Use default schema for inspection/generic traversal and `WITH` for stable relational contracts. Verify the database compatibility level supports `OPENJSON`.
 
+## What should be recallable
+
+- Explain the core model of **SQL Server OPENJSON relational shaping** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `OPENJSON` turns JSON text into a rowset.
+- Reconstruct this Unit-grounded rule: The optional path navigates to a nested value before opening it.
+- Reconstruct this Unit-grounded rule: Project nested scalar fields with paths such as `$.address.city`.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/ef has conversion, value converte,comparer/`
 - Authoritative processed source: `06-full-combined-final-transcript.md`, R04-R05

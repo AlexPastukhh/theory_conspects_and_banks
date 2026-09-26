@@ -22,6 +22,14 @@ A custom `ValueGenerator` can assign client values. Its `GeneratesTemporaryValue
 
 Migration output is part of verification: confirm defaults, computed definitions, sequence dependencies, and save behavior against the exact provider.
 
+## What should be recallable
+
+- Explain the core model of **EF Core value generation, defaults, and save behavior** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `ValueGeneratedOnAdd`, `ValueGeneratedOnAddOrUpdate`, and `ValueGeneratedNever` describe when EF expects store/application generation.
+- Reconstruct this Unit-grounded rule: Before-save and after-save behaviors decide whether an explicitly supplied value is sent/accepted or ignored/rejected around persistence.
+- Reconstruct this Unit-grounded rule: A custom `ValueGenerator` can assign client values.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/onmodelcreating/`

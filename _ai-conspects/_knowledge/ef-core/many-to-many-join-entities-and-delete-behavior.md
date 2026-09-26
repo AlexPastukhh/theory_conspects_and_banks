@@ -19,6 +19,14 @@ Delete behavior describes what happens to dependents/foreign keys when the princ
 
 Treat the join-table shape and delete rule as schema/domain decisions rather than interchangeable conventions.
 
+## What should be recallable
+
+- Explain the core model of **EF Core many-to-many join entities and delete behavior** without opening the Unit.
+- Reconstruct this Unit-grounded rule: An implicit many-to-many mapping hides the join row when it has no domain meaning.
+- Reconstruct this Unit-grounded rule: Delete behavior describes what happens to dependents/foreign keys when the principal relationship is severed.
+- Reconstruct this Unit-grounded rule: Treat the join-table shape and delete rule as schema/domain decisions rather than interchangeable conventions.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/onmodelcreating/`

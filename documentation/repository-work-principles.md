@@ -1,60 +1,119 @@
-# Принципы работы с репозиторием конспектов
+# Repository Work Principles
 
-Status: current cross-cutting principles for the ai-conspects repository.
+Status: current repository-specific principles.
 
-Scope: корректная форма репозитория, ответственность слоёв, границы authority и инварианты изменений. Этот файл не заменяет Process конкретного Use Case и не задаёт учебные интервалы.
+Scope: repository form, semantic ownership, source/knowledge/question/memory boundaries, migration compatibility, and change invariants. Universal knowledge semantics live under `documentation/principles/`.
 
-## Навигация и выбор работы
+## Navigation and authority
 
-[README](../README.md) отвечает за структурную навигацию, [реестр Use Cases](use-case-registry.md) — за выбор результата по ситуации, а выбранный Use Case — за Process. Принципы и специализированные политики определяют смысл и инварианты, но не запускают все процессы при простом чтении. Проверенный ранее маршрут можно использовать повторно, пока контекст и authority не изменились.
+- root `README.md` is structural entry;
+- `documentation/README.md` maps methodology/guidance;
+- `documentation/use-case-registry.md` is the functional entry;
+- selected Use Case owns Situation / Result / Process;
+- universal principles/policies own shared semantics;
+- specialized source/image rules remain supporting mechanics;
+- `documentation/migration/CURRENT-MIGRATION-STATE.md` owns temporary migration boundaries.
 
-Реестр может привести к нулю, одному или нескольким Use Cases. Совпадение строки реестра не означает выполнение Process. Если запрос только на объяснение или проверку, навигация не даёт разрешения менять файлы; commit и push не следуют из выполнения учебной работы.
+A proposal, index, generated report, legacy dashboard, or physical folder never becomes semantic authority merely because it is convenient to navigate.
 
-## Корректная форма репозитория
+## Layer boundaries
 
 ```text
-README.md                              структурный вход
-documentation/
-  use-case-registry.md                 функциональный вход
-  use-cases/                           канонические Situation / Result / Process
-  *-principles.md                      стабильные правила и термины
-_ai-conspects/
-  <source-workspace>/                  локальный source-preserving материал и provenance (вне Git)
-  _knowledge/INDEX.md                  список topics
-  _knowledge/<topic>/INDEX.md          список units одного topic
-  _knowledge/<topic>/<unit>.md         independently reviewable unit
-  _repetition/REPETITION_POLICY.md      правила обучения и календарных интервалов
-  _repetition/REPETITION_STATE.csv      текущее состояние по Knowledge ID
-  _repetition/LEARNING_INBOX.md         реестр дневных batch
-  _repetition/QUESTIONS_BACKLOG.md      реестр отложенных вопросов
-  _repetition/inbox/                   raw dumps, создаются по мере сбора
-  _repetition/history/                 история реальных reviews, создаётся по мере повторений
+Sources / Evidence
+  preserve what external material actually contains
+
+Knowledge
+  canonical durable personal model
+
+Questions / Coverage / Expansion
+  growth state and planning objects
+
+Memory / Repetition
+  observed recall and scheduling state
+
+Views
+  projections over canonical knowledge/state, not owners
 ```
 
-Это карта ответственности, не требование удалить все остальные файлы: в _ai-conspects/ уже есть унаследованные протоколы, аудиты и технические материалы. .obsidian/ и иные локальные настройки редактора не являются authority для знаний. Новые опорные файлы располагаются по назначению, а не по историческому месту старого проекта obs.
+Sources, Knowledge, Questions, and Memory must not be collapsed into one record merely for convenience.
 
-## Слои и authority
+Current planning-layer physical projection:
 
-- Исходный материал и проверенный source-конспект сохраняют evidence и provenance. Источник может быть текстовым, визуальным или смешанным. Текст не требует OCR или image coverage. Source workspace нужен, когда действительно требуется отдельное source-preserving представление; прямой проверенный текст или дневной batch не обязаны создавать фиктивный workspace.
-- Knowledge unit — самостоятельный материал для повторения, а не замена исходного evidence. Его содержание регулируют [принципы создания knowledge-конспекта](knowledge-conspect-principles.md).
-- CURRENT_SOURCE_OF_TRUTH.md определяет текущую authority-цепочку конкретного source workspace. Для заявления о завершённом processed source названные authoritative файлы должны существовать, а непокрытое содержание — быть обозначено. Workspace без такого подтверждения не становится готовым только из-за наличия каталога.
-- KNOWLEDGE_REGISTRY.md подтверждает распределение meaningful claims только после фактической миграции workspace. MAPPED/MERGED должны вести к содержимому destination; UNRESOLVED относится к конкретному meaningful claim, а не закрывает полностью необработанный workspace.
-- Knowledge indexes служат навигацией; Knowledge ID — стабильной идентичностью unit; REPETITION_STATE.csv — текущим состоянием обучения по этому ID. Оценку и интервалы определяет [REPETITION_POLICY.md](../_ai-conspects/_repetition/REPETITION_POLICY.md). История отражает реальные результаты повторения, а не автоматически выведенную «память».
+```text
+_ai-conspects/_planning/
+  = operational Coverage / tracked Question / Expansion Plan state;
+  = not a second semantic owner and not a global scheduler.
+```
 
-Текстовый source workspace хранит исходный текст или точную ссылку/идентичность источника отдельно от нормализованного представления и авторской интерпретации. Если исходник недоступен, это ограничение provenance, а не повод объявить пересказ verified. Для текста не требуется искусственный screenshot ledger; visual coverage применяется только к визуальной части смешанного источника.
+## Canonical knowledge identity
 
-## Инварианты целостности
+- Knowledge ID is stable identity.
+- Every durable explanation has one canonical semantic home.
+- Physical path is representation, not the sole semantic owner.
+- Current topic folders intentionally remain during migration; current Area/nested-Area ownership must be read from the current domain map/hierarchy rather than inferred from folders.
+- Tags provide cross-cutting retrieval and never create a second canonical owner.
+- Comparison knowledge is a real Knowledge Unit when the comparison itself contains durable understanding.
 
-- У каждого действующего Use Case есть канонический owner с Situation / Result / Process, а реестр содержит ровно одну ссылку на него. README не дублирует процессы или правила.
-- Каждый затронутый knowledge unit имеет уникальный Knowledge ID, согласованный topic, физический destination и запись в topic index; root knowledge index перечисляет topics, не каждый unit. Sources и workspace registries не должны ссылаться на вымышленные физические пути или overclaim содержимое unit.
-- Для затронутого repetition state один Knowledge ID имеет одну текущую строку; batch, вопросы и history сохраняют идентичность и реальные даты. Новый unit не получает задним числом оценку, review или интервал.
-- Исходные изображения, транскрипты и evidence не переписываются ради удобства knowledge layer. Чужие и нерелевантные изменения остаются нетронутыми. Добавление, изменение и удаление требуют знания точной цели и последствий для ссылок.
-- Сгенерированный KNOWLEDGE_MIGRATION_STATUS.md и иные индексы — производные представления. Совпадение counts или наличие registry не доказывает no-loss, техническую корректность и подлинный recall.
-- Проверка ограниченного scope не является проверкой всего репозитория; отчёт должен различать подтверждённое, непроверенное и нарушенное. Обычный git diff не включает новые untracked файлы.
-- Commit, push, массовая очистка и переписывание истории не следуют из Use Case и требуют отдельного явного запроса. Перед публикацией важно сверить Git-снимок, а не приравнивать локальное дерево к удалённому.
+## Source/provenance compatibility
 
-## Локальное и публикуемое evidence
+Existing source-workspace mechanics remain valid where applicable:
 
-Текущий .gitignore исключает source workspaces, SVG и PNG из Git, но не удаляет их с диска. Публикуемый Git-снимок содержит knowledge и repetition layers, но не локальное source evidence. Проверка локального source и проверка будущего GitHub-клона — разные утверждения: ссылки из knowledge units на workspace могут не разрешаться в клоне. Если источник недоступен в текущей среде, фиксировать известную identity и ограничение; не утверждать, что он физически проверен. Для визуальной обработки применять [отдельные принципы](image-conspect-principles.md).
+- `CURRENT_SOURCE_OF_TRUTH.md` names the actual processed authority for a workspace;
+- `KNOWLEDGE_REGISTRY.md` may record claim-level materialization only after real distribution;
+- `MAPPED / MERGED / NON_LEARNING / UNRESOLVED` remain useful specialized dispositions;
+- generated counts/status never prove semantic no-loss;
+- original evidence is not rewritten merely to simplify the knowledge layer;
+- text does not require fake visual coverage; visual material uses `image-conspect-principles.md`.
 
-Старые команды, привязанные к пути C:\Users\alexa\obs, прежним веткам и ZIP-доставке, не являются инструкцией для этого репозитория без отдельной проверки.
+`UC-KNOWLEDGE-MATERIALIZE-SOURCE` is now the capability owner for accountable source-to-knowledge materialization; legacy source rules support it.
+
+## Historical instruction boundary
+
+Legacy source-processing artifacts may remain useful evidence or supporting mechanics, but their historical execution context is not current repository authority. In particular, old instructions that name paths such as `C:\Users\alexa\obs`, retired branches, historical ZIP/apply transport, or other environment-specific commands must not be executed merely because the file is present.
+
+```text
+legacy process/evidence text
++ historical path / branch / transport command
+≠ current executable repository instruction
+```
+
+Reuse the underlying semantic/source-processing rule only when it is still valid under the current Use Case and current repository/source context. Revalidate any concrete path, branch, script, ZIP/apply command, or mutation instruction before execution.
+
+## Coverage interpretation boundary
+
+Repository representation must not collapse semantic structure and coverage evidence:
+
+- the domain hierarchy answers where knowledge belongs;
+- broad nested-Area occupancy is only a structural/primary-owner signal;
+- responsibility coverage answers what the domain is expected to explain;
+- manifestation coverage checks relevant technology-specific realizations;
+- a gap does not need its own entity or Question ID unless planning/lifecycle requires one.
+
+`MISSING` / `PARTIAL` / `COVERED` are scope-relative assessment results, not file-presence flags.
+
+## Repetition transition boundary
+
+The methodology migration has **not yet** converted `REPETITION_STATE.csv` or existing review history; that cutover belongs to CS5.
+
+Target semantics are owned by:
+
+- `principles/retention-repetition.md`;
+- `policies/repetition-scheduling-policy.md`.
+
+Existing `_ai-conspects/_repetition/*` policy/dashboard/inbox/backlog files remain transitional operational artifacts for the legacy state until CS5. They must not be interpreted as the target ontology, and legacy values must not be silently converted to `ACTIVE/STABLE`, Retention Class, or Recall State.
+
+## Integrity invariants
+
+- one current owner per Use Case;
+- one stable Knowledge ID per durable Unit;
+- no duplicate canonical semantic ownership;
+- no invented review, score, interval, Learning State, Retention Class, or Recall State;
+- review findings must distinguish memory failure from knowledge-base/source gaps;
+- source claims and provenance must remain recoverable;
+- scoped checks must not be presented as global audits;
+- unrelated files remain untouched;
+- commit/push/mass cleanup require their own explicit authorization.
+
+## Published vs local evidence
+
+Current `.gitignore` excludes some source workspaces and visual assets from Git. A published clone therefore may contain Knowledge/Memory layers without the local source evidence. A path reference does not prove that source evidence is currently available or re-verified.

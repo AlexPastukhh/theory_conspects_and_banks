@@ -27,6 +27,14 @@ To deconstruct a call, inspect `Method`, `Object`, and `Arguments`; do not assum
 
 An in-memory compiled delegate can invoke any accessible CLR method. Query providers translate only recognized calls. A custom helper or even an overload with a comparer may fail translation; keep provider expressions to supported methods or map explicit database functions, then cross to client evaluation deliberately.
 
+## What should be recallable
+
+- Explain the core model of **Expression-tree method calls and provider boundaries** without opening the Unit.
+- Reconstruct this Unit-grounded rule: A `MethodCallExpression` separates the receiver from arguments.
+- Reconstruct this Unit-grounded rule: Resolve the exact overload: name alone is ambiguous, and parameter types, generic arity, static/instance form, and closed generic arguments are part of the call contract.
+- Reconstruct this Unit-grounded rule: To deconstruct a call, inspect `Method`, `Object`, and `Arguments`; do not assume argument zero is always the receiver.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/EXPRESSION TREES/`

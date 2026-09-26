@@ -1,16 +1,46 @@
-# Реестр Use Cases — работа с конспектами и повторением
+# Use-Case Registry — Personal Knowledge System
 
 Status: current functional entry for this repository.
 
-Сопоставьте текущую ситуацию с краткими Situation / Result. Откройте только подходящие owner-файлы и следуйте их Process; может подойти несколько Use Cases. Просмотр реестра не запускает работу и не даёт разрешения на commit, push или изменение источника.
+Match the current situation to the compact Situation / Result summaries. Open only the applicable owner files. The registry is navigation; each owner file remains authoritative for its Process.
 
-| ID | Use Case | Situation summary | Result summary | Owner |
+## Knowledge & Learning
+
+| ID | Use Case | Situation | Result | Owner |
 |---|---|---|---|---|
-| UC-REPO-CHECK-FORM | Проверить форму репозитория | структура, ссылки или cross-layer состояние могли разойтись | проверенная в указанной области форма либо конкретные находки и границы проверки | [UC-REPO-CHECK-FORM](use-cases/UC-REPO-CHECK-FORM.md) |
-| UC-SOURCE-CREATE-CONSPECT | Создать source-конспект | текстовый или визуальный источник нужно сохранить как проверяемое представление | source-preserving workspace с честной authority и coverage, либо явной незавершённостью | [UC-SOURCE-CREATE-CONSPECT](use-cases/UC-SOURCE-CREATE-CONSPECT.md) |
-| UC-KNOWLEDGE-MIGRATE-WORKSPACE | Мигрировать source workspace | готовый authoritative source workspace нужно распределить по knowledge units | claim-level no-loss partition, registry и связанные индексы | [UC-KNOWLEDGE-MIGRATE-WORKSPACE](use-cases/UC-KNOWLEDGE-MIGRATE-WORKSPACE.md) |
-| UC-KNOWLEDGE-CREATE-OR-CHANGE | Создать или изменить knowledge-конспект | проверенный текст, материал дня или уточнение должны стать материалом для повторения | самостоятельный source-grounded unit или дополнение существующего | [UC-KNOWLEDGE-CREATE-OR-CHANGE](use-cases/UC-KNOWLEDGE-CREATE-OR-CHANGE.md) |
-| UC-LEARNING-COLLECT-DAY | Собрать материал дня | в течение дня накопились сведения, ещё не готовые к семантическому разбору | сохранённый raw batch с provenance и сроком последующей обработки | [UC-LEARNING-COLLECT-DAY](use-cases/UC-LEARNING-COLLECT-DAY.md) |
-| UC-LEARNING-REVIEW-AND-RECORD | Провести и зарегистрировать повторение | есть due item, первоначальная волна или целевой follow-up | реальный recall проверен, история и дальнейшее состояние согласованы | [UC-LEARNING-REVIEW-AND-RECORD](use-cases/UC-LEARNING-REVIEW-AND-RECORD.md) |
+| UC-KNOWLEDGE-ORGANIZE-DOMAIN | Organize Domain Understanding | Existing knowledge or a new domain needs coherent structure | A clearer personal model of the domain and its coverage | [owner](use-cases/UC-KNOWLEDGE-ORGANIZE-DOMAIN.md) |
+| UC-LEARNING-REVIEW-AND-RECORD | Review and Strengthen Knowledge | ACTIVE knowledge needs formative recall, or STABLE knowledge needs calibration/repetition; legacy rows use the documented transition branch until CS5 | Recall occurs before reading; findings and the appropriate current state are updated without inventing migration state | [owner](use-cases/UC-LEARNING-REVIEW-AND-RECORD.md) |
+| UC-KNOWLEDGE-EXPLAIN-PERSONAL-MODEL | Explain Through Personal Knowledge Model | A topic should be understood or explained using the owner's existing representation | An accurate explanation grounded in the personal model | [owner](use-cases/UC-KNOWLEDGE-EXPLAIN-PERSONAL-MODEL.md) |
+| UC-KNOWLEDGE-PLAN-EXPANSION | Plan Knowledge Expansion | A domain is incomplete, a Question appeared, or further learning must be chosen | Structured, prioritized expansion work with optional temporal/order placement | [owner](use-cases/UC-KNOWLEDGE-PLAN-EXPANSION.md) |
+| UC-KNOWLEDGE-RESOLVE-TARGET | Resolve Knowledge Target | A concrete Question or knowledge gap has been selected | The target is resolved to the required depth and integrated, or explicitly remains unresolved | [owner](use-cases/UC-KNOWLEDGE-RESOLVE-TARGET.md) |
+| UC-KNOWLEDGE-EXPAND-BY-ANALOGY | Expand Through Analogy and Comparison | One Area is known while an analogous Area is unknown or weaker | Explicit comparative model that improves understanding of both Areas | [owner](use-cases/UC-KNOWLEDGE-EXPAND-BY-ANALOGY.md) |
+| UC-KNOWLEDGE-EXPAND-BY-PRACTICE | Expand Through Practice | Knowledge should be tested or developed through application | Evidence from practice plus reusable findings and Questions | [owner](use-cases/UC-KNOWLEDGE-EXPAND-BY-PRACTICE.md) |
 
-Реестр — только функциональная навигация. Канонические Situation / Result / Process находятся в owner-файлах. При существенном изменении ситуации выбор Use Case пересматривается; повторно читать неизменившиеся файлы без причины не требуется.
+## Capture & Sources
+
+| ID | Use Case | Situation | Result | Owner |
+|---|---|---|---|---|
+| UC-LEARNING-CAPTURE-BATCH | Capture Learning Material | Useful raw learning material appears before it is ready for formalization | Preserved raw batch registered for delayed triage, with context and uncertainty | [owner](use-cases/UC-LEARNING-CAPTURE-BATCH.md) |
+| UC-SOURCE-CREATE-CONSPECT | Create Source-Preserving Conspect | An external source should be transferred into a usable form without losing source meaning | Verifiable source-preserving conspect | [owner](use-cases/UC-SOURCE-CREATE-CONSPECT.md) |
+| UC-KNOWLEDGE-MATERIALIZE-SOURCE | Materialize Source Into Knowledge | A meaningful source corpus should be fully reflected in the knowledge layer | Accountable disposition of meaningful claims | [owner](use-cases/UC-KNOWLEDGE-MATERIALIZE-SOURCE.md) |
+
+## System Maintenance
+
+| ID | Use Case | Situation | Result | Owner |
+|---|---|---|---|---|
+| UC-REPO-CHECK-FORM | Check Knowledge-System Form | Structural correctness and invariants should be checked | Read-only report of verified invariants, defects, and unverified boundaries | [owner](use-cases/UC-REPO-CHECK-FORM.md) |
+
+## Supporting owners
+
+- [Universal principles](principles/universal-knowledge-principles.md)
+- [Knowledge structure / ontology](principles/knowledge-structure-ontology.md)
+- [Priority model](principles/priority-model.md)
+- [Questions / Coverage / Expansion](principles/questions-coverage-expansion.md)
+- [Tags / Comparisons / Views](principles/tags-comparisons-and-views.md)
+- [Retention / Repetition](principles/retention-repetition.md)
+- [Repetition scheduling target policy](policies/repetition-scheduling-policy.md)
+- [Integrate verified knowledge](processes/integrate-verified-knowledge.md)
+- [Triage learning batch](processes/triage-learning-batch.md)
+- [Default learning inbox workflow](workflows/default-daily-learning-inbox-workflow.md)
+
+Migration boundaries are explicit in [CURRENT-MIGRATION-STATE](migration/CURRENT-MIGRATION-STATE.md).

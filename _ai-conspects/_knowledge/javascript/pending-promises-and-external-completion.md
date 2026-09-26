@@ -26,6 +26,14 @@ An externally completed promise needs an owner and lifecycle: who settles it, wh
 
 Semaphores use this mechanism internally: a queued acquire stores a resolver and `release` completes the oldest pending promise. Prefer a small abstraction that owns the queue/state rather than scattering “deferred” resolvers through application code.
 
+## What should be recallable
+
+- Explain the core model of **Pending promises and external completion** without opening the Unit.
+- Reconstruct this Unit-grounded rule: The `Promise` constructor executor runs synchronously.
+- Reconstruct this Unit-grounded rule: Calling a resolver schedules reactions as microtasks; it does not run all `then`/`await` continuations inline.
+- Reconstruct this Unit-grounded rule: An externally completed promise needs an owner and lifecycle: who settles it, what error rejects it, how cancellation/timeout removes registrations, and what happens when the underlying component closes first.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/semaphoreslim for ts js, pending promise without resolve/`

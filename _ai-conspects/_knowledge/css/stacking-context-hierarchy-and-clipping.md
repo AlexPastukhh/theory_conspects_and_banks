@@ -12,6 +12,13 @@ Debug from the element toward the root, record every context, find the first div
 
 Pseudo-elements belong to their originating element's context and can extend outside its border box, but `overflow:hidden`, clips, masks, or containment can cut them off. Negative layers may fall behind the parent's background. Test clipping separately by removing overflow, and restructure wrappers or move global overlays when a child should not be constrained. Preserve focus order, pointer behavior, and accessibility in visual fixes.
 
+## What should be recallable
+
+- Why `z-index` is local to a stacking context rather than a global layer number.
+- Common stacking-context triggers and the distinction between stacking contexts and containing blocks.
+- How to debug from the element toward the root and compare the first diverging sibling contexts.
+- How overflow/clipping/masks/containment and negative layers affect pseudo-elements and overlays.
+
 ## Sources
 - Workspace: `_ai-conspects/stacking contexts, zindex/`
 - Processed source: `05-full-combined-final-transcript.md`, complete transcript

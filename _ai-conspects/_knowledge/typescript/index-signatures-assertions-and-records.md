@@ -27,6 +27,14 @@ type Labels = Record<Status, string>;
 
 Likewise, a `for...in` loop produces `string`, which is normally too broad for indexed access on a finite object type. Narrow or validate the key instead of silently asserting every runtime string is a `keyof T`.
 
+## What should be recallable
+
+- Explain the core model of **Index signatures, assertions, and finite records** without opening the Unit.
+- Reconstruct this Unit-grounded rule: A type assertion changes the compiler's view, not the runtime value.
+- Reconstruct this Unit-grounded rule: `keyof T` produces known property keys.
+- Reconstruct this Unit-grounded rule: Overloads can preserve literal-dependent return types when a simple generic is insufficient.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/index sign, keyof, type assertions, records to solve index sign issues/`
 - Processed source: `01-final-transcript.md`, complete transcript

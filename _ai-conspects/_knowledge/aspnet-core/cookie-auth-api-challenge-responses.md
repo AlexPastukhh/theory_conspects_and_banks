@@ -22,6 +22,14 @@ Choose redirect or JSON once, then stop the event/pipeline path. Validate custom
 
 Only one component should own the response body. An authentication event can translate an API challenge/forbid into Problem Details; a resource authorization handler still owns a resource-specific policy denial. Set the status before writing, write once, and do not continue into a second redirect/body path.
 
+## What should be recallable
+
+- Explain the core model of **Cookie authentication responses for pages and APIs** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Cookie authentication normally redirects challenge/forbid to login/access-denied pages.
+- Reconstruct this Unit-grounded rule: In cookie events, keep redirects for page endpoints and classify API endpoints with stable metadata (or a path prefix when necessary).
+- Reconstruct this Unit-grounded rule: Choose redirect or JSON once, then stop the event/pipeline path.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/cookies auth ON REDIRECT  probmem details returning/`
 - Processed source: `regions/R01-cookie-auth-redirects-api-problemdetails-final.md`, complete transcript

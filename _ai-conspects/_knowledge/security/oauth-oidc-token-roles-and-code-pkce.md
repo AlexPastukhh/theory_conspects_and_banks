@@ -21,6 +21,14 @@ The request carries `state` and `nonce`. PKCE binds authorization request and co
 
 PKCE does not replace confidential-client authentication and does not by itself protect browser-held tokens from XSS.
 
+## What should be recallable
+
+- Explain the core model of **OAuth, OIDC, token roles, and authorization code with PKCE** without opening the Unit.
+- Reconstruct this Unit-grounded rule: OAuth 2.x delegates access to an API; OpenID Connect adds authentication and identity claims.
+- Reconstruct this Unit-grounded rule: The request carries `state` and `nonce`.
+- Reconstruct this Unit-grounded rule: PKCE does not replace confidential-client authentication and does not by itself protect browser-held tokens from XSS.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/OIDC,OAUTH, IDENTITY SERVER,BFF,authtoken, authproperties/`

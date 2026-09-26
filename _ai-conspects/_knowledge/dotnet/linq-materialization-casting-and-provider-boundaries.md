@@ -10,6 +10,14 @@ Deferred pipelines can observe later source changes and repeat expensive or stat
 
 `Cast<T>` requires every element to be compatible and throws when one is not; use it when heterogeneous values indicate invalid state. `OfType<T>` filters to compatible non-null elements and fits intentionally mixed sequences. `AsEnumerable` does not execute the query; it changes subsequent operator binding from provider expressions to LINQ-to-Objects. Keep `IQueryable` operations server-side as long as filtering, ordering, and paging must translate, then cross the client boundary deliberately.
 
+## What should be recallable
+
+- Explain the core model of **LINQ materialization, casting, and provider boundaries** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `ToList` and `ToArray` execute and snapshot a sequence.
+- Reconstruct this Unit-grounded rule: Deferred pipelines can observe later source changes and repeat expensive or stateful work on every enumeration.
+- Reconstruct this Unit-grounded rule: `Cast<T>` requires every element to be compatible and throws when one is not; use it when heterogeneous values indicate invalid state.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/-all/`

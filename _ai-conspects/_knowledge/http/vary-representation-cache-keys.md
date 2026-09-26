@@ -10,6 +10,14 @@ For example, a response compressed only when the request contains `Accept-Encodi
 
 Missing dimensions can serve the wrong format, language, version, or tenant representation. High-cardinality dimensions reduce hit rate; `Cookie` or `Authorization` approaches cache-per-user and is risky. Query strings are already in the URL. `Vary: *` effectively prevents ordinary shared reuse. Prefer shared response caching for anonymous public GETs and private/no-store, validation, or application caching for personalized responses.
 
+## What should be recallable
+
+- Explain the core model of **Vary and representation cache keys** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `Vary` tells caches which request headers select representations of one URL.
+- Reconstruct this Unit-grounded rule: For example, a response compressed only when the request contains `Accept-Encoding: gzip` needs `Vary: Accept-Encoding`; otherwise a cache can serve compressed bytes to a client that did not select them.
+- Reconstruct this Unit-grounded rule: Missing dimensions can serve the wrong format, language, version, or tenant representation.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/vary header/`

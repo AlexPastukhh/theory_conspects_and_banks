@@ -31,6 +31,14 @@ Use `undefined` as a missing-provider sentinel and a custom hook that throws, pr
 
 Provider placement also defines state lifetime. State survives ordinary rerenders while the provider instance remains mounted, but resets when a different route branch replaces it, a changed `key` forces remount, conditional rendering removes it, or the application root is recreated. Put the provider above the route boundary when child pages must share the state; put it inside a branch when navigation should reset it naturally.
 
+## What should be recallable
+
+- Explain the core model of **React Context provider identity and splitting** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Consumers subscribe to the nearest provider.
+- Reconstruct this Unit-grounded rule: Memoize provider object values when unrelated renders would create new identity.
+- Reconstruct this Unit-grounded rule: Do not split every field; selector stores/libraries fit large frequently changing graphs.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/context/`; processed source: `regions/final-transcript.md`
 - Additional workspace: `_ai-conspects/usecontext/`; processed source: `03-full-combined-final-transcript.md`

@@ -66,6 +66,14 @@ Exclude / Extract / NonNullable
 
 For a closed key set mapped to one value type, use `Record<K, V>`; that finite-record contract is covered with index signatures.
 
+## What should be recallable
+
+- Explain the core model of **Built-in object and union utility types** without opening the Unit.
+- Reconstruct this Unit-grounded rule: TypeScript's built-in utility types transform either an object's properties or the members of a union.
+- Reconstruct this Unit-grounded rule: A nested object is not recursively made partial, required, or readonly.
+- Reconstruct this Unit-grounded rule: `Exclude<T, U>` removes union members assignable to `U`; `Extract<T, U>` keeps them.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/utility types/`
 - Authoritative processed source: `01-final-transcript.md`, R01 (except the `Record` claim merged into the existing finite-record unit)

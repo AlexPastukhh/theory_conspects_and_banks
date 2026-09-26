@@ -17,6 +17,14 @@ With `[ApiController]`, complex DTOs are usually inferred from body, form-file t
 
 Only one body-bound parameter should normally consume the forward-only body; combine several body values into one DTO. `[FromForm]` is for form/multipart input, not JSON, and `[FromServices]` is for services, not user input. Binding selects/converts input; validation follows it, while authorization is separate.
 
+## What should be recallable
+
+- Explain the core model of **Action parameter binding sources** without opening the Unit.
+- Reconstruct this Unit-grounded rule: An external name can differ from the parameter, for example `[FromHeader(Name = "X-Correlation-Id")]`.
+- Reconstruct this Unit-grounded rule: With `[ApiController]`, complex DTOs are usually inferred from body, form-file types from form, names matching route tokens from route, and other simple values from query.
+- Reconstruct this Unit-grounded rule: Only one body-bound parameter should normally consume the forward-only body; combine several body values into one DTO.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/BINDING SOURCE ATTRIBUTES/`
 - Processed source: `regions/R01-final-coverage-transcript.md`, complete transcript

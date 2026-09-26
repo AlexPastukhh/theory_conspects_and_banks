@@ -19,6 +19,14 @@ A domain aggregate can expose `IReadOnlyCollection<T>` while maintaining a priva
 
 Configure a backing field explicitly with `HasField` when conventions cannot discover it. Select field/property access to preserve both persistence behavior and domain invariants.
 
+## What should be recallable
+
+- Explain the core model of **EF Core backing fields and property access modes** without opening the Unit.
+- Reconstruct this Unit-grounded rule: EF Core can map a backing field so persistence does not require a public setter.
+- Reconstruct this Unit-grounded rule: A domain aggregate can expose `IReadOnlyCollection<T>` while maintaining a private mutable list; EF maps the field/navigation and domain methods enforce legal changes.
+- Reconstruct this Unit-grounded rule: Configure a backing field explicitly with `HasField` when conventions cannot discover it.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/onmodelcreating/`

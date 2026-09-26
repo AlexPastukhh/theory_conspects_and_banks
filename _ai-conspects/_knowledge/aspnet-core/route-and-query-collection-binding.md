@@ -29,6 +29,14 @@ public IActionResult GetUsers([FromQuery] int[] ids) => Ok(ids);
 
 `?ids=1,2,3` contains one query value and also needs explicit/custom parsing. Path identity versus query filtering is a design recommendation, not a protocol ban: a path may intentionally identify a batch resource. For ordinary filters prefer repeated query keys; for large/complex selections consider a request body on a purpose-designed endpoint.
 
+## What should be recallable
+
+- Explain the core model of **ASP.NET Core route and query collection binding** without opening the Unit.
+- Reconstruct this Unit-grounded rule: A route segment such as `/users/1,2,3` is one route value.
+- Reconstruct this Unit-grounded rule: Reusable choices are a strongly typed parsable value or custom model binder.
+- Reconstruct this Unit-grounded rule: `?ids=1,2,3` contains one query value and also needs explicit/custom parsing.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/ROUTE PARAMS,QUERY STRING BASICS/`
 - Processed source: `04-source-preserving-transcript-v002.md`, complete transcript

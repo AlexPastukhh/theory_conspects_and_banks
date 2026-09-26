@@ -18,6 +18,14 @@ var page = source
     .Take(pageSize);
 ```
 
+## What should be recallable
+
+- Explain the core model of **LINQ partitioning and sequence generation** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `Skip`/`Take` partition by position.
+- Reconstruct this Unit-grounded rule: `SkipWhile` and `TakeWhile` are boundary operators.
+- Reconstruct this Unit-grounded rule: `Chunk(size)` emits non-overlapping arrays of at most `size`; the final chunk may be shorter.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/-all/`

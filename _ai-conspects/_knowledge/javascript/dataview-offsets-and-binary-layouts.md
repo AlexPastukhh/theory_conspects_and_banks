@@ -82,6 +82,14 @@ console.log(view.getUint16(2, true));
 
 Use `Uint8Array` for raw-byte inspection and copying; use `DataView` for structured numeric fields, mixed widths, byte offsets, and explicit file/protocol endianness.
 
+## What should be recallable
+
+- Explain the core model of **DataView offsets and mixed binary layouts** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `DataView` reads and writes mixed numeric types at byte offsets in an `ArrayBuffer`.
+- Reconstruct this Unit-grounded rule: `view.getUint32(4, true)` starts at byte offset 4 and reads four bytes.
+- Reconstruct this Unit-grounded rule: Here the view covers original bytes `8..13`; method offsets are relative to that view, so offset `2` starts at original buffer byte `10`.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/uintarray,blob, arraybuffer,dataview,endianness/`
 - Authoritative processed source: `01-final-transcript.md`, R04 (with the mixed-layout boundary from R03)

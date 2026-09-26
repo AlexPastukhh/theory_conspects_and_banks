@@ -10,6 +10,14 @@ The header can carry a delay in seconds or an HTTP date. Server implementations 
 
 In ASP.NET Core, `RateLimitLease.IsAcquired` always tells whether the lease succeeded. Limiter-specific values such as `RetryAfter`, remaining permits, configured limit/reset time, or rejection reason are optional metadata. Use `TryGetMetadata`; the rejection path must work even when no value exists. `OnRejected` can copy metadata to the response and format its status/header/body, but it does not create or enforce a policy.
 
+## What should be recallable
+
+- Explain the core model of **Rate-limit responses and Retry-After** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `429 Too Many Requests` is the normal HTTP response when a request exceeds an applicable limit.
+- Reconstruct this Unit-grounded rule: The header can carry a delay in seconds or an HTTP date.
+- Reconstruct this Unit-grounded rule: In ASP.NET Core, `RateLimitLease.IsAcquired` always tells whether the lease succeeded.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/manual account lockout,ratelimiter middleware, idatabase vs idist cache/`

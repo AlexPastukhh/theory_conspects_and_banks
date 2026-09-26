@@ -1,0 +1,18 @@
+{
+  "version": "v3",
+  "knowledge_ids": 576,
+  "clear_placements": 576,
+  "root_areas": 15,
+  "broad_nested_areas": 80,
+  "broad_with_evidence": 52,
+  "broad_missing": 28,
+  "hierarchy_rows_changed_from_v2": 1,
+  "responsibilities_total": 183,
+  "responsibilities_partial": 101,
+  "responsibilities_missing": 82,
+  "manifestation_baseline_rows": 30,
+  "knowledge_unit_bodies_changed": false,
+  "physical_paths_changed": false,
+  "repetition_state_touched": false,
+  "next_gate": "CS5 repetition cutover"
+}

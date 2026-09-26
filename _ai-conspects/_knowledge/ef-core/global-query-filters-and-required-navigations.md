@@ -14,6 +14,14 @@ A soft-delete query filter only hides rows; it does not turn `Remove` into an up
 
 For multitenancy, capture the tenant in the context and ensure it is initialized for every request. With `AddDbContextPool`, `OnConfiguring` is not a safe per-request initialization point because the same context instance is checked out repeatedly. Assign and reset tenant state for every checkout/request; stale state can otherwise leak one tenant's rows into another request. The model expression is stable and reads the current context-instance value rather than being rebuilt for each request.
 
+## What should be recallable
+
+- Explain the core model of **Global query filters and required navigations** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `HasQueryFilter` automatically narrows an entity for soft deletion, tenancy, or similar policy.
+- Reconstruct this Unit-grounded rule: Mitigations include making the relationship optional where that matches the domain, applying compatible filters to both sides, and carefully reviewing `Include` with required relationships and filtered principals.
+- Reconstruct this Unit-grounded rule: `IgnoreQueryFilters()` bypasses protection for that query and can expose deleted or cross-tenant data.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/query filters ef core/`
 - Processed source: `02-stage2-corrected-source-preserving-transcript-v002.md`, complete transcript

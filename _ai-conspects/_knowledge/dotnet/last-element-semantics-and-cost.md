@@ -10,6 +10,14 @@ Arrays/lists use `[^1]` or count-minus-one after an empty check; `^0` is the bou
 
 For `IQueryable`, “last” requires deterministic `OrderBy`; providers may reject/rewrite shapes. `OrderByDescending(key).FirstOrDefault()` or `MaxBy` may express latest-by-key better. Order/limit on the server rather than materializing, and inspect generated SQL for provider-specific translation. Avoid `Count()` then `Last()` on general sequences.
 
+## What should be recallable
+
+- Explain the core model of **LINQ and indexed last-element semantics** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `Last` throws for empty/no matching element; `LastOrDefault` returns the type default, or an explicit fallback on supported frameworks.
+- Reconstruct this Unit-grounded rule: Arrays/lists use `[^1]` or count-minus-one after an empty check; `^0` is the boundary after the last item, not an element.
+- Reconstruct this Unit-grounded rule: For `IQueryable`, “last” requires deterministic `OrderBy`; providers may reject/rewrite shapes.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/sheet get last/`
 - Processed source: `05-full-combined-final-transcript.md`, complete transcript

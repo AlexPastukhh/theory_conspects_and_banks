@@ -37,6 +37,14 @@ var result = page.Select(author => mapper.Map<AuthorDto>(author));
 
 `GetPropertyMapping<TSource, TDestination>` should require exactly one configured mapping: absence or duplication is a developer/configuration error, whereas an unsupported requested field is a client error. A singleton lifetime suits a service whose mapping collection is immutable and contains no scoped state.
 
+## What should be recallable
+
+- Explain the core model of **Public sorting and property mapping** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Sorting is part of the public resource contract.
+- Reconstruct this Unit-grounded rule: Public fields need not match entity fields.
+- Reconstruct this Unit-grounded rule: `age desc` therefore becomes `DateOfBirth asc`; mapped destination order defines tie-breaking.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/SORTING,MAPPING SERVICE/`
 - Processed source: `05-full-combined-final-transcript.md`, complete transcript

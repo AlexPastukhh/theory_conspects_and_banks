@@ -31,6 +31,14 @@ Private/backing fields can preserve aggregate APIs, but migrations and materiali
 
 Owned or complex values can map several columns into one concept such as `FullName` or `Money`. Configure names, lengths, requiredness, precision, and concurrency behavior at the component-property level. A one-column value converter, including a wrapper such as `Maybe<T>`, does not naturally represent a multi-column value. Domain-friendly optionality must therefore sit around an explicit component mapping. Requiredness should agree across the domain property, EF navigation/complex-property configuration, component columns, and database constraints.
 
+## What should be recallable
+
+- Explain the core model of **Optional nested owned values and requiredness** without opening the Unit.
+- Reconstruct this Unit-grounded rule: CLR nullable annotations and EF navigation requiredness are related but separate contracts.
+- Reconstruct this Unit-grounded rule: Private/backing fields can preserve aggregate APIs, but migrations and materialization behavior still need tests.
+- Reconstruct this Unit-grounded rule: Owned or complex values can map several columns into one concept such as `FullName` or `Money`.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/owned entity/`

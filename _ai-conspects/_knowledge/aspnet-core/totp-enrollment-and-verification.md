@@ -26,6 +26,14 @@ The Base32 secret is a credential equivalent to a password:
 - treat a QR code containing it as sensitive material;
 - rotate and re-enroll when exposure is suspected.
 
+## What should be recallable
+
+- Explain the core model of **TOTP enrollment and verification** without opening the Unit.
+- Reconstruct this Unit-grounded rule: TOTP is HOTP whose counter comes from time: `C = floor((T - T0) / X)`, commonly with a 30-second step.
+- Reconstruct this Unit-grounded rule: Enrollment is two-phase: generate a high-entropy secret; build an `otpauth://` URI/QR with issuer, account, algorithm, digits, period, and Base32 secret; show the manual key only during enrollment; then protect the secret at rest in a pending record.
+- Reconstruct this Unit-grounded rule: The login flow is also staged: validate the primary credential first, preserve short-lived MFA session state such as `mfa_userId` plus `rememberMe` or a temporary MFA cookie, then ask for the TOTP code.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/totp, summary,theory/`
 - Processed source: `regions/R01-totp-theory-enrollment-verification-final.md`, complete transcript

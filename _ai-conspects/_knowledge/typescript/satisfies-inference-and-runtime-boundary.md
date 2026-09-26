@@ -21,6 +21,14 @@ Use annotations when a variable/public field should intentionally expose an abst
 
 The operator requires TypeScript 4.9+ syntax support. Align IDE, build, lint, and dependency parsers; an older parser may reject syntax even if `tsc` accepts it. Critical public APIs may need type tests because compiler upgrades can adjust inference details.
 
+## What should be recallable
+
+- Explain the core model of **TypeScript satisfies, inference, and runtime boundary** without opening the Unit.
+- Reconstruct this Unit-grounded rule: An annotation (`const value: Target = expression`) checks the expression and then exposes the variable as `Target`, potentially widening or hiding specific property information.
+- Reconstruct this Unit-grounded rule: Use annotations when a variable/public field should intentionally expose an abstraction, and `satisfies` for configuration/maps needing both contract validation and precise keys/literals.
+- Reconstruct this Unit-grounded rule: `satisfies` is not an assertion or runtime check.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/typescript explicit type annotations vs satisfies/`
 - Processed source: `05-full-combined-final-transcript.md`, complete transcript

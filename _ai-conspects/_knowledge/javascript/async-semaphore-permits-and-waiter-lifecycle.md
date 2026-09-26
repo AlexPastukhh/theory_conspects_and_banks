@@ -50,6 +50,14 @@ finally { release(); }
 
 Make the release handle idempotent so accidental double release cannot create permits. Return release ownership only from a successful `acquire`; do not expose an unrestricted raw `release()` callable without ownership. Production queues also need cancellation/timeout removal; abandoning a waiting promise without removing its entry leaks memory and may later hand a permit to work that no longer wants it.
 
+## What should be recallable
+
+- Explain the core model of **JavaScript async semaphore permits and waiter lifecycle** without opening the Unit.
+- Reconstruct this Unit-grounded rule: A semaphore bounds how many asynchronous operations may enter a critical region.
+- Reconstruct this Unit-grounded rule: `acquire()` either consumes a free permit immediately or returns a pending promise queued for a future release.
+- Reconstruct this Unit-grounded rule: Make the release handle idempotent so accidental double release cannot create permits.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/semaphoreslim for ts js, pending promise without resolve/`

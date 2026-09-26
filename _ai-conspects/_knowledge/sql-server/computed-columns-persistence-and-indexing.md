@@ -22,6 +22,14 @@ Use non-persisted computation when read-time evaluation is acceptable, `PERSISTE
 
 For normalized-value uniqueness, first check whether the column collation already implements the required comparison semantics. A deterministic, indexable computed value is useful when an actual transformation beyond collation is required; a unique index on it can then enforce that normalized key.
 
+## What should be recallable
+
+- Explain the core model of **Computed columns, persistence, and indexing** without opening the Unit.
+- Reconstruct this Unit-grounded rule: A non-persisted computed column stores its expression in metadata and calculates the value when needed.
+- Reconstruct this Unit-grounded rule: An index on a computed column stores computed index keys even if the base computed value is not persisted.
+- Reconstruct this Unit-grounded rule: Indexed computed expressions must satisfy engine requirements such as determinism and precision.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/computed columns/`
 - Processed source: `02-source-preserving-transcript-v002.md`, complete transcript

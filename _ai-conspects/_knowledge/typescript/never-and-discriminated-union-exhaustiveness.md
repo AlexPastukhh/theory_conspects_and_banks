@@ -29,6 +29,14 @@ When a runtime helper is unnecessary, a local `const exhaustive: never = value` 
 
 Plain unions can use `in`, `typeof`, `instanceof`, or custom predicates, but overlapping optional fields are fragile. Prefer a discriminant for states, commands, results, reducers, and serialized events, and validate external JSON before treating it as the union.
 
+## What should be recallable
+
+- Explain the core model of **never and discriminated-union exhaustiveness** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `never` is the bottom type: no runtime value can have it.
+- Reconstruct this Unit-grounded rule: A discriminated union gives every variant one shared literal field.
+- Reconstruct this Unit-grounded rule: Adding a union member now produces a compile-time error until the switch is extended, while the throw still protects runtime trust boundaries.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/never type, exhaustion check with discriminated union/`
 - Processed source: `05-full-combined-final-transcript.md`, complete transcript

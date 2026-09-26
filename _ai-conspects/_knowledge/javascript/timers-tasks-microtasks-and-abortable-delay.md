@@ -38,6 +38,14 @@ setTimeout(() => console.log("timer task"), 0);
 
 The logs are `sync`, `microtask`, then `timer task` (assuming no other host work). Single-threaded execution does not prevent async races: operations interleave at `await`/task boundaries, which is why explicit queues, semaphores, cancellation, and ownership still matter.
 
+## What should be recallable
+
+- Explain the core model of **JavaScript timers, tasks, microtasks, and abortable delay** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `setTimeout` asks the host to make a callback eligible after at least a delay; it does not block a JavaScript thread and does not guarantee exact execution time.
+- Reconstruct this Unit-grounded rule: Cleanup must cover both normal completion and abort and should settle once.
+- Reconstruct this Unit-grounded rule: The logs are `sync`, `microtask`, then `timer task` (assuming no other host work).
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/semaphoreslim for ts js, pending promise without resolve/`

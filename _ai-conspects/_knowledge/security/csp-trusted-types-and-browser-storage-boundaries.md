@@ -16,6 +16,14 @@ Trusted Types can require DOM XSS sinks to receive a typed value produced by an 
 
 Moving a token among `localStorage`, `sessionStorage`, memory, or ordinary JavaScript state does not make it unreadable to code already executing in the origin. Lifetimes and persistence differ, but XSS can read accessible storage and act through the application. HttpOnly cookies reduce direct token theft while introducing cookie/CSRF/session design concerns; storage choice cannot replace prevention of executable sinks.
 
+## What should be recallable
+
+- Explain the core model of **CSP, Trusted Types, and browser-storage boundaries** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Content Security Policy is a response-header defense-in-depth layer.
+- Reconstruct this Unit-grounded rule: Generate an unpredictable nonce per response and put the same value on scripts intentionally allowed to execute.
+- Reconstruct this Unit-grounded rule: Trusted Types can require DOM XSS sinks to receive a typed value produced by an approved policy rather than an arbitrary string.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/xss, csp/`

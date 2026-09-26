@@ -51,6 +51,14 @@ bytes 7..14  timestamp
 
 needs mixed-width, offset-based parsing rather than one `Uint32Array` view.
 
+## What should be recallable
+
+- Explain the core model of **Byte values and endianness** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Endianness determines how the bytes of a multi-byte value map to significance.
+- Reconstruct this Unit-grounded rule: A one-byte value has no byte-order issue.
+- Reconstruct this Unit-grounded rule: represent `1` when the first byte is least significant, but `16777216` when it is most significant.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/uintarray,blob, arraybuffer,dataview,endianness/`
 - Authoritative processed source: `01-final-transcript.md`, R02-R03

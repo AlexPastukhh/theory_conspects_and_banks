@@ -17,6 +17,14 @@ One hexadecimal digit has 16 possibilities and therefore represents exactly four
 
 Preserve leading zeros when displaying a full byte: `0x01` maps to `0000 0001`. For the reverse operation, group binary digits into four-bit nibbles from the right and map each nibble to a hex digit. This compact alignment makes hex useful for bytes, bit patterns, memory dumps, colors, and binary protocols; for example UTF-8 `é` is commonly shown as `0xC3 0xA9` rather than sixteen binary digits.
 
+## What should be recallable
+
+- Explain the core model of **Hexadecimal and byte representation** without opening the Unit.
+- Reconstruct this Unit-grounded rule: A number is a quantity; decimal, binary, and hexadecimal are representations of the same value.
+- Reconstruct this Unit-grounded rule: In JavaScript, `0x`, `0b`, and `0o` mark hexadecimal, binary, and octal literals respectively; `0x10` means sixteen, not “zero times” another value.
+- Reconstruct this Unit-grounded rule: One hexadecimal digit has 16 possibilities and therefore represents exactly four bits.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/hexadecimal base16 how  to convert to bytes easily/`
 - Processed source: `10-full-source-preserving-transcript-v002.md`, complete source-preserving transcript

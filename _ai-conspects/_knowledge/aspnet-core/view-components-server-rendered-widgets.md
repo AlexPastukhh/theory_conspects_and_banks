@@ -16,6 +16,14 @@ Unlike a React component, a View Component has no client state or automatic subt
 
 Choose an ordinary Razor view for server-rendered pages where SEO/fast first render, forms/CRUD, and minimal JavaScript dominate. Choose a View Component for an independently reusable server widget with its own DI/data work. Choose React when the boundary needs interactive client state, effects, and local rerendering.
 
+## What should be recallable
+
+- Explain the core model of **View Components as server-rendered widgets** without opening the Unit.
+- Reconstruct this Unit-grounded rule: A View Component is reusable server-side UI with its own service/data orchestration.
+- Reconstruct this Unit-grounded rule: Use a partial when the parent already owns the data and only markup is reused.
+- Reconstruct this Unit-grounded rule: Unlike a React component, a View Component has no client state or automatic subtree rerender.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/viewcomponent/`
 - Processed source: `regions/R01R02R03-final-coverage.md`, complete transcript

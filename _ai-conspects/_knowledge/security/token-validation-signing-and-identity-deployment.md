@@ -20,6 +20,14 @@ public HTTPS origin + exact redirect URIs
 
 Require HTTPS, secure cookies, strict redirect URI matching, and secret rotation.
 
+## What should be recallable
+
+- Explain the core model of **Token validation, signing, and identity deployment** without opening the Unit.
+- Reconstruct this Unit-grounded rule: An API validates an access token's signature, issuer, audience, lifetime, and authorization requirements.
+- Reconstruct this Unit-grounded rule: Production identity deployments need stable protected signing keys or certificates, planned rotation, and correct publication through discovery/JWKS.
+- Reconstruct this Unit-grounded rule: Reverse proxies must forward scheme and host correctly so issuer values, redirects, and HTTPS links match the public origin.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/OIDC,OAUTH, IDENTITY SERVER,BFF,authtoken, authproperties/`

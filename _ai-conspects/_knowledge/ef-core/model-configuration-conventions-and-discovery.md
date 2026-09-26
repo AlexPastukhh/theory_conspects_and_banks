@@ -20,6 +20,14 @@ This expression-bodied form has no backing field and avoids nullable initializat
 
 A default schema is a fallback namespace and does not silently move existing objects. `HasDbFunction` connects a CLR marker method to a database function; function name, schema, nullability, and any custom translation must match the provider. Provider-specific schema, sequence, function, collation, computed SQL, and store-type choices should remain explicit and be verified in migrations/generated SQL.
 
+## What should be recallable
+
+- Explain the core model of **EF Core model configuration, conventions, and discovery** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `OnModelCreating` refines conventions into an explicit EF Core model: entity inclusion/exclusion, keys, relationships, relational names, functions, sequences, inheritance, conversions, generation, and other metadata.
+- Reconstruct this Unit-grounded rule: Split large models into `IEntityTypeConfiguration<T>` classes and apply them explicitly or with `ApplyConfigurationsFromAssembly`.
+- Reconstruct this Unit-grounded rule: Types enter the model through `DbSet`, relationship/navigation discovery, explicit `Entity<T>`, configuration application, or shared-type configuration.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/onmodelcreating/`

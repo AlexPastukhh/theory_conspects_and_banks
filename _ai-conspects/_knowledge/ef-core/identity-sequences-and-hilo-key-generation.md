@@ -15,6 +15,14 @@ HiLo intentionally permits gaps, and values from entity types sharing a sequence
 
 Identity normally receives its final value during insert; sequences allocate independently; HiLo provides early client-side keys from reserved ranges.
 
+## What should be recallable
+
+- Explain the core model of **EF Core identity, sequences, and HiLo key generation** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Identity columns generate a value during insert.
+- Reconstruct this Unit-grounded rule: HiLo intentionally permits gaps, and values from entity types sharing a sequence can interleave.
+- Reconstruct this Unit-grounded rule: Identity normally receives its final value during insert; sequences allocate independently; HiLo provides early client-side keys from reserved ranges.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/onmodelcreating/`

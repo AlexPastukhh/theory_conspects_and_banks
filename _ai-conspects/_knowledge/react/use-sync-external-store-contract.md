@@ -23,6 +23,14 @@ An auth store can replace `{ user, isAuthenticated, isLoading }`, notify after l
 
 Selectors should observe the smallest useful slice. Primitive selections are naturally stable; object/array selections need caching or deliberate equality. Custom equality must not hide meaningful changes and should cost less than the rerender it avoids.
 
+## What should be recallable
+
+- Explain the core model of **useSyncExternalStore contract** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot?)` connects React to state owned outside React.
+- Reconstruct this Unit-grounded rule: An unchanged store must return an `Object.is`-equal snapshot.
+- Reconstruct this Unit-grounded rule: React reads the snapshot during render, establishes the subscription, and then checks the snapshot again.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/usesyncexternalstore/`
 - Processed source: `05-full-combined-final-transcript.md`, complete transcript

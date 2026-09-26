@@ -29,6 +29,14 @@ Alternatives are immutable replacement, provider-native primitive collections, o
 
 Converting `DateTime` to formatted text is usually inferior to a native temporal column unless a legacy schema requires it; the provider type and length must fit the representation. Enum-to-string storage is readable and avoids dependence on numeric enum values, but ordering/ranges become lexicographic under database collation rather than CLR enum order, and renaming a member becomes a data migration.
 
+## What should be recallable
+
+- Explain the core model of **EF Core value converters and mutable value comparers** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `HasConversion` maps a model value to one provider value and back.
+- Reconstruct this Unit-grounded rule: Mutable reference values need an explicit tracking model.
+- Reconstruct this Unit-grounded rule: Equality, hash, and snapshot must implement one semantic model.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/ef has conversion, value converte,comparer/`

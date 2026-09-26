@@ -30,6 +30,14 @@ For tenant-specific data on one stable database configuration, a scoped wrapper 
 
 Changing the connection string per tenant is a configuration problem, not merely a mutable field. It usually requires separate stable factories/pools or a non-pooled dynamic context design.
 
+## What should be recallable
+
+- Explain the core model of **EF Core DbContext pooling, tenant state, and connection cleanup** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Context pooling resets and retains EF context instances, reducing allocation and the cost of constructing the context graph, EF services/helpers, and tracking/query/save machinery; it does not avoid database round trips.
+- Reconstruct this Unit-grounded rule: `AddDbContextPool<T>` injects a scoped context owned/disposed by DI.
+- Reconstruct this Unit-grounded rule: Pooled instances must not retain request/user/tenant state.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/dbcontextpool, queryfilter/`
 - Processed source: `01-final-transcript.md`, complete transcript

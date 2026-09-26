@@ -8,6 +8,13 @@ Topic: `redis`
 
 One Redis command is atomic; several commands are not automatically atomic. Issuing async commands before awaiting pipelines them and reduces round trips but adds no isolation. `CreateBatch` coordinates pipelined dispatch; `CreateTransaction` adds conditions and optimistic execution. Dedicated atomic commands or Lua are often preferable for multi-step atomic work. Command flags can influence routing or select fire-and-forget behavior. Fire-and-forget discards completion and errors, so use it only when loss is acceptable.
 
+## What should be recallable
+
+- Explain the core model of **Redis values, pipelining, and command atomicity** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `RedisValue` carries text, bytes, and numeric representations.
+- Reconstruct this Unit-grounded rule: One Redis command is atomic; several commands are not automatically atomic.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/manual account lockout,ratelimiter middleware, idatabase vs idist cache/`

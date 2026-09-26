@@ -60,6 +60,14 @@ The reflection helper can technically shape classes, records, structs, and anony
 
 Data shaping and database projection solve different costs. Shaping removes response properties after materialization; projection reduces columns/joins transferred by the database. A sorting map (resource name to `OrderBy` path) cannot normally serve as a projection map (resource name to a DTO-construction expression). Projection can use predefined list/detail DTOs for a small fixed set of shapes, or runtime expression trees/dynamic LINQ/a dedicated selection-mapping service for truly dynamic fields. Prefer post-mapping shaping for moderate results and rich DTOs; prefer constrained database projection when rows, blobs, latency, or DB/network cost dominate.
 
+## What should be recallable
+
+- Explain the core model of **ASP.NET Core dynamic data shaping** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Data shaping lets a client select public representation fields, for example `GET /api/authors?fields=id,name`.
+- Reconstruct this Unit-grounded rule: After repository retrieval and DTO mapping, resolve the selected `PropertyInfo` values into an `ExpandoObject` through `IDictionary<string, object?>`.
+- Reconstruct this Unit-grounded rule: The corresponding single-resource flow validates fields, loads by ID, returns 404 when absent, maps one DTO, and calls the single-object `ShapeData(fields)` overload.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/data shaping,expando/`
 - Processed source: `02-code-preserving-integrated-transcript-v002.md`, complete transcript

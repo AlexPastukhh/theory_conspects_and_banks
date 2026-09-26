@@ -16,6 +16,14 @@ LAST_VALUE(value) OVER (
 
 `ROWS` counts physical rows; `RANGE` includes peers with equal ordering values and provider offset support varies. Running totals use unbounded preceding through current row; moving frames use N preceding. Defaults depend on function/ORDER BY, so state frames explicitly when peer behavior matters. Duplicate ordering values need tie-breakers; a null navigation result may mean no offset row or a null source value.
 
+## What should be recallable
+
+- Explain the core model of **SQL Server window ranking, navigation, and frames** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `ROW_NUMBER` uniquely numbers (add a stable tie-breaker), `RANK` shares ranks with gaps, `DENSE_RANK` without gaps, and `NTILE` creates near-equal buckets with earlier buckets possibly larger.
+- Reconstruct this Unit-grounded rule: `LAG`/`LEAD` read prior/next rows for differences, change detection, and interval boundaries.
+- Reconstruct this Unit-grounded rule: `ROWS` counts physical rows; `RANGE` includes peers with equal ordering values and provider offset support varies.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/window funcs/`
 - Processed source: `04-full-combined-final-transcript.md`, complete transcript

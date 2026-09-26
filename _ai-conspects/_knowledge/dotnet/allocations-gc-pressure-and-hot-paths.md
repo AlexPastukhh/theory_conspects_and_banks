@@ -51,6 +51,14 @@ A request that creates `Guid.NewGuid().ToString()`, formats `DateTime.UtcNow`, a
 
 Measure before and after with realistic load. Relevant tools include `dotnet-counters`, `dotnet-trace`, `dotnet-gcdump`, PerfView, and allocation profilers. Optimize the hot allocation path rather than imposing low-level ownership rules everywhere.
 
+## What should be recallable
+
+- Explain the core model of **.NET allocations, GC pressure, and hot-path decisions** without opening the Unit.
+- Reconstruct this Unit-grounded rule: A managed heap allocation costs more than object construction: the runtime must track the object and eventually reclaim it.
+- Reconstruct this Unit-grounded rule: Stack storage is thread-local and does not create GC work; the managed heap is shared and coordinated.
+- Reconstruct this Unit-grounded rule: Heap allocation is not inherently wrong.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Related knowledge
 
 - `dotnet.span-memory-and-ref-safety`

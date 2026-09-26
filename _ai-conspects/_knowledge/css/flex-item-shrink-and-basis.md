@@ -10,6 +10,14 @@ Although `flex-shrink` defaults to 1, a row item's `min-width: auto` can clamp i
 
 Equal-width controls need equal bases (`flex: 1 1 0`) plus `min-width: 0`, not merely equal grow. Fixed sides use `0 0 width`; a center uses `1 1 auto` plus zero min width. Gap sits outside distributed widths. Account for wrapping, zoom/localization, and responsive stacking.
 
+## What should be recallable
+
+- Explain the core model of **Flex item shrinking and basis** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Although `flex-shrink` defaults to 1, a row item's `min-width: auto` can clamp it at min-content width.
+- Reconstruct this Unit-grounded rule: Zero basis distributes from equal starts; auto uses main-size/content.
+- Reconstruct this Unit-grounded rule: Equal-width controls need equal bases (`flex: 1 1 0`) plus `min-width: 0`, not merely equal grow.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/flex item ,flex shrinking/`
 - Processed source: `04-full-combined-final-transcript.md`, complete transcript

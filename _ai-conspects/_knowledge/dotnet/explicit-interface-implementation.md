@@ -20,6 +20,14 @@ It can override a default interface slot or present role-specific capabilities t
 
 Use implicit implementation when the operation is natural and discoverable on the concrete type. When both views need it, put logic in one public method and forward the explicit member. Explicit implementation changes discoverability, not security or accessibility to interface holders; prefer composition when one class accumulates unrelated roles.
 
+## What should be recallable
+
+- Explain the core model of **Explicit interface implementation** without opening the Unit.
+- Reconstruct this Unit-grounded rule: An explicit member uses a qualified name such as `void IDisposable.Dispose()` and has no access modifier.
+- Reconstruct this Unit-grounded rule: It can override a default interface slot or present role-specific capabilities through DI.
+- Reconstruct this Unit-grounded rule: Use implicit implementation when the operation is natural and discoverable on the concrete type.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/explicit interface inplementation/`
 - Processed source: `05-full-combined-final-transcript.md`, complete transcript

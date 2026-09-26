@@ -22,6 +22,14 @@ In the original unaliased subquery, unqualified `id` and `email` bind to the inn
 
 Preview with the exact same predicate, then verify inside a transaction with `@@ROWCOUNT` and rollback before committing. Check collation/case/trailing-space/normalization behavior, explicit NULL policy (`NULL = NULL` is not true), supporting indexes, and concurrent writes/isolation. After cleanup, add a unique index consistent with the application's null and normalization policy.
 
+## What should be recallable
+
+- Explain the core model of **Safely deleting duplicate SQL Server rows** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `SELECT 1` communicates existence; its value is not materialized.
+- Reconstruct this Unit-grounded rule: Explicitly aliasing the inner table as `earlier` makes that correlation visible and safer to review.
+- Reconstruct this Unit-grounded rule: Preview with the exact same predicate, then verify inside a transaction with `@@ROWCOUNT` and rollback before committing.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/delete/`
 - Processed source: `regions/final-transcript.md`, corrected complete transcript

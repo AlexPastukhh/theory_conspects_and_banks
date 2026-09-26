@@ -51,6 +51,14 @@ OIDC events occur at distinct trust stages: redirect to the identity provider, r
 
 `AuthenticationProperties` carries ticket/session state and can hold saved token values. Keep token material out of the cookie when size/exposure calls for a server-side store.
 
+## What should be recallable
+
+- Explain the core model of **ASP.NET Core authentication schemes, OIDC events, and tickets** without opening the Unit.
+- Reconstruct this Unit-grounded rule: ASP.NET Core authentication delegates to named handlers.
+- Reconstruct this Unit-grounded rule: With several identity entrances, select the scheme intentionally per endpoint or policy.
+- Reconstruct this Unit-grounded rule: For repeated rules, name policies such as `EmployeePolicy` and `ClientPolicy` so endpoint code does not scatter scheme strings.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/OIDC,OAUTH, IDENTITY SERVER,BFF,authtoken, authproperties/`

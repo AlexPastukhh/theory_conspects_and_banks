@@ -1,0 +1,77 @@
+# Documentation
+
+Status: current structural navigation for Personal Knowledge System methodology and repository-specific guidance.
+
+## Reading contract / authority
+
+For a fresh snapshot, use this authority order:
+
+```text
+CURRENT semantic owner (principle / policy / Use Case / domain map)
+        ↓
+CURRENT operational projection/state
+        ↓
+validation evidence / migration history
+        ↓
+proposal provenance / legacy implementation
+```
+
+A validation CSV, old proposal, legacy dashboard, or physical folder may contain useful evidence, but it does not override a current owner.
+
+Start with:
+
+1. [Current migration state](migration/CURRENT-MIGRATION-STATE.md)
+2. [Use-Case Registry](use-case-registry.md)
+3. the applicable principle/policy/domain map.
+
+## Universal methodology
+
+- [Universal Knowledge Principles](principles/universal-knowledge-principles.md)
+- [Knowledge Structure & Ontology](principles/knowledge-structure-ontology.md)
+- [Priority Model](principles/priority-model.md)
+- [Questions, Coverage & Expansion](principles/questions-coverage-expansion.md)
+- [Tags, Comparisons & Core Views](principles/tags-comparisons-and-views.md)
+- [Retention & Repetition](principles/retention-repetition.md)
+- [Repetition Scheduling target policy](policies/repetition-scheduling-policy.md)
+
+## Repository-specific guidance
+
+- [Repository work principles](repository-work-principles.md)
+- [Knowledge Unit principles](knowledge-conspect-principles.md)
+- [Image/source visual principles](image-conspect-principles.md)
+
+## Current operational state
+
+- [Planning-layer boundary](../_ai-conspects/_planning/README.md)
+- [Coverage & Expansion](../_ai-conspects/_planning/COVERAGE_AND_EXPANSION.md)
+- [Tracked Questions](../_ai-conspects/_planning/QUESTIONS.csv)
+- [Expansion Plan](../_ai-conspects/_planning/EXPANSION_PLAN.md)
+
+These are projections/state, not replacement semantic owners for principles, Use Cases, or domain ontology.
+
+## Current domain maps
+
+### Software Engineering
+
+- [Knowledge Map](domains/software-engineering/KNOWLEDGE-MAP.md) — current logical Area / recursive nested-Area hierarchy; non-prescriptive about physical layout.
+- [Responsibility Catalog](domains/software-engineering/RESPONSIBILITY-CATALOG.md) — responsibility-first completeness checklist independent of current folder/node occupancy.
+- [Cross-Runtime Manifestation Coverage](domains/software-engineering/MANIFESTATION-COVERAGE.md) — selected symmetric .NET / JavaScript / Browser / Node.js / Python coverage projection; not an exhaustive curriculum.
+- Current machine-readable hierarchy: [semantic hierarchy v3](validation/software-engineering-semantic-hierarchy-v3.csv).
+
+## Important interpretation boundary
+
+```text
+hierarchy = where knowledge belongs
+responsibility catalog = what the domain should explain
+manifestation coverage = how relevant technologies express those responsibilities
+repetition = memory maintenance of existing Units
+```
+
+Do not infer `COVERED` from Unit count. Do not infer `MISSING` merely from an empty folder. Do not turn every responsibility into a nested Area or every manifestation into a required one-to-one tool analogue.
+
+## Migration
+
+- [Current migration state](migration/CURRENT-MIGRATION-STATE.md) — authoritative temporary boundary for this snapshot.
+- [Migration plan](migration/PERSONAL-KNOWLEDGE-SYSTEM-MIGRATION-PLAN.md) — plan/provenance; current state wins when they differ.
+
+The previous consolidated v11 package remains under `proposals/personal-knowledge-system-v11/` as provenance. Its wrapper/index files are non-authoritative after CS1.

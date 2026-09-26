@@ -1,6 +1,8 @@
+> **Migration status:** transitional legacy operational artifact for the pre-CS5 repetition/storage model. Target semantics are owned under `documentation/principles/` and `documentation/policies/`; do not silently reinterpret legacy state as v11 state. See `documentation/migration/CURRENT-MIGRATION-STATE.md`.
+
 # Study Session Agent Contract
 
-Status: active operational entry point
+Status: transitional active legacy operational entry point for the pre-CS5 repetition schema
 
 Purpose: let the learner start or continue a repetition session without
 searching the repository or keeping unrelated editor tabs open.

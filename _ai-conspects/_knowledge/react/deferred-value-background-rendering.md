@@ -23,6 +23,14 @@ Deferred rendering is interruptible/restartable and has no fixed wait. It is not
 
 Use `startTransition` when the component owns the state update and can mark it non-urgent. Use `useDeferredValue` when it receives a value and wants a lagging rendering view.
 
+## What should be recallable
+
+- Explain the core model of **React deferred values and background rendering** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `useDeferredValue(value)` lets an urgent render commit with the previous deferred value while React attempts the new dependent UI in the background.
+- Reconstruct this Unit-grounded rule: Memoization matters: deferring a value does not make rendering cheap if an unrelated parent render recreates all expensive work.
+- Reconstruct this Unit-grounded rule: Deferred rendering is interruptible/restartable and has no fixed wait.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/useTransition full flow, usedebounce, useDefferedvalue/`

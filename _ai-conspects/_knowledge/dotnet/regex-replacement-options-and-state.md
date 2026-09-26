@@ -19,6 +19,14 @@ An Nth-occurrence replacement needs state local to that operation. A simple coun
 
 Reusable expressions can be cached when reuse is significant. `Compiled` trades startup and memory for repeated execution; source-generated regex is another option. Stateful data must not leak between calls. Always use a realistic timeout for untrusted or complex input because catastrophic backtracking can otherwise consume unbounded time. A timeout only limits damage; it does not make a poor expression efficient, so prefer deterministic or non-backtracking designs where possible.
 
+## What should be recallable
+
+- Explain the core model of **Regex replacement options and per-call state** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Case-insensitivity can be supplied as `RegexOptions.IgnoreCase`, inline `(?i)`, or a scoped group such as `(?i:...)`.
+- Reconstruct this Unit-grounded rule: Replacement strings support numbered (`$1`) and named (`${name}`) captures; `$$` emits a literal dollar sign.
+- Reconstruct this Unit-grounded rule: An Nth-occurrence replacement needs state local to that operation.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/sharp regex options  + COND REPLACE/`
 - Processed source: `01-final-transcript.md`, complete transcript

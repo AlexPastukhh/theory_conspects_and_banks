@@ -30,6 +30,14 @@ return Ok(dto);
 
 Emit validators and relevant cache metadata on 200 and 304; a 304 has no normal representation body. Validators answer whether stored content is current, while `max-age`/`Expires` define freshness without contacting the server. `no-cache` permits storage but requires revalidation before reuse; `no-store` forbids storage. After freshness expires, a cache sends `If-Modified-Since` and receives 304 or a new 200. Prefer ETags when several changes can happen within one second or modification time cannot represent the output precisely.
 
+## What should be recallable
+
+- Explain the core model of **Last-Modified revalidation and freshness** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `Last-Modified` is a validator for the selected representation.
+- Reconstruct this Unit-grounded rule: Read a shadow value inside the query with `EF.Property<DateTimeOffset>(author, "LastModified")` so the representation and validator are selected together.
+- Reconstruct this Unit-grounded rule: HTTP dates have whole-second precision, so normalize to UTC and truncate both stored and request values before comparing.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/last modified header, implementation, expirational model/`
 - Processed source: `01-final-transcript.md`, complete transcript

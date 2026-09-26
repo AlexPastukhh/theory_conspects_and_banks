@@ -14,6 +14,14 @@ Inline groups combine options (`(?im)`), disable them (`(?-s)`), or scope combin
 
 Greedy `.*` may overconsume; use lazy/specific patterns. Test LF/CRLF and newline boundaries, and document complex toggles.
 
+## What should be recallable
+
+- Explain the core model of **.NET Regex inline option scopes** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Singleline makes dot include newlines; Multiline changes anchors.
+- Reconstruct this Unit-grounded rule: Inline groups combine options (`(?im)`), disable them (`(?-s)`), or scope combinations (`(?s-m:...)`).
+- Reconstruct this Unit-grounded rule: Greedy `.*` may overconsume; use lazy/specific patterns.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/inline flags sharp/`
 - Processed source: `04-full-combined-final-transcript.md`, complete transcript

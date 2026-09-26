@@ -106,6 +106,14 @@ finally
 
 Keep synchronous monitor sections short and free of async I/O.
 
+## What should be recallable
+
+- Explain the core model of **Monitor mutual exclusion and lock ownership** without opening the Unit.
+- Reconstruct this Unit-grounded rule: A short, memory-only critical section protected by `lock` is ordinary synchronous coordination.
+- Reconstruct this Unit-grounded rule: The monitor belongs to the reference object passed to `lock` or `Monitor`.
+- Reconstruct this Unit-grounded rule: Avoid locking on `this`, `typeof(...)`, public objects, or interned strings.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/lock-monitor/`
 - Authoritative processed source: `04-source-preserving-transcript-v002.md`, S-001 through S-015 and S-025

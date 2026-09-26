@@ -1,0 +1,31 @@
+{
+  "stage": "CS5 structural preparation — semantic hierarchy review v2",
+  "status": "current",
+  "knowledge_units": 576,
+  "root_areas": 15,
+  "broad_nested_areas": 79,
+  "occupied_broad_nested_areas": 52,
+  "missing_broad_nested_areas": 27,
+  "occupied_logical_paths": 106,
+  "structure_changes_vs_v1": 94,
+  "root_area_changes_vs_v1": 17,
+  "cumulative_root_area_changes_vs_pre_hierarchy_map": 69,
+  "path_depth_distribution": {
+    "2": 552,
+    "1": 24
+  },
+  "coverage": {
+    "COVERED": 0,
+    "PARTIAL": 15,
+    "MISSING": 0
+  },
+  "technology_core_candidates": 317,
+  "area_owned": 259,
+  "explicit_review_scopes": 576,
+  "placement_clear": 576,
+  "knowledge_unit_bodies_touched": false,
+  "physical_knowledge_paths_touched": false,
+  "repetition_state_touched": false,
+  "initial_wave_queue_touched": false,
+  "next_stage": "CS5 repetition cutover"
+}

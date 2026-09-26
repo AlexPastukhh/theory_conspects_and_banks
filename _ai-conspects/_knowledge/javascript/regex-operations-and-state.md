@@ -33,6 +33,14 @@ Groups may be numeric or named; `(?:...)` groups alternatives without capturing,
 
 Cache/reuse dynamically constructed expressions only when reuse is significant, and handle stateful `g`/`y` instances deliberately. When business rules exceed regex readability, separate parsing from validation instead of expanding one monolithic expression.
 
+## What should be recallable
+
+- Explain the core model of **JavaScript regex operations and state** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Global/sticky expressions mutate `lastIndex`, so shared repeated `test` or `exec` calls are stateful and can alternate results.
+- Reconstruct this Unit-grounded rule: Literals suit static patterns; `new RegExp(pattern, flags)` suits runtime construction.
+- Reconstruct this Unit-grounded rule: Groups may be numeric or named; `(?:...)` groups alternatives without capturing, and backreferences require captured text to repeat.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/js regex/`
 - Processed source: `04-full-combined-final-transcript.md`, complete transcript

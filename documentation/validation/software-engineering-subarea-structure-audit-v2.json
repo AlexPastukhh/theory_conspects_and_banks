@@ -1,0 +1,30 @@
+{
+  "rows": 576,
+  "unique_ids": 576,
+  "changed_rows_vs_v1": 94,
+  "root_area_changes_vs_v1": 17,
+  "occupied_broad_nodes": 52,
+  "missing_broad_nodes": 27,
+  "distinct_paths": 106,
+  "depth_distribution": {
+    "1": 24,
+    "2": 552
+  },
+  "area_counts": {
+    "A02": 2,
+    "A11": 5,
+    "A12": 46,
+    "A08": 92,
+    "A06": 69,
+    "A10": 11,
+    "A04": 20,
+    "A15": 1,
+    "A07": 59,
+    "A09": 102,
+    "A03": 21,
+    "A01": 95,
+    "A05": 46,
+    "A13": 6,
+    "A14": 1
+  }
+}

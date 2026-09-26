@@ -28,6 +28,14 @@ Remove-first semantics require state: find `Array.IndexOf` then use the two-copy
 
 Use `List<T>` when removal is normal (`Remove`, `RemoveAt`, `RemoveAll`). Manual copying avoids LINQ iterator/predicate overhead for hot code. Linked structures trade locality/indexing for fewer shifts. If order is irrelevant, swap-with-last on a resizable collection enables O(1) removal. Avoid repeated array/list conversions and benchmark realistic sizes.
 
+## What should be recallable
+
+- Explain the core model of **C# array removal and copying** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Removing all matching values uses `Where(...).ToArray`; removing one index allocates a length-minus-one result and copies the prefix and shifted suffix with `Array.Copy`.
+- Reconstruct this Unit-grounded rule: The copy parameters identify source array/index, destination array/index, and element count.
+- Reconstruct this Unit-grounded rule: Remove-first semantics require state: find `Array.IndexOf` then use the two-copy algorithm, or use a carefully scoped stateful predicate.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/remove from arr, copy/`
 - Processed source: `05-full-combined-final-transcript.md`, complete transcript

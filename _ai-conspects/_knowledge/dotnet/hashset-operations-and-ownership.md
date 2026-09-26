@@ -16,6 +16,14 @@ The receiver's comparer defines membership. Clone before mutation when the origi
 
 LINQ `Distinct`, `Union`, `Intersect`, and `Except` return deferred enumerable pipelines and leave inputs unchanged; their comparer overloads make equality explicit, while key-based `*By` variants compare selected keys. Re-enumeration may rebuild lookup state. Use `ToHashSet` when the result needs repeated fast membership checks or mutation. LINQ is convenient for one transformation; an owned `HashSet<T>` fits incremental state. Neither model should be used when duplicate counts or ordering are meaningful. Translation of set operators on `IQueryable` is provider-dependent and is not identical to LINQ-to-Objects.
 
+## What should be recallable
+
+- Explain the core model of **HashSet operations and ownership** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `HashSet<T>` stores unique values under an equality comparer supplied at construction or taken from the type default.
+- Reconstruct this Unit-grounded rule: The receiver's comparer defines membership.
+- Reconstruct this Unit-grounded rule: Re-enumeration may rebuild lookup state.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/sheet hashset/`
 - Processed source: `05-full-combined-final-transcript.md`, complete transcript

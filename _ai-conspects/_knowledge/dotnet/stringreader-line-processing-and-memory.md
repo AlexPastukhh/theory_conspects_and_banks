@@ -12,6 +12,14 @@ For ten 1 MB lines, `Split` can retain the original, array, and ten strings; inc
 
 Choose `Split` for small input when clarity outweighs peak-memory concerns, `StringReader` when the complete string already exists and work can be sequential, and `StreamReader` for genuine file/HTTP streaming.
 
+## What should be recallable
+
+- Explain the core model of **StringReader line processing and memory** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `ReadLine()` processes one line at a time without constructing a line array, but each returned line is still a new string.
+- Reconstruct this Unit-grounded rule: `data.Split('\n')` normally creates an array, every segment string, and references retaining all segments.
+- Reconstruct this Unit-grounded rule: For ten 1 MB lines, `Split` can retain the original, array, and ten strings; incremental work can be closer to original plus current line.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/STRINGREADER/`
 - Processed source: `regions/R01R02R03-final-coverage-transcript.md`, complete transcript

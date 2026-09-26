@@ -53,6 +53,14 @@ Incremental `responseText` is browser-decoded text, not original byte chunks. `A
 
 XHR can also remain appropriate for legacy-browser support, existing code, precise upload/download progress, and its explicit abort/event controls. Prefer Fetch for modern Promise/`async` code and Service Worker integration. In either API, CORS governs whether cross-origin JavaScript may access a response; it is not a universal prohibition on sending cross-origin requests.
 
+## What should be recallable
+
+- Explain the core model of **XMLHttpRequest lifecycle, progress, and streaming limits** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `open()` configures an XHR and `send()` starts it.
+- Reconstruct this Unit-grounded rule: `progress` exposes `loaded`, `total`, and `lengthComputable`, but does not provide the newly arrived byte chunk.
+- Reconstruct this Unit-grounded rule: `lastIndex` prevents reprocessing old text, complete lines are emitted repeatedly, and the incomplete tail remains buffered until more text arrives.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/xhr/`
 - Processed source: `01-final-transcript.md`, complete transcript

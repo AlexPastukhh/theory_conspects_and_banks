@@ -1,6 +1,8 @@
+> **Migration status:** transitional legacy operational artifact for the pre-CS5 repetition/storage model. Target semantics are owned under `documentation/principles/` and `documentation/policies/`; do not silently reinterpret legacy state as v11 state. See `documentation/migration/CURRENT-MIGRATION-STATE.md`.
+
 # Repetition Policy
 
-Status: active knowledge-unit repetition and learning policy
+Status: transitional active legacy repetition policy for the pre-CS5 state schema; not target repetition semantic authority
 
 Scope: learning state for units under `_ai-conspects/_knowledge/` and controlled creation of new knowledge material.
 

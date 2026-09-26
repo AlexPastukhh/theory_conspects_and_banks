@@ -27,6 +27,14 @@ CREATE INDEX IX_Users_UserName_CI ON Users(UserName_CI);
 
 Use a separately normalized key when business normalization exceeds collation, and enforce required uniqueness on that key. Computed-index eligibility depends on determinism/settings, and Unicode/locale rules require domain tests.
 
+## What should be recallable
+
+- Explain the core model of **SQL Server collation, search, and SARGability** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Collation controls SQL Server string comparison: `CI/CS` select case sensitivity, `AI/AS` accent sensitivity, while binary collations follow encoded-value rules.
+- Reconstruct this Unit-grounded rule: `CHARINDEX` searches a literal substring, returns a one-based position or zero, accepts an optional start, and follows collation.
+- Reconstruct this Unit-grounded rule: Define an explicit product rule for an empty search string.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/CASE INSENS,collate/`
 - Processed source: `05-full-combined-final-transcript.md`, complete transcript

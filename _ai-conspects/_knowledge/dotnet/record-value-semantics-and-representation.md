@@ -17,6 +17,14 @@ Structs copy by value in assignment and ordinary calls; `ref` passes by referenc
 
 An immutable `Address`-style record class can model an EF owned/complex value object when it lacks independent identity; actual mapping support is EF-version-specific.
 
+## What should be recallable
+
+- Explain the core model of **C# record value semantics and representation** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `record` means reference-type `record class`; `record struct` and `readonly record struct` are value types.
+- Reconstruct this Unit-grounded rule: `with` is nondestructive but shallow: referenced nested objects remain shared.
+- Reconstruct this Unit-grounded rule: Structs copy by value in assignment and ordinary calls; `ref` passes by reference with read/write access, `in` passes by reference with read-only intent, and `out` passes by reference for assignment by the callee.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/records/`
 - Processed source: `01-final-transcript.md`, complete transcript

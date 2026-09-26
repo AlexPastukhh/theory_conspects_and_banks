@@ -46,6 +46,14 @@ upsert and final-table invariants      -> staging plus validated merge
 detailed retry/failed-row diagnostics -> replayable source and retained staging state
 ```
 
+## What should be recallable
+
+- Explain the core model of **Bulk-import staging, validation, and recovery** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Directly bulk-inserting into a final table is often too blunt for messy or partially valid input.
+- Reconstruct this Unit-grounded rule: Staging can be a heap for fast raw loading, with indexes added after load when appropriate.
+- Reconstruct this Unit-grounded rule: `TableLock`, `BatchSize`, indexes, triggers, constraints, transaction size, and transaction-log capacity interact.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/sqlserver-efcore-bulk-sqlbulkcopy/`

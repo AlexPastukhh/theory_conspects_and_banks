@@ -37,6 +37,14 @@ Use `1em` sizing to follow text and `fill="currentColor"` for theme color. Mark 
 </button>
 ```
 
+## What should be recallable
+
+- Explain the core model of **React SVG import contracts and accessibility** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Vite normally imports SVG as a URL for `<img src={iconUrl}>`; SVGR with `?react` imports a component.
+- Reconstruct this Unit-grounded rule: Dynamic JSX component identifiers must be uppercase (`Icon`); lowercase is treated as an intrinsic tag.
+- Reconstruct this Unit-grounded rule: Use `1em` sizing to follow text and `fill="currentColor"` for theme color.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/svg react/`
 - Processed source: `regions/final-transcript.md`, complete transcript and configuration examples

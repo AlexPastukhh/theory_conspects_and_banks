@@ -21,6 +21,14 @@ Keep custom accumulator state inside the fold. Mutating shared external state ma
 
 For `IQueryable`, provider translation and database null/aggregate behavior must be verified; a custom in-memory comparer usually does not translate.
 
+## What should be recallable
+
+- Explain the core model of **LINQ aggregation, quantifiers, and membership** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `Aggregate` folds a sequence into accumulated state.
+- Reconstruct this Unit-grounded rule: `Count` counts elements; `LongCount` avoids `int` range limits.
+- Reconstruct this Unit-grounded rule: `Any` asks whether at least one element exists or matches and can short-circuit.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/-all/`

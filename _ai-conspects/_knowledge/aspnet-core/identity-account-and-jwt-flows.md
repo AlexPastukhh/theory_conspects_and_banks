@@ -17,6 +17,14 @@ verify password → load user claims and roles → add role claims
 
 Choose default endpoints or custom flows deliberately, and keep authorization decisions server-side even when claims are carried to clients.
 
+## What should be recallable
+
+- Explain the core model of **Identity account and JWT flows** without opening the Unit.
+- Reconstruct this Unit-grounded rule: ASP.NET Core Identity supplies users, roles, stores, managers, lockout controls, and default UI/API account workflows.
+- Reconstruct this Unit-grounded rule: External login begins with an authentication challenge, then consumes the provider's login information.
+- Reconstruct this Unit-grounded rule: Identity manages accounts; bearer JWT is a separate transport.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/identity/`
 - Processed source: `01-final-transcript.md`, complete transcript

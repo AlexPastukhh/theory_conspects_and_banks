@@ -34,6 +34,14 @@ for (long mask = 1; mask < (1L << n); mask++)
 
 Generic enum code converts atomic values to an integral representation, combines them, then uses `(TEnum)Enum.ToObject(typeof(TEnum), combined)`. Filter out zero, aliases, duplicates, and pre-combined members; validate `[Flags]` intent and exactly-one-bit atomic values. Choose a width that fits every bit (`long` has 63 practical positive positions; consider `ulong`). The algorithm is exponential: about one million combinations at 20 flags and one billion at 30, so do not materialize large power sets.
 
+## What should be recallable
+
+- Explain the core model of **Enumerating flag combinations with bit masks** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Independent `[Flags]` values use one bit each and combine with OR.
+- Reconstruct this Unit-grounded rule: For `n` atomic flags there are `2^n` subsets and `2^n - 1` non-empty subsets.
+- Reconstruct this Unit-grounded rule: `yield return` emits each combination lazily and preserves the iterator state so enumeration can continue with later masks; it avoids materializing the full result by itself.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/Bitwise checking for all combinations/`

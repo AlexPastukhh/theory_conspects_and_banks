@@ -65,6 +65,14 @@ options.ClientErrorMapping[StatusCodes.Status409Conflict].Title =
 
 Mapping targets MVC client-error results such as parameterless `NotFound()`/`BadRequest()` that implement the client-error contract. An explicit body such as `NotFound(myObject)` is normally retained rather than replaced. This behavior is not successful-response mapping or general exception handling.
 
+## What should be recallable
+
+- Explain the core model of **API behavior, validation, and client errors** without opening the Unit.
+- Reconstruct this Unit-grounded rule: With API-controller conventions, binding/validation can populate invalid `ModelState` and short-circuit before the action body.
+- Reconstruct this Unit-grounded rule: Set `SuppressModelStateInvalidFilter = true` to disable automatic 400 and allow the action to inspect invalid state.
+- Reconstruct this Unit-grounded rule: A custom validation contract may deliberately use `422 Unprocessable Entity` instead of the default automatic 400.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/apibehavioroptions/`
 - Processed source: `04-source-preserving-transcript-v002.md`, complete transcript

@@ -1,0 +1,20 @@
+{
+  "stage": "CS5 structural preparation — recursive Software Engineering Area hierarchy",
+  "knowledge_units": 576,
+  "root_areas": 15,
+  "broad_nested_areas": 79,
+  "occupied_broad_nested_areas": 54,
+  "occupied_nested_paths": 104,
+  "top_level_area_corrections": 52,
+  "coverage": {
+    "COVERED": 0,
+    "PARTIAL": 15,
+    "MISSING": 0
+  },
+  "technology_core_candidates": 317,
+  "area_owned": 259,
+  "knowledge_unit_bodies_touched": false,
+  "physical_knowledge_paths_touched": false,
+  "repetition_state_touched": false,
+  "next_stage": "CS5 repetition cutover"
+}

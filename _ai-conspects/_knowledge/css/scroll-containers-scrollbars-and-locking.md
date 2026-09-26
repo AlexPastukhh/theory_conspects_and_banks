@@ -10,6 +10,14 @@ Hide only scrollbar chrome while retaining overflow: Firefox uses `scrollbar-wid
 
 Modal body locking must restore the previous inline overflow, centralize/reference-count overlapping locks, compensate scrollbar gap or use `scrollbar-gutter: stable`, and handle mobile position preservation. Keep the overlay scrollable, clean up on unmount/navigation, trap focus, and mark background inert. Scroll lock alone is not modal accessibility; blanket wheel/touch prevention can block overlay scrolling.
 
+## What should be recallable
+
+- Explain the core model of **Scroll containers, scrollbar visibility, and scroll locking** without opening the Unit.
+- Reconstruct this Unit-grounded rule: An internal scroll area needs overflowing content, a constrained axis, and an overflow policy.
+- Reconstruct this Unit-grounded rule: Hide only scrollbar chrome while retaining overflow: Firefox uses `scrollbar-width: none`, legacy Microsoft used `-ms-overflow-style`, and WebKit/Blink expose `::-webkit-scrollbar`.
+- Reconstruct this Unit-grounded rule: Modal body locking must restore the previous inline overflow, centralize/reference-count overlapping locks, compensate scrollbar gap or use `scrollbar-gutter: stable`, and handle mobile position preservation.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/scroll block/`; processed source: `04-full-combined-final-transcript.md`
 - Duplicate workspace: `_ai-conspects/scroll block css/`; same complete semantic transcript

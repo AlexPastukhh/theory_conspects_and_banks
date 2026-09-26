@@ -10,6 +10,14 @@ Deletion sends an expired `Set-Cookie`. Name, path, and domain must match the or
 
 Keep callbacks small, deterministic, and tested across consent suppression, essential cookies, delete matching, and cross-site SameSite flows. Prefer dedicated component options and local factories for ordinary cases.
 
+## What should be recallable
+
+- Explain the core model of **Cookie policy callbacks and deletion symmetry** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `OnAppendCookie` can inspect name, value, request context, and mutable options; enforce global invariants, alter attributes, suppress appends, or apply request-dependent compatibility.
+- Reconstruct this Unit-grounded rule: Deletion sends an expired `Set-Cookie`.
+- Reconstruct this Unit-grounded rule: Keep callbacks small, deterministic, and tested across consent suppression, essential cookies, delete matching, and cross-site SameSite flows.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/usecookiepolicy/`

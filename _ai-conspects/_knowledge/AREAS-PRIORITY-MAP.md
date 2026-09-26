@@ -1,5 +1,7 @@
 # Карта покрытия и приоритетов knowledge layer
 
+> **CS4 status:** historical pre-v11 coverage/priority snapshot. Current operational expansion planning is owned by `_ai-conspects/_planning/COVERAGE_AND_EXPANSION.md`, `QUESTIONS.csv`, and `EXPANSION_PLAN.md`. Retained as historical evidence; its P0–P3 backlog is not the current Expansion Plan.
+
 Status: planning and audit artifact; not authority over knowledge-unit content
 
 Snapshot date: 2026-09-03

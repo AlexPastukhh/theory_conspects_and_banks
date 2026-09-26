@@ -64,6 +64,13 @@ ArrayBuffer  raw in-memory byte storage
 typed array  homogeneous numeric view over that storage
 ```
 
+## What should be recallable
+
+- The distinction between raw `ArrayBuffer` storage, typed-array views, and `Blob` as browser file-like data.
+- How multiple typed-array views can share the same bytes and why element width/endianness affect interpretation.
+- When `Uint8Array` versus wider typed arrays are appropriate and when mixed-layout data requires `DataView`.
+- How `Blob.arrayBuffer()` bridges file-like browser data to raw byte-oriented processing.
+
 ## Sources
 - Workspace: `_ai-conspects/uintarray,blob, arraybuffer,dataview,endianness/`
 - Authoritative processed source: `01-final-transcript.md`, R01

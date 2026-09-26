@@ -36,6 +36,14 @@ Capacity policy is part of the application protocol. `Wait` preserves every comm
 
 The connection coordinator owns the full lifecycle: start receive/send loops, propagate cancellation, complete the outgoing writer so the sender can drain or finish, stop new producers, coordinate the close handshake, and await both loops. A bounded channel similarly supports hosted background queues while preventing unbounded memory growth.
 
+## What should be recallable
+
+- Explain the core model of **Channel<T> producer-consumer lifecycle** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `Channel<T>` combines async queue storage, producer/consumer coordination, completion, and waiting.
+- Reconstruct this Unit-grounded rule: `TryWrite`/`TryRead` return immediately.
+- Reconstruct this Unit-grounded rule: `SingleReader`/`SingleWriter` are binary access-pattern hints, not numeric limits.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/channel/`

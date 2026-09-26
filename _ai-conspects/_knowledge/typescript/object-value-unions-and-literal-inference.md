@@ -30,6 +30,14 @@ Without `as const`, mutable object properties commonly widen to `string`, so the
 
 This helper changes no runtime behavior. It derives a static union from an object that already exists at runtime.
 
+## What should be recallable
+
+- Explain the core model of **Object value unions and literal inference** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `keyof T` produces the key union; `T[keyof T]` then produces the union of the corresponding property values.
+- Reconstruct this Unit-grounded rule: Without `as const`, mutable object properties commonly widen to `string`, so the derived type loses the useful literal union.
+- Reconstruct this Unit-grounded rule: This helper changes no runtime behavior.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/utility types/`
 - Authoritative processed source: `01-final-transcript.md`, R04 `ValueOf` and R05 literal-inference claims

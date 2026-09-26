@@ -1,4 +1,6 @@
-# Personal Knowledge System — current state (v11)
+> **Historical proposal snapshot.** Current canonical methodology was promoted during CS1. Start at [`../../README.md`](../../README.md) and [`../../migration/CURRENT-MIGRATION-STATE.md`](../../migration/CURRENT-MIGRATION-STATE.md).
+
+# Personal Knowledge System — v11 proposal snapshot state
 
 This package preserves the latest best current variants while keeping proposal status explicit.
 

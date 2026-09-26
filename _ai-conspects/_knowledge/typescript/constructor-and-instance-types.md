@@ -19,6 +19,14 @@ function make<C extends new (...args: any[]) => any>(
 
 In C#, `T` normally denotes the instance; `where T : new()` permits only parameterless `new T()`. Arbitrary constructor signatures are not generic constraints: prefer typed factory delegates, use DI for registered services, and reserve `Activator.CreateInstance` reflection for genuinely dynamic runtime-checked construction.
 
+## What should be recallable
+
+- Explain the core model of **Constructor and instance types** without opening the Unit.
+- Reconstruct this Unit-grounded rule: In TypeScript, `ClassName` in a type position is the instance shape; `typeof ClassName` is the runtime constructor/static side, including `new` and statics.
+- Reconstruct this Unit-grounded rule: `ConstructorParameters<C>` preserves the argument tuple; `InstanceType<C>` is the object produced by constructor type `C`.
+- Reconstruct this Unit-grounded rule: In C#, `T` normally denotes the instance; `where T : new()` permits only parameterless `new T()`.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/ctor type and instance type/`
 - Processed source: `regions/final-transcript.md`, complete transcript

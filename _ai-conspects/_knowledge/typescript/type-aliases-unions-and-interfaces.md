@@ -13,6 +13,13 @@ type Id = string | number;
 
 Parentheses matter: `(string | number)[]` is an array of mixed elements; `string | number[]` is one string or an array of numbers. Aliasing an alias creates another structural name, not a new nominal incompatible type. Prefer interface for extensible/mergeable public object contracts and type for general expressions; either can suit an ordinary object.
 
+## What should be recallable
+
+- Explain the core model of **Type aliases, unions, and interfaces** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Interfaces describe object/call/construct shapes and support extension/declaration merging.
+- Reconstruct this Unit-grounded rule: Parentheses matter: `(string | number)[]` is an array of mixed elements; `string | number[]` is one string or an array of numbers.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/type aliases, unions,iterfaces/`
 - Processed source: `04-full-combined-final-transcript.md`, complete transcript

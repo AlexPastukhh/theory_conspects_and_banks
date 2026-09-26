@@ -1,4 +1,8 @@
+> **Migration status:** transitional legacy operational artifact for the pre-CS5 repetition/storage model. Target semantics are owned under `documentation/principles/` and `documentation/policies/`; do not silently reinterpret legacy state as v11 state. See `documentation/migration/CURRENT-MIGRATION-STATE.md`.
+
 # Repetition Entry Template
+
+Status: transitional active legacy history template for the pre-CS5 repetition schema
 
 Use this template for `_repetition/history/<topic>/<unit>.md`.
 

@@ -35,6 +35,14 @@ var posts = await context.Posts
 
 Provider-specific raw SQL needs explicit projection, integration tests, generated SQL/query-plan measurement, and a deliberate schema exit when repeated high-volume JSON predicates dominate.
 
+## What should be recallable
+
+- Explain the core model of **EF Core JSON-converted collections and SQL Server querying** without opening the Unit.
+- Reconstruct this Unit-grounded rule: The database cannot enforce per-item foreign keys, arbitrary CLR collection operations do not automatically translate through the converter, and change tracking still needs a comparer/immutable strategy.
+- Reconstruct this Unit-grounded rule: `JSON_VALUE(column, path)` extracts one scalar and can be exposed through a mapped scalar DbFunction for filters/projections/ordering.
+- Reconstruct this Unit-grounded rule: `FromSqlInterpolated` parameterizes values; never concatenate user input.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/ef has conversion, value converte,comparer/`

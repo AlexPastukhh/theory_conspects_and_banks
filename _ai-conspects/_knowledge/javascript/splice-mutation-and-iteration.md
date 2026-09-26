@@ -18,6 +18,14 @@ Replacing all contents preserves references held by observers; assigning a new a
 
 Forward removal can skip adjacent matches because the next element shifts into the current index before `i++`. Iterate backward, decrement after removal, filter immutably, or compact with read/write indices and truncate once. Front removals are O(n); repeated front splices can become O(n²), so queues should use a deque/ring buffer/logical head and bulk deletions should filter/compact once.
 
+## What should be recallable
+
+- Explain the core model of **JavaScript splice mutation and iteration** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `array.splice(start, deleteCount, ...items)` mutates its receiver and returns a new array of removed elements; insertion-only calls return `[]`.
+- Reconstruct this Unit-grounded rule: Replacing all contents preserves references held by observers; assigning a new array is clearer under simple ownership.
+- Reconstruct this Unit-grounded rule: `slice(start,end)` is non-mutating with exclusive end; `splice` uses a count and mutates.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/splice/`
 - Processed source: `05-full-combined-final-transcript.md`, complete transcript

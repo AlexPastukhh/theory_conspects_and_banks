@@ -16,6 +16,14 @@ Stored XSS persists a payload and later serves it to victims. Reflected XSS plac
 
 Consequences include account actions in the current origin, data disclosure, UI deception, and propagation through stored content. `HttpOnly` prevents direct JavaScript reads of that cookie, but injected code can still make authenticated same-origin requests and read accessible page/API data; it is damage reduction, not an XSS fix.
 
+## What should be recallable
+
+- Explain the core model of **XSS sources, sinks, and attack flows** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Sources include form and query input, API/database values, URL fragments, `localStorage`, `postMessage`, and third-party data.
+- Reconstruct this Unit-grounded rule: Stored XSS persists a payload and later serves it to victims.
+- Reconstruct this Unit-grounded rule: Consequences include account actions in the current origin, data disclosure, UI deception, and propagation through stored content.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/xss, csp/`

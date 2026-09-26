@@ -25,6 +25,13 @@ useEffect(() => {
 
 `root: null` means viewport; a DOM root observes within a scroll container. Thresholds are target-visible fractions. Positive `rootMargin` expands and negative contracts the CSS-ordered root rectangle, enabling prefetch/early load/delayed activation. `unobserve` stops one target; `disconnect` stops all.
 
+## What should be recallable
+
+- Explain the core model of **IntersectionObserver lifecycle in React** without opening the Unit.
+- Reconstruct this Unit-grounded rule: One observer can watch many targets, so callbacks receive an entries array.
+- Reconstruct this Unit-grounded rule: `root: null` means viewport; a DOM root observes within a scroll container.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/interseption observer/`
 - Processed source: `regions/final-transcript.md`, complete transcript

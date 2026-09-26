@@ -55,6 +55,14 @@ The fetch wrapper snapshots the current token, sets `Authorization`, preserves c
 
 On logout, clear token state and remove/invalidate identity-owned queries. `queryClient.clear()` is optional and may be too broad. React Query can technically store an access token but is primarily a server-state cache; HttpOnly secure cookies or a dedicated auth store may provide clearer boundaries. Do not persist sensitive tokens to local storage without security review.
 
+## What should be recallable
+
+- Explain the core model of **React Query cache observers and auth refresh** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `setQueryData` notifies observers of that query, but components that never observe its key do not rerender.
+- Reconstruct this Unit-grounded rule: Export exactly one client and key, and pass that same instance to `QueryClientProvider` and non-React helpers.
+- Reconstruct this Unit-grounded rule: A hook observing the same key rerenders when its selected result changes; a root observer can switch login/product branches.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/react query rerenders + setting and getting data from cache outside of react/`
 - Processed source: `01-final-transcript.md`, complete transcript

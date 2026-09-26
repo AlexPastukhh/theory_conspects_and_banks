@@ -57,6 +57,14 @@ public IActionResult Head(int id)
 
 Here `CreateETag` returns a typed, quoted `EntityTagHeaderValue`. The example composes the metadata query, typed request/response headers, wildcard handling, weak comparison, optional exact length, and 304/200 outcomes without a body.
 
+## What should be recallable
+
+- Explain the core model of **Explicit ASP.NET Core HEAD endpoints** without opening the Unit.
+- Reconstruct this Unit-grounded rule: In current ASP.NET Core controller/endpoint routing, `[HttpGet]` declares GET only; map HEAD explicitly with `[HttpHead]` or explicitly map both verbs.
+- Reconstruct this Unit-grounded rule: The action can query version metadata, return 404, compute the same quoted ETag as GET, evaluate `If-None-Match`, and return 304 or 200 without content.
+- Reconstruct this Unit-grounded rule: Helpers typed as `object` cannot access `.Version`; accept a concrete type/interface or the version value.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/HEAD REQUEST/`

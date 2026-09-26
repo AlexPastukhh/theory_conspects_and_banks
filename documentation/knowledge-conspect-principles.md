@@ -1,44 +1,56 @@
-# Принципы создания knowledge-конспектов
+# Knowledge Unit Principles
 
-Status: current general principles for creating and changing reviewable knowledge units.
+Status: current repository-specific principles for creating/changing durable Knowledge Units.
 
-Scope: стабильные правила knowledge units под _ai-conspects/_knowledge/ независимо от того, пришёл проверенный материал из source workspace, текстового источника или дневного learning batch. Полная миграция source workspace дополнительно следует [KNOWLEDGE_LAYER_RULES.md](../_ai-conspects/KNOWLEDGE_LAYER_RULES.md); её процедурные шаги принадлежат выбранному Use Case.
+Universal identity/ownership semantics are defined by [Knowledge Structure & Ontology](principles/knowledge-structure-ontology.md).
 
-## Результат и граница
+## Unit boundary
 
-Knowledge-конспект — самостоятельная смысловая единица для активного вспоминания. Его граница задаётся одной связной моделью, а не количеством изображений, разделов, файлов или строк. Он должен сохранять важные причины, механику, ограничения, failure modes, trade-offs и representative examples допущенного источника. Короткий пересказ богатого материала не считается успешным созданием unit.
+A Knowledge Unit is one coherent durable model that can be independently reviewed/explained. Its boundary follows meaning, not screenshot count, file length, source section, technology folder, or collection day.
 
-Source workspace остаётся evidence/provenance layer. Knowledge unit не делает непроверенный источник проверенным и не должен подменять его исходный текст. Текстовый источник может использоваться без визуальной транскрипции; изображение сначала требует доступного и проверенного source-preserving представления.
+One source may produce several Units; one Unit may use several verified sources.
 
-## Допуск материала и происхождение
+## Stable identity and canonical home
 
-- Перед записью установить точный источник, его доступность, авторитетность и границы проверенного содержания. Сохранять различие между дословным источником, нормализацией, выводом и непроверенной гипотезой.
-- Не добавлять правдоподобные знания модели без отдельного источника. Не переносить спорное утверждение как факт; сохранить вопрос и причину неопределённости в соответствующем источнике или регистре.
-- Для материала из source workspace назвать конкретный authoritative processed file и использованные sections/regions. Для материала из learning batch назвать точный dump, исходные ссылки и проверенную часть. Не придумывать source workspace или KNOWLEDGE_REGISTRY.md только ради единообразия.
-- Original SVG указывать как физический путь лишь тогда, когда он действительно установлен; иначе различать source identity и доступность файла. Отсутствие SVG не обесценивает самостоятельно проверенный текстовый источник.
+- preserve a stable unique Knowledge ID;
+- search for semantic overlap before creating another Unit;
+- extend/merge when the same durable model already exists;
+- choose one canonical semantic home;
+- current physical topic path may remain transitional and is not by itself final ownership;
+- add tags/ordinary links for cross-cutting retrieval instead of duplicating the explanation.
 
-## Смысловая граница, идентичность и recall contract
+## Body and Review Scope
 
-- Один unit охватывает связную модель, которую можно независимо вспомнить примерно за 5–15 минут. Граница определяется смыслом, не heading/region, длиной файла, числом картинок или днём сбора. Один источник может дать несколько units, а один unit — опираться на несколько проверенных источников.
-- Knowledge ID уникален, стабилен, lowercase и назван по смыслу, а не по положению в source. Topic обозначает устойчивую область знаний. Новый numbered duplicate не создаётся, если модель уже представлена; существующий unit содержательно расширяется с сохранением прежнего provenance.
-- Body должен самостоятельно объяснять достаточную механику и важные примеры. Перестановка и лёгкая нормализация допустимы без изменения смысла; уникальные caveats, failure modes и объяснения «почему» остаются.
-- What should be recallable — проверяемый contract: каждый его пункт полностью отвечается body того же unit. Related knowledge связывает близкие, но самостоятельные модели, а не оправдывает выпадение необходимого объяснения.
-- Sources точно отделяет вклады разных источников. При расширении unit прежняя provenance остаётся, новая добавляется с соответствующим section/region. Topic index перечисляет units; root knowledge index перечисляет topics и меняется только при появлении нового topic.
+The body must support the Unit's Review Scope. Preserve the important causal model, mechanics, boundaries, failure modes, trade-offs, and representative examples needed to reconstruct that scope.
 
-## Source workspace и его registry
+`What should be recallable` is an accepted current representation of Review Scope, but the semantic contract is the scope itself, not the exact heading.
 
-Полная миграция workspace требует физически доступного authoritative processed source, no-loss распределения meaningful claims и claim-level KNOWLEDGE_REGISTRY.md. MAPPED означает новый destination, MERGED — реально присутствующий или добавленный материал в существующем destination, NON_LEARNING — только процессный/evidence материал, UNRESOLVED — конкретное непереносимое пока meaningful утверждение. Нельзя использовать UNRESOLVED для объявления полностью нерасшифрованного workspace мигрированным.
+If one file contains materially heterogeneous retention/review needs, revisit the Unit/Review Scope boundary rather than averaging incompatible needs into one schedule.
 
-Registry хранит точные destination Knowledge ID, topic и file, concrete claim groups, boundary decisions и сходящиеся counts. Ни он, ни generated migration status не заменяют проверки body против source. При прямом текстовом источнике или дневном batch фиктивный source workspace и KNOWLEDGE_REGISTRY.md не создаются.
+## Provenance
 
-## Дневной материал и повторение
+Separate:
 
-Дневной raw batch — evidence для будущего разбора, но не готовый knowledge unit и не автоматически проверенный источник. В день сбора допустима только грубая группировка; происхождение, доступность, цитаты/пересказ и гипотезы должны оставаться различимыми. Его жизненный цикл и фактические даты определяют [REPETITION_POLICY.md](../_ai-conspects/_repetition/REPETITION_POLICY.md) и [LEARNING_INBOX.md](../_ai-conspects/_repetition/LEARNING_INBOX.md). Материализация создаёт новый unit, дополняет существующий либо честно откладывает/отклоняет claim.
+- exact source/evidence;
+- source-preserving normalization;
+- durable personal knowledge;
+- interpretation/hypothesis;
+- unresolved Question.
 
-Вопрос или уточнение, возникшие при создании/повторении, не добавляются в unit без проверенного ответа и provenance. Существенные отложенные вопросы хранятся в [QUESTIONS_BACKLOG.md](../_ai-conspects/_repetition/QUESTIONS_BACKLOG.md) с привязкой к Knowledge ID либо с явным отсутствием unit.
+Do not add plausible model knowledge as verified fact without suitable evidence when provenance is required. Existing source workspace rules and `KNOWLEDGE_LAYER_RULES.md` remain specialized support for whole-source materialization.
 
-Новый unit входит в систему повторения по её текущим правилам. Knowledge content, память учащегося и scheduling — разные ответственности: добавление текста не создаёт задним числом recall score, history или interval; существующий learning state нельзя перезаписывать повторным bootstrap.
+## Questions and durable answers
 
-## Инвариант качества
+A Question is not automatically a Knowledge Unit. A checked answer is integrated into the canonical Knowledge destination: update an existing Unit, create a new Unit, create a comparison Unit, refine Concept/Area structure, or decide that no durable knowledge is needed.
 
-Допущенные source claims должны восстанавливаться из union соответствующих units. Каждый recall item, Sources, индексная ссылка и claim-level registry row должны подтверждаться фактическим body и доступным evidence. Форма без содержательного покрытия не доказывает no-loss.
+The current `_ai-conspects/_planning/QUESTIONS.csv` is the operational registry for independently tracked expansion Questions. Legacy `_repetition/QUESTIONS_BACKLOG.md` may still exist for compatibility with the pre-CS5 review workflow, but it is not current expansion authority.
+
+## Learning / repetition transition
+
+New or materially reshaped knowledge uses target `ACTIVE/STABLE` semantics conceptually, but the current pre-CS5 repository must not fabricate those fields inside legacy `REPETITION_STATE.csv`. Until CS5 cutover, use only the truthful legacy operational storage contract and record migration needs explicitly.
+
+Content change never proves recall and must never create synthetic review history, scores, or intervals.
+
+## Quality invariant
+
+For material admitted from a source scope, meaningful claims must remain recoverable from the resulting canonical knowledge or explicitly unresolved/non-learning disposition. Index/count equality alone is not proof of no-loss.

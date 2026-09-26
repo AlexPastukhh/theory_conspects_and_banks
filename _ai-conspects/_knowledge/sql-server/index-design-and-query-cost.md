@@ -14,6 +14,14 @@ Key/RID lookups fetch missing columns from the base table after nonclustered acc
 
 Heaps can suit staging, short-lived intermediates, and append-oriented loads, but are not automatically a fast-write default. Review forwarded records, RID lookups, overlapping/unused indexes, write cost, and query distribution as data changes.
 
+## What should be recallable
+
+- Explain the core model of **SQL Server index design and query cost** without opening the Unit.
+- Reconstruct this Unit-grounded rule: An index is a persistent ordered access structure, normally a B-tree.
+- Reconstruct this Unit-grounded rule: A clustered index stores complete rows at its leaves and defines the table's key order; only one can exist.
+- Reconstruct this Unit-grounded rule: Composite indexes support leftmost prefixes.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/indexes, onmodel indexes/`
 - Processed source: `09-full-combined-final-transcript.md`, complete transcript

@@ -27,6 +27,14 @@ builder.Services.AddControllers()
 
 Explicit `[Required]` attributes still express requiredness after this option is enabled.
 
+## What should be recallable
+
+- Explain the core model of **ModelState binding, validation, and revalidation** without opening the Unit.
+- Reconstruct this Unit-grounded rule: MVC populates `ModelStateDictionary` during binding and validation.
+- Reconstruct this Unit-grounded rule: `[ApiController]` normally returns automatic 400 before the action.
+- Reconstruct this Unit-grounded rule: `TryValidateModel(model, prefix)` runs configured validators and writes to `ModelState`; it does not bind, read JSON, run authorization, or throw for ordinary invalidity.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/modelstate/`
 - Processed source: `regions/modelstate-final.md`, complete transcript

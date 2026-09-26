@@ -56,6 +56,14 @@ async function toArray<T>(
 
 Use `Parameters` and `ReturnType` to inspect ordinary function signatures, and add `Awaited` when the desired contract is the eventual value rather than its promise wrapper.
 
+## What should be recallable
+
+- Explain the core model of **Function signature and async utility types** without opening the Unit.
+- Reconstruct this Unit-grounded rule: TypeScript can derive argument and result types from an existing function instead of duplicating its signature.
+- Reconstruct this Unit-grounded rule: `Parameters<F>` produces the function's parameter tuple.
+- Reconstruct this Unit-grounded rule: Use `Parameters` and `ReturnType` to inspect ordinary function signatures, and add `Awaited` when the desired contract is the eventual value rather than its promise wrapper.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/utility types/`
 - Authoritative processed source: `01-final-transcript.md`, R03

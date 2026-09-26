@@ -58,6 +58,14 @@ Whitelist dynamic sort/field names; never concatenate raw identifiers into SQL. 
 
 That POST boundary also applies when a request contains many identifiers, exceeds practical URL limits, needs complex body validation, or includes sensitive structured criteria that should not be exposed in URLs and routine URL logs. It is an explicit search-request contract, not permission to turn ordinary collection filtering into RPC.
 
+## What should be recallable
+
+- Explain the core model of **Collection filtering and search query composition** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Structured filters constrain known fields; search applies a free-text term across fields.
+- Reconstruct this Unit-grounded rule: Deferred execution translates filtering, searching, stable ordering, and paging into one database query rather than loading all rows and filtering in memory.
+- Reconstruct this Unit-grounded rule: Page collections by default because an unbounded collection increases database work, allocation, serialization, transfer size, and client rendering cost.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/FILTERING AND SEARCHING/`
 - Processed source: `regions/final-transcript.md`, complete transcript and query example

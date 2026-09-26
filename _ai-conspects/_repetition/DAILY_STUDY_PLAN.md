@@ -1,6 +1,8 @@
+> **Migration status:** transitional legacy operational artifact for the pre-CS5 repetition/storage model. Target semantics are owned under `documentation/principles/` and `documentation/policies/`; do not silently reinterpret legacy state as v11 state. See `documentation/migration/CURRENT-MIGRATION-STATE.md`.
+
 # Daily Study Plan
 
-Status: active rolling plan
+Status: transitional active legacy rolling plan; not target daily-work authority
 
 This plan starts on the learner's first actual study date. `Day N` means a calendar day from that start, while an initial-wave slot advances only when its six calibration rows are complete.
 

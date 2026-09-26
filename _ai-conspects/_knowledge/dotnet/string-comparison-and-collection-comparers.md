@@ -24,6 +24,14 @@ names.Sort(StringComparer.CurrentCultureIgnoreCase);
 
 Avoid `a.ToLower() == b.ToLower()`: it allocates, obscures semantics, and risks culture errors.
 
+## What should be recallable
+
+- Explain the core model of **String comparison and collection comparers** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `string.Compare` returns negative/zero/positive for ordering; use `string.Equals` when only equality matters.
+- Reconstruct this Unit-grounded rule: Ordinal is deterministic code-unit-oriented behavior and avoids locale casing surprises.
+- Reconstruct this Unit-grounded rule: Avoid `a.ToLower() == b.ToLower()`: it allocates, obscures semantics, and risks culture errors.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/STRINGCOMPARER,compare strings case insens/`
 - Processed source: `regions/final-transcript.md`, complete transcript

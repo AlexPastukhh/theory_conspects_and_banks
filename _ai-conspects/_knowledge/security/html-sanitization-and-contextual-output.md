@@ -25,6 +25,14 @@ return <article dangerouslySetInnerHTML={{ __html: clean }} />;
 
 Track raw and sanitized values explicitly so already trusted output is not confused with unreviewed input. Decide whether sanitization occurs at ingestion, rendering, or both, and version the policy when stored content may need re-sanitization after a security update. Server-side sanitization protects every client; client-side sanitization still matters when a browser creates HTML from data the server did not render.
 
+## What should be recallable
+
+- Explain the core model of **HTML sanitization and contextual output** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Escaping and sanitization solve different problems.
+- Reconstruct this Unit-grounded rule: HTML text, HTML attributes, URLs, JavaScript strings, and CSS each have different encoding rules.
+- Reconstruct this Unit-grounded rule: If the product intentionally accepts HTML, use a maintained parser-based sanitizer.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/xss, csp/`

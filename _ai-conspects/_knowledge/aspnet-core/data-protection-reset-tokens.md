@@ -10,6 +10,14 @@ The flow is payload → protect → URL-safe HTTPS link → email → unprotect/
 
 Wrap named protectors, purposes, URL encoding, and exception mapping behind focused services rather than scattering them through handlers. Hash when only comparison is needed; use reversible protection only when the payload must be recovered. A database-backed alternative stores a random token hash plus expiry/used state.
 
+## What should be recallable
+
+- Explain the core model of **Data Protection password-reset tokens** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `IDataProtectionProvider.CreateProtector` creates a purpose-isolated protector.
+- Reconstruct this Unit-grounded rule: The flow is payload → protect → URL-safe HTTPS link → email → unprotect/validate → reset.
+- Reconstruct this Unit-grounded rule: Wrap named protectors, purposes, URL encoding, and exception mapping behind focused services rather than scattering them through handlers.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/adddataprotection, encryption, password recovery/`
 - Processed source: `regions/final-transcript.md`, complete structured transcript

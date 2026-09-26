@@ -22,6 +22,14 @@ An anchor is inline by default, so assigning `height` does not create the intend
 
 Automatic minimum sizes can stop shrinking at intrinsic content size. Set `min-width:0` or `min-height:0` on the relevant flex child when it must shrink or scroll inside a constrained layout.
 
+## What should be recallable
+
+- Explain the core model of **CSS flex centering, axes, and defaults** without opening the Unit.
+- Reconstruct this Unit-grounded rule: An anchor is inline by default, so assigning `height` does not create the intended clickable box; its visible line box still follows line-height and font metrics.
+- Reconstruct this Unit-grounded rule: `display:flex` creates a block-level flex container; `inline-flex` keeps inline-level outer behavior.
+- Reconstruct this Unit-grounded rule: `justify-content` aligns on the main axis; `align-items` aligns items within each flex line on the cross axis; `align-content` distributes multiple lines and matters only when wrapping produces them.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/flex,centering etc/`
 - Processed source: `01-final-transcript.md`, complete transcript

@@ -19,6 +19,14 @@ Functional updater functions must remain pure because React may evaluate them mo
 
 An external store owns state/listeners; React owns rendering/subscription lifecycle. A naive effect subscription can miss changes between render and effect and tear under concurrency. `useSyncExternalStore` supplies the supported bridge. Stable snapshots, selectors, equality, and exact cleanup determine rerender scope; notification schedules work but does not itself define the rendered result.
 
+## What should be recallable
+
+- Explain the core model of **Render snapshots, batching, and memoization** without opening the Unit.
+- Reconstruct this Unit-grounded rule: A function component executes whenever React renders it.
+- Reconstruct this Unit-grounded rule: `useCallback` stabilizes a function identity and `useMemo` caches a pure computed value; neither prevents their own component from rendering.
+- Reconstruct this Unit-grounded rule: Each render observes a fixed state snapshot.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/react state and rerenders, store subscriptions/`
 - Processed source: `05-full-combined-final-transcript.md`, complete transcript

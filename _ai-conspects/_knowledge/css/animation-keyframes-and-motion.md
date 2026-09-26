@@ -10,6 +10,13 @@ Transitions interpolate after a property/state change; animations can start inde
 
 Listen for `animationstart`, `animationiteration`, `animationend`, and `animationcancel`, and remove listeners on disposal. Prefer compositor-friendly `transform`/`opacity` over layout-heavy geometry; use `will-change` sparingly. Respect `prefers-reduced-motion` while preserving essential state communication.
 
+## What should be recallable
+
+- How CSS animations differ from transitions and what animation keyframes add beyond a single state transition.
+- The meaning of direction and fill modes, including why `forwards` changes presentation without rewriting underlying CSS.
+- Which animation lifecycle events matter and why listeners need cleanup.
+- Why `transform`/`opacity`, restrained `will-change`, and `prefers-reduced-motion` matter for performance and accessibility.
+
 ## Sources
 - Workspace: `_ai-conspects/animation keyframes/`
 - Processed source: `regions/final-transcript.md`, complete transcript

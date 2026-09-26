@@ -79,6 +79,14 @@ lock (_gate)
 
 Even after `PulseAll`, waiters never run inside the same monitor simultaneously. Each reacquires it in turn and rechecks its own condition.
 
+## What should be recallable
+
+- Explain the core model of **Monitor condition waiting and signaling** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `Monitor.Wait`, `Pulse`, and `PulseAll` coordinate threads around a condition protected by a monitor.
+- Reconstruct this Unit-grounded rule: All three calls require the current thread to own the monitor.
+- Reconstruct this Unit-grounded rule: `Pulse` makes one current waiter eligible; `PulseAll` makes all current waiters eligible.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/lock-monitor/`
 - Authoritative processed source: `04-source-preserving-transcript-v002.md`, S-016 through S-024

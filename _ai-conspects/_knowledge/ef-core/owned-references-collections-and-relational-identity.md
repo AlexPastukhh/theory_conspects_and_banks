@@ -37,6 +37,14 @@ var orders = await context.Orders
 
 Owned entities are not independent shared references. When a value needs independent querying, sharing, lifecycle, or references from several owners, model an entity instead.
 
+## What should be recallable
+
+- Explain the core model of **EF Core owned references, collections, and relational identity** without opening the Unit.
+- Reconstruct this Unit-grounded rule: An owned value belongs to an owner and is reached through that aggregate.
+- Reconstruct this Unit-grounded rule: The `OwnsMany` key defines relational identity.
+- Reconstruct this Unit-grounded rule: Tracking queries preserve owned instances with their owner.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/owned entity/`

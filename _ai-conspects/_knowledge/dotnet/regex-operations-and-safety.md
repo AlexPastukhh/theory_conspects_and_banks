@@ -30,6 +30,13 @@ var regex = new Regex(
 
 A match evaluator supports conditional/computed replacement. Replacement-string `$` semantics are retained in `dotnet.string-replacement`.
 
+## What should be recallable
+
+- Explain the core model of **.NET Regex operations and safety** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Read captures through `Match.Groups`, including named groups.
+- Reconstruct this Unit-grounded rule: A match evaluator supports conditional/computed replacement.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/sheet regex sharp/`

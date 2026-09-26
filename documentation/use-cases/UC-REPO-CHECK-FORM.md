@@ -1,18 +1,27 @@
-# UC-REPO-CHECK-FORM — Проверить форму репозитория
+# UC-REPO-CHECK-FORM — Check Knowledge-System Form
 
 ## Situation
-
-Нужно понять, соответствует ли текущий репозиторий своей форме: после изменений, перед публикацией, при сломанной навигации или при подозрении на расхождение source, knowledge и repetition слоёв.
+The structural correctness and invariants of the knowledge system should be checked.
 
 ## Result
+A read-only report describing:
+- which invariants were checked;
+- which passed;
+- which defects were found;
+- which boundaries remain unverified;
+- which owner/process should repair each defect.
 
-Форма в объявленной области проверена: либо подтверждены проверенные инварианты, либо перечислены точные нарушения, непроверенные области и ограничения. Если пользователь запросил исправление, разрешённые дефекты устранены и повторно проверены.
+The Use Case does not repair the system itself.
 
 ## Process
+1. Define check scope.
+2. Check relevant structural invariants.
+3. Check IDs, links, indexes, states, and registries when in scope.
+4. Check consistency between relevant layers.
+5. Separate `VERIFIED`, `DEFECT`, and `UNVERIFIED`.
+6. Record findings.
+7. Route defects to the semantic owner responsible for the affected structure.
+8. Re-run after external repair when needed.
 
-1. Определить область проверки: конкретное изменение/workspace, затронутые слои или весь репозиторий. Не выдавать scoped pass за global pass.
-2. Прочитать [принципы работы с репозиторием](../repository-work-principles.md). Сверить фактические пути с указанными там ответственностями, не пытаясь удалить унаследованные материалы за одно лишь отклонение от краткой карты.
-3. Проверить структурную навигацию: README, [реестр Use Cases](../use-case-registry.md), ссылки на текущих Use-Case owners и применимые principle-файлы.
-4. Для затронутых source workspaces проверить доступность объявленной authority и отсутствие ложного статуса завершённости; для затронутых knowledge units — уникальность ID, topic index, Sources, содержательное подтверждение registry/counts. Для repetition — согласованность нужных Knowledge IDs, state, batch/question/history записей по [REPETITION_POLICY](../../_ai-conspects/_repetition/REPETITION_POLICY.md).
-5. Проверить целостность затронутых путей и ссылок, границу Git-снимка для локальных source workspaces и SVG/PNG, scoped diff и unrelated work. Структурная проверка не заменяет визуальную или semantic no-loss проверку.
-6. При диагностическом запросе сообщить находки без правок. При запросе на исправление изменить только разрешённую область, затем повторить релевантные проверки. Отдельно назвать то, что не удалось проверить физически или по смыслу.
+## Boundary
+`Check` and `Repair` produce different Results. Repair belongs to the affected semantic owner.

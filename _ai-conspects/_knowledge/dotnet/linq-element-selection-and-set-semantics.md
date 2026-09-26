@@ -12,6 +12,14 @@ Topic: `dotnet`
 
 These methods operate on enumeration order and equality contracts, not database constraints. `IQueryable` translation, ordering, and comparer support are provider-specific.
 
+## What should be recallable
+
+- Explain the core model of **LINQ element selection and set semantics** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `First` means at least one result is required.
+- Reconstruct this Unit-grounded rule: `ElementAt` selects by position and throws outside the sequence; `ElementAtOrDefault` returns default.
+- Reconstruct this Unit-grounded rule: `Distinct`, `Union`, `Intersect`, and `Except` use equality semantics and remove duplicates from their set-shaped results.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/-all/`

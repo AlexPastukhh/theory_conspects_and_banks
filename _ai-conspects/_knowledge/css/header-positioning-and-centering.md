@@ -12,6 +12,14 @@ A floating fixed/absolute box can center itself with `left: 50%`, `transform: tr
 
 Choose sticky for an in-flow persistent page header, fixed for a viewport overlay, and absolute for a local component overlay that scrolls with its containing block. Sticky/max-width can work directly when a full-width background is unnecessary; use fixed outer plus centered inner when the background must span the viewport.
 
+## What should be recallable
+
+- Explain the core model of **CSS header positioning and centering** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `fixed` leaves normal flow and is normally viewport-relative; give it explicit inline constraints because auto width may shrink to content.
+- Reconstruct this Unit-grounded rule: A floating fixed/absolute box can center itself with `left: 50%`, `transform: translateX(-50%)`, and a constrained width.
+- Reconstruct this Unit-grounded rule: `sticky` remains in flow, reserves space, and sticks only after a threshold such as `top: 0`, within its nearest relevant scroll ancestor and containing-block bounds.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/header max width, sticky,fixed/`
 - Processed source: `01-final-transcript.md`, complete transcript

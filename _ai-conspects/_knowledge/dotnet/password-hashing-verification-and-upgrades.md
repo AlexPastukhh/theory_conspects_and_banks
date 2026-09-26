@@ -16,6 +16,14 @@ byte[] key = Rfc2898DeriveBytes.Pbkdf2(
 
 Tune cost using deployment measurements and prefer framework password hashing or a dedicated wrapper over ad hoc code. The `user` parameter in `IPasswordHasher<TUser>` permits implementations with user-specific context. Use encryption/Data Protection only for data that must later be recovered.
 
+## What should be recallable
+
+- Explain the core model of **Password hashing, verification, and upgrades** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Passwords need one-way verification, not reversible encryption.
+- Reconstruct this Unit-grounded rule: Store a versioned envelope containing algorithm, parameters, salt, and derived key, for example `version:algorithm:iterations:salt:hash`.
+- Reconstruct this Unit-grounded rule: Tune cost using deployment measurements and prefer framework password hashing or a dedicated wrapper over ad hoc code.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/hashing/`
 - Processed source: `01-final-transcript.md`, complete transcript

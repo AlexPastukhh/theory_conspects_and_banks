@@ -76,6 +76,14 @@ Should Map keys, or only Map values, become partial?
 
 There is no universal `DeepPartial`. Define and test the categories that the application's input contract actually permits.
 
+## What should be recallable
+
+- Explain the core model of **DeepPartial is an application-specific recursive contract** without opening the Unit.
+- Reconstruct this Unit-grounded rule: That definition is too broad for many production contracts because `object` also includes arrays, functions, `Date`, maps, sets, and other built-ins.
+- Reconstruct this Unit-grounded rule: There is an important branch-order consequence in that exact source-shaped definition: every mutable `Array<T>` also extends `ReadonlyArray<T>`.
+- Reconstruct this Unit-grounded rule: That still does not preserve tuple positions; tuple handling would need another explicit branch.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/utility types/`
 - Authoritative processed source: `01-final-transcript.md`, R04

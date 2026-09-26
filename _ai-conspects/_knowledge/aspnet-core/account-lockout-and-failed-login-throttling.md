@@ -22,6 +22,14 @@ On successful authentication, clear/reset failed-access state. Simultaneous atte
 
 Count only failed authentication outcomes, not every request reaching generic middleware. Email-only partitions allow attacker-driven denial of service against a victim; IP-only partitions harm shared networks and distribute poorly; combined keys reduce one problem while increasing cardinality. Normalize identifiers, avoid account-enumeration differences, and place credential-aware logic in the login action or authentication service.
 
+## What should be recallable
+
+- Explain the core model of **Account lockout and failed-login throttling** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Account lockout and request rate limiting protect different boundaries.
+- Reconstruct this Unit-grounded rule: ASP.NET Core Identity exposes lockout configuration and concurrency-aware user storage.
+- Reconstruct this Unit-grounded rule: A manual model needs explicit fields and transitions: failure count, window start, lockout end, success reset, and concurrent-update handling.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/manual account lockout,ratelimiter middleware, idatabase vs idist cache/`

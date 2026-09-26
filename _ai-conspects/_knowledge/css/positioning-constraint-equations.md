@@ -10,6 +10,14 @@ Absolute horizontal layout solves one equation containing left/right, margins, b
 
 Padding remains internal but contributes to the sizing equation according to the selected `box-sizing` model. Absolute margins participate but do not push siblings. `width:100%` plus 20px margins can yield `0 + 20 + W + 20 + right = W`, so `right = -40px`. Prefer both insets with auto width or deliberate box sizing for fill-available-space.
 
+## What should be recallable
+
+- Explain the core model of **CSS positioning constraint equations** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Positioned values resolve against a containing block, not always the DOM parent.
+- Reconstruct this Unit-grounded rule: Absolute horizontal layout solves one equation containing left/right, margins, borders, padding, and width; vertical layout is analogous.
+- Reconstruct this Unit-grounded rule: Padding remains internal but contributes to the sizing equation according to the selected `box-sizing` model.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/inset vs size,margins,formula/`
 - Processed source: `regions/final-transcript.md`, complete transcript

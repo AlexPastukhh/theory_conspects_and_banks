@@ -15,6 +15,14 @@ builder.Services.AddScoped(_ =>
 
 The manual factory remains scoped, matching the default scoped lifetime of `AddDbContext`; the difference is exposed API shape, not lifetime. More broadly, client code should receive the minimum meaningful configuration inputs rather than assembling every internal detail.
 
+## What should be recallable
+
+- Explain the core model of **DbContext configuration encapsulation** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Infrastructure encapsulation reduces how many EF details startup code can choose.
+- Reconstruct this Unit-grounded rule: This narrows configuration possibilities and keeps sensitive logging policy near the infrastructure implementation; sensitive-data logging can place SQL parameters in logs.
+- Reconstruct this Unit-grounded rule: The manual factory remains scoped, matching the default scoped lifetime of `AddDbContext`; the difference is exposed API shape, not lifetime.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/encapsulating-dbcontext/`
 - Processed source: `regions/R01R02-encapsulating-dbcontext-final.md`, complete transcript

@@ -30,6 +30,14 @@ var lambda = Expression.Lambda<Func<User, bool>>(body, user);
 
 Compilation proves the CLR tree can execute, not that an external query provider can translate it. Keep provider-bound trees within the supported node/operator subset and inspect generated commands.
 
+## What should be recallable
+
+- Explain the core model of **Expression-tree members, parameters, and binary operators** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `Expression.Property`/`PropertyOrField` builds member access over another expression.
+- Reconstruct this Unit-grounded rule: When extracting a path, walk `MemberExpression.Expression` back toward the root, collect member names, then reverse them.
+- Reconstruct this Unit-grounded rule: Binary factories such as `Equal`, `GreaterThan`, `AndAlso`, and `Coalesce` require operand types compatible with that operator.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/EXPRESSION TREES/`

@@ -12,6 +12,14 @@ Decorator expressions evaluate top-to-bottom and decorator functions apply botto
 
 Class decorators may replace constructors while preserving prototype/statics; method/accessor decorators replace descriptors. Legacy property/parameter decorators mainly record metadata and ignore returns. Keep business flow visible, test normal invocation/composition order, and expect legacy-to-modern migration may require redesign.
 
+## What should be recallable
+
+- Explain the core model of **TypeScript decorator wrapping and semantics** without opening the Unit.
+- Reconstruct this Unit-grounded rule: Decorators run when declarations are processed, not per instance.
+- Reconstruct this Unit-grounded rule: A legacy method wrapper stores `descriptor.value` and calls `original.apply(this,args)` to preserve receiver/arguments; arrow wrappers often break instance `this`.
+- Reconstruct this Unit-grounded rule: Decorator expressions evaluate top-to-bottom and decorator functions apply bottom-to-top.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/decorator/`
 - Processed source: `05-full-combined-final-transcript.md`, complete transcript

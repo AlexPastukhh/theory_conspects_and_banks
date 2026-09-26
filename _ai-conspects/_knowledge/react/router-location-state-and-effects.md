@@ -10,6 +10,14 @@ Use route params for path segments and normalize trailing slashes/basename accor
 
 Location changes rerender consumers, and the location object's identity may change when only one field changes. Derive the specific field needed and key effects to relevant fields unless every navigation matters. Clean timers/subscriptions and expect Strict Mode development repeats. Test under `MemoryRouter` or a memory data router with `initialEntries`; prefer route configuration to manual pathname switches. `useLocation` does not replace route params or loader data.
 
+## What should be recallable
+
+- Explain the core model of **React Router location state and effects** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `useLocation` subscribes a component to the rendered router location.
+- Reconstruct this Unit-grounded rule: Use route params for path segments and normalize trailing slashes/basename according to router configuration.
+- Reconstruct this Unit-grounded rule: Location changes rerender consumers, and the location object's identity may change when only one field changes.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/uselocation/`
 - Processed source: `04-full-combined-final-transcript.md`, complete transcript

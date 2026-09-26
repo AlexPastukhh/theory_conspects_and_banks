@@ -48,6 +48,14 @@ Returning `View("Compact", model)` from the component selects `Compact.cshtml` u
 
 Use explicit paths for deliberate one-off overrides. When the whole application follows a different directory structure, customize Razor view-engine locations rather than scattering explicit paths.
 
+## What should be recallable
+
+- Explain the core model of **Razor view discovery conventions** without opening the Unit.
+- Reconstruct this Unit-grounded rule: When an MVC action returns `View()` without a name, the action name becomes the view name.
+- Reconstruct this Unit-grounded rule: `View("Something")` uses the same search order for `Something.cshtml`.
+- Reconstruct this Unit-grounded rule: Partial views follow the controller-then-shared pattern.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Related knowledge
 
 - `aspnet-core.mvc-display-editor-templates`

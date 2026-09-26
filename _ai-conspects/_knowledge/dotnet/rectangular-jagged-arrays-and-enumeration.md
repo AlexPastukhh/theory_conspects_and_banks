@@ -18,6 +18,14 @@ int copy = (int)boxed;      // unbox: requires the exact value type
 
 `Cast<T>()` is deferred and throws at the first incompatible element; enumerating again repeats the work. For boxed values it performs the runtime cast/unbox—it is not a numeric or general conversion API. `OfType<T>()` filters incompatible values and skips `null`. Unboxing requires the exact boxed value type: a boxed `int` cannot be unboxed directly as `long`; unbox to `int`, then convert.
 
+## What should be recallable
+
+- Explain the core model of **Rectangular and jagged arrays, enumeration, and boxing** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `T[,]` is one rectangular allocation with a fixed length per dimension.
+- Reconstruct this Unit-grounded rule: `T[][]` is an array of independently allocated arrays.
+- Reconstruct this Unit-grounded rule: Non-generic `IEnumerable` exposes `object`, so each value-type element may be boxed into an object representation.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/jagged arr,multidim arr,cast boxing unboxing enumerable vs generic/`
 - Processed source: `05-full-combined-final-transcript.md`, complete transcript

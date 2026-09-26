@@ -18,6 +18,14 @@ finally { ArrayPool<byte>.Shared.Return(rented, clearArray: true); }
 
 `MemoryPool<T>.Rent` returns `IMemoryOwner<T>` for transferable ownership across awaits/queues/components; the final consumer disposes it. A `Memory<T>` slice is only a view and dies with its owner. Prefer ArrayPool for locally controlled lifetime, memory owners for transferred lifetime, ObjectPool for stateful resettable objects, and stack allocation for small synchronous scratch. Measure: pooling trades allocations for retained memory and correctness risk.
 
+## What should be recallable
+
+- Explain the core model of **ObjectPool, ArrayPool, and MemoryPool ownership** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `ObjectPool<T>` reuses expensive resettable objects.
+- Reconstruct this Unit-grounded rule: `DefaultObjectPoolProvider` creates pools and is normally shared as a singleton; create and register the concrete `ObjectPool<T>` once for its consumers.
+- Reconstruct this Unit-grounded rule: `ArrayPool<T>.Rent(n)` returns length ≥ n, so track logical length.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/objectpool,arraypool,memorypool/`
 - Processed source: `09-full-combined-final-transcript.md`, complete transcript

@@ -15,6 +15,13 @@ values.Where(value => value > 0);
 
 Many sequence operators are deferred: their pipeline runs during enumeration, and repeated enumeration can repeat source work. Materializers and terminal operators such as `ToList`, `ToArray`, `ToDictionary`, and typically `Count`, `First`, `Single`, or `Aggregate` execute the pipeline. Materialize deliberately at API/lifetime boundaries or before repeated traversal of an expensive/stateful source.
 
+## What should be recallable
+
+- Explain the core model of **Enumerable static methods and execution** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `Enumerable.Empty<T>()` supplies an empty enumerable without allocating a new list, `Range(start, count)` produces consecutive integers, and `Repeat(value, count)` repeats a value.
+- Reconstruct this Unit-grounded rule: Many sequence operators are deferred: their pipeline runs during enumeration, and repeated enumeration can repeat source work.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/Enumerable static methods/`
 - Processed source: `01-final-transcript.md`, complete transcript

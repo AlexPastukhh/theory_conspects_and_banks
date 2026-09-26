@@ -12,6 +12,14 @@ A JWT may instead travel in an HttpOnly cookie. Its semantics remain JWT validat
 
 Choose based on concrete portability and validation topology, not fashion. Credential format and transport mechanism are independent decisions.
 
+## What should be recallable
+
+- Explain the core model of **Cookie sessions versus JWT credentials** without opening the Unit.
+- Reconstruct this Unit-grounded rule: In classic cookie authentication, login produces a server-side session identifier or encrypted authentication ticket; the browser automatically returns it.
+- Reconstruct this Unit-grounded rule: A backend-issued JWT is a signed credential explicitly sent as `Authorization: Bearer …`.
+- Reconstruct this Unit-grounded rule: A JWT may instead travel in an HttpOnly cookie.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/cookies vs tokens sheet jswt in cookies/`
 - Processed source: `regions/R01R02-final-coverage.md`, complete transcript

@@ -22,6 +22,13 @@ Serializing refresh per session prevents two requests from redeeming the same ro
 
 Logout removes both the browser session and corresponding server-side token record. Distributed token updates must be atomic, and record expiration must track the authentication session.
 
+## What should be recallable
+
+- Why a browser-facing BFF keeps OAuth/OIDC tokens server-side while the browser holds only a protected session cookie.
+- The trade-off between storing tokens in the authentication ticket/cookie and using a server-side ticket/token store, including multi-instance requirements.
+- Why refresh must be serialized per session and update rotated access/refresh tokens and expiries atomically.
+- What invalid refresh, downstream `401`, and logout must do to session/token state.
+
 ## Sources
 
 - Workspace: `_ai-conspects/OIDC,OAUTH, IDENTITY SERVER,BFF,authtoken, authproperties/`

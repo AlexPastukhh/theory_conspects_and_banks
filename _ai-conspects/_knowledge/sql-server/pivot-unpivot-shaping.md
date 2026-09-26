@@ -16,6 +16,14 @@ Dynamic columns require safely quoted identifiers and parameterized data values.
 
 Alias generated report columns clearly and order the final output explicitly; keep business labels separate from physical source names. Filter early, index relevant grouping/filter columns, inspect plans, and do not assume PIVOT beats conditional aggregation. Avoid repeatedly pivoting and unpivoting the same large dataset. Static columns fit stable schemas; dynamic reports make consumers handle changing schemas. Document null and duplicate-row semantics.
 
+## What should be recallable
+
+- Explain the core model of **SQL Server PIVOT and UNPIVOT shaping** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `PIVOT` rotates pivot-key row values into a fixed `IN` column list while aggregating a measure.
+- Reconstruct this Unit-grounded rule: Dynamic columns require safely quoted identifiers and parameterized data values.
+- Reconstruct this Unit-grounded rule: `UNPIVOT` converts compatible wide columns into name/value rows but omits null inputs.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/pivot unpivot/`
 - Processed source: `04-full-combined-final-transcript.md`, complete transcript

@@ -14,6 +14,13 @@ var sorted = words.OrderBy(x => x, comparer)
 
 Add a secondary key when comparer-equal values still need deterministic order. `OrderByDescending` follows the same comparer model.
 
+## What should be recallable
+
+- Explain the core model of **C# string sorting and comparer choice** without opening the Unit.
+- Reconstruct this Unit-grounded rule: `Array.Sort` and `List<T>.Sort` mutate; LINQ `OrderBy` returns a new ordered sequence.
+- Reconstruct this Unit-grounded rule: Add a secondary key when comparer-equal values still need deterministic order.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 
 - Workspace: `_ai-conspects/STRING SORT/`

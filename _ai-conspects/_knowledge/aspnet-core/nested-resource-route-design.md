@@ -12,6 +12,14 @@ For an independent child aggregate, make `/courses/{courseId}` canonical for sin
 
 If both route families exist, choose one canonical form for links, `Location`, `CreatedAtAction`, and documentation. A nested single-resource route can remain a scoped view/check or alias, but must verify membership. A convenience top-level lookup does not necessarily change aggregate ownership: commands may remain nested while globally indexed reads are top-level.
 
+## What should be recallable
+
+- Explain the core model of **ASP.NET Core nested resource route design** without opening the Unit.
+- Reconstruct this Unit-grounded rule: A parent key is required for identity when the child ID is only locally unique, for example `/authors/{authorId}/courses/{courseId}`.
+- Reconstruct this Unit-grounded rule: Nesting fits a parent aggregate when children cannot be created independently, parent invariants govern commands, deletion/lifecycle is parent-owned, or tenancy policies are keyed by the parent.
+- Reconstruct this Unit-grounded rule: For an independent child aggregate, make `/courses/{courseId}` canonical for single-resource operations and keep `/authors/{authorId}/courses` for scoped listing/creation.
+- Recall the Unit's stated boundaries, failure modes, and trade-offs; source/provenance details themselves are outside the scheduled scope.
+
 ## Sources
 - Workspace: `_ai-conspects/ROUTE NESTING/`
 - Processed source: `04-source-preserving-transcript-v002.md`, complete transcript
