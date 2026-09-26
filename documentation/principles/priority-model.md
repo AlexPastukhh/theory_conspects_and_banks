@@ -42,6 +42,8 @@ For the current personal system, the Repetition Map is intended to cover essenti
 
 Do not assign a class mechanically from a single legacy priority field. The four dimensions plus the actual Review Scope and current planning context are decision inputs, not a formula. Retention Class is a qualitative/advisory flag: the owner may assign or change it by judgment, and AI may recommend a class without turning that recommendation into a mandatory score or transition rule.
 
+When one exact anchor would create false precision, the retention decision may use an adjacent boundary band such as `CORE ↔ WORKING`, `WORKING ↔ RECOGNITION`, or `RECOGNITION ↔ MAP_ONLY`. A boundary band is not a fifth class family or lifecycle transition; it is an advisory statement that the current Review Scope sits between two neighboring retention depths. Do not introduce a separate `MIXED` Retention Class.
+
 ## Scale
 Default qualitative scale: `HIGH | MEDIUM | LOW`. Add numbers only if real use proves necessary.
 

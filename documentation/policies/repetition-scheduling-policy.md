@@ -1,15 +1,18 @@
 # Repetition Scheduling Policy
 
-Status: current target scheduling policy. Legacy `_repetition` records remain transitional until CS5; do not silently reinterpret them.
+Status: current scheduling policy. Current runtime is `_ai-conspects/_repetition/REPETITION_MAP.csv`; legacy pre-CS5 files under `_ai-conspects/_repetition/legacy/` are provenance only.
 
 ## 1. One Repetition Map, different retention strengths
 The target personal system uses one Repetition Map over durable Review Scopes.
 
 The map is intended to cover essentially the durable corpus, but the work item is not identical for every class:
 - `CORE | WORKING | RECOGNITION` use active-recall retention at different strengths;
-- `MAP_ONLY` uses very light map/relationship refresh and does not require ordinary recall scoring.
+- `MAP_ONLY` uses very light map/relationship refresh and does not require ordinary recall scoring;
+- adjacent boundary bands (`CORE ↔ WORKING`, `WORKING ↔ RECOGNITION`, `RECOGNITION ↔ MAP_ONLY`) may be used when one exact anchor would create false precision.
 
-This broad coverage is a personal retention policy, not a requirement that Knowledge ontology itself depend on repetition state. Retention Class and interval guidance are decision aids, not a deterministic scheduler contract: manual choice of the next useful date is normal.
+A boundary band is descriptive/advisory. It does not introduce a transition state or an automatic interval halfway between two classes; the owner chooses the useful review depth/date from context.
+
+This broad coverage is a personal retention policy, not a requirement that Knowledge ontology itself depend on repetition state. Retention Class/band and interval guidance are decision aids, not a deterministic scheduler contract: manual choice of the next useful date is normal.
 
 ## 2. Entry after learning/materialization
 When a learning batch is triaged/materialized into a new or materially reshaped durable Knowledge Unit:
@@ -38,8 +41,43 @@ If materialization occurred on D+2, that review is D+8.
 
 Choosing an earlier/later date manually is ordinary operation, not an exceptional override. Record a rationale only when it is useful for later interpretation.
 
+## 3A. Existing-corpus initial rollout
+
+For the current 576-Unit CS5 rollout, use **priority-first batching**, not balanced quotas across retention classes.
+
+Starting order:
+
+```text
+CORE
+→ CORE ↔ WORKING
+→ WORKING
+→ WORKING ↔ RECOGNITION
+→ RECOGNITION
+→ RECOGNITION ↔ MAP_ONLY
+→ MAP_ONLY
+```
+
+Fill a rollout day from the strongest remaining band first. Only after that band is exhausted may the same day continue into the next band. Do not manufacture mixes such as `10 CORE + 10 WORKING + 10 RECOGNITION` merely to diversify a day.
+
+The owner selected a starting capacity of **at least 30 standard-unit-equivalents per rollout day**. This is a workload calibration, not a permanent ceiling.
+
+The calibration Unit is `javascript.timers-tasks-microtasks-and-abortable-delay`:
+- 53 total lines;
+- 38 non-empty lines;
+- approximately one standard review Unit at the current Review Scope.
+
+The current rollout artifact also records Review-Scope size so very large support files do not count linearly as dozens of reviews. Its exact size-equivalent formula is an implementation heuristic documented in `../validation/cs5-retention-classification-and-rollout-v1.md`; it may be recalibrated from actual review time.
+
+Rules:
+- Retention Band outranks size. A smaller lower-priority Unit must not jump ahead of remaining higher-priority work merely because it fits a day better.
+- Add whole Units until the day's estimated load reaches at least 30 equivalents; do not split a Unit only to hit an exact number.
+- If observed daily capacity is comfortably higher, increase the practical target later without changing retention semantics.
+- Initial rollout buckets are relative (`Day 1`, `Day 2`, ...). Do not invent calendar dates or review history before the owner actually starts/reviews the work.
+
+Current generated rollout evidence is in `../validation/cs5-initial-repetition-rollout-v1.csv`.
+
 ## 4. Active-recall score
-For `CORE | WORKING | RECOGNITION`, score actual recall **before opening the Unit**:
+For a recall-bearing map item — normally `CORE` through `RECOGNITION`, including adjacent boundary bands when the owner chooses active recall — score actual recall **before opening the Unit**:
 
 ```text
 0 — practically nothing reconstructed
@@ -51,10 +89,10 @@ For `CORE | WORKING | RECOGNITION`, score actual recall **before opening the Uni
 
 Score only against the authoritative Review Scope and the depth expected by the Retention Class. A base/source defect must not lower the memory score.
 
-`MAP_ONLY` map-refresh does not require this 0–4 score unless the Scope is being promoted to a recall-bearing class.
+`MAP_ONLY` map-refresh does not require this 0–4 score. A `RECOGNITION ↔ MAP_ONLY` item may use lightweight map refresh or active recall depending on the current purpose; the boundary label itself does not force one mechanism.
 
 ## 5. Recall State
-For recall-bearing classes:
+For items actually participating in active recall:
 
 ```text
 UNCALIBRATED — in the Repetition Map with CORE/WORKING/RECOGNITION treatment, but no valid blind-recall baseline yet
@@ -100,7 +138,7 @@ The first valid blind-recall review establishes evidence for Recall State. The t
 | 4 + WORKING | RECOVERING | 30 |
 | 4 + RECOGNITION | RECOVERING | 60 |
 
-These are post-calibration gaps. They do **not** redefine the separate initial post-materialization timing in section 3.
+These are post-calibration gaps. They do **not** redefine the separate initial post-materialization timing in section 3. For an adjacent boundary band, use the neighboring rows as guidance and choose the next useful date manually rather than inventing a mandatory interpolated interval.
 
 ## 8. Later interval guidance
 When the default ladder is being used, let `completed stage` be the ladder gap that led to the current review. The rules below are default adaptation heuristics, not mandatory transitions.
@@ -130,7 +168,7 @@ A map refresh should be able to ask only for lightweight awareness such as:
 - what other technology/responsibility it is useful to compare with;
 - where the detailed knowledge can be recovered.
 
-Its cadence can be chosen manually and may later gain a useful low-frequency default if practice justifies one. CS5 does not need an exact universal `MAP_ONLY` interval before cutover. Do not force the normal 0–4 ladder onto it.
+Its cadence is chosen manually and may later gain a useful low-frequency default if practice justifies one. Do not force the normal 0–4 ladder onto it.
 
 ## 10. Review/event types
 
@@ -155,20 +193,30 @@ A Scope can have both:
 
 Only actual memory performance changes recall scheduling. Expansion findings route outward to their own owners.
 
-## 12. Logical state requirements
-For `CORE | WORKING | RECOGNITION`, the map needs enough state to support:
-- Knowledge ID + authoritative Review Scope;
-- Retention Class when assigned;
-- Recall State when real recall evidence/participation makes it applicable;
-- last real recall date/type/score when one exists;
-- completed/next gap when applicable;
-- next review date/type;
-- lazy append-only history after real review activity.
+## 12. Current physical Repetition Map
+The current physical table is `_ai-conspects/_repetition/REPETITION_MAP.csv`. It intentionally stores only operational facts that are useful now:
 
-For `MAP_ONLY`, the map needs at least:
-- Knowledge ID + Review Scope/map-awareness scope;
-- Retention Class = `MAP_ONLY`;
-- next map-refresh date/type;
-- optional last map-refresh evidence.
+```text
+KnowledgeId
+Title
+RetentionBand
+InitialDay
+InitialOrder
+SizeEquivalent
+UnitPath
+ReviewScopeRef
+InitialReviewDate
+LastReview
+LastReviewType
+LastRecallScore
+NextReview
+NextReviewType
+NextScope
+Notes
+```
 
-CS5 owns the exact physical schema. Legacy fields must not be copied merely because they exist.
+`InitialDay` / `InitialOrder` seed the one-time full-corpus first pass. Actual calendar/history fields start blank and are populated only by real reviews.
+
+An explicit stored Recall State is **not required** by the current physical schema. `WEAK / RECOVERING / STRONG` may be used as interpretive labels when actual evidence makes them useful, but the table does not need a mandatory state-machine column. Likewise, `MAP_ONLY` shares the same table without requiring a normal recall score.
+
+Future/new Units may temporarily have a blank Retention Band until the owner assesses it; do not invent `UNDECIDED`. `UnitPath` / `ReviewScopeRef` are non-authoritative representation pointers and must be updated after any physical file move while preserving `KnowledgeId`.

@@ -32,7 +32,7 @@ Start with:
 - [Questions, Coverage & Expansion](principles/questions-coverage-expansion.md)
 - [Tags, Comparisons & Core Views](principles/tags-comparisons-and-views.md)
 - [Retention & Repetition](principles/retention-repetition.md)
-- [Repetition Scheduling target policy](policies/repetition-scheduling-policy.md)
+- [Repetition Scheduling policy](policies/repetition-scheduling-policy.md)
 
 ## Repository-specific guidance
 
@@ -45,7 +45,9 @@ Start with:
 - [Planning-layer boundary](../_ai-conspects/_planning/README.md)
 - [Coverage & Expansion](../_ai-conspects/_planning/COVERAGE_AND_EXPANSION.md)
 - [Tracked Questions](../_ai-conspects/_planning/QUESTIONS.csv)
-- [Expansion Plan](../_ai-conspects/_planning/EXPANSION_PLAN.md)
+- [Expansion Map](../_ai-conspects/_planning/EXPANSION_MAP.md) — current planned expansion owner; currently empty
+- [Repetition runtime](../_ai-conspects/_repetition/README.md)
+- [Repetition Map](../_ai-conspects/_repetition/REPETITION_MAP.csv) — current 576-row operational table
 
 These are projections/state, not replacement semantic owners for principles, Use Cases, or domain ontology.
 
@@ -72,10 +74,15 @@ Do not infer `COVERED` from Unit count. Do not infer `MISSING` merely from an em
 ## Migration
 
 - [Current migration state](migration/CURRENT-MIGRATION-STATE.md) — authoritative temporary boundary for this snapshot.
-- [CS5 repetition cutover analysis](migration/CS5-REPETITION-CUTOVER-ANALYSIS.md) — temporary design analysis derived from runtime scenarios; records evidence, broad Repetition Map / Retention-Class constraints, alternatives, and unresolved cutover decisions; not a permanent semantic owner.
+- [CS5 repetition cutover analysis](migration/CS5-REPETITION-CUTOVER-ANALYSIS.md) — completed cutover analysis/provenance; current runtime is `_ai-conspects/_repetition/REPETITION_MAP.csv`.
 - [CS5 sparse repetition / learning workflow audit v3](validation/cs5-sparse-repetition-methodology-audit-v3.md) — superseded validation evidence from the over-sparse intermediate model.
 - [CS5 retention-map methodology audit v4](validation/cs5-retention-map-methodology-audit-v4.md) — superseded validation evidence; retained for provenance.
 - [CS5 advisory retention/scheduling audit v5](validation/cs5-advisory-retention-scheduling-audit-v5.md) — current validation evidence that Retention Classes and interval tables are guidance/defaults rather than a rigid automated state machine.
+- [CS5 retention classification + initial rollout v1](validation/cs5-retention-classification-and-rollout-v1.md) — current full-corpus 576-Unit advisory classification and priority-first relative rollout evidence.
+- [Retention priority classification v4 CSV](validation/retention-priority-classification-v4.csv) — machine-readable current working retention distribution.
+- [Initial repetition rollout v1 CSV](validation/cs5-initial-repetition-rollout-v1.csv) — relative day buckets using the current 30-standard-unit starting workload.
+- [CS5 classification/rollout audit v6](validation/cs5-retention-classification-rollout-audit-v6.md) — current integrity checks for the full-corpus classification and rollout.
+- [CS5 operational readiness audit v7](validation/cs5-operational-readiness-audit-v7.md) — validates the current Repetition Map cutover, empty Expansion Map, legacy isolation, and unchanged Knowledge Unit bodies.
 - [Migration plan](migration/PERSONAL-KNOWLEDGE-SYSTEM-MIGRATION-PLAN.md) — plan/provenance; current state wins when they differ.
 
 The previous consolidated v11 package remains under `proposals/personal-knowledge-system-v11/` as provenance. Its wrapper/index files are non-authoritative after CS1.

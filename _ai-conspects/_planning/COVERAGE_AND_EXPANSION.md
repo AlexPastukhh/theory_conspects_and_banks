@@ -69,6 +69,11 @@ The manifestation matrix intentionally reveals reverse gaps. Examples:
 - Node.js and Python are `MISSING` for nearly the entire current cross-runtime baseline because no durable technology-core corpus exists yet;
 - browser/JavaScript evidence is meaningful for promises/event-loop/cancellation/client state, but does not substitute for Node.js runtime/process/server semantics.
 
-## Relationship to Expansion Plan
+## Relationship to Expansion Map
 
-Only gaps that need independent planning/history become rows in `QUESTIONS.csv`. Other `MISSING` responsibilities remain first-class coverage gaps without creating a heavy Gap/Question entity graph.
+Coverage and tracked Questions are candidate inputs; they are not automatically scheduled work.
+
+Current planned expansion items: **0**.
+
+The operational owner is [`EXPANSION_MAP.md`](EXPANSION_MAP.md). A `MISSING` responsibility or open Question enters that file only after explicit selection. Until then it remains coverage/question state only.
+

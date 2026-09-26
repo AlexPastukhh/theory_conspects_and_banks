@@ -43,7 +43,7 @@ Do not add plausible model knowledge as verified fact without suitable evidence 
 
 A Question is not automatically a Knowledge Unit. A checked answer is integrated into the canonical Knowledge destination: update an existing Unit, create a new Unit, create a comparison Unit, refine Concept/Area structure, or decide that no durable knowledge is needed.
 
-The current `_ai-conspects/_planning/QUESTIONS.csv` is the operational registry for independently tracked expansion Questions. Legacy `_repetition/QUESTIONS_BACKLOG.md` may still exist for compatibility with the pre-CS5 review workflow, but it is not current expansion authority.
+The current `_ai-conspects/_planning/QUESTIONS.csv` is the operational registry for independently tracked expansion Questions. Pre-CS5 question-backlog material is retained only under `_ai-conspects/_repetition/legacy/` and is not current authority. A Question is not planned expansion work until explicitly selected into `_ai-conspects/_planning/EXPANSION_MAP.md`.
 
 ## Learning / repetition handoff
 

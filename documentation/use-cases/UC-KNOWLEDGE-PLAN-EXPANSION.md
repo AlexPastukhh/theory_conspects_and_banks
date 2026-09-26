@@ -14,8 +14,8 @@ Meaningful targets:
 - are decomposed when useful;
 - have sufficiently clear scope;
 - receive priority;
-- receive a work disposition such as `PURSUE_NOW`, `DEFER`, `DISCARD`, or `NEEDS_CLARIFICATION`;
-- may receive lightweight temporal/order placement in the Expansion Plan when selected for action (`today / tomorrow / later`, a date, or another simple ordering).
+- receive a useful disposition such as `UNSCHEDULED`, `PURSUE_NOW`, `DEFER`, `DISCARD`, or `NEEDS_CLARIFICATION`;
+- may be inserted into the Expansion Map when explicitly selected for action, optionally with lightweight temporal/order placement (`today / tomorrow / later`, a date, or another simple ordering).
 
 Planning is independently useful and does not require immediate research. Temporal placement is optional: semantic placement and priority remain valid even when no date is assigned.
 
@@ -28,7 +28,7 @@ Planning is independently useful and does not require immediate research. Tempor
 6. Check existing knowledge, responsibility coverage, relevant manifestations, and duplicate Questions.
 7. Evaluate targets using the Priority Model.
 8. Determine useful order and required depth.
-9. For selected actionable targets, place them in the Expansion Plan when time/order context is useful.
+9. For explicitly selected actionable targets, add them to the Expansion Map; time/order context is optional.
 10. Preserve deferred targets with context.
 11. Route selected targets to the appropriate learning Use Case.
 
@@ -39,4 +39,9 @@ This Use Case answers:
 
 It does not have to answer the Questions itself.
 
-It also does not coordinate Expansion Plan work against Repetition or Capture/Triage; those remain separate operational concerns.
+It also does not coordinate Expansion Map work against Repetition or Capture/Triage; those remain separate operational concerns.
+
+
+## Current operational note
+
+The current `_ai-conspects/_planning/EXPANSION_MAP.md` is intentionally empty. Existing open Questions and coverage gaps remain candidate inputs only until the owner explicitly selects expansion work.

@@ -1,46 +1,33 @@
-> **Migration status:** transitional legacy operational artifact for the pre-CS5 repetition/storage model. Target semantics are owned under `documentation/principles/` and `documentation/policies/`; do not silently reinterpret legacy state as v11 state. See `documentation/migration/CURRENT-MIGRATION-STATE.md`.
-
 # Learning Inbox
 
-Status: transitional active legacy batch registry; target Capture/Triage semantics are owned under `documentation/`
+Status: **current operational batch registry** for D0 capture → D+2 triage/materialization.
 
-This registry implements the collection-to-knowledge cycle defined in `REPETITION_POLICY.md`.
+Methodology owner: `../../documentation/workflows/default-daily-learning-inbox-workflow.md`.
 
-## Lifecycle
+## Batch lifecycle
 
 ```text
-D0 COLLECTED
-  -> one unpartitioned or roughly grouped daily dump
-
-D+2 MATERIALIZE_DUE
-  -> after one complete day, verify and split into new units or additions
-
-MATERIALIZED
-  -> record exact affected Knowledge IDs and actual materialization date
-
-D+8 FIRST_REVIEW_DUE
-  -> after five complete days following materialization, recall the new material
-
-CLOSED
-  -> first review recorded; units continue on the normal interval ladder
+COLLECTED
+→ TRIAGE_DUE
+→ TRIAGED / CLOSED
 ```
 
-If a due step is completed late, later dates are calculated from the actual completion date.
+There is no universal D+8 batch lifecycle stage. After durable knowledge is materialized, its future review belongs to `REPETITION_MAP.csv` and is chosen per Unit.
 
 ## Batch registry
 
-| Batch ID | Direction | Dump | Collected | Status | Materialize due | Materialized | Affected Knowledge IDs / sections | First review due | Questions | Notes |
-|---|---|---|---|---|---|---|---|---|---|---|
+| Batch ID | Direction | Dump | Collected | Triage due | Status | Triaged | Affected Knowledge IDs / sections | Questions | Notes |
+|---|---|---|---|---|---|---|---|---|---|
 
-## Batch rules
+## Rules
 
-- Prefer one batch per study day; use several only for genuinely unrelated source sets.
-- D0 may be messy, but provenance and uncertainty markers must remain visible.
-- Do not silently convert hypotheses into knowledge claims.
-- D+2 decides `new unit`, `merge into existing unit`, `defer`, or `discard` claim by claim.
-- Affected units retain their stable Knowledge IDs.
-- The D+8 review may target only newly added sections, but its history entry belongs to each affected Knowledge ID.
-- Open questions are stored canonically in `QUESTIONS_BACKLOG.md`.
+- D0 may be rough, but provenance and uncertainty must remain visible.
+- D+2 verifies, partitions, places, merges, discards, or creates durable knowledge as appropriate.
+- For each accepted/reshaped durable Review Scope, update canonical knowledge, assess Retention Band when useful, and ensure a row exists in `REPETITION_MAP.csv`.
+- D+2 is a real learning/review contact but not a blind-recall score.
+- Choose the Unit's next review date manually from the actual material/context; do not fabricate history or memory strength.
+- Independently tracked Questions belong in `../_planning/QUESTIONS.csv`.
+- A Question or coverage gap is not automatically a planned expansion item. Only `../_planning/EXPANSION_MAP.md` means expansion has actually been selected for work.
 
 ## Raw dump template
 
@@ -50,14 +37,12 @@ Path:
 _repetition/inbox/YYYY-MM-DD-<slug>.md
 ```
 
-Contents:
-
 ```markdown
 # Learning dump — <direction> — <YYYY-MM-DD>
 
 Batch ID: L-YYYYMMDD-NN
 Collected: YYYY-MM-DD
-Materialize due: YYYY-MM-DD
+Triage due: YYYY-MM-DD
 
 ## Sources
 
@@ -65,11 +50,7 @@ Materialize due: YYYY-MM-DD
 
 ## Raw material
 
-<facts, examples, excerpts within copyright limits, rough grouping allowed>
-
-## Uncertainties
-
-- <claim requiring verification>
+<facts, examples, rough grouping, uncertainty markers>
 
 ## Possible existing Knowledge IDs
 

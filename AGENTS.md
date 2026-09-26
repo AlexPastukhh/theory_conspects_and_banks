@@ -46,13 +46,23 @@ Cross-technology gap discovery идёт от общей engineering responsibili
 
 Technology Core — ownership exception для defining language/runtime/framework models. В текущих migration tables значение `TECHNOLOGY_CORE_CANDIDATE` означает: Unit прошёл boundary classification как вероятный defining technology model, но физическая Technology Core representation ещё не материализована/не является требованием текущего этапа. Не перемещай файл и не дублируй объяснение только из-за этого label.
 
-## Repetition transition
+## Repetition runtime
 
-Existing `_ai-conspects/_repetition/` state/policy/dashboard files остаются transitional implementation до CS5.
+CS5 operational cutover is complete. Current repetition authority is:
 
-- Не выводи `ACTIVE/STABLE`, Retention Class или Recall State из legacy state автоматически.
-- Legacy `NOT_REVIEWED` не означает target `ACTIVE`.
-- Не переписывай `REPETITION_STATE.csv` и не придумывай recall history до явного cutover.
+- `_ai-conspects/_repetition/REPETITION_MAP.csv` — current one-row-per-Unit operational table;
+- `_ai-conspects/_repetition/README.md` — runtime contract;
+- `documentation/principles/retention-repetition.md` — semantic owner;
+- `documentation/policies/repetition-scheduling-policy.md` — scheduling owner.
+
+Rules:
+
+- Current working retention classification covers 576 / 576 Review Scopes and is advisory.
+- Four anchors remain `CORE | WORKING | RECOGNITION | MAP_ONLY`; adjacent `↔` bands are allowed. There is no separate `MIXED` class and no boundary-state lifecycle.
+- The first full-corpus pass is stored as relative `InitialDay` / `InitialOrder` in `REPETITION_MAP.csv`, using priority-first loading and a starting target of at least 30 standard-unit-equivalents/day.
+- Do not invent calendar dates, recall scores, review history, or next-review dates before a real review. After each actual review the owner chooses depth and `NextReview` per Unit.
+- `UnitPath` / `ReviewScopeRef` are convenience pointers only; future physical Unit moves preserve `KnowledgeId` and update those pointers without recalculating retention/order/history.
+- `_ai-conspects/_repetition/legacy/` is provenance only and must never be used as current scheduler/state authority.
 
 ## Repository/source safety
 

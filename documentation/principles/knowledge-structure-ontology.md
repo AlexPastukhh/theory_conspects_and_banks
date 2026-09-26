@@ -349,14 +349,14 @@ Projects the knowledge map together with:
 
 This is the main structural planning view: it shows both what exists and the unfinished edges of the map.
 
-### 2. Expansion Plan
-A temporal/actionable projection of expansion work selected from Questions, gaps, Concepts, and other targets.
+### 2. Expansion Map
+A lightweight projection of expansion work explicitly selected from Questions, gaps, Concepts, and other targets. It may be completely empty even while coverage gaps and open Questions exist.
 
 It answers:
 
-> What am I going to expand or clarify, and when/in what order?
+> What expansion work have I actually selected to do?
 
-Typical grouping may be `today / tomorrow / later`, dated work, or another lightweight schedule. The plan does not own the underlying Questions/Concepts; it references them.
+Ordering/date is optional. The map does not own the underlying Questions/Concepts; it references them.
 
 ### 3. Repetition View
 An operational memory-maintenance view over review/repetition state.

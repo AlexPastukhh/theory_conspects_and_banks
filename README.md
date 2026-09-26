@@ -19,7 +19,7 @@
 - `documentation/` — current methodology, current domain maps, repository guidance and migration control;
 - `_ai-conspects/_knowledge/` — current physical Knowledge Unit corpus and indexes;
 - `_ai-conspects/_planning/` — current Coverage / Questions / Expansion operational projection;
-- `_ai-conspects/_repetition/` — current physical repetition storage/legacy operational artifacts; schema/policy remain transitional until CS5 cutover;
+- `_ai-conspects/_repetition/` — current repetition runtime (`REPETITION_MAP.csv`, current learning inbox, optional history template); superseded pre-CS5 artifacts are isolated under `_repetition/legacy/`;
 - `_ai-conspects/<source-workspace>/` — local source-preserving evidence/provenance where available.
 
 The physical topic layout under `_knowledge/` is not the canonical semantic ontology. All 576 current Knowledge IDs already have a current logical Software Engineering Area/nested-Area assignment in the hierarchy v3 evidence, while files intentionally remain in their existing physical paths.

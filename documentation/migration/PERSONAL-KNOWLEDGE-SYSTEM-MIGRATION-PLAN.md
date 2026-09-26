@@ -1,6 +1,6 @@
 # Personal Knowledge System Migration Plan — v1
 
-> **Current correction (superseding both the earlier `ACTIVE/STABLE` design and the later over-sparse correction):** current owners do not use a universal Knowledge Unit maturity state. Current personal retention policy aims to keep essentially all durable Review Scopes visible in the Repetition Map, with `CORE | WORKING | RECOGNITION | MAP_ONLY` used as qualitative/advisory retention flags rather than a rigid state machine. D+2 materialization is the first learning/review contact and map-entry/update point; for important CORE knowledge five clear days is a useful default next active-recall interval, while manual date choice from context/workload remains normal. Historical sections below remain provenance; follow `CURRENT-MIGRATION-STATE.md`, `CS5-REPETITION-CUTOVER-ANALYSIS.md`, `../principles/retention-repetition.md`, and `../policies/repetition-scheduling-policy.md` where they differ.
+> **Current correction (superseding both the earlier `ACTIVE/STABLE` design and the later over-sparse correction):** current owners do not use a universal Knowledge Unit maturity state. Current personal retention policy aims to keep essentially all durable Review Scopes visible in the Repetition Map, with `CORE | WORKING | RECOGNITION | MAP_ONLY` as the four anchor qualitative/advisory retention flags and adjacent boundary bands allowed where an exact anchor would create false precision. There is no separate `MIXED` class or boundary-state lifecycle. CS5 runtime cutover is now complete: `_ai-conspects/_repetition/REPETITION_MAP.csv` is the current 576-row operational table, its first pass is priority-first at a starting load of at least 30 standard-unit-equivalents/day, and actual review depth / next date are chosen per Unit after real review. `_ai-conspects/_planning/EXPANSION_MAP.md` is the current expansion owner and intentionally contains 0 planned items. Historical sections below remain provenance; follow `CURRENT-MIGRATION-STATE.md`, `CS5-REPETITION-CUTOVER-ANALYSIS.md`, `../principles/retention-repetition.md`, and `../policies/repetition-scheduling-policy.md` where they differ.
 
 Status: migration plan/provenance based on the original checked snapshot and accepted target methodology. Historical counts/wording in later sections describe the state at planning time. **`CURRENT-MIGRATION-STATE.md` is authoritative for the current snapshot whenever they differ.**
 
@@ -22,12 +22,12 @@ CS5 structural prep: recursive nested Areas       COMPLETE
 CS5 structure semantic review                     COMPLETE
 CS5 responsibility-first coverage refinement      COMPLETE
 CS5 snapshot handoff/methodology audit             COMPLETE
-CS5  repetition cutover                           NEXT
-CS6  physical representation decision            PENDING / optional
-CS7  legacy cleanup + final consistency audit    PENDING
+CS5  repetition cutover                           COMPLETE
+CS6  physical Knowledge Unit representation/move PENDING / separate
+CS7  post-move consistency audit                  PENDING
 ```
 
-Current resolved pre-CS5 state:
+Current resolved migration state:
 
 ```text
 Knowledge IDs                  576 / 576
@@ -35,7 +35,8 @@ primary semantic homes         576 CLEAR
 explicit Review Scope          576 / 576
 recursive nested-Area paths    576 / 576
 ambiguous owner kind           0
-legacy repetition state        unchanged
+current repetition runtime      CUT OVER (`_repetition/REPETITION_MAP.csv`)
+legacy repetition artifacts    isolated under `_repetition/legacy/`
 ```
 
 ---
@@ -92,6 +93,8 @@ same durable knowledge
 ```
 
 ### 2.3 Do not infer ACTIVE from NOT_REVIEWED
+
+> **Historical target-design note — superseded.** This subsection records the earlier `ACTIVE/STABLE` design for provenance only. Current methodology has no universal Knowledge Unit `ACTIVE/STABLE` axis.
 
 Legacy:
 
@@ -569,6 +572,8 @@ Replace the legacy repetition model with the accepted v11 model after semantic m
 
 ### Target state axes
 
+> **Historical target-design note — superseded.** The state axes below are retained only to explain the earlier proposal; do not implement `Learning State = ACTIVE | STABLE` in the current CS5 cutover.
+
 ```text
 Learning State
   ACTIVE
@@ -820,8 +825,8 @@ The following are intentionally deferred:
 - final controlled tag vocabulary;
 - final ontology commitment beyond the current validated working frame;
 - final UI/storage representation for Coverage & Expansion;
-- final UI/storage representation for Expansion Plan;
-- retention class for every Unit before semantic review;
+- whether Expansion Map later needs any UI beyond lightweight Markdown;
+- no additional retention-class blocker remains for the current 576 Units;
 - whether a higher-level combined daily dashboard is useful.
 
 These are not missing requirements. They are decisions whose evidence comes from later migration phases.
@@ -830,28 +835,16 @@ These are not missing requirements. They are decisions whose evidence comes from
 
 # 8. Immediate next action
 
-Proceed with:
+CS5 repetition cutover is complete. Current runtime is:
 
 ```text
-CS5 — Repetition cutover
+_ai-conspects/_repetition/REPETITION_MAP.csv
+_ai-conspects/_repetition/README.md
+_ai-conspects/_planning/EXPANSION_MAP.md
 ```
 
-Prerequisite gates are now closed:
+The next separate migration action, when explicitly requested, is the physical Knowledge Unit representation/move.
 
-- all 576 Knowledge IDs have one current primary semantic home;
-- all 576 Knowledge Units have an explicit authoritative Review Scope;
-- semantic boundary and Unit-boundary work is resolved;
-- Coverage / Questions / Expansion is already operational;
-- legacy `REPETITION_STATE.csv` and `INITIAL_WAVE_QUEUE.csv` remain untouched, so the state transition can still be performed without inventing history.
+That pass must preserve stable Knowledge IDs and content identity, update current path-bearing projections such as `REPETITION_MAP.csv`, and finish with a link/ID/Review-Scope consistency audit. Physical movement must not recalculate Retention Bands, initial review order, review dates, or history.
 
-The CS5 implementation pass must:
-
-1. define the target repetition-state schema;
-2. classify current Units as `STABLE + UNCALIBRATED` versus genuinely `ACTIVE` from knowledge maturity, not from legacy `NOT_REVIEWED`;
-3. assign Retention Class independently from legacy `ReviewPriority`;
-4. migrate all 576 rows without inventing recall scores, dates, intervals, or history;
-5. make calibration eligibility representable without `INITIAL_WAVE_QUEUE.csv` as architectural authority;
-6. update current repetition views/tooling to target semantics;
-7. preserve legacy artifacts only as transition/history until the cutover is validated.
-
-Physical Knowledge Unit movement remains outside CS5.
+Until that move, the current old `_knowledge/<topic>/...` paths remain valid representation pointers and the system is otherwise operationally ready.

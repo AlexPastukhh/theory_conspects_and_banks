@@ -117,12 +117,12 @@ The current core view set is intentionally small:
 
 ```text
 Coverage & Expansion View
-Expansion Plan
+Expansion Map
 Repetition View
 ```
 
 - Coverage & Expansion shows the structural map plus coverage, questions, gaps, and growth edges.
-- Expansion Plan is the temporal/actionable projection of what to expand next.
+- Expansion Map is the lightweight projection of explicitly selected expansion work and may be empty.
 - Repetition View is the temporal/actionable projection of what existing knowledge to reconstruct and maintain.
 
 Technology, tags, comparisons, quality attributes, performance, and similar dimensions should default to filters/tags/navigation rather than separately maintained views unless a future use case proves otherwise.

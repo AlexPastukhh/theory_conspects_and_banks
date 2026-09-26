@@ -1,6 +1,6 @@
 # CS5 Repetition Cutover Analysis
 
-Status: current pre-cutover migration analysis; not a permanent semantic owner.
+Status: completed CS5 cutover analysis / migration provenance; not a permanent semantic owner. Current runtime is `_ai-conspects/_repetition/REPETITION_MAP.csv`.
 
 ## Purpose
 Derive the target repetition representation/runtime from the current Personal Knowledge System owners before mutating legacy data.
@@ -125,18 +125,26 @@ Priority context can change. A Scope may move between `CORE / WORKING / RECOGNIT
 The same Scope may be due in the Repetition Map while related responsibilities/questions remain `PARTIAL/MISSING` in Coverage & Expansion. These operational maps remain independent.
 
 ## Existing-corpus Retention Class assignment
-The target personal policy favors broad map coverage, so the existing 576 Review Scopes can be classified gradually over time. Class assignment is useful orientation, not a prerequisite that must be completed before the Repetition Map can function.
+The target personal policy favors broad map coverage. A current working classification has now been produced for all **576 / 576** Review Scopes using the current Priority Model, Review Scope content/boundaries, and the current planning context rather than legacy `ReviewPriority`.
 
-Do not populate classes blindly:
-- use the current Priority Model (Leverage, Consequence, Usefulness, External Recoverability);
-- use Review Scope content/boundaries;
-- use current planning context;
-- do not mechanically translate legacy `HIGH/NORMAL/LOW/UNASSESSED`.
+Current distribution:
 
-A missing class during migration is acceptable and does not require a permanent `UNDECIDED` value. The item can still have a Review Scope and manually chosen next date while classification catches up.
+- `CORE`: 20
+- `CORE ↔ WORKING`: 1
+- `WORKING`: 273
+- `WORKING ↔ RECOGNITION`: 16
+- `RECOGNITION`: 258
+- `RECOGNITION ↔ MAP_ONLY`: 0
+- `MAP_ONLY`: 8
 
-## Candidate logical target representation
-Not final physical schema, but runtime behavior implies at least:
+The four anchor classes remain `CORE | WORKING | RECOGNITION | MAP_ONLY`. Adjacent boundary bands are allowed when forcing one anchor would create false precision. They are advisory descriptions and may remain indefinitely; there is no separate `MIXED` Retention Class.
+
+Machine-readable evidence: `../validation/retention-priority-classification-v4.csv`.
+
+The classification is a working recommendation, not an immutable semantic property. Manual reassignment remains normal when context, actual repetition, or Review Scope boundaries change. A target schema should still permit a temporarily absent Retention Class for future/new items when a justified assessment has not yet been made; however, missing classification is no longer a blocker for the current 576-row rollout.
+
+## Physical representation chosen at cutover
+The current runtime uses `_ai-conspects/_repetition/REPETITION_MAP.csv` with a deliberately minimal schema. The semantic requirements that drove it are:
 
 Common map identity:
 - Knowledge ID;
@@ -160,30 +168,82 @@ The legacy system already happens to contain 576 rows, and the target policy als
 
 Safe migration principles:
 1. preserve IDs and Review Scopes;
-2. assign Retention Class where current evidence/judgment makes that useful; leave it unset temporarily rather than inventing a class;
+2. use the current 576-row classification as the working retention input, while allowing manual correction and nullable class for future/unassessed items; never translate legacy `ReviewPriority` mechanically;
 3. create `UNCALIBRATED` only when a recall-bearing item is actually initialized for active recall and no valid baseline exists;
 4. initialize `MAP_ONLY` without fake Recall State;
-5. choose future first-review/map-refresh dates explicitly during rollout, using defaults and manual workload balancing rather than invented historical dates;
+5. seed first-review/map-refresh work from the current priority-first relative rollout, then attach actual future dates only from a real cutover/start date and observed workload;
 6. carry no synthetic initial-wave slot/history forward as evidence.
 
-## What remains genuinely unresolved before data/schema cutover
-1. Exact minimal physical schema for the Repetition Map and actual review history.
-2. Practical rollout of the existing 576 Review Scopes: how to seed useful future dates without an impossible workload spike.
-3. How nullable/advisory Retention Class is represented during staged classification without inventing `UNDECIDED`.
-4. Whether `MAP_ONLY` shares the same physical state table/event history or uses a lightweight variant.
-5. Replacement of legacy initial-wave scheduling/dashboard behavior and the retirement boundary for legacy repetition artifacts.
+### Current relative rollout calibration
 
-Exact class-specific intervals, a deterministic class-assignment formula, and formal class-transition protocols are **not** CS5 prerequisites. Current owners intentionally allow human judgment and manual scheduling.
+The current rollout uses a starting workload of **at least 30 standard-unit-equivalents/day**, calibrated around `javascript.timers-tasks-microtasks-and-abortable-delay` as approximately one standard Unit.
 
-## Exit condition
-CS5 design is ready for physical migration when the target can safely represent and operate:
-- the Review Scope / thing to revisit;
-- the next date/action shown in the Repetition Map;
-- optional qualitative Retention Class guidance;
-- Recall State and score/history only from real recall evidence;
-- lightweight `MAP_ONLY` refresh when used;
-- manual/default scheduling without requiring a rigid transition algorithm;
-- a safe staged rollout of existing corpus items;
-- clear retirement of legacy scheduler/state authority.
+Priority order is strict:
 
-Until then, legacy repetition data remains unchanged.
+```text
+CORE
+→ CORE ↔ WORKING
+→ WORKING
+→ WORKING ↔ RECOGNITION
+→ RECOGNITION
+→ RECOGNITION ↔ MAP_ONLY
+→ MAP_ONLY
+```
+
+A day is not deliberately balanced across classes. It consumes the strongest remaining band first and enters the next band only after the stronger one is exhausted. Unit size affects workload packing, not semantic priority.
+
+The generated v1 relative rollout spans 25 buckets. Day 1 is 20 `CORE` + 1 `CORE ↔ WORKING` + 8 `WORKING` = 30.00 estimated equivalents.
+
+Evidence: `../validation/cs5-initial-repetition-rollout-v1.csv` and `../validation/cs5-retention-classification-and-rollout-v1.md`.
+
+## Cutover decisions resolved
+
+CS5 physical/runtime choices are now fixed for the current working system:
+
+1. **Physical map:** `_ai-conspects/_repetition/REPETITION_MAP.csv`, one row per current Knowledge ID.
+2. **First-pass scheduling:** retain the 25 relative priority-first `InitialDay` buckets; do not fabricate calendar dates before actual work.
+3. **Daily capacity:** start at at least 30 standard-unit-equivalents/day and adjust empirically later.
+4. **Future/new classification:** Retention Band may be blank temporarily; no `UNDECIDED` class.
+5. **MAP_ONLY:** shares the same table; normal recall score/state is optional/not required.
+6. **Recall State storage:** not mandatory in the physical CSV. Interpretive labels may be used when actual evidence makes them useful, without creating a required state-machine column.
+7. **Legacy retirement:** pre-CS5 state/wave/dashboard/policy/agent artifacts are isolated under `_ai-conspects/_repetition/legacy/` and are non-authoritative.
+8. **Actual recurrence:** after each real Unit review, the owner decides depth and the next date manually using Retention Band, actual recall, context, and scheduling heuristics as guidance. No second/third review schedule is precomputed for the initial corpus.
+
+## Current physical columns
+
+```text
+KnowledgeId
+Title
+RetentionBand
+InitialDay
+InitialOrder
+SizeEquivalent
+UnitPath
+ReviewScopeRef
+InitialReviewDate
+LastReview
+LastReviewType
+LastRecallScore
+NextReview
+NextReviewType
+NextScope
+Notes
+```
+
+All actual-review/date/history fields begin empty. `UnitPath` / `ReviewScopeRef` are convenience pointers and must be updated during later physical Knowledge Unit moves without changing semantic identity or review evidence.
+
+## Exit result
+
+**CS5 repetition cutover is complete.**
+
+The current runtime can safely represent and operate:
+- all 576 Review Scopes;
+- advisory retention bands including adjacent boundaries;
+- priority-first first-pass workload;
+- manual per-Unit review depth and next-date choice;
+- optional real recall evidence only after actual review;
+- lightweight `MAP_ONLY` treatment;
+- no universal Knowledge Unit maturity state;
+- explicit legacy retirement boundary.
+
+The remaining migration task is separate physical Knowledge Unit representation/movement, followed by path/link consistency checks.

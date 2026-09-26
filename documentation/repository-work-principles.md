@@ -41,7 +41,7 @@ Current planning-layer physical projection:
 
 ```text
 _ai-conspects/_planning/
-  = operational Coverage / tracked Question / Expansion Plan state;
+  = operational Coverage / tracked Question / explicit Expansion Map state;
   = not a second semantic owner and not a global scheduler.
 ```
 
@@ -91,16 +91,13 @@ Repository representation must not collapse semantic structure and coverage evid
 
 `MISSING` / `PARTIAL` / `COVERED` are scope-relative assessment results, not file-presence flags.
 
-## Repetition transition boundary
+## Repetition runtime boundary
 
-The methodology migration has **not yet** converted `REPETITION_STATE.csv` or existing review history; that cutover belongs to CS5.
+CS5 repetition cutover is complete. Current physical runtime is `_ai-conspects/_repetition/REPETITION_MAP.csv`, with operational guidance in `_ai-conspects/_repetition/README.md`. Semantic/scheduling authority remains under `documentation/principles/` and `documentation/policies/`.
 
-Target semantics are owned by:
+Legacy pre-CS5 state, wave, dashboard, policy, and agent files are isolated under `_ai-conspects/_repetition/legacy/` and are provenance only. Do not migrate their `LearningState`, synthetic calibration defaults, old priority, slots, or empty history as if they were actual review evidence.
 
-- `principles/retention-repetition.md`;
-- `policies/repetition-scheduling-policy.md`.
-
-Existing `_ai-conspects/_repetition/*` policy/dashboard/inbox/backlog files remain transitional operational artifacts for the legacy state until CS5. They must not be interpreted as the target ontology, and legacy values must not be silently converted to `ACTIVE/STABLE`, Retention Class, or Recall State.
+Current first-pass `InitialDay` values are relative workload buckets, not invented calendar reviews. Actual depth and next date are chosen after the real Unit review.
 
 ## Integrity invariants
 

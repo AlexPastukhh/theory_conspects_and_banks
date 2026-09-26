@@ -2,6 +2,8 @@
 
 Status: supporting validation evidence for the current Priority Model; **does not modify the methodology** and is not a semantic owner.
 
+Note: this v1 evidence predates the current adjacent-boundary-band convention and therefore contains historical `MIXED` cells. Current methodology does **not** use `MIXED` as a Retention Class; those cases are normalized in the current full-corpus classification to explicit adjacent bands such as `CORE ↔ WORKING` or `WORKING ↔ RECOGNITION`.
+
 ## Test context
 
 The ratings assume the current intended engineering direction:

@@ -136,8 +136,8 @@ Its defining question is:
 
 This view may be filtered by tag, Area, technology tag, knowledge type, coverage status, or other metadata. Those filters do not become separate views.
 
-## Core view 2 — Expansion Plan
-Expansion Plan is a temporal/actionable projection of selected growth work from the Coverage & Expansion map.
+## Core view 2 — Expansion Map
+Expansion Map is a lightweight projection of explicitly selected growth work from the Coverage & Expansion map. It may be empty.
 
 Examples:
 
@@ -163,7 +163,7 @@ The plan may select:
 
 The plan does not own those objects. It references them and adds ordering/time context.
 
-`UC-KNOWLEDGE-PLAN-EXPANSION` may assign this temporal/order placement. Expansion Plan does not globally rank itself against Repetition or Capture/Triage.
+`UC-KNOWLEDGE-PLAN-EXPANSION` selects items into this map and may optionally assign order/date. Expansion Map does not globally rank itself against Repetition or Capture/Triage.
 
 ## Core view 3 — Repetition
 Repetition View is the operational projection of memory-maintenance state.
@@ -222,7 +222,7 @@ A comparison Unit is especially suitable for `CONTRAST` and `TRANSFER` review mo
 
 `MAP_ONLY` is useful for semantic/navigation/comparison anchors: it may receive a very low-frequency `MAP_REFRESH` so the owner retains awareness of existence, location, and analogy value without maintaining full active-recall detail. Cross-technology manifestation and analogy work can deliberately use such anchors.
 
-Generated views, tags, indexes, Roadmaps/Expansion Plans, and navigation pages are not repetition subjects merely because they exist.
+Generated views, tags, indexes, Roadmaps/Expansion Maps, and navigation pages are not repetition subjects merely because they exist.
 
 ## Questions and expansion placement
 Questions belong near the place they most likely expand.

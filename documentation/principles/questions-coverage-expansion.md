@@ -134,32 +134,35 @@ The view can expose:
 
 Coverage becomes explainable because the user can see which responsibilities/questions are and are not answered. A populated Area/nested Area can still contain `MISSING` responsibilities; an empty primary-owner node can still have supporting evidence elsewhere. Structural occupancy is not semantic completeness.
 
-## Expansion Plan
-Expansion Plan is separate from the structural map because it adds time/order.
+## Expansion Map
+The Expansion Map is a separate lightweight operational owner because explicit planning adds selection/order beyond structural coverage.
+
+Current physical owner:
+
+`_ai-conspects/_planning/EXPANSION_MAP.md`
+
+A coverage gap or Open Expansion Question is **not planned work by default**. It enters the Expansion Map only after explicit selection. Therefore the Expansion Map may legitimately be empty while `MISSING` responsibilities and Open Questions still exist.
+
+Example only after selection:
 
 ```text
-Today
+Planned
 - Python cancellation Question
-
-Tomorrow
 - structured concurrency ownership
-
-Later
-- cache coherence
 ```
 
-The same Question/gap remains semantically located on the Coverage & Expansion map while also appearing in the temporal plan.
+Time/date/order is optional. The same Question/gap remains semantically located in Coverage / Questions while the Expansion Map adds only the temporary action choice.
 
-`UC-KNOWLEDGE-PLAN-EXPANSION` owns selection/prioritization and may assign this lightweight time/order placement. The plan may change freely without moving canonical knowledge or Questions.
+`UC-KNOWLEDGE-PLAN-EXPANSION` owns selection/prioritization. Reordering or clearing the Expansion Map must not move canonical knowledge, change coverage status, or resolve Questions.
 
-Expansion Plan does not coordinate itself against Repetition or Capture/Triage; the current model intentionally has no global daily-work scheduler.
+The Expansion Map does not coordinate itself against Repetition or Capture/Triage; there is no global daily-work state machine.
 
 ## Relationship to Repetition
 Expansion and repetition are parallel operational concerns:
 
 ```text
-Expansion Plan
-    what new/uncertain knowledge to expand
+Expansion Map
+    explicitly selected new/uncertain knowledge to expand
 
 Repetition View
     what existing knowledge to reconstruct/retain

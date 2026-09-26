@@ -1,6 +1,6 @@
 # Default Daily Learning Inbox Workflow
 
-Status: current default workflow. Existing `LEARNING_INBOX.md` remains transitional storage until its later migration.
+Status: current default workflow. Current operational batch registry: `_ai-conspects/_repetition/LEARNING_INBOX.md`.
 
 This preserves the useful personal rhythm: **collect first, partition later, then choose the next review date with Retention Class as guidance**. It does not impose `ACTIVE | STABLE` or any other universal Knowledge Unit maturity lifecycle.
 
@@ -52,14 +52,17 @@ For `WORKING`, `RECOGNITION`, or `MAP_ONLY`, the next review will often be later
 
 A concrete learning workflow may schedule extra formative practice when useful, but such practice is an additional local action, not a persistent maturity state and not a mandatory lifecycle step for every new Unit.
 
-## Pre-CS5 compatibility boundary
-Until CS5, the physical repetition layer still uses legacy storage. Do not fabricate target Retention Class, Recall State, review score, interval, or history inside `REPETITION_STATE.csv`.
+## Current operational handoff
+The current physical repetition runtime is `_ai-conspects/_repetition/REPETITION_MAP.csv`. Do not write new state into legacy files under `_ai-conspects/_repetition/legacy/`.
 
-Use legacy inbox/queue mechanics only as transitional execution support. The target semantic facts established here are:
-- materialization date;
+At D+2, record only real facts:
+- triage/materialization date;
 - affected Knowledge IDs / Review Scopes;
-- the need to assess retention treatment;
-- the intended next-review timing once that treatment is known.
+- Retention Band assessment when useful;
+- Repetition Map entry/update;
+- the next review date only when the owner actually chooses it.
+
+Do not fabricate recall score, memory state, interval, or history from materialization itself.
 
 ## Batch lifecycle
 

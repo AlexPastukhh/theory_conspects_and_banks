@@ -1,6 +1,6 @@
 # Карта покрытия и приоритетов knowledge layer
 
-> **CS4 status:** historical pre-v11 coverage/priority snapshot. Current operational expansion planning is owned by `_ai-conspects/_planning/COVERAGE_AND_EXPANSION.md`, `QUESTIONS.csv`, and `EXPANSION_PLAN.md`. Retained as historical evidence; its P0–P3 backlog is not the current Expansion Plan.
+> **CS4 status:** historical pre-v11 coverage/priority snapshot. Current operational expansion planning is owned by `_ai-conspects/_planning/COVERAGE_AND_EXPANSION.md`, `QUESTIONS.csv`, and `EXPANSION_MAP.md`. Retained as historical evidence; its P0–P3 backlog is not the current Expansion Map.
 
 Status: planning and audit artifact; not authority over knowledge-unit content
 
@@ -214,7 +214,7 @@ $ids | Group-Object | Where-Object Count -gt 1
 3. риск production failure или security defect;
 4. отсутствие цельной модели, даже когда отдельные fragments уже есть.
 
-Этот backlog управляет прежде всего **добавлением нового знания**. Он не задаёт интервалы уже существующим units: их review priority и следующий интервал определяются фактическим recall по `_ai-conspects/_repetition/REPETITION_POLICY.md`.
+Этот backlog исторически описывал **добавление нового знания**, но больше не является текущим Expansion Plan. В актуальной системе ни этот backlog, ни coverage gaps, ни open Questions автоматически не создают expansion items: планирование начинается только после явного добавления элемента в `_ai-conspects/_planning/EXPANSION_MAP.md`. Для существующих Units текущий runtime owner — `_ai-conspects/_repetition/REPETITION_MAP.csv`; глубина review и следующая дата выбираются после фактического review конкретного Unit.
 
 Внутри каждого уровня порядок предварительный. Всего ниже **40 уникальных backlog groups**: P0 = 9, P1 = 12, P2 = 11, P3 = 8.
 
@@ -306,9 +306,20 @@ depth = assigned only after body + recall-contract + provenance audit
 
 ## 8. Operational workflow
 
-- Repetition rules: `../_repetition/REPETITION_POLICY.md`
-- Daily rolling plan: `../_repetition/DAILY_STUDY_PLAN.md`
-- Full baseline state: `../_repetition/REPETITION_STATE.csv`
-- Balanced initial wave: `../_repetition/INITIAL_WAVE_QUEUE.csv`
-- New-knowledge lifecycle: `../_repetition/LEARNING_INBOX.md`
-- Deferred questions and clarifications: `../_repetition/QUESTIONS_BACKLOG.md`
+This section originally pointed at the pre-CS5 repetition runtime. Those files are retained only under `../_repetition/legacy/` as historical evidence and are not current owners.
+
+Current operational owners:
+
+- Repetition runtime and usage guidance: `../_repetition/README.md`
+- Current Repetition Map: `../_repetition/REPETITION_MAP.csv`
+- New-learning D0/D+2 inbox: `../_repetition/LEARNING_INBOX.md`
+- Current Expansion Map: `../_planning/EXPANSION_MAP.md`
+- Open questions and dispositions: `../_planning/QUESTIONS.csv`
+
+Historical pre-CS5 references, if provenance is needed:
+
+- `../_repetition/legacy/REPETITION_POLICY.md`
+- `../_repetition/legacy/DAILY_STUDY_PLAN.md`
+- `../_repetition/legacy/REPETITION_STATE.csv`
+- `../_repetition/legacy/INITIAL_WAVE_QUEUE.csv`
+- `../_repetition/legacy/QUESTIONS_BACKLOG.md`

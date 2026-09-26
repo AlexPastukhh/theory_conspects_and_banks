@@ -1,6 +1,6 @@
 # Retention & Repetition
 
-Status: current target semantic owner. Existing legacy repetition storage and scheduling remain transitional until CS5; see `../migration/CURRENT-MIGRATION-STATE.md`.
+Status: current semantic owner. CS5 physical repetition runtime is active at `_ai-conspects/_repetition/REPETITION_MAP.csv`; legacy pre-CS5 files are provenance only.
 
 ## Goal
 Maintain useful awareness of the durable Knowledge Base at a depth appropriate to each Review Scope, without introducing a universal Knowledge Unit maturity lifecycle such as `ACTIVE | STABLE`.
@@ -10,13 +10,20 @@ The current personal policy is **broad Repetition Map coverage**: durable Knowle
 This is an operational retention policy, not an ontology rule. A Knowledge Unit remains valid knowledge independently of repetition mechanics, and temporary migration gaps in retention metadata do not invalidate the Unit.
 
 ## Retention intent
-Current retention vocabulary is:
+The four anchor retention classes are:
 - `CORE`
 - `WORKING`
 - `RECOGNITION`
 - `MAP_ONLY`
 
-These classes answer **how available the Review Scope should be from memory / awareness**, not how mature the Knowledge Unit is. They are semantic/advisory retention flags: they help the owner and AI reason about desired depth, but they do not define a rigid lifecycle or uniquely determine a review date. Manual judgment remains normal.
+When forcing one anchor would create false precision, an adjacent **boundary band** is also allowed:
+- `CORE ↔ WORKING`
+- `WORKING ↔ RECOGNITION`
+- `RECOGNITION ↔ MAP_ONLY`
+
+A boundary band means that the Review Scope reasonably belongs between two adjacent retention depths in the current context. It may remain on that boundary indefinitely; it is not a transitional lifecycle state and does not require a formal move to one side later. There is no separate `MIXED` Retention Class.
+
+These labels answer **how available the Review Scope should be from memory / awareness**, not how mature the Knowledge Unit is. They are semantic/advisory retention flags: they help the owner and AI reason about desired depth, but they do not define a rigid lifecycle or uniquely determine a review date. Manual judgment remains normal.
 
 ### CORE
 Should be readily available for reasoning and decisions. Mental models, invariants, causal mechanisms, important boundaries, and expensive-to-verify decisions tend to belong here.
@@ -50,10 +57,11 @@ The target personal policy aims to classify essentially the durable corpus over 
 ## Review Scope is the retention subject
 Retention treatment applies to the authoritative coherent Review Scope.
 
-If meaningful parts of one Unit need substantially different memory treatment:
-- do not average them blindly;
-- first check the Knowledge Unit / Review Scope boundary;
-- split or narrow the scope when that is semantically justified;
+If meaningful parts of one Unit pull toward different adjacent retention depths:
+- do not pretend that one exact anchor is more precise than the evidence;
+- an adjacent boundary band may describe the whole Review Scope when that is operationally useful;
+- keep the internal nuance in notes when useful;
+- split or narrow the Review Scope only when that improves the knowledge boundary itself, not merely to eliminate a retention boundary label;
 - keep supporting detail outside the required recall target when appropriate.
 
 Review Scope remains useful beyond repetition: explanation, self-check, formative learning, comparison, and Unit-boundary checks all use the same semantic boundary.
@@ -116,6 +124,8 @@ Do not turn these findings into a larger universal state machine.
 High External Recoverability can reduce memory pressure for syntax, signatures, boilerplate, and easy lookup detail. It should not automatically reduce retention for mental models, invariants, causal reasoning, failure modes, boundaries, or decisions whose correctness is expensive to verify.
 
 ## Repetition Map
+Current physical owner: `_ai-conspects/_repetition/REPETITION_MAP.csv`. Runtime usage contract: `_ai-conspects/_repetition/README.md`.
+
 Repetition Map is the operational projection of retention work. Its central user-facing question is:
 
 > **On what date, and what exactly should I revisit?**
