@@ -61,17 +61,21 @@ Raw learning may first enter a batch/inbox. Collection time is allowed to be mes
 ## 15. Practice is evidence, not automatic knowledge
 Practice may reveal durable mechanisms/questions, but project-specific noise should not flood the base.
 
-## 16. Learning lifecycle is separate from long-term retention
-`Learning State = ACTIVE | STABLE` describes maturity of the knowledge model. Retention Class describes desired long-term memory strength. They are independent axes.
+## 16. Learning/formative work is workflow-owned
+Do not introduce a universal state on every Knowledge Unit merely to represent whether learning/formative work is currently happening.
 
-## 17. Memory condition is separate again
-Observed recall condition is not Learning State and not Retention Class. Stable repetition records it separately as Recall State/history.
+Formative learning may be a normal part of a learning workflow: capture/materialization may schedule a later reconstruction, practice pass, scope check, or related follow-up. That work is owned by the workflow that created it and exists only while that workflow needs it. It does not require every Knowledge Unit to carry a persistent maturity state.
+
+If repeated Use Cases later prove a shared durable field is necessary, add only the narrowest representation those Use Cases require.
+
+## 17. Memory condition is separate from retention intent
+Observed recall condition is not Retention Class. Repetition records it separately as Recall State/history.
 
 ## 18. Stable identity survives presentation changes
 Tracked Knowledge Units and Questions should retain identity through title/path/layout changes.
 
 ## 19. Growth is continuous
-Organize → surface Questions/gaps → prioritize → learn/compare/practice → integrate → stabilize → repeat → reorganize.
+Organize → surface Questions/gaps → prioritize → learn/compare/practice → integrate → retain/review where useful → reorganize.
 
 ## 20. Keep review scopes coherent
 Do not average fundamentally different memory needs merely because content currently lives in one file. Prefer a coherent Unit/Review Scope boundary before adding per-claim scheduling complexity.
@@ -96,7 +100,7 @@ Tags may represent:
 - logical topics such as `caching`, `streaming`, `cancellation`;
 - technologies/ecosystems such as `python`, `dotnet`, `node`, `react`.
 
-This avoids maintaining duplicate Technology/Topic maps merely for retrieval. Tags do not change canonical ownership and should not duplicate operational fields such as Learning State, Retention, or Priority.
+This avoids maintaining duplicate Technology/Topic maps merely for retrieval. Tags do not change canonical ownership and should not duplicate operational fields such as Retention, Recall State, or Priority.
 
 ## 24. Comparison ownership follows the broader concept
 Cross-technology comparison knowledge belongs canonically to the broader Concept/Area that makes the comparison meaningful.

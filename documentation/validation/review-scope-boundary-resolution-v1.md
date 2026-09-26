@@ -1,6 +1,10 @@
 # Review Scope & Boundary Resolution — CS5 Preparation
 
-Status: applied to the working snapshot.
+Status: historical validation evidence; structural changes remain applied to the working snapshot.
+
+## Supersession note
+
+The structural Review Scope/boundary findings in this artifact remain valid. Its CS5 recommendations about a universal `Learning State = ACTIVE | STABLE` are superseded by current repetition owners and `../migration/CURRENT-MIGRATION-STATE.md`. They are retained below only as historical provenance.
 
 ## Purpose
 

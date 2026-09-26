@@ -1,37 +1,45 @@
 # Repetition Scheduling Policy
 
-Status: current target scheduling policy for v11-state records. Legacy `_repetition` records remain under the transitional legacy policy until CS5; do not silently convert them.
+Status: current target scheduling policy. Legacy `_repetition` records remain transitional until CS5; do not silently reinterpret them.
 
-## 1. One common review queue/state
+## 1. One Repetition Map, different retention strengths
+The target personal system uses one Repetition Map over durable Review Scopes.
 
-The system uses one logical review/repetition queue for both:
-- ACTIVE formative reviews;
-- STABLE retention reviews.
+The map is intended to cover essentially the durable corpus, but the work item is not identical for every class:
+- `CORE | WORKING | RECOGNITION` use active-recall retention at different strengths;
+- `MAP_ONLY` uses very light map/relationship refresh and does not require ordinary recall scoring.
 
-The review type determines scoring semantics.
+This broad coverage is a personal retention policy, not a requirement that Knowledge ontology itself depend on repetition state. Retention Class and interval guidance are decision aids, not a deterministic scheduler contract: manual choice of the next useful date is normal.
 
-ACTIVE formative due dates can be created by a learning workflow (default daily inbox: first formative review after five clear days). They do not use the interval ladder until the Unit becomes STABLE.
+## 2. Entry after learning/materialization
+When a learning batch is triaged/materialized into a new or materially reshaped durable Knowledge Unit:
+1. finalize/update its authoritative Review Scope;
+2. assess/update priority/retention treatment when useful;
+3. insert/update the Scope in the Repetition Map;
+4. treat the D+2 materialization pass as the first learning/review contact;
+5. choose the next review date using Retention Class, current context, and workload as guidance.
 
-## 2. Eligibility — what enters normal spaced repetition?
+The materialization pass is **not** a blind recall calibration. It must not create a recall score, `WEAK/RECOVERING/STRONG`, or fictional review history.
 
-Scheduling applies to the Unit's **authoritative scheduled Review Scope**, not automatically to every detail stored in the file.
+If class assessment is not useful or cannot yet be justified, the map item may temporarily have no class; this must not block scheduling a sensible next review. Do not use `UNDECIDED` as a fifth Retention Class.
 
-If a Unit contains materially heterogeneous retention needs, resolve the Unit/Review Scope boundary before normal scheduling rather than averaging them into one class.
-
-Normal spaced repetition is eligible only when:
+## 3. Initial post-materialization timing
+For important `CORE` knowledge, the default first active-recall review is after **five complete clear days** following materialization, then review on the next calendar day:
 
 ```text
-Learning State = STABLE
-AND Retention Class ∈ {CORE, WORKING, RECOGNITION}
+materialized/reviewed on M
+5 clear days
+next review on M + 6
 ```
 
-`MAP_ONLY` is not scheduled by default.
-`ACTIVE` uses formative review, not normal repetition scheduling.
+If materialization occurred on D+2, that review is D+8.
 
-A targeted source repair is not a memory review.
+`WORKING`, `RECOGNITION`, and `MAP_ONLY` will often start later because their memory-pressure goal is lower. No exact class-specific starting gap is required as a system invariant. The owner may choose an appropriate date directly; future defaults may be added or adjusted when repeated use makes them helpful.
 
-## 3. Stable review score
-Score actual recall **before opening the Unit**:
+Choosing an earlier/later date manually is ordinary operation, not an exceptional override. Record a rationale only when it is useful for later interpretation.
+
+## 4. Active-recall score
+For `CORE | WORKING | RECOGNITION`, score actual recall **before opening the Unit**:
 
 ```text
 0 — practically nothing reconstructed
@@ -41,20 +49,25 @@ Score actual recall **before opening the Unit**:
 4 — model + important mechanics/failure modes/boundaries reconstructed without material hints
 ```
 
-A base/source defect must not lower the memory score.
+Score only against the authoritative Review Scope and the depth expected by the Retention Class. A base/source defect must not lower the memory score.
 
-## 4. Recall State
+`MAP_ONLY` map-refresh does not require this 0–4 score unless the Scope is being promoted to a recall-bearing class.
+
+## 5. Recall State
+For recall-bearing classes:
 
 ```text
-UNCALIBRATED — no valid STABLE baseline review yet
-WEAK         — latest stable recall 0–1
-RECOVERING   — latest stable recall 2–3, or recent failure after strength
+UNCALIBRATED — in the Repetition Map with CORE/WORKING/RECOGNITION treatment, but no valid blind-recall baseline yet
+WEAK         — latest valid recall 0–1
+RECOVERING   — latest valid recall 2–3, or recent failure after strength
 STRONG       — at least two consecutive unhinted 4s and a completed interval >= 20 clear days
 ```
 
-Recall State describes observed memory, not knowledge maturity.
+Observed states beyond `UNCALIBRATED` require real review evidence.
 
-## 5. Calendar semantics
+`MAP_ONLY` does not need normal Recall State.
+
+## 6. Calendar semantics
 Intervals count complete calendar days between reviews.
 
 ```text
@@ -64,7 +77,7 @@ Gap 5  → next review D + 6
 Gap 10 → next review D + 11
 ```
 
-Canonical ladder:
+Default active-recall ladder (a reusable scheduling heuristic, not a mandatory state machine):
 
 ```text
 1, 5, 10, 20, 30, 60, 90, 180 complete days
@@ -74,8 +87,8 @@ Canonical ladder:
 
 Late review records actual elapsed gap. Overdue status alone is not memory failure.
 
-## 6. Baseline calibration after STABLE
-The first valid stable recall establishes the starting interval.
+## 7. First blind-recall calibration
+The first valid blind-recall review establishes evidence for Recall State. The table below provides recommended next gaps; the owner may choose another sensible date.
 
 | Recall | Recall State | Next gap |
 |---:|---|---:|
@@ -87,10 +100,10 @@ The first valid stable recall establishes the starting interval.
 | 4 + WORKING | RECOVERING | 30 |
 | 4 + RECOGNITION | RECOVERING | 60 |
 
-`MAP_ONLY` has no baseline repetition by default.
+These are post-calibration gaps. They do **not** redefine the separate initial post-materialization timing in section 3.
 
-## 7. Later interval updates
-Let `completed stage` be the ladder gap that led to the current review.
+## 8. Later interval guidance
+When the default ladder is being used, let `completed stage` be the ladder gap that led to the current review. The rules below are default adaptation heuristics, not mandatory transitions.
 
 | Final recall | Next interval rule |
 |---:|---|
@@ -101,45 +114,61 @@ Let `completed stage` be the ladder gap that led to the current review.
 
 Additional rules:
 - a material misconception or missed critical invariant prevents score 4;
-- `KNOWLEDGE_BASE_GAP`/source defect does not shorten interval by itself;
-- an integrated new Question may create a targeted follow-up without resetting the whole Unit;
-- manual override is allowed only with an override reason.
+- a knowledge-base/source gap does not shorten interval by itself;
+- a new Question may create expansion work without resetting the whole Scope;
+- the owner may choose a different next interval/date when context, workload, or judgment warrants it; rationale is optional unless it is useful evidence.
 
-Retention Class determines *whether* and *how strongly* the Unit participates; actual recall controls interval growth/shrinkage. No hard class-specific maximum gap is imposed initially; validate this empirically.
+Retention Class communicates desired memory pressure and actual recall informs scheduling; neither mechanically determines the next date.
 
-## 8. Review types
+## 9. `MAP_ONLY` scheduling
+`MAP_ONLY` is a lightweight Repetition Map item, not full spaced-recall maintenance.
+
+A map refresh should be able to ask only for lightweight awareness such as:
+- what this Unit/manifestation is;
+- where it belongs;
+- why it exists;
+- what other technology/responsibility it is useful to compare with;
+- where the detailed knowledge can be recovered.
+
+Its cadence can be chosen manually and may later gain a useful low-frequency default if practice justifies one. CS5 does not need an exact universal `MAP_ONLY` interval before cutover. Do not force the normal 0–4 ladder onto it.
+
+## 10. Review/event types
 
 ```text
-FORMATIVE     ACTIVE learning; no authoritative normal score
-CALIBRATION   first valid STABLE recall
+PLACEMENT     D+2 materialization/map entry or substantial rematerialization; no recall score
+CALIBRATION   first valid blind active-recall pass for CORE/WORKING/RECOGNITION
 FULL          reconstruct/verify full Review Scope
 TARGETED      named weak scope/mechanism/question
 QUESTIONS_ONLY answer already integrated questions without rereading full Unit
+MAP_REFRESH   lightweight MAP_ONLY awareness/comparison refresh
 SOURCE_REPAIR resolve evidence/provenance; no memory score
 ```
 
-## 9. Scope boundary
+`FORMATIVE` may still be used by a local learning workflow when genuine extra practice is needed, but it is not a universal mandatory post-materialization stage.
 
-This policy schedules **review/repetition work only**.
+## 11. Relationship to learning and expansion
+The Repetition Map does not rank itself globally against Capture/Triage or Expansion.
 
-It does not rank or coordinate repetition against:
-- Capture/Triage work;
-- Expansion Plan work;
-- Question processing;
-- other daily work.
+A Scope can have both:
+- a repetition due date; and
+- expansion gaps/questions.
 
-Those concerns keep their own due/order semantics. A future higher-level daily dashboard may display them together, but no global daily-work scheduler is part of the current model.
+Only actual memory performance changes recall scheduling. Expansion findings route outward to their own owners.
 
-## 10. State fields (logical minimum)
-A Knowledge ID participating in the common review queue should be able to record the state of its authoritative scheduled Review Scope:
-- Learning State (referenced, not owned here);
-- Retention Class (possibly UNDECIDED while ACTIVE);
-- Recall State (only meaningful for STABLE retention review);
-- last review date/type;
-- last stable recall score when applicable;
-- completed gap when applicable;
-- next review type/date/scope;
-- next gap when normal spaced repetition applies;
-- optional override reason.
+## 12. Logical state requirements
+For `CORE | WORKING | RECOGNITION`, the map needs enough state to support:
+- Knowledge ID + authoritative Review Scope;
+- Retention Class when assigned;
+- Recall State when real recall evidence/participation makes it applicable;
+- last real recall date/type/score when one exists;
+- completed/next gap when applicable;
+- next review date/type;
+- lazy append-only history after real review activity.
 
-Detailed append-only history may remain lazy per Unit rather than pre-created for every Knowledge ID.
+For `MAP_ONLY`, the map needs at least:
+- Knowledge ID + Review Scope/map-awareness scope;
+- Retention Class = `MAP_ONLY`;
+- next map-refresh date/type;
+- optional last map-refresh evidence.
+
+CS5 owns the exact physical schema. Legacy fields must not be copied merely because they exist.

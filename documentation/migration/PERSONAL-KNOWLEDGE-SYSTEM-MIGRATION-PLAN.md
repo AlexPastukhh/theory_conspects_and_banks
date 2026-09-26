@@ -1,5 +1,7 @@
 # Personal Knowledge System Migration Plan — v1
 
+> **Current correction (superseding both the earlier `ACTIVE/STABLE` design and the later over-sparse correction):** current owners do not use a universal Knowledge Unit maturity state. Current personal retention policy aims to keep essentially all durable Review Scopes visible in the Repetition Map, with `CORE | WORKING | RECOGNITION | MAP_ONLY` used as qualitative/advisory retention flags rather than a rigid state machine. D+2 materialization is the first learning/review contact and map-entry/update point; for important CORE knowledge five clear days is a useful default next active-recall interval, while manual date choice from context/workload remains normal. Historical sections below remain provenance; follow `CURRENT-MIGRATION-STATE.md`, `CS5-REPETITION-CUTOVER-ANALYSIS.md`, `../principles/retention-repetition.md`, and `../policies/repetition-scheduling-policy.md` where they differ.
+
 Status: migration plan/provenance based on the original checked snapshot and accepted target methodology. Historical counts/wording in later sections describe the state at planning time. **`CURRENT-MIGRATION-STATE.md` is authoritative for the current snapshot whenever they differ.**
 
 Source snapshot:

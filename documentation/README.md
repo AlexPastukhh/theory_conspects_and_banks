@@ -64,7 +64,7 @@ These are projections/state, not replacement semantic owners for principles, Use
 hierarchy = where knowledge belongs
 responsibility catalog = what the domain should explain
 manifestation coverage = how relevant technologies express those responsibilities
-repetition = memory maintenance of existing Units
+repetition = memory/awareness maintenance over Review Scopes at Retention-Class-dependent strength
 ```
 
 Do not infer `COVERED` from Unit count. Do not infer `MISSING` merely from an empty folder. Do not turn every responsibility into a nested Area or every manifestation into a required one-to-one tool analogue.
@@ -72,6 +72,10 @@ Do not infer `COVERED` from Unit count. Do not infer `MISSING` merely from an em
 ## Migration
 
 - [Current migration state](migration/CURRENT-MIGRATION-STATE.md) — authoritative temporary boundary for this snapshot.
+- [CS5 repetition cutover analysis](migration/CS5-REPETITION-CUTOVER-ANALYSIS.md) — temporary design analysis derived from runtime scenarios; records evidence, broad Repetition Map / Retention-Class constraints, alternatives, and unresolved cutover decisions; not a permanent semantic owner.
+- [CS5 sparse repetition / learning workflow audit v3](validation/cs5-sparse-repetition-methodology-audit-v3.md) — superseded validation evidence from the over-sparse intermediate model.
+- [CS5 retention-map methodology audit v4](validation/cs5-retention-map-methodology-audit-v4.md) — superseded validation evidence; retained for provenance.
+- [CS5 advisory retention/scheduling audit v5](validation/cs5-advisory-retention-scheduling-audit-v5.md) — current validation evidence that Retention Classes and interval tables are guidance/defaults rather than a rigid automated state machine.
 - [Migration plan](migration/PERSONAL-KNOWLEDGE-SYSTEM-MIGRATION-PLAN.md) — plan/provenance; current state wins when they differ.
 
 The previous consolidated v11 package remains under `proposals/personal-knowledge-system-v11/` as provenance. Its wrapper/index files are non-authoritative after CS1.

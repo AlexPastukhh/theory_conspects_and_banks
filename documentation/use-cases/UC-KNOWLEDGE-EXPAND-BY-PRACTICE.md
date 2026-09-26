@@ -24,7 +24,7 @@ A single practice session does not automatically prove mastery.
 8. Separate durable knowledge from project-specific noise.
 9. Integrate durable findings through the shared process.
 10. Route new Questions to expansion planning.
-11. Let Learning State and Retention/Repetition policy decide when the resulting knowledge enters normal repetition; do not schedule raw practice observations directly.
+11. Integrate durable findings first. Let Retention/Repetition policy decide ordinary repetition eligibility, while any needed formative follow-up remains local to the practice/learning workflow; do not schedule raw practice observations directly.
 
 ## Boundary
 Simply completing a project is not sufficient. Practice must have a learning objective or produce meaningful feedback.

@@ -3,96 +3,124 @@
 Status: current target semantic owner. Existing legacy repetition storage and scheduling remain transitional until CS5; see `../migration/CURRENT-MIGRATION-STATE.md`.
 
 ## Goal
-Define how integrated knowledge moves from active learning into long-term memory maintenance and how review findings are interpreted.
+Maintain useful awareness of the durable Knowledge Base at a depth appropriate to each Review Scope, without introducing a universal Knowledge Unit maturity lifecycle such as `ACTIVE | STABLE`.
 
-## Three separate axes
+The current personal policy is **broad Repetition Map coverage**: durable Knowledge Units normally receive a retention treatment and appear in the Repetition Map. Low-value knowledge is not necessarily removed; it can be retained at a much lighter level.
 
-### 1. Learning State — model maturity
-- `ACTIVE` — understanding/scope is still being formed, clarified, practiced, or reorganized.
-- `STABLE` — scope is coherent enough for ordinary retention review.
+This is an operational retention policy, not an ontology rule. A Knowledge Unit remains valid knowledge independently of repetition mechanics, and temporary migration gaps in retention metadata do not invalidate the Unit.
 
-### 2. Retention Class — desired memory strength
+## Retention intent
+Current retention vocabulary is:
 - `CORE`
 - `WORKING`
 - `RECOGNITION`
 - `MAP_ONLY`
 
-`UNDECIDED` means no class has yet been assigned; it is not a fifth class.
-
-### 3. Recall State — observed memory condition
-For STABLE reviewable knowledge:
-- `UNCALIBRATED`
-- `WEAK`
-- `RECOVERING`
-- `STRONG`
-
-These axes must not be collapsed.
-
-## Retention applies to a coherent Review Scope
-A Retention Class describes the desired long-term availability of a coherent review scope.
-
-If meaningful parts of one Unit appear to require substantially different Retention Classes:
-- do not average them;
-- first split/restructure the Knowledge Unit or narrow the scheduled Review Scope;
-- keep purely supporting low-retention detail outside scheduled recall when appropriate.
-
-The initial model avoids independently scheduling many sub-claims inside one Unit.
-
-## Retention classes
+These classes answer **how available the Review Scope should be from memory / awareness**, not how mature the Knowledge Unit is. They are semantic/advisory retention flags: they help the owner and AI reason about desired depth, but they do not define a rigid lifecycle or uniquely determine a review date. Manual judgment remains normal.
 
 ### CORE
-Should be readily available for reasoning/decisions. Review often uses explanation, diagnosis, decision, transfer, and scenarios.
+Should be readily available for reasoning and decisions. Mental models, invariants, causal mechanisms, important boundaries, and expensive-to-verify decisions tend to belong here.
 
 ### WORKING
-Should be well understood and quickly reconstructable, but not maximally available at all times.
+Should be well understood and quickly reconstructable. It matters in practical work but does not need maximal ready-memory pressure.
 
 ### RECOGNITION
-Should be recognized, purpose understood, relevance detected, and details recoverable externally.
+The owner should recognize what the knowledge is, why it matters, when it applies, and where/how to recover detail. Exact syntax, signatures, boilerplate, and cheap external lookup often belong here.
 
 ### MAP_ONLY
-Kept for semantic coverage/navigation/comparison; no scheduled repetition by default.
+Kept primarily as a semantic/navigation/comparison anchor. The owner should at least retain awareness that the knowledge exists, what area/responsibility it belongs to, and what it is useful to compare or connect with.
 
-Retention is contextual and revisable, not an eternal property of a Concept.
+`MAP_ONLY` is especially useful for transfer/analogy. For example, a familiar C# manifestation may be retained only as a map/comparison anchor while the corresponding Python manifestation is being learned more deeply. This works with the existing manifestation-coverage and analogy/comparison mechanisms; it does not require a pairwise relation taxonomy.
 
-## Assignment authority
-Priority provides the inputs; this policy maps them to Retention Class. Do not create a second competing priority model here.
+`MAP_ONLY` is therefore **not equivalent to absence from the Repetition Map**. It may use a very low-frequency map-refresh/recognition action rather than full active-recall scoring.
 
-Because Usefulness is context-dependent, Retention may change when the active planning/work context changes even if the Knowledge Unit content itself does not.
+Do not create `UNDECIDED` as a fifth Retention Class. During migration, an as-yet-unassessed Scope may simply lack a final class temporarily; that is migration incompleteness, not a permanent semantic class.
 
-## ACTIVE review = formative
-While ACTIVE, recall is used to reconstruct the current model, expose contradictions, test predictions, connect ideas, and create Questions. Normal spaced-repetition scoring is not authoritative while expected scope is materially changing.
+## Priority is the assignment input
+`documentation/principles/priority-model.md` provides the inputs:
+- Leverage;
+- Consequence;
+- Usefulness in the current planning horizon;
+- External Recoverability.
 
-## Transition ACTIVE → STABLE
-A Unit may become STABLE when:
-- Review Scope is coherent;
-- blocking Questions are resolved or consciously deferred;
-- the owner can explain the core model consistently enough for ordinary use;
-- expected future learning mostly extends rather than repeatedly redefines the Unit.
+The retention owner interprets those dimensions against the concrete Review Scope. In an AI-assisted environment, high External Recoverability can reduce required ready-memory depth, but it does not erase knowledge whose map/comparison value remains useful.
 
-At transition, confirm scope, assess/reconfirm Priority, assign Retention Class, and make the Unit eligible for normal repetition when the class requires it.
+The target personal policy aims to classify essentially the durable corpus over time, but the class is a qualitative aid rather than a computed outcome. Human judgment may assign or change it directly; AI may propose it from the four dimensions. CS5 must not fabricate classes from legacy `ReviewPriority` merely to fill rows, and assignment may be staged while evidence is gathered.
 
-A STABLE Unit may return to ACTIVE after substantial revision or evidence that the model itself is broken. Its previous Retention Class may remain as the intended long-term class, but normal scheduling for the affected scope pauses until stable again.
+## Review Scope is the retention subject
+Retention treatment applies to the authoritative coherent Review Scope.
+
+If meaningful parts of one Unit need substantially different memory treatment:
+- do not average them blindly;
+- first check the Knowledge Unit / Review Scope boundary;
+- split or narrow the scope when that is semantically justified;
+- keep supporting detail outside the required recall target when appropriate.
+
+Review Scope remains useful beyond repetition: explanation, self-check, formative learning, comparison, and Unit-boundary checks all use the same semantic boundary.
+
+## Learning workflow and retention are separate concerns
+Removing `ACTIVE | STABLE` does **not** remove the learning workflow.
+
+A normal daily learning flow may:
+
+```text
+D0   capture raw material
+D+2  triage/materialize it into durable knowledge
+     + place/update the resulting Review Scope in the Repetition Map
+     + choose/update retention treatment
+     + count this materialization pass as the first learning/review contact
+later active recall according to retention treatment
+```
+
+The D+2 materialization pass is not a blind recall calibration: the owner is reading, checking, organizing, and placing knowledge. Therefore it must not fabricate a recall score or `WEAK/RECOVERING/STRONG` state.
+
+For important knowledge, a useful default next active-recall check is after five complete days following materialization (review on the next calendar day; D+8 when materialization happened on D+2). Lower-retention classes are commonly scheduled later, but the owner may choose dates directly from context, workload, and current importance.
+
+Thus:
+
+```text
+D+8 is not a universal extra formative lifecycle stage.
+It is the common five-clear-day next review for knowledge whose retention treatment calls for it.
+```
+
+A workflow may still run additional formative practice when needed, but that is locally workflow-owned and does not introduce a persistent maturity axis.
+
+## Recall State
+Recall State records observed memory condition for Review Scopes that use normal active-recall repetition:
+- `UNCALIBRATED` — entered normal active-recall retention but no valid blind-recall baseline exists yet;
+- `WEAK`;
+- `RECOVERING`;
+- `STRONG`.
+
+`WEAK | RECOVERING | STRONG` require real review evidence.
+
+`MAP_ONLY` map-refresh activity does not require a normal Recall State unless the Scope is promoted into a recall-bearing class.
+
+Retention intent and observed recall must not be collapsed.
 
 ## Review modes
 `EXPLAIN`, `CONTRAST`, `DIAGNOSE`, `DECIDE`, `TRANSFER`, `RECOGNIZE`.
 
-## Review Scope is authoritative
-Do not penalize missing out-of-scope information. Extra AI knowledge can create a base gap/new Question but not a false memory failure.
+Comparison Units and technology manifestations are especially suitable for `CONTRAST` and `TRANSFER`. `MAP_ONLY` anchors can participate in those learning actions even when they are not maintained through full recall scoring.
 
 ## Finding classification
-- `MEMORY_GAP` — expected in scope but not recalled; affects repetition.
-- `KNOWLEDGE_BASE_GAP` — expected understanding is missing/inadequate in the base; routes to expansion, does not directly lower memory score.
-- `NEW_QUESTION` — meaningful new uncertainty; routes to expansion.
-- source/evidence defect should be handled as source repair, not memory failure.
+Keep only the distinctions needed by the review behavior:
+- `MEMORY_GAP` — expected in the Review Scope but not recalled; affects recall/scheduling;
+- `KNOWLEDGE_BASE_GAP` — expected understanding is missing/inadequate in the base; routes to Coverage/Expansion;
+- `NEW_QUESTION` — meaningful new uncertainty; routes to Questions/Expansion;
+- source/evidence defect routes to source repair.
 
-## Scheduling owner
-Exact intervals, review score, Recall State derivation, eligibility, and next-date rules belong to `documentation/policies/repetition-scheduling-policy.md`.
+Do not turn these findings into a larger universal state machine.
 
 ## AI-era implication
-High External Recoverability can reduce memory pressure for syntax, signatures, boilerplate, and easy lookup details. It should not automatically reduce retention for mental models, invariants, causal reasoning, failure modes, boundaries, or decisions whose correctness is expensive to verify.
+High External Recoverability can reduce memory pressure for syntax, signatures, boilerplate, and easy lookup detail. It should not automatically reduce retention for mental models, invariants, causal reasoning, failure modes, boundaries, or decisions whose correctness is expensive to verify.
 
-## Repetition View
-Repetition View is the operational projection over the common review/repetition state. It does not own Knowledge Units or scheduling rules.
+## Repetition Map
+Repetition Map is the operational projection of retention work. Its central user-facing question is:
+
+> **On what date, and what exactly should I revisit?**
+
+The current personal target is broad coverage of durable Review Scopes, with very different treatment by Retention Class.
 
 Recommended subviews:
 
@@ -103,44 +131,26 @@ Attention
 History
 ```
 
-### Today
-Show due/overdue work in one working queue while preserving the semantic distinction:
-
-```text
-FORMATIVE — ACTIVE
-RETENTION — STABLE
-```
-
-A queue item is the Knowledge ID plus its authoritative Review Scope, review type, and due state—not merely a file path.
-
-### Upcoming
-Show expected future review load so review debt and clustering are visible. It is a forecast over scheduling state, not an expansion roadmap.
+### Today / Upcoming
+Show due and future items with:
+- date;
+- Knowledge ID / title;
+- authoritative Review Scope or map-refresh scope;
+- Retention Class;
+- review type/mode where useful.
 
 ### Attention
-Surface problems that require intervention rather than ordinary repetition, including:
-- repeated `MEMORY_GAP`;
-- `KNOWLEDGE_BASE_GAP` or `NEW_QUESTION` discovered during review;
-- Units returned from STABLE to ACTIVE;
-- Review Scopes that appear too broad/heterogeneous;
-- overdue work;
-- missing retention assignment for stable reviewable knowledge.
+Surface concrete intervention needs such as repeated memory failure, overly broad Review Scope, overdue work, or a retention classification that needs reassessment. Do not add global maturity states merely for this view.
 
 ### History
-Show past review events/state changes for diagnosis, not primarily for streaks or gamification.
+Store actual review evidence. Do not invent historical review events merely because a Unit was placed into the map.
 
-Useful history includes review date/type, recall result when applicable, findings, completed/next gap, and important state transitions.
+### Coverage and Expansion remain independent
+A Unit can simultaneously:
+- have a scheduled Repetition Map item; and
+- have gaps/questions in Coverage & Expansion.
 
-### Eligible content
-Normal Knowledge Units and comparison Knowledge Units can participate when they have a coherent Review Scope.
+Repetition maintains memory/awareness of what is already represented. Expansion handles what is missing or needs deeper knowledge. Neither owns the other.
 
-Comparison Units are especially suitable for `CONTRAST` and `TRANSFER` modes.
-
-`STABLE + MAP_ONLY` remains unscheduled by default.
-
-Generated views, tags, indexes, Expansion Plans, and other navigation/planning surfaces are not repetition subjects merely because they exist.
-
-### Findings route outward
-`MEMORY_GAP` affects memory/repetition state.
-
-`KNOWLEDGE_BASE_GAP` and `NEW_QUESTION` route into the local Question/Coverage & Expansion system without being mis-scored as forgetting.
-
+## Scheduling owner
+Scheduling defaults, clear-day semantics, calibration guidance, map-refresh guidance, and history rules belong to `documentation/policies/repetition-scheduling-policy.md`. That policy supplies useful defaults rather than a requirement that every date be algorithmically derived.

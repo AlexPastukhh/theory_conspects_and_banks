@@ -36,7 +36,11 @@ What should be learned/resolved first? Primarily Leverage + Consequence + Useful
 How deeply should it be understood? Primarily Leverage + Consequence + Usefulness. Do not create a hidden fifth "complexity" dimension; complexity matters only through its real effects on these dimensions.
 
 ### Retention Input
-How valuable is ready memory availability? Leverage + Consequence + Usefulness + inverse External Recoverability. The Retention owner maps this to a Retention Class.
+Ask how valuable ready memory availability is: Leverage + Consequence + Usefulness + inverse External Recoverability. The Retention owner maps that input to the desired retention treatment for the Review Scope.
+
+For the current personal system, the Repetition Map is intended to cover essentially the durable corpus at different strengths rather than only a small selected subset. Priority therefore helps distinguish **how strongly and how often** a Scope should be revisited, not whether low-priority knowledge ceases to matter. Easy-to-recover or low-leverage material can fall to `RECOGNITION` or `MAP_ONLY` rather than being dropped from the map.
+
+Do not assign a class mechanically from a single legacy priority field. The four dimensions plus the actual Review Scope and current planning context are decision inputs, not a formula. Retention Class is a qualitative/advisory flag: the owner may assign or change it by judgment, and AI may recommend a class without turning that recommendation into a mandatory score or transition rule.
 
 ## Scale
 Default qualitative scale: `HIGH | MEDIUM | LOW`. Add numbers only if real use proves necessary.
@@ -58,9 +62,6 @@ Reassess Usefulness when the context changes materially. Do not treat changing U
 
 ## Questions
 Question appearance does not imply immediate research. Work dispositions are `PURSUE_NOW | DEFER | DISCARD | NEEDS_CLARIFICATION`.
-
-## Learning State independence
-`ACTIVE` does not mean high priority; `STABLE` does not mean low priority. Priority is effort/value; Learning State is model maturity.
 
 ## Domain interpretation
 Domains may explain how the four dimensions manifest (e.g. production blast radius, accessibility) but should not create competing universal models without evidence.

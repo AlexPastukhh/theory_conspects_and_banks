@@ -61,7 +61,6 @@ Technology tags replace the need for a separately maintained Technology View. Th
 Avoid tags for information already owned by operational state fields, for example:
 
 ```text
-ACTIVE
 CORE
 important
 learn-now
@@ -180,15 +179,7 @@ Repetition
 ```
 
 ### Today
-One working queue, visibly separated by semantics:
-
-```text
-FORMATIVE — ACTIVE
-    due formative reconstruction of evolving knowledge
-
-RETENTION — STABLE
-    due/overdue calibration or spaced repetition
-```
+One working queue for due/overdue Repetition Map actions over Review Scopes, including calibration/active recall and lightweight `MAP_REFRESH` when due. Formative work owned by a learning workflow may be surfaced alongside it when useful, but it is not represented by a universal Knowledge Unit state.
 
 A repeat item is logically:
 
@@ -209,10 +200,9 @@ Surfaces conditions that need intervention, for example:
 - repeated `MEMORY_GAP`;
 - `KNOWLEDGE_BASE_GAP` discovered during review;
 - new Questions discovered during review;
-- STABLE → ACTIVE returns;
+- explicit workflow handoffs/overrides that affect a participating repetition item;
 - review scopes that appear too broad;
-- overdue items;
-- missing retention assignment for otherwise stable reviewable knowledge.
+- overdue participating items.
 
 ### History
 Supports diagnosis of the retention system:
@@ -226,11 +216,11 @@ Supports diagnosis of the retention system:
 History is not primarily a streak/gamification surface.
 
 ### What can repeat
-Normal Knowledge Units and comparison Knowledge Units may have Review Scopes and participate in repetition.
+Normal Knowledge Units and comparison Knowledge Units have authoritative Review Scopes and, under the current personal retention policy, normally appear in the Repetition Map, usually with a qualitative Retention Class when that label is useful. This is broad operational coverage, not a claim that repetition owns the Knowledge ontology.
 
 A comparison Unit is especially suitable for `CONTRAST` and `TRANSFER` review modes.
 
-`STABLE + MAP_ONLY` receives no scheduled repetition by default.
+`MAP_ONLY` is useful for semantic/navigation/comparison anchors: it may receive a very low-frequency `MAP_REFRESH` so the owner retains awareness of existence, location, and analogy value without maintaining full active-recall detail. Cross-technology manifestation and analogy work can deliberately use such anchors.
 
 Generated views, tags, indexes, Roadmaps/Expansion Plans, and navigation pages are not repetition subjects merely because they exist.
 

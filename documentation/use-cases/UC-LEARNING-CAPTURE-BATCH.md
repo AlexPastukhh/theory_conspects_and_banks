@@ -6,7 +6,7 @@ During learning, work, practice, reading, discussion, or research, potentially u
 The material may include observations, links, quotations, raw explanations, Questions, hypotheses, examples, screenshots, and partial understanding.
 
 ## Result
-A raw learning batch is safely captured and registered for **delayed triage**:
+A raw learning batch is safely captured and registered for delayed triage:
 - useful material is not lost;
 - origin/context remain visible;
 - uncertainty is not disguised as knowledge;
@@ -22,9 +22,21 @@ A raw learning batch is safely captured and registered for **delayed triage**:
 6. When triage becomes due, hand the batch to `../processes/triage-learning-batch.md`.
 
 ## Default personal workflow
-The default operational implementation is `../workflows/default-daily-learning-inbox-workflow.md`, preserving the useful D0/D+2/D+8 rhythm.
+The default implementation is `../workflows/default-daily-learning-inbox-workflow.md`:
+
+```text
+D0   capture
+D+2  triage/materialization
+     + first learning/review contact
+     + Repetition Map entry/update
+later review date chosen with Retention Class as guidance
+```
+
+For important `CORE` knowledge, five clear days after D+2 materialization gives the familiar D+8 next active-recall review. Lower-retention knowledge may be scheduled later.
+
+This workflow does not require `ACTIVE | STABLE`.
 
 ## Boundary
-This Use Case owns **capture**, not semantic materialization.
+This Use Case owns capture, not semantic materialization, retention classification, scheduling, or a global Knowledge Unit lifecycle.
 
 A calendar day is the default personal batching policy, not a universal definition of the Use Case.

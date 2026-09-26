@@ -45,11 +45,15 @@ A Question is not automatically a Knowledge Unit. A checked answer is integrated
 
 The current `_ai-conspects/_planning/QUESTIONS.csv` is the operational registry for independently tracked expansion Questions. Legacy `_repetition/QUESTIONS_BACKLOG.md` may still exist for compatibility with the pre-CS5 review workflow, but it is not current expansion authority.
 
-## Learning / repetition transition
+## Learning / repetition handoff
 
-New or materially reshaped knowledge uses target `ACTIVE/STABLE` semantics conceptually, but the current pre-CS5 repository must not fabricate those fields inside legacy `REPETITION_STATE.csv`. Until CS5 cutover, use only the truthful legacy operational storage contract and record migration needs explicitly.
+Creating or materially reshaping a Knowledge Unit does not put it into a universal maturity state. The D+2 learning/materialization workflow revisits and places the knowledge, establishes/updates its Review Scope, and normally hands it into the Repetition Map. A Retention Class may be assigned/updated as a qualitative guide from the priority/retention methodology; it is not a mandatory algorithmic transition.
 
-Content change never proves recall and must never create synthetic review history, scores, or intervals.
+That materialization pass is the first learning/review contact, but it is not blind recall and therefore does not prove memory strength. For important `CORE` knowledge, five clear days later is a useful default next active-recall check; lower-retention classes will often be scheduled later, with manual date choice remaining normal.
+
+The current personal policy aims for broad Repetition Map coverage, including very light `MAP_ONLY` awareness/comparison anchors. This does not make repetition part of Knowledge ontology and does not reintroduce `ACTIVE/STABLE`.
+
+Content change never proves recall and must never create synthetic review history, scores, intervals, or due dates.
 
 ## Quality invariant
 

@@ -64,7 +64,6 @@ A Unit should support:
 - optional personal mental model and caveats;
 - ordinary links and comparisons;
 - provenance where required;
-- `Learning State` reference as defined by Retention/Repetition;
 - Retention Class reference when assigned;
 - optional tags.
 
@@ -208,12 +207,11 @@ Tags answer:
 They do **not** replace:
 - Area/nested-Area/Concept ownership;
 - Technology Core canonical ownership where the core exception applies;
-- Learning State;
 - Retention Class;
 - priority;
 - explicit comparison Knowledge Units.
 
-Avoid tags that merely reproduce operational state such as `ACTIVE`, `CORE`, `important`, `learn-now`, or similar fields already owned elsewhere.
+Avoid tags that merely reproduce operational state such as `CORE`, `important`, `learn-now`, or similar fields already owned elsewhere.
 
 Keep the vocabulary controlled enough to remain useful. A tag may optionally have a curated topic page, but that page does not become canonical owner of the linked Units.
 

@@ -11,6 +11,7 @@ CS5 pre-cutover
 - Review Scope blocker closed
 
 NEXT: CS5 repetition state/scheduler cutover
+- pre-cutover analysis in progress; target repetition schema/retention migration still requires a methodological decision
 ```
 
 ## Read this snapshot in this order
@@ -145,8 +146,11 @@ Current tracked Questions: 12 total; 6 `PURSUE_NOW / READY`, 6 `DEFER / LATER`. 
 - `_ai-conspects/_repetition/REPETITION_STATE.csv` remains the unchanged legacy 576-row state store;
 - `_ai-conspects/_repetition/INITIAL_WAVE_QUEUE.csv` remains unchanged;
 - legacy policy/dashboard/agent files under `_repetition/` are transitional implementation, not target semantic owners;
-- legacy `NOT_REVIEWED` does **not** mean target `ACTIVE`;
-- do not invent Learning State, Retention Class, Recall State, score, interval, or review history before CS5 cutover.
+- legacy `NOT_REVIEWED` does **not** mechanically determine target Retention Class or observed Recall State; together with verified empty review/history fields, it proves there is no valid blind-recall baseline;
+- current personal target policy wants broad Repetition Map coverage of durable Review Scopes, but the legacy 576-row shape is not evidence that the old rows already contain valid target retention decisions;
+- target class assignment must come from the current Priority/Retention owners, not from legacy `ReviewPriority`; migration may stage those assessments rather than fabricate them;
+- `CORE | WORKING | RECOGNITION` rows begin `UNCALIBRATED` until a real blind-recall calibration occurs; `MAP_ONLY` uses lightweight map-refresh behavior rather than normal Recall State;
+- do not invent observed Recall State (`WEAK | RECOVERING | STRONG`), recall score, completed interval, or historical review evidence before real reviews occur.
 
 The semantic-placement and Review-Scope prerequisites for CS5 are closed. Expansion completeness is independent of repetition readiness.
 
@@ -176,13 +180,31 @@ Current evidence:
 
 ## Next gate — CS5 repetition cutover
 
-CS5 may proceed from the semantic/Review-Scope side, but must independently decide:
+Current pre-cutover analysis: [`CS5-REPETITION-CUTOVER-ANALYSIS.md`](CS5-REPETITION-CUTOVER-ANALYSIS.md). It records verified source facts, deterministic non-mappings, candidate representations, and unresolved decisions. It is not a permanent semantic owner and does not yet authorize schema/data cutover.
+Current validation: [`../validation/cs5-advisory-retention-scheduling-audit-v5.md`](../validation/cs5-advisory-retention-scheduling-audit-v5.md). The earlier v4 retention-map audit remains provenance but is superseded where it over-formalized class assignment and interval decisions; the sparse-repetition audit v3 is also superseded.
 
-1. target state-file/schema representation;
-2. which Units are `STABLE + UNCALIBRATED` versus genuinely `ACTIVE`;
-3. Retention Class assignment without mechanically translating legacy `ReviewPriority`;
-4. migration of legacy rows without inventing recall history;
-5. replacement of initial-wave architecture by target calibration eligibility/query;
-6. retirement boundary for the legacy scheduler/dashboard.
+The previous target design introduced a universal `Learning State = ACTIVE | STABLE` axis. Current methodology still rejects that axis.
+
+The current daily flow is instead:
+
+```text
+D0 capture
+→ D+2 triage/materialization + first learning/review contact + Repetition Map entry/update
+→ next review date chosen with Retention Class + context/workload as guidance
+```
+
+For important `CORE` knowledge, five clear days after D+2 materialization gives D+8. Less important knowledge may be scheduled later. D+8 is therefore not a mandatory extra lifecycle stage for every Unit.
+
+Current personal policy aims for broad Repetition Map coverage of the durable corpus. `CORE | WORKING | RECOGNITION | MAP_ONLY` are qualitative retention flags that help communicate desired memory/awareness depth; they guide rather than mechanically determine scheduling. `MAP_ONLY` is a low-intensity map/comparison anchor rather than absence from the map.
+
+CS5 may proceed from the semantic/Review-Scope side, but must still decide/validate:
+
+1. minimal physical Repetition Map/history schema, including nullable/advisory Retention Class during staged classification;
+2. safe staged rollout of the existing 576 Review Scopes and practical first future dates without inventing history or creating an impossible workload spike;
+3. physical treatment of lightweight `MAP_ONLY` refresh versus recall-bearing review events;
+4. replacement of initial-wave architecture by the new map/date workflow while preserving normal manual scheduling;
+5. retirement boundary for the legacy scheduler/dashboard/state authority.
+
+Exact per-class interval formulas, a deterministic Retention Class assignment algorithm, and formal class-transition rules are not CS5 prerequisites. Defaults such as the CORE five-clear-day follow-up remain guidance that the owner may adjust by context and workload.
 
 Physical Knowledge Unit moves remain optional and are not a CS5 prerequisite.
