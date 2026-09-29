@@ -2,9 +2,9 @@
 
 Status: **current operational owner** for explicitly planned knowledge expansion.
 
-Current planned expansion items: **0**.
+Current planned expansion items: **2**.
 
-This file is intentionally empty of work items. Coverage gaps and open Questions exist, but none are currently selected into an expansion plan.
+Coverage gaps and open Questions remain candidate inputs unless explicitly selected. The two current items below were selected from an ordinary learning need and the cross-runtime manifestation gaps; they do not schedule every visible gap.
 
 ## Boundary
 
@@ -21,7 +21,21 @@ Repetition is independent and lives in `../_repetition/REPETITION_MAP.csv`.
 
 ## Planned
 
-_None._
+### Go foundations and engineering manifestations
+
+Source: ordinary need + `MANIFESTATION_COVERAGE.csv`
+Target: selected Go manifestations across the existing Software Engineering responsibility map, beginning with programming model, concurrency, and runtime/resource foundations
+Why now: add a native compiled, garbage-collected ecosystem with goroutines/channels and a deliberately different concurrency/runtime model from the existing .NET / JavaScript / Python baseline
+Intended result: durable Go defining-model Units plus Area-owned manifestations/comparisons where the broader engineering Concept remains canonical
+Notes: learn by engineering responsibility rather than exhaustive syntax curriculum; materialize only after real learning/triage
+
+### Rust foundations and engineering manifestations
+
+Source: ordinary need + `MANIFESTATION_COVERAGE.csv`
+Target: selected Rust manifestations across the existing Software Engineering responsibility map, beginning with programming model, concurrency, and runtime/resource foundations
+Why now: add ownership/borrowing, RAII, compile-time resource/concurrency safety, and async/runtime tradeoffs that are not represented by the current ecosystems
+Intended result: durable Rust defining-model Units plus Area-owned manifestations/comparisons where the broader engineering Concept remains canonical
+Notes: learn by engineering responsibility rather than exhaustive syntax curriculum; materialize only after real learning/triage
 
 ## Adding work
 
@@ -42,4 +56,4 @@ Ordering/date is optional. Removing or reordering an item does not move canonica
 
 ## Physical-layout boundary
 
-The future physical move of existing Knowledge Unit files does not populate this map. Physical migration is repository representation work, not knowledge expansion.
+Physical reorganization of existing Knowledge Unit files does not populate this map. Repository representation work is not knowledge expansion.

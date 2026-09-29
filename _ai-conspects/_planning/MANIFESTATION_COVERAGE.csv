@@ -1,31 +1,31 @@
-manifestation_id,area,responsibility,GENERIC,DOTNET,JAVASCRIPT_LANGUAGE,BROWSER,NODEJS,PYTHON,notes
-M01,A01,Values / type / object model,PARTIAL,PARTIAL,PARTIAL,NOT_APPLICABLE,PARTIAL,MISSING,Node shares JS language model; current repo has JS/TS language evidence but no Python core.
-M02,A01,"Scope, closures and binding",MISSING,MISSING,MISSING,NOT_APPLICABLE,MISSING,MISSING,No coherent scope/closure baseline despite scattered usage.
-M03,A01,"Modules, imports and name resolution",MISSING,MISSING,MISSING,NOT_APPLICABLE,MISSING,MISSING,Tool/module-loading mentions do not establish language module semantics.
-M04,A01,Error / exception / result model,MISSING,MISSING,MISSING,NOT_APPLICABLE,MISSING,MISSING,Framework exception handling is not a language failure-model baseline.
-M05,A03,Async abstraction: task/promise/coroutine,PARTIAL,PARTIAL,PARTIAL,PARTIAL,MISSING,MISSING,
-M06,A03,Event loop / scheduler / execution queues,PARTIAL,PARTIAL,PARTIAL,PARTIAL,MISSING,MISSING,Browser JS has task/microtask evidence; Node/libuv and Python loop are absent.
-M07,A03,Cancellation / time bounds,PARTIAL,PARTIAL,PARTIAL,PARTIAL,MISSING,MISSING,
-M08,A03,Structured concurrency / failure propagation,MISSING,MISSING,MISSING,MISSING,MISSING,MISSING,
-M09,A03,Threads / workers / processes,MISSING,PARTIAL,PARTIAL,PARTIAL,MISSING,MISSING,"Current .NET/Browser evidence is fragmentary, not a coherent model."
-M10,A03,Synchronization and memory-ordering model,PARTIAL,PARTIAL,MISSING,MISSING,MISSING,MISSING,
-M11,A03,Channels / queues / bounded concurrency / backpressure,PARTIAL,PARTIAL,PARTIAL,PARTIAL,MISSING,MISSING,
-M12,A04,Runtime / compiler / interpreter / toolchain model,PARTIAL,PARTIAL,MISSING,NOT_APPLICABLE,MISSING,MISSING,
-M13,A04,"Process lifecycle, environment, signals, startup/shutdown",MISSING,MISSING,NOT_APPLICABLE,NOT_APPLICABLE,MISSING,MISSING,
-M14,A04,Filesystem / handles / permissions,MISSING,MISSING,NOT_APPLICABLE,NOT_APPLICABLE,MISSING,MISSING,
-M15,A04,Memory management / GC / reachability,PARTIAL,PARTIAL,MISSING,MISSING,MISSING,MISSING,
-M16,A04,Deterministic resource cleanup / ownership,PARTIAL,PARTIAL,MISSING,MISSING,MISSING,MISSING,Python context managers and JS resource-management model are absent.
-M17,A04,Native / FFI boundary,MISSING,PARTIAL,MISSING,NOT_APPLICABLE,MISSING,MISSING,Existing .NET unmanaged units are manifestations; generic boundary remains missing.
-M18,A04,Clock / timezone / timer model,PARTIAL,PARTIAL,MISSING,MISSING,MISSING,MISSING,
-M19,A05,Streams / file I/O / incremental I/O,PARTIAL,PARTIAL,MISSING,PARTIAL,MISSING,MISSING,
-M20,A05,Serialization / schema / compatibility model,PARTIAL,PARTIAL,PARTIAL,PARTIAL,MISSING,MISSING,
-M21,A06,HTTP client and connection semantics,PARTIAL,PARTIAL,PARTIAL,PARTIAL,MISSING,MISSING,
-M22,A07,Application host / startup / shutdown lifecycle,MISSING,MISSING,NOT_APPLICABLE,NOT_APPLICABLE,MISSING,MISSING,Important symmetric gap: even .NET host lifecycle is not documented coherently.
-M23,A07,Request pipeline / routing / binding / validation,PARTIAL,PARTIAL,NOT_APPLICABLE,NOT_APPLICABLE,MISSING,MISSING,ASP.NET is strong; Node/Python backend manifestations absent.
-M24,A07,Dependency composition / configuration,PARTIAL,PARTIAL,NOT_APPLICABLE,NOT_APPLICABLE,MISSING,MISSING,
-M25,A07,Background jobs / schedulers / recurring work,MISSING,MISSING,NOT_APPLICABLE,NOT_APPLICABLE,MISSING,MISSING,
-M26,A09,Data-access / ORM responsibility model,PARTIAL,PARTIAL,NOT_APPLICABLE,NOT_APPLICABLE,MISSING,MISSING,Generic ORM model is partial; Python/Node manifestations intentionally tracked only after generic responsibilities.
-M27,A13,Testing strategy / design baseline,MISSING,MISSING,MISSING,MISSING,MISSING,MISSING,
-M28,A13,Debugging / profiling / diagnosis baseline,PARTIAL,MISSING,PARTIAL,PARTIAL,MISSING,MISSING,One browser/Vitest diagnosis unit does not establish ecosystem baselines.
-M29,A14,Package / dependency / build workflow,PARTIAL,MISSING,PARTIAL,PARTIAL,MISSING,MISSING,Vite gives one JS/browser tooling manifestation; package/build fundamentals remain mostly absent.
-M30,A15,Logging / metrics / tracing / telemetry integration,MISSING,MISSING,MISSING,MISSING,MISSING,MISSING,
+manifestation_id,area,responsibility,GENERIC,DOTNET,JAVASCRIPT_LANGUAGE,BROWSER,NODEJS,PYTHON,GO,RUST,notes
+M01,A01,Values / type / object model,PARTIAL,PARTIAL,PARTIAL,NOT_APPLICABLE,PARTIAL,MISSING,MISSING,MISSING,"Node shares the JS language model; Python, Go, and Rust core models are now selected but have no durable baseline yet."
+M02,A01,"Scope, closures and binding",MISSING,MISSING,MISSING,NOT_APPLICABLE,MISSING,MISSING,MISSING,MISSING,No coherent scope/closure baseline despite scattered usage.
+M03,A01,"Modules, imports and name resolution",MISSING,MISSING,MISSING,NOT_APPLICABLE,MISSING,MISSING,MISSING,MISSING,Tool/module-loading mentions do not establish language module semantics.
+M04,A01,Error / exception / result model,MISSING,MISSING,MISSING,NOT_APPLICABLE,MISSING,MISSING,MISSING,MISSING,Framework exception handling is not a language failure-model baseline.
+M05,A03,Async abstraction: task/promise/coroutine,PARTIAL,PARTIAL,PARTIAL,PARTIAL,MISSING,MISSING,MISSING,MISSING,
+M06,A03,Event loop / scheduler / execution queues,PARTIAL,PARTIAL,PARTIAL,PARTIAL,MISSING,MISSING,MISSING,MISSING,"Browser JS has task/microtask evidence; Node/libuv, Python asyncio, Go scheduler, and Rust executor/runtime models are not yet durably covered."
+M07,A03,Cancellation / time bounds,PARTIAL,PARTIAL,PARTIAL,PARTIAL,MISSING,MISSING,MISSING,MISSING,
+M08,A03,Structured concurrency / failure propagation,MISSING,MISSING,MISSING,MISSING,MISSING,MISSING,MISSING,MISSING,
+M09,A03,Threads / workers / processes,MISSING,PARTIAL,PARTIAL,PARTIAL,MISSING,MISSING,MISSING,MISSING,"Current .NET/Browser evidence is fragmentary, not a coherent model."
+M10,A03,Synchronization and memory-ordering model,PARTIAL,PARTIAL,MISSING,MISSING,MISSING,MISSING,MISSING,MISSING,
+M11,A03,Channels / queues / bounded concurrency / backpressure,PARTIAL,PARTIAL,PARTIAL,PARTIAL,MISSING,MISSING,MISSING,MISSING,
+M12,A04,Runtime / compiler / interpreter / toolchain model,PARTIAL,PARTIAL,MISSING,NOT_APPLICABLE,MISSING,MISSING,MISSING,MISSING,
+M13,A04,"Process lifecycle, environment, signals, startup/shutdown",MISSING,MISSING,NOT_APPLICABLE,NOT_APPLICABLE,MISSING,MISSING,MISSING,MISSING,
+M14,A04,Filesystem / handles / permissions,MISSING,MISSING,NOT_APPLICABLE,NOT_APPLICABLE,MISSING,MISSING,MISSING,MISSING,
+M15,A04,Memory management / GC / reachability,PARTIAL,PARTIAL,MISSING,MISSING,MISSING,MISSING,MISSING,MISSING,
+M16,A04,Deterministic resource cleanup / ownership,PARTIAL,PARTIAL,MISSING,MISSING,MISSING,MISSING,MISSING,MISSING,"Python context managers, Go defer/resource conventions, JS resource management, and Rust ownership/RAII need coherent manifestation coverage."
+M17,A04,Native / FFI boundary,MISSING,PARTIAL,MISSING,NOT_APPLICABLE,MISSING,MISSING,MISSING,MISSING,Existing .NET unmanaged units are manifestations; generic boundary remains missing.
+M18,A04,Clock / timezone / timer model,PARTIAL,PARTIAL,MISSING,MISSING,MISSING,MISSING,MISSING,MISSING,
+M19,A05,Streams / file I/O / incremental I/O,PARTIAL,PARTIAL,MISSING,PARTIAL,MISSING,MISSING,MISSING,MISSING,
+M20,A05,Serialization / schema / compatibility model,PARTIAL,PARTIAL,PARTIAL,PARTIAL,MISSING,MISSING,MISSING,MISSING,
+M21,A06,HTTP client and connection semantics,PARTIAL,PARTIAL,PARTIAL,PARTIAL,MISSING,MISSING,MISSING,MISSING,
+M22,A07,Application host / startup / shutdown lifecycle,MISSING,MISSING,NOT_APPLICABLE,NOT_APPLICABLE,MISSING,MISSING,MISSING,MISSING,Important symmetric gap: even .NET host lifecycle is not documented coherently.
+M23,A07,Request pipeline / routing / binding / validation,PARTIAL,PARTIAL,NOT_APPLICABLE,NOT_APPLICABLE,MISSING,MISSING,MISSING,MISSING,ASP.NET is strong; Node/Python/Go/Rust backend manifestations are absent.
+M24,A07,Dependency composition / configuration,PARTIAL,PARTIAL,NOT_APPLICABLE,NOT_APPLICABLE,MISSING,MISSING,MISSING,MISSING,
+M25,A07,Background jobs / schedulers / recurring work,MISSING,MISSING,NOT_APPLICABLE,NOT_APPLICABLE,MISSING,MISSING,MISSING,MISSING,
+M26,A09,Data-access / ORM responsibility model,PARTIAL,PARTIAL,NOT_APPLICABLE,NOT_APPLICABLE,MISSING,MISSING,MISSING,MISSING,Generic ORM model is partial; technology manifestations remain secondary to the generic responsibility.
+M27,A13,Testing strategy / design baseline,MISSING,MISSING,MISSING,MISSING,MISSING,MISSING,MISSING,MISSING,
+M28,A13,Debugging / profiling / diagnosis baseline,PARTIAL,MISSING,PARTIAL,PARTIAL,MISSING,MISSING,MISSING,MISSING,One browser/Vitest diagnosis unit does not establish ecosystem baselines.
+M29,A14,Package / dependency / build workflow,PARTIAL,MISSING,PARTIAL,PARTIAL,MISSING,MISSING,MISSING,MISSING,Vite gives one JS/browser tooling manifestation; package/build fundamentals remain mostly absent across the selected ecosystems.
+M30,A15,Logging / metrics / tracing / telemetry integration,MISSING,MISSING,MISSING,MISSING,MISSING,MISSING,MISSING,MISSING,

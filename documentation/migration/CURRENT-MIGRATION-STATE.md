@@ -91,7 +91,7 @@ Current baseline:
 80 broad nested Areas: 52 HAS_PRIMARY_EVIDENCE / 28 NO_PRIMARY_EVIDENCE
 183 responsibilities: 101 PARTIAL / 82 MISSING / 0 COVERED asserted
 12 open tracked Questions
-0 planned Expansion Map items
+2 planned Expansion Map items: Go foundations/manifestations; Rust foundations/manifestations
 ```
 
 All 12 current open Questions are `UNSCHEDULED`; their qualitative priority evidence remains available, but none is currently selected for expansion work. A `MISSING` responsibility or open Question is not automatically an expansion plan.

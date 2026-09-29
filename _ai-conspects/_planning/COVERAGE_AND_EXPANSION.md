@@ -49,7 +49,7 @@ Broad hierarchy occupancy: **80** broad nested Areas → **52 `HAS_PRIMARY_EVIDE
 - `PARTIAL` means some durable evidence exists but completeness is not demonstrated.
 - `MISSING` means the stated generic responsibility lacks sufficient durable knowledge evidence, even if adjacent framework/tool Units exist.
 - Manifestation coverage is checked only where a technology/runtime is relevant; no one-to-one framework analogue is required.
-- A responsibility discovered from Python/Node/.NET/browser knowledge must be checked symmetrically against the other relevant ecosystems, including the historically dominant .NET corpus.
+- A responsibility discovered from one selected ecosystem must be checked symmetrically against the other relevant ecosystems, including the historically dominant .NET corpus and the newly selected Go/Rust expansion surfaces.
 
 ## High-signal gaps exposed by this pass
 
@@ -67,13 +67,14 @@ The manifestation matrix intentionally reveals reverse gaps. Examples:
 
 - `.NET` remains `MISSING` for coherent scope/closure semantics, module/import semantics, process lifecycle/filesystem foundations, structured concurrency, application-host lifecycle, general testing strategy, and observability integration;
 - Node.js and Python are `MISSING` for nearly the entire current cross-runtime baseline because no durable technology-core corpus exists yet;
+- Go and Rust are now selected expansion ecosystems; the current 30-responsibility applicability pass marks their initial manifestation baseline `MISSING` because no durable Go/Rust Units exist yet;
 - browser/JavaScript evidence is meaningful for promises/event-loop/cancellation/client state, but does not substitute for Node.js runtime/process/server semantics.
 
 ## Relationship to Expansion Map
 
 Coverage and tracked Questions are candidate inputs; they are not automatically scheduled work.
 
-Current planned expansion items: **0**.
+Current planned expansion items: **2** — Go foundations/manifestations and Rust foundations/manifestations.
 
 The operational owner is [`EXPANSION_MAP.md`](EXPANSION_MAP.md). A `MISSING` responsibility or open Question enters that file only after explicit selection. Until then it remains coverage/question state only.
 

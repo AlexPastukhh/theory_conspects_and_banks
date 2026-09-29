@@ -45,7 +45,7 @@ Start with:
 - [Planning-layer boundary](../_ai-conspects/_planning/README.md)
 - [Coverage & Expansion](../_ai-conspects/_planning/COVERAGE_AND_EXPANSION.md)
 - [Tracked Questions](../_ai-conspects/_planning/QUESTIONS.csv)
-- [Expansion Map](../_ai-conspects/_planning/EXPANSION_MAP.md) — current planned expansion owner; currently empty
+- [Expansion Map](../_ai-conspects/_planning/EXPANSION_MAP.md) — current planned expansion owner; contains the explicitly selected work
 - [Repetition runtime](../_ai-conspects/_repetition/README.md)
 - [Repetition Map](../_ai-conspects/_repetition/REPETITION_MAP.csv) — current 576-row operational table
 
@@ -57,7 +57,7 @@ These are projections/state, not replacement semantic owners for principles, Use
 
 - [Knowledge Map](domains/software-engineering/KNOWLEDGE-MAP.md) — current logical Area / recursive nested-Area hierarchy; non-prescriptive about physical layout.
 - [Responsibility Catalog](domains/software-engineering/RESPONSIBILITY-CATALOG.md) — responsibility-first completeness checklist independent of current folder/node occupancy.
-- [Cross-Runtime Manifestation Coverage](domains/software-engineering/MANIFESTATION-COVERAGE.md) — selected symmetric .NET / JavaScript / Browser / Node.js / Python coverage projection; not an exhaustive curriculum.
+- [Cross-Runtime Manifestation Coverage](domains/software-engineering/MANIFESTATION-COVERAGE.md) — selected symmetric .NET / JavaScript / Browser / Node.js / Python / Go / Rust coverage projection; not an exhaustive curriculum.
 - Current machine-readable hierarchy: [semantic hierarchy v3](validation/software-engineering-semantic-hierarchy-v3.csv).
 
 ## Important interpretation boundary

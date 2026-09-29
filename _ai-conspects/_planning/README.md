@@ -9,7 +9,7 @@ Status: **current operational projection/state layer**. Semantic authority remai
 - `RESPONSIBILITY_COVERAGE.csv` — responsibility-first semantic coverage checklist and main generic gap surface.
 - `MANIFESTATION_COVERAGE.csv` — selected cross-runtime manifestation coverage; not an exhaustive curriculum.
 - `QUESTIONS.csv` — independently tracked Open Expansion Questions. Current rows are candidates, not scheduled work.
-- `EXPANSION_MAP.md` — **current owner of explicitly planned expansion work**. It is currently empty.
+- `EXPANSION_MAP.md` — **current owner of explicitly planned expansion work**. Read the file for the current selected items rather than inferring them from coverage or Questions.
 - `EXPANSION_PLAN.md` — compatibility pointer for older references; not current authority.
 - `COVERAGE_AND_EXPANSION.md` — human-readable summary across the coverage projections.
 
@@ -26,7 +26,7 @@ EXPANSION_MAP.md
     contains only selected expansion work
 ```
 
-A `MISSING` responsibility, manifestation gap, or open Question does not automatically enter the Expansion Map. The current repository deliberately has **0 planned expansion items** even though coverage gaps and 12 open Questions remain visible.
+A `MISSING` responsibility, manifestation gap, or open Question does not automatically enter the Expansion Map. The current repository has **2 explicitly selected expansion directions** (Go and Rust), while other coverage gaps and 12 open Questions remain candidate state only.
 
 `QUESTIONS.csv` may retain qualitative priority evidence, but current open rows use `UNSCHEDULED` and have no plan slot until the owner explicitly chooses expansion work.
 

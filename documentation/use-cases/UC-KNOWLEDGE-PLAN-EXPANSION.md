@@ -44,4 +44,4 @@ It also does not coordinate Expansion Map work against Repetition or Capture/Tri
 
 ## Current operational note
 
-The current `_ai-conspects/_planning/EXPANSION_MAP.md` is intentionally empty. Existing open Questions and coverage gaps remain candidate inputs only until the owner explicitly selects expansion work.
+The current `_ai-conspects/_planning/EXPANSION_MAP.md` contains only explicitly selected work. At this snapshot, Go and Rust foundations/manifestations are selected; existing open Questions and other coverage gaps remain candidate inputs until the owner explicitly selects them.
