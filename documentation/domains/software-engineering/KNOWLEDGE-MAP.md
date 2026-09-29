@@ -1,6 +1,6 @@
 # Software Engineering Knowledge Map
 
-Status: current logical domain map after semantic structure review v2. This is a semantic/navigation structure, not a physical-folder prescription.
+Status: current logical domain map after semantic structure review. This remains the semantic authority; CS6 now materializes a deliberately shallow physical projection under `engineering/` and `technology-core/` without encoding the full ontology depth.
 
 ## Structural rule
 
@@ -21,7 +21,7 @@ Technology Core remains an ownership exception: a Unit can be canonically techno
 
 - Seed: historical `Software Engineering Map Proposal v3` Subareas.
 - First hierarchy pass: `software-engineering-semantic-hierarchy-v1.csv` (superseded as current assignment after semantic audit).
-- Current machine-readable assignment: [`../../validation/software-engineering-semantic-hierarchy-v2.csv`](../../validation/software-engineering-semantic-hierarchy-v2.csv).
+- Current machine-readable assignment: [`../../validation/software-engineering-semantic-hierarchy-v3.csv`](../../validation/software-engineering-semantic-hierarchy-v3.csv).
 - Current structure audit: [`../../validation/software-engineering-subarea-structure-audit-v2.md`](../../validation/software-engineering-subarea-structure-audit-v2.md).
 
 ## Current hierarchy
@@ -245,5 +245,5 @@ Counts in parentheses are current primary Knowledge Units. `0` is meaningful: th
 - Broad nested Areas are durable semantic responsibilities, seeded from Map v3 and corrected against the real corpus.
 - A narrower nested Area is materialized only when it represents a stable multi-Unit cluster; singleton Concepts do not force another taxonomy level.
 - Empty broad nodes are retained when the domain model says the responsibility exists; they remain explicit expansion targets.
-- Physical `_knowledge/<topic>/` paths remain unchanged.
+- CS6 physical representation is now materialized: Area-owned Units live under `_knowledge/engineering/<area>/<broad-nested-area>/`, while defining technology models live under `_knowledge/technology-core/<technology>/`. Area indexes link to relevant Technology Core Units instead of duplicating them.
 - `CLEAR` means one primary logical path is currently selected; it does not mean the Unit has no secondary relationships or tags.

@@ -1,0 +1,26 @@
+# typescript Technology Core
+
+Defining technology-owned Units. Their broader semantic placement remains visible through Engineering Area indexes and the semantic hierarchy.
+
+- [`typescript.built-in-object-and-union-utility-types` — Built-in object and union utility types](built-in-object-and-union-utility-types.md)
+- [`typescript.constructor-and-instance-types` — Constructor and instance types](constructor-and-instance-types.md)
+- [`typescript.custom-mapped-utilities-prettify-and-xor` — Custom mapped utilities: Prettify and XOR](custom-mapped-utilities-prettify-and-xor.md)
+- [`typescript.deep-partial-recursive-contracts` — DeepPartial is an application-specific recursive contract](deep-partial-recursive-contracts.md)
+- [`typescript.function-signature-and-async-utility-types` — Function signature and async utility types](function-signature-and-async-utility-types.md)
+- [`typescript.keyof-property-extraction` — Generic property extraction with keyof](keyof-property-extraction.md)
+- [`typescript.index-signatures-assertions-and-records` — Index signatures, assertions, and finite records](index-signatures-assertions-and-records.md)
+- [`typescript.interfaces-and-class-contracts` — Interfaces and implements](interfaces-and-class-contracts.md)
+- [`typescript.never-and-discriminated-union-exhaustiveness` — never and discriminated-union exhaustiveness](never-and-discriminated-union-exhaustiveness.md)
+- [`typescript.object-value-unions-and-literal-inference` — Object value unions and literal inference](object-value-unions-and-literal-inference.md)
+- [`typescript.constructor-inheritance-and-definite-assignment` — Parameter properties, inheritance, and definite assignment](constructor-inheritance-and-definite-assignment.md)
+- [`typescript.class-members-and-accessors` — Static members, getters, and setters](class-members-and-accessors.md)
+- [`typescript.type-aliases-unions-and-interfaces` — Type aliases, unions, and interfaces](type-aliases-unions-and-interfaces.md)
+- [`typescript.any-vs-unknown-external-data` — TypeScript `any` versus `unknown` at external-data boundaries](any-vs-unknown-external-data.md)
+- [`typescript.control-flow-type-narrowing` — TypeScript control-flow type narrowing](control-flow-type-narrowing.md)
+- [`typescript.decorator-wrapping-and-semantics` — TypeScript decorator wrapping and semantics](decorator-wrapping-and-semantics.md)
+- [`typescript.generic-default-type-arguments` — TypeScript generic default type arguments](generic-default-type-arguments.md)
+- [`typescript.satisfies-inference-and-runtime-boundary` — TypeScript satisfies, inference, and runtime boundary](satisfies-inference-and-runtime-boundary.md)
+- [`typescript.zod-discriminated-union-validation` — Zod discriminated-union validation](zod-discriminated-union-validation.md)
+- [`typescript.zod-form-input-coercion-and-transforms` — Zod form-input coercion, preprocessing, and transforms](zod-form-input-coercion-and-transforms.md)
+- [`typescript.zod-refinements-and-cross-field-errors` — Zod refinements and cross-field errors](zod-refinements-and-cross-field-errors.md)
+- [`typescript.zod-schema-validation-and-inference` — Zod schema validation, composition, and type inference](zod-schema-validation-and-inference.md)

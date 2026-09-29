@@ -1,6 +1,6 @@
 # Personal Knowledge System Migration — Current State
 
-Status: authoritative temporary migration control for this snapshot. Permanent semantics remain owned by the linked principles, policies, Use Cases, and domain maps.
+Status: migration closure/current-state control for this snapshot. Permanent semantics remain owned by the linked principles, policies, Use Cases, and domain maps.
 
 ## Current phase
 
@@ -13,14 +13,15 @@ CS1–CS5                    COMPLETE
 - Repetition Map physical/runtime cutover
 - Expansion operational owner ready
 
-CS6                       PENDING / separate
+CS6                       COMPLETE
 - physical Knowledge Unit representation / moves
+- path-bearing runtime/projections synchronized
 
-CS7                       PENDING
-- post-move link/path/consistency audit
+CS7                       COMPLETE
+- post-move link/path/ID/Review-Scope consistency audit
 ```
 
-The system is operationally ready **without** moving Knowledge Unit files first. Existing `_ai-conspects/_knowledge/<topic>/...` paths remain the old physical representation and are not semantic authority.
+The physical Knowledge representation now follows canonical ownership: Area-owned Units are under `_ai-conspects/_knowledge/engineering/...`; defining language/runtime/framework/library Units are under `_ai-conspects/_knowledge/technology-core/...`. The semantic hierarchy remains authority over meaning; folders are a deliberately shallow projection.
 
 ## Read this snapshot in this order
 
@@ -57,18 +58,18 @@ Software Engineering owners/projections:
 - **576 / 576** stable Knowledge IDs are present.
 - **576 / 576** have current semantic placement in hierarchy v3.
 - **576 / 576** have exactly one explicit `## What should be recallable` Review Scope.
-- Physical `_ai-conspects/_knowledge/<topic>/` paths remain unchanged.
-- Physical path is representation, not canonical semantic ownership.
+- **576 / 576** Units have a current physical path in the CS6 representation.
+- Physical path is representation of canonical ownership, not a replacement for semantic Area/Concept authority.
 
-Current owner-kind migration labels remain:
+Final physical owner kinds are:
 
 ```text
-259 AREA
-317 TECHNOLOGY_CORE_CANDIDATE
+257 AREA
+319 TECHNOLOGY_CORE
 0 ambiguous
 ```
 
-`TECHNOLOGY_CORE_CANDIDATE` is still a semantic/representation migration label, not an instruction to duplicate or move a Unit automatically.
+Historical `TECHNOLOGY_CORE_CANDIDATE` values remain only in superseded validation/provenance artifacts. Current hierarchy v3 contains final physical ownership for migrated Units.
 
 ## Coverage / Questions / Expansion
 
@@ -156,20 +157,17 @@ D0 COLLECTED
 
 D+2 may create/update durable Knowledge, Review Scope, Questions, and Repetition Map entries. It is not a blind-recall score. There is no universal D+8 batch lifecycle stage; the Unit's next review belongs to the Repetition Map and is chosen per Unit.
 
-## Physical Knowledge Unit move — only remaining representation task
+## Physical Knowledge Unit representation — completed
 
-A future physical move may reorganize current `_knowledge/<topic>/...` files according to the accepted semantic hierarchy / Technology Core representation.
+CS6 materialized the accepted ownership rule:
 
-That move must:
+- Area-owned Units: `_ai-conspects/_knowledge/engineering/<area>/<broad-nested-area>/<unit>.md`;
+- defining technology models: `_ai-conspects/_knowledge/technology-core/<technology>/<unit>.md`;
+- broad Area indexes link to relevant Technology Core Units without duplicating bodies.
 
-1. preserve every `KnowledgeId`;
-2. preserve Knowledge Unit content unless a separate semantic edit is explicitly intended;
-3. update `UnitPath` / `ReviewScopeRef` in `_ai-conspects/_repetition/REPETITION_MAP.csv`;
-4. update any path-bearing current projections/links that truly depend on physical location;
-5. not recalculate Retention Band, first-pass order, review dates, or history merely because a file moved;
-6. run a post-move link/ID/Review-Scope consistency audit.
+The move preserved all 576 `KnowledgeId` values and all 576 Review Scopes. 575 Unit bodies are byte-identical to the pre-move body; one Unit received link-only relative-path repair for three Markdown links. No retention band, first-pass order, actual review evidence, Questions, or Expansion plan was changed because of the move.
 
-The move is separate from Expansion: reorganizing existing files does not populate `EXPANSION_MAP.md`.
+`REPETITION_MAP.csv` and current path-bearing validation projections were synchronized to the new paths. The move remains separate from Expansion: reorganizing existing files did not populate `EXPANSION_MAP.md`.
 
 ## Current validation evidence
 
@@ -178,11 +176,13 @@ The move is separate from Expansion: reorganizing existing files does not popula
 - `documentation/validation/cs5-initial-repetition-rollout-v1.csv`
 - `documentation/validation/cs5-retention-classification-rollout-audit-v6.md`
 - `documentation/validation/cs5-operational-readiness-audit-v7.md`
+- `documentation/validation/cs6-physical-move-manifest-v1.csv`
+- `documentation/validation/cs6-physical-move-audit-v1.md`
 
 Older audits/proposals remain provenance only where superseded.
 
-## Next gate
+## Migration closure state
 
-There is no remaining CS5 methodology/schema blocker for ordinary operation.
+There is no remaining CS1–CS7 migration blocker in this finalized snapshot. Ordinary operation should use the current semantic owners, the current Engineering/Technology Core physical representation, `REPETITION_MAP.csv`, and the current planning layer.
 
-The next separate migration gate is the physical Knowledge Unit representation/move followed by consistency validation. Until that move is requested, use stable Knowledge IDs plus the current paths recorded in `REPETITION_MAP.csv`.
+Historical validation/proposal/legacy artifacts remain provenance only. Any later taxonomy or physical-layout change is a new deliberate migration, not continuation of CS6.

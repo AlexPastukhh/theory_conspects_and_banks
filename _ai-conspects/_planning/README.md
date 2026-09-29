@@ -4,7 +4,7 @@ Status: **current operational projection/state layer**. Semantic authority remai
 
 ## Current files
 
-- `COVERAGE_STATE.csv` — coarse root-Area roll-up; presence/`PARTIAL` is not completeness.
+- `COVERAGE_STATE.csv` — coarse root-Area roll-up; `technology_core_units` is the final CS6 ownership count by semantic Area, while presence/`PARTIAL` is not completeness.
 - `SUBAREA_COVERAGE_STATE.csv` — broad nested-Area primary occupancy only.
 - `RESPONSIBILITY_COVERAGE.csv` — responsibility-first semantic coverage checklist and main generic gap surface.
 - `MANIFESTATION_COVERAGE.csv` — selected cross-runtime manifestation coverage; not an exhaustive curriculum.
@@ -42,7 +42,7 @@ A `MISSING` responsibility, manifestation gap, or open Question does not automat
 
 A row in `QUESTIONS.csv` does not own its durable answer. The Area/Concept fields locate the question in the knowledge map. Durable answers belong in canonical Knowledge Units / semantic structure.
 
-The current physical `_knowledge/<topic>/` layout remains non-authoritative and may be migrated later without changing Expansion Map semantics.
+The current physical Knowledge layout is `_knowledge/engineering/...` plus `_knowledge/technology-core/...`. Physical location follows canonical ownership, while Expansion semantics remain owned by Area/Concept/Question selection rather than by folder paths.
 
 ## Relationship to repetition
 

@@ -15,7 +15,7 @@
 ## Текущая semantic boundary
 
 - Различай Sources/Evidence, Knowledge, Questions/Coverage/Expansion и Memory/Repetition. Не превращай один слой в authority другого.
-- Knowledge ID — стабильная идентичность; физический `_knowledge/<topic>/` path не определяет canonical Area.
+- Knowledge ID — стабильная идентичность; current physical layout under `_knowledge/engineering/` and `_knowledge/technology-core/` follows canonical ownership but does not replace semantic Area/Concept authority.
 - Для Software Engineering текущий logical map — `documentation/domains/software-engineering/KNOWLEDGE-MAP.md`; machine-readable current assignment — `documentation/validation/software-engineering-semantic-hierarchy-v3.csv`.
 - В hierarchy v3 используй current `area/nested_area_path/concept_label/owner_kind/status` columns; `v1_*`, `v2_*` и audit/change columns — provenance, а не альтернативные current placements.
 - `Subarea` — разговорное имя для nested `Area`, а не отдельный тип. Вложенность Areas рекурсивна и не имеет фиксированной глубины.
@@ -44,7 +44,7 @@ Cross-technology gap discovery идёт от общей engineering responsibili
 
 ## Technology Core
 
-Technology Core — ownership exception для defining language/runtime/framework models. В текущих migration tables значение `TECHNOLOGY_CORE_CANDIDATE` означает: Unit прошёл boundary classification как вероятный defining technology model, но физическая Technology Core representation ещё не материализована/не является требованием текущего этапа. Не перемещай файл и не дублируй объяснение только из-за этого label.
+Technology Core — ownership exception для defining language/runtime/framework/library models. CS6 materialized this boundary physically under `_ai-conspects/_knowledge/technology-core/<technology>/`. Current hierarchy v3 now uses final `AREA | TECHNOLOGY_CORE` ownership for the 576 migrated Units; historical `TECHNOLOGY_CORE_CANDIDATE` values remain provenance only in older validation artifacts. A technology-owned Unit may still carry an Engineering Area/nested-Area path for coverage/navigation; broad Area indexes link to it instead of duplicating the learning body.
 
 ## Repetition runtime
 
@@ -61,7 +61,7 @@ Rules:
 - Four anchors remain `CORE | WORKING | RECOGNITION | MAP_ONLY`; adjacent `↔` bands are allowed. There is no separate `MIXED` class and no boundary-state lifecycle.
 - The first full-corpus pass is stored as relative `InitialDay` / `InitialOrder` in `REPETITION_MAP.csv`, using priority-first loading and a starting target of at least 30 standard-unit-equivalents/day.
 - Do not invent calendar dates, recall scores, review history, or next-review dates before a real review. After each actual review the owner chooses depth and `NextReview` per Unit.
-- `UnitPath` / `ReviewScopeRef` are convenience pointers only; future physical Unit moves preserve `KnowledgeId` and update those pointers without recalculating retention/order/history.
+- `UnitPath` / `ReviewScopeRef` are convenience pointers only. CS6 synchronized them to the current physical layout; any later move must preserve `KnowledgeId` and update those pointers without recalculating retention/order/history.
 - `_ai-conspects/_repetition/legacy/` is provenance only and must never be used as current scheduler/state authority.
 
 ## Repository/source safety

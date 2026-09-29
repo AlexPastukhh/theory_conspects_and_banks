@@ -22,7 +22,7 @@
 - `_ai-conspects/_repetition/` — current repetition runtime (`REPETITION_MAP.csv`, current learning inbox, optional history template); superseded pre-CS5 artifacts are isolated under `_repetition/legacy/`;
 - `_ai-conspects/<source-workspace>/` — local source-preserving evidence/provenance where available.
 
-The physical topic layout under `_knowledge/` is not the canonical semantic ontology. All 576 current Knowledge IDs already have a current logical Software Engineering Area/nested-Area assignment in the hierarchy v3 evidence, while files intentionally remain in their existing physical paths.
+The physical Knowledge layout now follows canonical ownership through `_knowledge/engineering/` and `_knowledge/technology-core/`. It is still a deliberately shallow representation rather than the semantic ontology itself: all 576 Knowledge IDs retain their logical Software Engineering Area/nested-Area assignment in hierarchy v3, and broad Area indexes link to technology-owned defining models without duplicating their bodies.
 
 ## Coverage interpretation
 

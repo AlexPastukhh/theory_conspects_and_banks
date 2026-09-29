@@ -1,6 +1,6 @@
 # Personal Knowledge System Migration Plan — v1
 
-> **Current correction (superseding both the earlier `ACTIVE/STABLE` design and the later over-sparse correction):** current owners do not use a universal Knowledge Unit maturity state. Current personal retention policy aims to keep essentially all durable Review Scopes visible in the Repetition Map, with `CORE | WORKING | RECOGNITION | MAP_ONLY` as the four anchor qualitative/advisory retention flags and adjacent boundary bands allowed where an exact anchor would create false precision. There is no separate `MIXED` class or boundary-state lifecycle. CS5 runtime cutover is now complete: `_ai-conspects/_repetition/REPETITION_MAP.csv` is the current 576-row operational table, its first pass is priority-first at a starting load of at least 30 standard-unit-equivalents/day, and actual review depth / next date are chosen per Unit after real review. `_ai-conspects/_planning/EXPANSION_MAP.md` is the current expansion owner and intentionally contains 0 planned items. Historical sections below remain provenance; follow `CURRENT-MIGRATION-STATE.md`, `CS5-REPETITION-CUTOVER-ANALYSIS.md`, `../principles/retention-repetition.md`, and `../policies/repetition-scheduling-policy.md` where they differ.
+> **Current correction (superseding both the earlier `ACTIVE/STABLE` design and the later over-sparse correction):** current owners do not use a universal Knowledge Unit maturity state. Current personal retention policy aims to keep essentially all durable Review Scopes visible in the Repetition Map, with `CORE | WORKING | RECOGNITION | MAP_ONLY` as the four anchor qualitative/advisory retention flags and adjacent boundary bands allowed where an exact anchor would create false precision. There is no separate `MIXED` class or boundary-state lifecycle. CS5 runtime cutover is now complete: `_ai-conspects/_repetition/REPETITION_MAP.csv` is the current 576-row operational table, its first pass is priority-first at a starting load of at least 30 standard-unit-equivalents/day, and actual review depth / next date are chosen per Unit after real review. `_ai-conspects/_planning/EXPANSION_MAP.md` is the current expansion owner and intentionally contains 0 planned items. CS6/CS7 are also now complete in the finalized snapshot: physical Knowledge storage is materialized as the Engineering Area + Technology Core projection and post-move consistency validation is complete. Historical sections below remain provenance; follow `CURRENT-MIGRATION-STATE.md`, `CS5-REPETITION-CUTOVER-ANALYSIS.md`, `../principles/retention-repetition.md`, and `../policies/repetition-scheduling-policy.md` where they differ.
 
 Status: migration plan/provenance based on the original checked snapshot and accepted target methodology. Historical counts/wording in later sections describe the state at planning time. **`CURRENT-MIGRATION-STATE.md` is authoritative for the current snapshot whenever they differ.**
 
@@ -23,8 +23,8 @@ CS5 structure semantic review                     COMPLETE
 CS5 responsibility-first coverage refinement      COMPLETE
 CS5 snapshot handoff/methodology audit             COMPLETE
 CS5  repetition cutover                           COMPLETE
-CS6  physical Knowledge Unit representation/move PENDING / separate
-CS7  post-move consistency audit                  PENDING
+CS6  physical Knowledge Unit representation/move COMPLETE
+CS7  post-move consistency audit                  COMPLETE
 ```
 
 Current resolved migration state:
@@ -36,6 +36,7 @@ explicit Review Scope          576 / 576
 recursive nested-Area paths    576 / 576
 ambiguous owner kind           0
 current repetition runtime      CUT OVER (`_repetition/REPETITION_MAP.csv`)
+physical Knowledge layout       MATERIALIZED (`engineering/` + `technology-core/`)
 legacy repetition artifacts    isolated under `_repetition/legacy/`
 ```
 
@@ -681,29 +682,18 @@ No global repetition-owned daily scheduler should rank repetition against Triage
 
 Goal:
 
-Decide whether physical file movement is useful after semantic mapping is complete.
+Materialize physical storage only after semantic ownership is complete.
 
-This is deliberately not assumed.
+Result: **COMPLETE**. The selected outcome was broad reorganization with deliberately shallow physical depth:
 
-Possible outcomes:
+```text
+_ai-conspects/_knowledge/engineering/<area>/<broad-nested-area>/<unit>.md
+_ai-conspects/_knowledge/technology-core/<technology>/<unit>.md
+```
 
-### A — no mass moves
+Area ownership remains the default. Technology Core is the exception for defining language/runtime/framework/library models. When a Technology Core Unit also manifests a broad engineering concept, the Area index links to the canonical technology-owned Unit rather than duplicating it.
 
-Keep existing physical topic folders and use:
-
-- canonical mapping;
-- indexes;
-- tags;
-- links;
-- generated/query views.
-
-### B — partial moves
-
-Move only paths where physical location materially harms ownership/navigation.
-
-### C — broad reorganization
-
-Only if a concrete use case proves it is worth the migration cost.
+All 576 Units received a unique target path. Stable Knowledge IDs and filenames were preserved; path-bearing current projections were synchronized.
 
 ### Invariant
 
@@ -712,99 +702,33 @@ physical move
 ≠ new Knowledge ID
 ```
 
-Any physical migration must preserve:
-
-- Knowledge ID;
-- body;
-- provenance;
-- links;
-- Review Scope;
-- repetition state;
-- semantic mapping.
+The physical migration did not recalculate Retention Bands, initial review order, review evidence, Questions, or Expansion state.
 
 ---
 
-## CS7 — Legacy cleanup and consistency audit
+## CS7 — Post-move consistency audit
 
 Goal:
 
-Remove obsolete operational artifacts only after the new system has replaced their responsibility.
+Validate the materialized representation and close the migration without turning historical provenance into current authority.
 
-Candidates include:
+Result: **COMPLETE** in the offline finalized snapshot.
 
-- old initial-wave machinery;
-- old daily study plan;
-- old repetition policy;
-- old global Questions backlog model;
-- old areas-priority map;
-- generated apply/manifests/audits;
-- permission-test files;
-- superseded dashboards.
+Validated:
 
-Classify before removal:
+- 576 / 576 Knowledge IDs preserved;
+- 576 / 576 target Unit files present;
+- 576 / 576 explicit Review Scopes present;
+- target-path collisions: 0;
+- Repetition Map UnitPath/ReviewScopeRef synchronized 576 / 576;
+- current semantic/retention/rollout projections synchronized;
+- old topic Unit files removed from the active physical layout;
+- Area navigation links to relevant Technology Core Units without duplicate bodies;
+- migration-introduced broken Markdown links: 0.
 
-```text
-still authoritative
-→ retain
-
-historical evidence
-→ preserve/archive
-
-generated obsolete
-→ delete
-
-temporary/test artifact
-→ delete
-```
-
-### Final checks
-
-- no duplicate semantic owners;
-- no conflicting current policies;
-- all 576 Knowledge IDs still present exactly once;
-- all canonical mappings resolve;
-- Review Scopes are usable;
-- repetition state matches current Knowledge IDs;
-- Coverage & Expansion references valid concepts/questions;
-- tags do not replace canonical ownership;
-- comparison Units have correct broader Concept ownership;
-- source/provenance evidence remains reachable or explicitly limited.
+Legacy repetition and historical validation artifacts remain provenance unless a current owner explicitly references them.
 
 ---
-
-# 6. Critical migration gates
-
-## Gate A — after CS1
-
-Question:
-
-> Is there exactly one current universal methodology and one functional Use-Case entry?
-
-If no, do not begin semantic mapping.
-
-## Gate B — after CS2 pilot
-
-Question:
-
-> Does the Software Engineering map naturally classify real knowledge without forcing ownership?
-
-If no, revise the map before all-576 mapping.
-
-## Gate C — after CS3
-
-Question:
-
-> Are all 576 IDs mapped uniquely and do all Units have a usable Review Scope or explicit repair disposition?
-
-If no, do not cut repetition over.
-
-## Gate D — after CS5
-
-Question:
-
-> Can repetition operate exclusively from Knowledge ID + Review Scope + new state axes without relying on legacy initial-wave/daily-order semantics?
-
-If no, keep legacy mechanism until the missing migration rule is resolved.
 
 ## Gate E — before CS7 cleanup
 
@@ -820,8 +744,8 @@ If no, do not delete it.
 
 The following are intentionally deferred:
 
-- final physical folder structure;
-- whether all 576 files should ever move;
+- future refinements to the now-materialized physical folder structure;
+- whether later corpus growth justifies additional physical grouping depth;
 - final controlled tag vocabulary;
 - final ontology commitment beyond the current validated working frame;
 - final UI/storage representation for Coverage & Expansion;
@@ -843,8 +767,6 @@ _ai-conspects/_repetition/README.md
 _ai-conspects/_planning/EXPANSION_MAP.md
 ```
 
-The next separate migration action, when explicitly requested, is the physical Knowledge Unit representation/move.
+CS6/CS7 are complete in the finalized offline snapshot. The current physical representation is the Engineering Area + Technology Core projection, with stable Knowledge IDs and synchronized current path-bearing projections.
 
-That pass must preserve stable Knowledge IDs and content identity, update current path-bearing projections such as `REPETITION_MAP.csv`, and finish with a link/ID/Review-Scope consistency audit. Physical movement must not recalculate Retention Bands, initial review order, review dates, or history.
-
-Until that move, the current old `_knowledge/<topic>/...` paths remain valid representation pointers and the system is otherwise operationally ready.
+Future physical or taxonomy changes are new deliberate migrations. They must preserve Knowledge identity and must not recalculate repetition evidence merely because representation changes.

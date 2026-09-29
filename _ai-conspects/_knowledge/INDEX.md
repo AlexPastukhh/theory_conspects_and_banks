@@ -1,25 +1,11 @@
 # Knowledge Index
 
-This layer contains independently reviewable knowledge units extracted from the source-preserving conspect workspaces. The original workspaces remain the provenance and evidence layer.
+Status: current physical-navigation entry point.
 
-| Topic | Registry |
-|---|---|
-| ASP.NET Core | [[aspnet-core/INDEX]] |
-| Axios | [[axios/INDEX]] |
-| Architecture | [[architecture/INDEX]] |
-| CSS | [[css/INDEX]] |
-| .NET | [[dotnet/INDEX]] |
-| EF Core | [[ef-core/INDEX]] |
-| HTTP | [[http/INDEX]] |
-| JavaScript | [[javascript/INDEX]] |
-| Redux | [[redux/INDEX]] |
-| Redis | [[redis/INDEX]] |
-| SQL | [[sql/INDEX]] |
-| SQL Server | [[sql-server/INDEX]] |
-| TypeScript | [[typescript/INDEX]] |
-| React | [[react/INDEX]] |
-| Testing | [[testing/INDEX]] |
-| React Query | [[react-query/INDEX]] |
-| React Hook Form | [[react-hook-form/INDEX]] |
-| Algorithms | [[algorithms/INDEX]] |
-| Security | [[security/INDEX]] |
+Canonical semantic ownership is defined by the Software Engineering Knowledge Map and semantic hierarchy; physical folders follow that ownership without encoding the full ontology depth.
+
+- [Engineering Areas](engineering/INDEX.md)
+- [Technology Core](technology-core/INDEX.md)
+- [Software Engineering Knowledge Map](../../documentation/domains/software-engineering/KNOWLEDGE-MAP.md)
+
+Knowledge IDs and the `Topic:` field remain stable identity/provenance metadata and do not determine physical ownership.

@@ -29,9 +29,9 @@ The source workspace remains unchanged and is still the source of truth.
 ```text
 source SVG / screenshots
     -> processed conspect workspace
-    -> knowledge units
-    -> topic registries
-    -> repetition by Knowledge ID (future stage)
+    -> canonical Knowledge Unit
+    -> Engineering Area / Technology Core navigation
+    -> repetition by Knowledge ID
 ```
 
 The layers have different ownership:
@@ -40,14 +40,20 @@ The layers have different ownership:
 _ai-conspects/<workspace>/
   = source-preserving processed representation and evidence;
 
-_ai-conspects/_knowledge/<topic>/<unit>.md
-  = independently reviewable learning unit;
+_ai-conspects/_knowledge/engineering/<area>/<broad-nested-area>/<unit>.md
+  = Area-owned independently reviewable learning unit;
 
-_ai-conspects/_knowledge/<topic>/INDEX.md
-  = registry of units in one topic;
+_ai-conspects/_knowledge/technology-core/<technology>/<unit>.md
+  = technology-owned defining language/runtime/framework/library unit;
+
+_ai-conspects/_knowledge/engineering/<area>/INDEX.md
+  = broad Area navigation, including links to relevant Technology Core Units;
+
+_ai-conspects/_knowledge/technology-core/<technology>/INDEX.md
+  = Technology Core navigation for one technology/ecosystem;
 
 _ai-conspects/_knowledge/INDEX.md
-  = registry of topics only;
+  = physical-navigation entry point for Engineering Areas and Technology Core;
 
 <workspace>/KNOWLEDGE_REGISTRY.md
   = coverage map from one source conspect to knowledge units.
@@ -109,15 +115,19 @@ Depending on meaning:
 
 Do not create a unit for every example, edge case, syntax detail, screenshot, heading, or region.
 
-## 5. Topic routing
+## 5. Canonical routing
 
-A topic represents a durable knowledge area, not a source filename.
+Route each durable Unit by semantic ownership, not by source workspace or historical `Topic:` value.
 
-Create only topics required by the current conspect. Before creating one, check whether an existing topic is semantically appropriate.
+Default case: a broader engineering concept owns ordinary implementations. Store the Unit under the matching Engineering Area and its first durable broad nested Area.
 
-Mixed-topic workspaces must route each unit according to its central model. For example, protocol behavior can remain under `http` while framework-specific middleware configuration belongs under `aspnet-core`, even when both came from one source.
+Technology Core exception: when the Unit's main subject is a defining language/runtime/framework/library model, store it under `technology-core/<technology>/`. If that defining model is also relevant to a broad engineering concept, keep one canonical technology-owned Unit and link to it from the Engineering Area navigation; do not duplicate the learning body.
 
-Do not redesign taxonomy preemptively. A topic boundary can be reconsidered after more real units accumulate, but current filenames and IDs remain stable unless a deliberate migration is performed.
+The historical `Topic:` field and Knowledge ID prefix remain stable identity/provenance metadata. They are not physical routing commands.
+
+Mixed-topic workspaces must still route every Unit by its central model. A source about one ecosystem can therefore contribute Units to several Engineering Areas and to Technology Core.
+
+Do not redesign the ontology preemptively. Use the current domain map and hierarchy, preserve filenames/Knowledge IDs unless a deliberate semantic migration requires otherwise, and treat physical folders as representation of canonical ownership rather than a second ontology.
 
 ## 6. Stable identity and duplicate prevention
 
@@ -132,7 +142,7 @@ Knowledge IDs must be lowercase, meaningful, unique, and independent of temporar
 
 Before creating a unit:
 
-1. search all topic indexes and unit files for semantic matches;
+1. search the global Knowledge Index, Area/Technology Core indexes, and unit files for semantic matches;
 2. distinguish a related concept from a duplicate concept;
 3. if the same unit exists, extend it with verified source knowledge and provenance;
 4. update every affected registry;
@@ -216,15 +226,16 @@ Zero `UNRESOLVED` is desirable but must never be achieved by silently dropping o
 
 ## 10. Index updates
 
-For each affected topic, update:
+For each affected canonical owner, update the appropriate navigation index:
 
 ```text
-_ai-conspects/_knowledge/<topic>/INDEX.md
+_ai-conspects/_knowledge/engineering/<area>/INDEX.md
+_ai-conspects/_knowledge/technology-core/<technology>/INDEX.md
 ```
 
-Each row contains the stable Knowledge ID, unit title, and link.
+Area indexes list Area-owned Units and may also link to Technology Core Units whose semantic placement belongs to that Area. Technology Core indexes list the canonical technology-owned Units. Do not duplicate a Unit merely to make it visible from both surfaces.
 
-Update `_ai-conspects/_knowledge/INDEX.md` only when a topic is first introduced. The global index lists topics, not every unit.
+Update `_ai-conspects/_knowledge/INDEX.md` when a new root navigation surface is introduced. The global index points to Engineering Areas and Technology Core; it is not a 576-row registry.
 
 ## 11. Completion check
 

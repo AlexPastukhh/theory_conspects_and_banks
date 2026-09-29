@@ -20,7 +20,7 @@ This directory stores operational state only. It does not own Knowledge ontology
 
 ## Repetition Map contract
 
-`KnowledgeId` is the stable identity. `UnitPath` is a convenience pointer and may change when physical Knowledge Unit files are reorganized.
+`KnowledgeId` is the stable identity. `UnitPath` is a convenience pointer to the current CS6 physical layout and may change in a later deliberate reorganization.
 
 Current columns:
 
@@ -32,7 +32,7 @@ Current columns:
 | `InitialDay` | relative bucket for the first full-corpus pass; not a calendar date |
 | `InitialOrder` | order inside the full first-pass queue |
 | `SizeEquivalent` | workload estimate only; never changes semantic priority |
-| `UnitPath` | current physical file pointer; update after physical moves |
+| `UnitPath` | current physical file pointer; synchronized to the CS6 Engineering/Technology Core layout |
 | `ReviewScopeRef` | pointer to the authoritative `What should be recallable` section |
 | `InitialReviewDate` | actual date when the first-pass review happens; blank until then |
 | `LastReview` | last actual review date; blank until real review |
@@ -93,9 +93,11 @@ A review finding should be routed by meaning:
 
 A finding does not automatically create a planned expansion item.
 
-## Physical Knowledge Unit moves
+## Physical Knowledge Unit layout
 
-The current `_knowledge/<topic>/...` layout is still the old physical layout. A later physical migration must preserve `KnowledgeId` and update `UnitPath` and `ReviewScopeRef` in this table. It must not recalculate Retention Band, first-pass order, or review history merely because the file moved.
+CS6 materialized the canonical physical representation under `_knowledge/engineering/...` and `_knowledge/technology-core/...`. `REPETITION_MAP.csv` was synchronized by `KnowledgeId`: all 576 `UnitPath` values point to the current Unit files and all `ReviewScopeRef` values point to their current recall sections.
+
+A later physical reorganization must preserve `KnowledgeId`, update these pointers, and must not recalculate Retention Band, first-pass order, review dates, scores, or history merely because a file moved.
 
 ## Legacy boundary
 
