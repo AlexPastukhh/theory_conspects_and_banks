@@ -8,6 +8,8 @@ Universal identity/ownership semantics are defined by [Knowledge Structure & Ont
 
 A Knowledge Unit is one coherent durable model that can be independently reviewed/explained. Its boundary follows meaning, not screenshot count, file length, source section, technology folder, or collection day.
 
+When knowledge concerns intentional achievement of a useful result, it may use the **unchanged R–D model** as a goal-directed form, in addition to descriptive Units. Canons and derived Requirements can supply the entire explanation; links to descriptive Units are optional, not a new mandatory Support layer. See [Goal-directed Knowledge](principles/goal-directed-knowledge.md). Do not force all mechanisms or processes into R/D.
+
 One source may produce several Units; one Unit may use several verified sources.
 
 ## Stable identity and canonical home

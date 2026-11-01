@@ -28,6 +28,7 @@ Start with:
 
 - [Universal Knowledge Principles](principles/universal-knowledge-principles.md)
 - [Knowledge Structure & Ontology](principles/knowledge-structure-ontology.md)
+- [Goal-directed Knowledge / existing R–D semantics](principles/goal-directed-knowledge.md) — optional goal/method representation alongside descriptive Knowledge Units
 - [Priority Model](principles/priority-model.md)
 - [Questions, Coverage & Expansion](principles/questions-coverage-expansion.md)
 - [Tags, Comparisons & Core Views](principles/tags-comparisons-and-views.md)
@@ -38,6 +39,7 @@ Start with:
 
 - [Repository work principles](repository-work-principles.md)
 - [Knowledge Unit principles](knowledge-conspect-principles.md)
+- [Practical routing of theory to descriptive KU or R–D graphs](processes/distribute-goal-directed-and-descriptive-knowledge.md)
 - [Image/source visual principles](image-conspect-principles.md)
 
 ## Current operational state

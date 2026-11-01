@@ -69,6 +69,8 @@ A Unit should support:
 
 These are semantic capabilities, not mandatory headings.
 
+Some coherent knowledge may be represented as a **goal-directed R–D model** rather than purely descriptive prose, where an intentional actor seeks a useful result. This reuses existing RDG semantics without adding new PKS ontology entities or requiring links to descriptive Units. See [Goal-directed Knowledge](goal-directed-knowledge.md); no global conversion of descriptive knowledge is implied.
+
 ## Review Scope
 Review Scope answers:
 
